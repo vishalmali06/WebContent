@@ -1,0 +1,13 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'JDAIconsFamily-Regular';
+  src: url('#{$jf-font-path}/JDAIconsFamily-Regular.otf?v=#{$jf-version}');
+  src: url('#{$jf-font-path}/JDAIconsFamily-Regular.eot?#iefix&v=#{$jf-version}') format('embedded-opentype'),
+    url('#{$jf-font-path}/JDAIconsFamily-Regular.woff?v=#{$jf-version}') format('woff'),
+    url('#{$jf-font-path}/JDAIconsFamily-Regular.ttf?v=#{$jf-version}') format('truetype'),
+    url('#{$jf-font-path}/JDAIconsFamily-Regular.svg?v=#{$jf-version}#JDAIconsFamily-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

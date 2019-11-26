@@ -1,0 +1,898 @@
+/**
+ * JDA customized styles for use with the DHTMLX grid.
+ */
+/* line 5, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda {
+  border: 1px outset #ffffff;
+  background-color: #ffffff;
+}
+
+/* line 9, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda .xhdr {
+  background-image: none;
+}
+
+/* line 12, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda table.hdr td {
+  background-color: #e2e2dd;
+  padding: 1px;
+  margin: 0;
+  border: none;
+}
+
+/* line 18, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda table.hdr td div.hdrcell {
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  color: #000000;
+  text-align: center;
+  background-color: #e2e2dd;
+  border: 1px solid #cccccc;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  height: 100%;
+}
+
+/* line 32, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda table.obj td {
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  overflow: hidden;
+  border: 1px solid white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* line 43, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda table.obj tr.rowselected td {
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  background: #dae8fa;
+}
+
+/* line 48, ../../theme-base/sass/jda-dhtmlx.scss */
+div.gridbox_jda table.obj tr.rowselected td.cellselected, div.gridbox table.obj td.cellselected {
+  background: #dae8fa;
+}
+
+/* line 52, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhtmlxGrid_selection {
+  -moz-opacity: .5;
+  filter: alpha(opacity=50);
+  background-color: #fe9a2e;
+  opacity: .5;
+  border: 1px dotted black;
+}
+
+/**
+ * JDA customized styles for use with the DHTMLX tree.
+ */
+/* line 63, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxtree_jda .selectedTreeRow {
+  background: #dae8fa;
+  border: 1px solid #777777;
+  color: black;
+  line-height: 17px;
+  font-size: 11px !important;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* line 72, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxtree_jda .standartTreeRow, .dhxtree_jda .standartTreeRow_lor {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-size: 11px !important;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+}
+
+/* line 80, ../../theme-base/sass/jda-dhtmlx.scss */
+html > body .dhxtree_jda .selectedTreeRow, html > body .dhxtree_jda .selectedTreeRow_lor {
+  padding: 1px 0px 1px 0px;
+  line-height: normal;
+  display: inline-block;
+  height: 13px;
+}
+
+/* line 86, ../../theme-base/sass/jda-dhtmlx.scss */
+body:nth-of-type(1) .dhxtree_jda span.selectedTreeRow, body:nth-of-type(1) .dhxtree_jda span.selectedTreeRow_lor {
+  padding: 1px 0px 1px 0px;
+  display: inline-block;
+  padding-top: 0px;
+  height: 13px;
+}
+
+/* line 92, ../../theme-base/sass/jda-dhtmlx.scss */
+body:nth-of-type(1) .dhxtree_jda span.standartTreeRow, body:nth-of-type(1) .dhxtree_jda span.standartTreeRow_lor {
+  display: inline-block;
+  height: 14px;
+}
+
+/* line 95, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxtree_jda .selectedTreeRow_lor, .dhxtree_jda .selectedTreeRow {
+  background-color: white;
+  background: #dae8fa;
+  border: 1px solid #777777;
+  color: black;
+  line-height: 17px;
+  font-size: 11px !important;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* line 105, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxtree_jda .selectedTreeRow_lor, .dhxtree_jda .selectedTreeRow {
+  class: selectedNode;
+}
+
+/**
+ * JDA customized styles for use with the DHTMLX layout.
+ */
+/* layout control */
+/* line 114, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda {
+  width: 100%;
+  height: 100%;
+}
+
+/* layout area */
+/* line 119, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly {
+  position: relative;
+  overflow: visible;
+  vertical-align: top;
+}
+
+/* header */
+/* line 126, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar {
+  position: relative;
+  height: 18px;
+  background-color: #e6e6e6;
+  overflow: hidden;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #999999 1px solid;
+  border-right: #999999 1px solid;
+}
+
+/* vertical header collapse icon (collapse to left) */
+/* line 138, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_hor1l {
+  background-image: url("../manugistics/images/secondary/grid_collapse.gif");
+}
+
+/* vertical header collapse icon (collapse to right) */
+/* line 142, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_hor1r {
+  background-image: url("../manugistics/images/secondary/grid_collapse.gif");
+}
+
+/* vertical header expand icon (expand to left) */
+/* line 146, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_hor2l {
+  background-image: url("../manugistics/images/secondary/grid_expand.gif");
+}
+
+/* vertical header expand icon (expand to right) */
+/* line 150, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_hor2r {
+  background-image: url("../manugistics/images/secondary/grid_expand.gif");
+}
+
+/* horizontal header collapse icon (collapse to top) */
+/* line 155, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_ver1t {
+  background-image: url("../manugistics/images/secondary/grid_collapse.gif");
+}
+
+/* horizontal header collapse icon (collapse to bottom) */
+/* line 159, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_ver1b {
+  background-image: url("../manugistics/images/secondary/grid_collapse.gif");
+}
+
+/* horizontal header expand icon (expand to top) */
+/* line 163, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_ver2t {
+  background-image: url("../manugistics/images/secondary/grid_expand.gif");
+}
+
+/* horizontal header expand icon (expand to bottom) */
+/* line 167, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhxLayoutButton_jda_ver2b {
+  background-image: url("../manugistics/images/secondary/grid_expand.gif");
+}
+
+/* header collapsed left border */
+/* line 172, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBar div.dhtmlxLineL {
+  position: absolute;
+}
+
+/* header collapsed right border */
+/* line 176, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBar div.dhtmlxLineR {
+  position: absolute;
+}
+
+/* header expand/collapse icon surround */
+/* line 180, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarButtonsFake {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* header label */
+/* line 190, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #000000;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-weight: normal;
+  top: -1;
+  margin-left: 4px;
+  line-height: 15px;
+  vertical-align: middle;
+  cursor: default;
+  position: absolute;
+  -moz-user-select: none;
+}
+
+/* vertical header collapsed */
+/* line 206, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #999999 1px solid;
+  border-right: #999999 1px solid;
+}
+
+/* vertical header collapsed */
+/* line 217, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarButtonsFake {
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: #e6e6e6;
+  overflow: hidden;
+  border-top: #ffffff 1px solid;
+  border-left: #ffffff 1px solid;
+}
+
+/* vertical header label collapsed (main label when collapsed) */
+/* line 230, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarLabel {
+  display: none;
+}
+
+/* vertical header collapsed label container */
+/* line 234, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel_collapsed_hor {
+  display: none;
+}
+
+/* vertical header collapsed label (collapsed label) */
+/* line 238, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoBarLabel_collapsed_hor {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  text-align: center;
+  writing-mode: tb-rl;
+  width: 100%;
+  cursor: default;
+  -moz-user-select: none;
+}
+
+/* vertical header collapsed top border */
+/* line 253, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxLineL {
+  position: absolute;
+}
+
+/* vertical header collapsed bottom border */
+/* line 257, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxLineR {
+  position: absolute;
+}
+
+/* vertical header expand/collapse icon surround */
+/* line 261, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_hor {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 1px;
+  right: 2px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* vertical header collapsed expand/collapse icon surround */
+/* line 273, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedVer div.dhtmlxInfoButtonShowHide_hor {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 3px;
+  left: 1px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* horizontal header collapsed */
+/* line 286, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor {
+  position: relative;
+  height: 18px;
+  overflow: hidden;
+}
+
+/* horizontal header collapsed */
+/* line 292, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarButtonsFake {
+  height: 18px;
+  left: 0;
+  position: relative;
+  top: 0;
+  background-color: #e6e6e6;
+  overflow: hidden;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #999999 1px solid;
+  border-right: #999999 1px solid;
+}
+
+/* horizontal header label collapsed (main label when collapsed) */
+/* line 305, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarLabel {
+  display: none;
+}
+
+/* horizontal header collapsed label container */
+/* line 309, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoBarLabel_collapsed_ver {
+  display: none;
+}
+
+/* horizontal header collapsed label (collapsed label) */
+/* line 313, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoBarLabel_collapsed_ver {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  white-space: nowrap;
+  cursor: default;
+  -moz-user-select: none;
+}
+
+/* horizontal header collapsed left border */
+/* line 326, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxLineL {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  height: 14px;
+  border-left: #ffffff 1px solid;
+}
+
+/* horizontal header collapsed right border */
+/* line 334, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxLineR {
+  position: absolute;
+}
+
+/* horizontal header expand/collapse icon surround */
+/* line 338, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBar div.dhtmlxInfoButtonShowHide_ver {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 1px;
+  right: 2px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* horizontal header collapsed expand/collapse icon surround */
+/* line 350, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhtmlxPolyInfoBarCollapsedHor div.dhtmlxInfoButtonShowHide_ver {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 3px;
+  right: 3px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* layout content area */
+/* line 363, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutSinglePoly div.dhxcont_global_content_area {
+  position: absolute;
+  overflow: hidden;
+  /* important for IE */
+  border: #bebebe 1px solid;
+  border-top: none;
+  background-color: #FFFFFF;
+}
+
+/* layout content blocker (when resizing) */
+/* line 371, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhxcont_content_blocker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  background-color: #93C0E7;
+}
+
+/* hor-based splitter */
+/* line 384, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterHor {
+  height: 6px;
+  cursor: n-resize;
+  -moz-user-select: none;
+  background-color: #c8c8c8;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #aaaaaa 1px solid;
+  border-right: #aaaaaa 1px solid;
+}
+
+/* hor-based splitter inactive */
+/* line 395, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterHorInactive {
+  height: 6px;
+  cursor: default;
+  -moz-user-select: none;
+  background-color: #c8c8c8;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #aaaaaa 1px solid;
+  border-right: #aaaaaa 1px solid;
+}
+
+/* ver-based splitter */
+/* line 406, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterVer {
+  width: 5px;
+  cursor: w-resize;
+  -moz-user-select: none;
+  background-color: #c8c8c8;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #aaaaaa 1px solid;
+  border-right: #aaaaaa 1px solid;
+  overflow: hidden;
+}
+
+/* weird empty div inside of vertical splitter */
+/* line 418, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterVer div {
+  width: 3px;
+}
+
+/* ver-based splitter inactive */
+/* line 422, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterVerInactive {
+  width: 5px;
+  cursor: default;
+  -moz-user-select: none;
+  background-color: #c8c8c8;
+  border-top: #ffffff 2px outset;
+  border-left: #ffffff 2px outset;
+  border-bottom: #aaaaaa 1px solid;
+  border-right: #aaaaaa 1px solid;
+}
+
+/* weird empty div inside of inactive vertical splitter */
+/* line 433, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda td.dhtmlxLayoutPolySplitterVerInactive div {
+  width: 3px;
+}
+
+/* sizer (when moving the splitter) */
+/* line 437, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhxLayout_Sizer_jda {
+  position: absolute;
+  background-color: #8db2d9;
+  border: 1px solid #222222;
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  opacity: 0.3;
+  transparent: 0;
+  font-size: 2px;
+  z-index: 1999;
+}
+
+/* overlay when moving the splitter */
+/* line 449, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhxLayout_Cover_jda {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  background-color: #93C0E7;
+}
+
+/* status bar attached to a layout area */
+/* line 462, ../../theme-base/sass/jda-dhtmlx.scss */
+table.dhtmlxLayoutPolyContainer_jda div.dhxcont_statusbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  font-family: tahoma, arial, helvetica, verdana, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  vertical-align: middle;
+  line-height: 20px;
+  height: 20px;
+  -moz-user-select: none;
+  cursor: default;
+  padding-left: 4px;
+  background-color: #e6e6e6;
+  border-top: 1px solid #bebebe;
+}
+
+/* MENU COMPONENTS */
+/* line 482, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon {
+  border-style: solid ;
+  border-width: 1px ;
+  border-color: #b05e81 #b05e81 #b05e81 #b05e81 ;
+  background-color: #01a368 ;
+  position: absolute;
+  overflow: hidden;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  /*  box-sizing: border-box; RAY - NEED THIS???????? */
+}
+
+/* line 495, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item {
+  height: 24px;
+  cursor: pointer;
+}
+
+/* line 497, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis {
+  height: 24px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+/* line 502, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected {
+  height: 24px;
+  cursor: pointer;
+  background-image: url("../css/theme-ugly/images/theme/menuItemBgSelected.gif") !important;
+  background-size: 100% 100%;
+}
+
+/* line 507, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected td.sub_item_text div.sub_item_text {
+  color: dodgerblue;
+}
+
+/* line 511, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_icon {
+  width: 24px;
+  text-align: left;
+  -moz-user-select: none;
+}
+
+/* line 515, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_icon img.sub_icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+/* line 522, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_text {
+  vertical-align: middle;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* line 527, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_item_text {
+  font-family: Papyrus;
+  font-weight: normal;
+  font-size: 12px;
+  color: dodgerblue;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* line 532, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_item_text {
+  color: #999999 !important;
+}
+
+/* line 535, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_hk {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 539, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_hk div.sub_item_hk {
+  font-family: Tahoma;
+  font-size: 10px;
+  color: #4985b7;
+  text-align: right;
+}
+
+/* line 545, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis td.sub_item_hk div.sub_item_hk {
+  color: #cecece !important;
+}
+
+/* line 548, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon tr.sub_sep {
+  height: 3px;
+  font-size: 1px;
+}
+
+/* line 552, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon div.sub_sep {
+  font-size: 1px;
+  background-image: url("imgs//dhxmenu_dhx_skyblue/dhxmenu_subsepbg.gif");
+  background-repeat: repeat-x;
+  background-position: top;
+  cursor: default;
+  height: 3px;
+}
+
+/* line 560, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.complex_arrow {
+  width: 4px;
+  height: 24px;
+  background-image: url("imgs//dhxmenu_dhx_skyblue/dhtmlxmenu_subar.gif");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  float: right;
+}
+
+/* line 568, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected div.complex_arrow {
+  background-position: -4px 0 !important;
+}
+
+/* line 571, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.complex_arrow {
+  background-position: -8px 0 !important;
+}
+
+/* line 574, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url("imgs//dhxmenu_dhx_skyblue/dhtmlxmenu_loader.gif");
+}
+
+/* line 582, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon_left div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+  top: 6px;
+  left: none;
+  right: 6px;
+}
+
+/* line 587, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon_right div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+  top: 6px;
+  right: none;
+  left: 6px;
+  _right: -38px;
+}
+
+/* line 592, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Arrow {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #eaf2fb;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 601, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Arrow div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  position: relative;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9px;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-image: url("imgs//dhxmenu_dhx_skyblue/dhtmlxmenu_upar.gif");
+}
+
+/* rjy - failed on height=18px - commenting out so that it passes through from the original file without going through sass compilation 
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Over,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Disabled {
+    position:absolute;
+    height:16px;
+    height=18px;
+    padding:1px 1px 0 1px;
+    font-size:1px;
+    background-color:#eaf2fb;
+    border:#a4bed4 1px solid;
+    border-bottom:none;
+}
+*/
+/* line 623, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: -27px 0;
+}
+
+/* line 626, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Over div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: -36px 0;
+}
+
+/* line 629, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Disabled div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: -45px 0;
+}
+
+/* rjy - failed on height=18px - commenting out so that it passes through from the original file without going through sass compilation 
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Over,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Disabled {
+    position:absolute;
+    height:16px;
+    height=18px;
+    font-size:1px;
+    padding:1px 1px 0 1px;
+    background-color:#eaf2fb;
+    border:#a4bed4 1px solid;
+    border-top:none;
+}
+*/
+/* line 644, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: 0 0;
+}
+
+/* line 647, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Over div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: -9px 0;
+}
+
+/* line 650, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Disabled div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+  background-position: -18px 0;
+}
+
+/* line 667, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhtmlxMenu_dhx_skyblue_Middle div.dhtmlxMenu_TopLevel_Text_right {
+  font-family: Papyrus;
+  font-weight: normal;
+  font-size: 12px;
+  color: dodgerblue;
+  position: absolute;
+  top: 5px;
+  left: none;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* line 668, ../../theme-base/sass/jda-dhtmlx.scss */
+.dhtmlxMenu_dhx_skyblue_Middle div.dhtmlxMenu_TopLevel_Text_left {
+  font-family: Papyrus;
+  font-weight: normal;
+  font-size: 12px;
+  color: dodgerblue;
+  position: absolute;
+  top: 5px;
+  right: none;
+  left: 8px;
+  cursor: pointer;
+}
+
+/* line 670, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon {
+  float: left;
+  margin: 0 2px 0 2px;
+  width: 18px;
+  height: 18px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url("imgs//dhxmenu_dhx_skyblue/dhtmlxmenu_chrd.gif");
+}
+
+/* line 679, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.chbx_0 {
+  background-position: 0 0 !important;
+}
+
+/* line 682, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.chbx_1 {
+  background-position: -18px 0 !important;
+}
+
+/* line 685, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.chbx_0 {
+  background-position: -36px 0 !important;
+}
+
+/* line 688, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.chbx_1 {
+  background-position: -54px 0 !important;
+}
+
+/* line 691, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.rdbt_0 {
+  background-position: -72px 0 !important;
+}
+
+/* line 694, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.rdbt_1 {
+  background-position: -90px 0 !important;
+}
+
+/* line 697, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.rdbt_0 {
+  background-position: -108px 0 !important;
+}
+
+/* line 700, ../../theme-base/sass/jda-dhtmlx.scss */
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.rdbt_1 {
+  background-position: -126px 0 !important;
+}

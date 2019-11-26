@@ -1,0 +1,389 @@
+/*
+This software is allowed to use under GPL or you need to obtain Commercial or Enterise License
+to use it in non-GPL project. Please contact sales@dhtmlx.com for details
+*/
+
+/*
+2012 February 16
+*/
+.dhx_skin_settings{
+	border-top:1px solid #adadad;
+	display:none;
+	color:#0986b0;
+}
+.dhx_column{
+	position:absolute;
+	top:0px;
+}
+.dhx_cell{
+	text-align:center;
+	overflow:hidden;
+	height:18px;
+}
+.dhx_hcell{
+	float:left;
+	text-align:center;
+	width:100%;
+	overflow:hidden;
+}
+.dhx_ss_body{
+	overflow:hidden;
+	position:relative;
+	clear:both;
+}
+.dhx_hs_left, .dhx_hs_attr, .dhx_hs_center, .dhx_hs_right, .dhx_ss_center, .dhx_ss_right, .dhx_ss_left, .dhx_ss_attr{
+	overflow:hidden;
+	float:left;
+}
+.dhx_ss_header table, .dhx_ss_footer table{
+	table-layout:fixed;
+}
+.dhx_ss_center_scroll{
+	height:100%;
+	position:relative;
+	overflow:hidden;
+}
+.dhx_ss_hscroll{
+	position:absolute;
+	bottom:0px; left:0px;
+}
+.dhx_ss_vscroll{
+	position:absolute;
+	top:0px; right:0px;
+}
+.dhx_dtable{
+	position:relative;
+	-moz-user-select:-moz-none;
+	-webkit-user-select:none;   	
+	cursor:default;
+}
+.dhx_resize_area{
+	position:absolute;
+	top:0px; left:0px;
+	width:100%;
+	height:100%;
+}
+.dhx_resize_handle_x{
+	width:1px; height:100%;
+	border:1px dotted #848484;
+
+	position:absolute;
+	top:-1px;
+	left:150px;
+}
+.dhx_resize_origin_x{
+	width:3px; height:100%;
+	backgroundColor:#c2c2c2;
+
+	position:absolute;
+	top:-1px;
+	left:100px;
+}
+.dhx_resize_handle_y{
+	height:1px; width:100%;
+	border:1px dotted #848484;
+
+	position:absolute;
+	left:-1px;
+	top:150px;
+}
+.dhx_resize_origin_y{
+	height:3px; width:100%;
+	backgroundColor:#c2c2c2;
+
+	position:absolute;
+	left:-1px;
+	top:100px;
+}
+.dhx_ss_footer, .dhx_ss_header{
+	clear:both;
+	overflow:hidden;
+}
+.dhx_ss_editor{
+	position:absolute;
+	background:white;
+	overflow:hidden;
+	border:2px solid orange;
+}
+.dhx_ss_texteditor{
+	width:100%; height:100%;
+	font-size:9pt; outline:none;
+	border:0px; padding-left:10px; margin:0px;
+}
+.dhx_ss_sort_asc{
+	position:absolute; float:right;
+	right:3px; top:8px;
+
+	width:7px; height:13px;
+	background:url(imgs/sort2.png);
+}
+.dhx_ss_sort_desc{
+	position:absolute;
+	right:3px; top:8px;
+
+	width:7px; height:13px;
+	background:url(imgs/sort1.png);
+}
+div.dhx_column > div, .dhx_table_cell{
+	font-family:Helvetica, Verdana;
+	font-size:12px;
+	/* border-right:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3; */
+	padding:2px 10px 0px 10px;
+	text-align:left;
+	white-space:nowrap;
+}
+.dhx_table_cell, .dhx_block_selection, .dhx_ss_header td, .dhx_ss_footer td, .dhx_hcell, .dhx_cell{
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.dhx_block_selection{
+	position:absolute;
+}
+.dhx_ss_filter select, .dhx_ss_filter input{
+	width:100%;
+}
+.dhx_datatable_overlay{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:10;
+	text-align:center;
+	padding-top:10px;
+}
+.dhx_view.dhx_dtable{
+	backgroundColor:#ffffff;
+}
+.dhx_ss_header TD, .dhx_ss_footer TD{
+	font-family:Verdana;
+	font-size:12px;
+	color:#262626;
+	backgroundColor: #b0e0f0;background: -o-linear-gradient(top, #d5eff7 0%,  #c9eaf5 71%,  #b0e0f0 72%,  #d2edf6 100%);background: -ms-linear-gradient(top, #d5eff7 0%,  #c9eaf5 71%,  #b0e0f0 72%,  #d2edf6 100%);background: -moz-linear-gradient(top, #d5eff7 0%,  #c9eaf5 71%,  #b0e0f0 72%,  #d2edf6 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5eff7), color-stop(71%, #c9eaf5), color-stop(72%, #b0e0f0), color-stop(100%, #d2edf6));
+	background-position:0px 1px;
+	background-repeat:no-repeat;
+}
+.dhx_hcell{
+	padding:2px 10px 0px 10px;
+	text-align:left;
+}
+.dhx_ss_header td{
+	border-right:1px solid #a7bac5;
+	border-bottom:1px solid #a7bac5;
+}
+.dhx_ss_footer td{
+	border-right:1px solid #a7bac5;
+	border-top:1px solid #a7bac5;
+}
+.dhx_hs_right td.dhx_last, .dhx_hs_center td.dhx_last{
+	border-right-width:0px;
+}
+.dhx_column.dhx_last>div{
+	border-right-width:0px;
+}
+.dhx_ss_right .dhx_column.dhx_first>div, .dhx_hs_right td.dhx_first{
+	border-left:1px solid #a7bac5;
+}
+.dhx_ss_left .dhx_column.dhx_last>div{
+	/* border-right:1px solid #a7bac5; */
+}
+.dhx_column>div:nth-child(even){
+	backgroundColor:#f7f7f7;
+}
+/*.dhx_column>div.dhx_cell_select, .dhx_column>div.dhx_column_select, .dhx_column>div.dhx_row_select{
+	backgroundColor: #dbffb0;background: -o-linear-gradient(top, #cff4a3 0%,  #dbffb0 20%,  #dbffb0 80%,  #cff4a3 100%);background: -ms-linear-gradient(top, #cff4a3 0%,  #dbffb0 20%,  #dbffb0 80%,  #cff4a3 100%);background: -moz-linear-gradient(top, #cff4a3 0%,  #dbffb0 20%,  #dbffb0 80%,  #cff4a3 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cff4a3), color-stop(20%, #dbffb0), color-stop(80%, #dbffb0), color-stop(100%, #cff4a3));
+}*/
+/*.dhx_column>div.dhx_cell_select{
+	border-bottom:1px solid #a6d074;
+	border-top:1px solid #a6d074;
+	padding-top:1px;
+	border-right:1px solid #a6d074;
+	border-left:1px solid #a6d074;
+	padding-left:9px;
+}*/
+.dhx_ss_right .dhx_column.dhx_first>div.dhx_cell_select{
+	padding-left:10px;
+}
+.dhx_column>div.dhx_row_select{
+	border-bottom:1px solid #a6d074;
+	border-top:1px solid #a6d074;
+	padding-top:1px;
+}
+.dhx_column>div.dhx_column_select{
+	border-right:1px solid #a6d074;
+	border-left:1px solid #a6d074;
+	padding-left:9px;
+}
+.dhx_sel_hcell{
+	backgroundColor:#c9eaf5;
+}
+.dhx_block_selection{
+	background:rgba(0,0,0,0.1);
+	border:2px solid #a6d074;
+}
+html, body{
+	padding:0;
+	margin:0;
+}
+.dhx_view{
+	font-family: "Helvetica World", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	
+	color:#303030;
+	border:0px solid #adadad;
+}
+.dhx_view{
+	overflow:hidden;
+	vertical-align:top;
+	backgroundColor:#FFFFFF;
+	cursor:default;
+}
+.dhx_layout_wide, .dhx_layout_head{
+	backgroundColor:#c2dae2;
+}
+.dhx_loading_overlay{
+	width:100%;
+	height:100%;
+	
+	position:absolute;
+	z-index:99999;
+	
+	background-image:url(./imgs/loading.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.dhx_vscroll_x{
+	height:0px;
+	width:100%;
+	overflow-y:hidden;
+	overflow-x:scroll;
+}
+.dhx_vscroll_y{
+	width:0px;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.dhx_vscroll_body{
+	width:16px; height:16px;
+}
+.dhtmlx_message_area{
+	position:fixed;
+	right:5px;
+	width:250px;
+	z-index:1000;
+}
+.dhtmlx-info{
+	min-width: 120px;
+	padding:4px 4px 4px 20px;
+	font-family:Tahoma;
+	z-index: 10000;
+
+	margin:5px;
+	margin-bottom:10px;
+
+	-webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.dhtmlx-info.hidden{
+	height:0px;
+	padding:0px;
+	border-width:0px;
+	margin:0px;
+	overflow:hidden;
+}
+.dhtmlx-info{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select:-moz-none;
+
+	cursor:pointer;
+}
+.dhtmlx-info img{
+	float:left;
+	margin-right:20px;
+}
+.dhtmlx-info, .dhtmlx-error{
+	font-size:14px;
+	color:#000;
+	box-shadow: 0px 0px 10px #888;
+	
+	padding:0px;
+	
+  	backgroundColor:#FFF;
+	border-radius:3px;
+	border:1px solid #ffffff;
+}
+.dhtmlx-info div{
+	padding:5px 10px 5px 10px;
+	backgroundColor: #fff;
+
+	border-radius:3px;
+	border:1px solid #B8B8B8;
+}
+.dhtmlx-error{
+	backgroundColor: #d81b1b;
+	border:1px solid #ff3c3c;
+	box-shadow: 0px 0px 10px #000;
+}
+.dhtmlx-error div{
+	backgroundColor: #d81b1b;	
+	border:1px solid #940000;
+	color:#FFF;
+}
+.dhx_pager_item, .dhx_pager_item_selected{
+	float:left;
+	text-align:center;
+	height:16px;
+	width:25px;
+
+	font-family:Tahoma;
+	font-size:10pt;
+	border:1px solid #a7bac5;
+	padding: 2px 4px;
+
+	margin-right:5px;
+	cursor:pointer;
+	backgroundColor:white;
+}
+.dhx_pager_item_selected{
+	cursor:default;
+
+	backgroundColor:#dbffb0;
+	border:1px solid #a6d074;
+}
+html,body{
+	-moz-user-select:-moz-none;
+	-webkit-user-select:none;
+	-user-select:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.dhx_scroll_x {
+	width:50px;
+	height:4px !important;
+	left:1px; bottom:3px;
+	background:rgba(0, 0, 0, 0.4);
+	position:absolute; 
+	border-radius: 4px;-webkit-border-radius:4px; -moz-border-radius:4px;
+	margin:0px !important;
+	padding:0px !important;
+}
+.dhx_scroll_y {
+	width:4px !important;
+	height:50px;
+	top:1px; right:3px; 
+	background:rgba(0, 0, 0, 0.4);
+	position:absolute; 
+	border-radius: 4px;-webkit-border-radius:4px; -moz-border-radius:4px;
+	margin:0px !important;
+	padding:0px !important;
+}
+.dhx_scroll_cont{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	clear:both;
+}

@@ -1,0 +1,8 @@
+// Font Constants
+// As a principle, avoid using font names or even these variables directly in subsequent styles. Instead, these constants
+// are to be assigned to style variables, and those variables should then be used in the styles
+$tahoma-font-stack:     tahoma, arial, helvetica, verdana, sans-serif;
+$papyrus-font-stack:    papyrus;
+$verdana-font-stack:    verdana, arial, sans-serif;
+$calibri-font-stack:    calibri, arial, sans-serif;
+$roboto-font-stack:     Roboto, arial, sans-serif;

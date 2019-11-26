@@ -1,0 +1,30 @@
+
+@mixin gridHeader ($bgColor: null, $color:null) {
+    @if ($color != null){
+        @include standardText($color);
+    } @else {
+        @include standardText;
+    }
+    @if ($bgColor != null) {
+        background-color: $bgColor;
+    }
+    border: 1px solid $j-grid-header-border-color;
+}
+
+@mixin miniGridHeader ($bgColor) {
+    @include standardText;
+    background-color: $bgColor;
+    border: 1px solid $j-grid-header-border-color;
+    text-align: center;
+}
+
+@mixin cell ($readonly: false, $hAlign: center) {
+    @if ($readonly == true) {
+        @include paddedText;
+    } @else {
+        @include paddedText($bgColor: $j-editable-data-background-color);
+    }
+    text-align: $hAlign;
+    vertical-align: middle;
+    white-space: nowrap 
+}

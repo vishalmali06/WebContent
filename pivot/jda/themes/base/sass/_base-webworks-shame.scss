@@ -1,0 +1,1280 @@
+//******************
+// Suwanto - START
+//******************
+.padding-4                  {padding: 4px;}
+.position-relative          {position: relative;}
+.width-200pct               {width: 200%;}
+// COMMON STYLES 
+.vpBorder-0                 {border: 0;}
+.vpHeight100Pct             {height: 100%;}
+.vpHeight90Pct              {height: 90%;}
+.vpLineHeight0              {line-height: 0;}
+.vpHidden                   {display: none;}
+.vpOverflow-auto            {overflow: auto;}
+.vpNoWrap                   {white-space: nowrap;}
+.vpAutoMargin               {margin: 0 auto;}
+// <input size=25/> 
+.vpInput15                  {width: 7em;}
+.vpInput16                  {width: 8em;}
+.vpInput20                  {width: 10em;}
+.vpInput25                  {width: 12em;}
+// <input size=30/> 
+.vpInput30                  {width: 18em;}
+.vpInput42                  {width: 21em;}
+// <input size=50/> 
+.vpInput50                  {width: 25em;}
+.vpInput70                  {width: 35em;}
+.vpWidth-0px                {width: 0;}
+.vpWidth-5px                {width: 5px;}
+.vpWidth-10px               {width: 10px;}
+.vpWidth-16px               {width: 16px;}
+.vpWidth-17x                {width: 17px;}
+.vpWidth-22px               {width: 22px;}
+.vpWidth-30px               {width: 30px;}
+.vpWidth-50px               {width: 50px;}
+.vpWidth-60px               {width: 60px;}
+.vpWidth-135x               {width: 135px;}
+.vpWidth-245px              {width: 245px;}
+.vpWidth-550px              {width: 550px;}
+.vpTextArea-500             {width: 500px;}
+.vpError                    {color: $j-error-text-color;}
+.vpDisabled                 {color: $j-control-text-foreground-disabled-color;}
+.vpButton {
+    width: 14px;
+    border: 0;
+}
+.vpHeight-0px               {height: 0;}
+.vpHeight-1px               {height: 1px;}
+.vpHeight-10px              {height: 10px;}
+.vpHeight-2px               {height: 2px;}
+.vpHeight-16px              {height: 16px;}
+.vpHeight-20px              {height: 20px;}
+.vpHeight-25px              {height: 25px;}
+.vpHeight-30px              {height: 30px;}
+.vpPlainText                {text-decoration: none;}
+// SEARCH STYLES
+.vpSearch-dropdown {
+    width: 187px;
+}
+.vpSearch-block-list {
+    height: 500px;
+    overflow: auto;
+}
+.vpSearch-cell-nonpublish {
+    height: 20px;
+    white-space: nowrap;
+}
+.vpSearch-popup-publishto {
+    width: 300px;
+    height: 250px;
+    overflow: auto;
+    visibility: visible;
+}
+.vpSearch-cell-equation-label {
+    width: 12%;
+    height: 22px;
+}
+.vpSearch-cell-equation-content {
+    width: 88%;
+    height: 22px;
+}
+// SearchUtils.generateSearchOptionsHTML - seemingly no longer used
+.vpSearch-option            {color: #001DF0;}
+// SearchDocument.printSingleSelectBox - seemingly no longer used
+.vpSearch-select-single-limit {
+    color: black;
+    width: 40px;
+}
+.vpSearch-select-single-nolimit {
+    color: gray;
+    width: 40px;
+}
+// SearchDocument.printSearchList - seemingly no longer used
+.vpSearch-select-option     {color: #001DF0;}
+// end
+
+.vpSearch-table-list        {width: 220px;}
+.vpSearch-column-list       {width: 200px;}
+.vpSearch-operator-list     {width: 110px;}
+.vpSearch-equation-label    {width: 12%;}
+.vpSearch-equation-content  {width: 88%;}
+.vpSearch-cell-checkbox     {width: 20px;}
+// PROCESS CHAIN STYLES 
+.vpProcessChain-cell        {height:22px;}
+// SRE STYLES 
+.sreProp-adv-panel-hidden   {visibility: hidden;}
+
+//Temporary styling for Ext-JS usage in SRE Popup and ECM Console Display
+
+//.x-panel-j-form td[id^='displayfield'][id$='labelCell'],
+//.x-panel-j-form td[id^='combobox'][id$='labelCell'],
+//.x-panel-j-form td[id^='textfield'][id$='labelCell'],
+//.x-panel-j-form td[id^='numberfield'][id$='labelCell'],
+//.x-panel-j-form td[id^='checkboxgroup'][id$='labelCell'],
+.x-panel-j-form .x-form-item-label{
+  background-color: $clr-gray-f05;
+  padding: 1px;
+}
+//.x-panel-j-form td[id^='displayfield'][id$='bodyEl'],
+//.x-panel-j-form td[id^='checkbox'][id$='boxLabelEl'],
+//.x-panel-j-form td[id^='button'][id$='btnIconEl'],
+.x-panel-j-form .x-form-item-body
+{
+  background-color: $clr-gray-f06;
+  padding: 1px;
+}
+//.x-panel-j-form div[id^='displayfield'][id$='inputEl'],
+//td[id^='combobox'][id$='inputEl'],
+//td[id^='textfield'][id$='inputEl'],
+//td[id^='checkbox'][id$='inputEl'],
+//.x-panel-j-form label,
+.x-panel-j-form .x-form-display-field ,
+.x-panel-j-form .x-form-item-label-inner{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// new CSS class for ECM show differences option
+.j-difference-row { 
+  color: #000000 !important;
+  background-color: #F5D0A9 !important;
+}
+
+.sreStatus-popup-body {
+    background-color: $j-popup-background-color;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.sreStatus-img {
+    border: 0;
+    vertical-align: top
+}
+.sreStatus-cell-message {
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: right
+}
+.sreNode-cell               {height:22px;}
+.sreProp-cell-image         {width: 2%;}
+.sreProp-cell-label         {width: 250px;}
+.sreProp-cell-optionname    {width: 150px;}
+.sreProp-cell-optionsetname {width: 125px;}
+.sreWait-panel              {background-color: $j-popup-background-color;}
+.secResource-label          {width: 100px;}
+.secRole-label              {width: 80px;}
+.secRole-label              {width: 80px;}
+.secRole-label-acl          {width: 100px;}
+.secRole-frame {
+    border: none;
+    overflow: hidden;
+}
+.secRole-panel-aclgrid      {padding-bottom: 1px;}
+.secFilter-list-tables      {width: 200px;}
+.secFilter-label            {width: 100px;}
+.secFilter-label-name       {width: 120px;}
+.secFilter-label-80         {width: 80px;}
+.secFilter-label-60         {width: 60px;}
+.secFilter-cell-checkbox    {width: 20px;}
+.secFilter-text-red         {color: $j-error-text-color;}
+.secFilter-label-table      {width: 80px;}
+.secFilter-list-relations   {width: 300px;}
+.secFilter-list-relations2  {width: 200px;}
+.secMain-cell               {width: 30px;}
+.secPartnership-table {
+    padding-left: 0;
+    padding-right: 0;
+}
+.secApplication-spacer      {width: 1px;}
+.secUser-label              {width: 80px;}
+.secUser-label-username     {width: 180px;}
+.secUser-label-username2    {width: 150px;}
+.secUser-spacer             {width: 1px;}
+.fe-column-name             {width: 150px;}
+.fe-column-operator         {width: 80px;}
+.fe-column-color            {width: 90px;}
+.fe-margin-10px             {width: 10px;}
+.fe-textarea-expression     {width: 400px;}
+.fe-compound-graph {
+    width: 100%;
+    height: 400px;
+}
+.fe-graph {
+    width: 100%;
+    height: 275px;
+}
+.fe-filter-column           {width: 150px;}
+.fe-graph-spacer            {width: 11px;}
+.fe-label-date              {width: 160px;}
+.fe-mm-returnpage           {width: 280px;}
+.fe-width-400px             {width: 400px;}
+.fe-width-5px               {width: 5px;}
+.fe-width-66px              {width: 66px;}
+.fe-width-17px              {width: 17px;}
+.fe-width-175px             {width: 175px;}
+.fe-column-date             {width: 160px;}
+.fe-option-relatedtable {
+    color: $j-error-text-color
+}
+.fe-add-column-option-padding {
+  padding-left: 20px;
+}
+.fe-properties-grid-tab-content {
+    overflow-x: hidden; overflow-y: auto;
+}
+// ImportExportDocument.buildSearchOptionsHTML - seemingly no longer used
+.fe-impexp-search-name      {color: #001DF0;}
+
+.vpGraph-series             {width: 27px;}
+.gsLookupField {
+    width: 98%;
+    margin-left: 3px;
+}
+.gsLookupField-select {
+    width: 300px;
+    height:200px;
+}
+.gsLookupField-select-height-override1 {
+    height:225px;
+}
+.gsLookupField-select-height-override2 {
+    height:210px;
+}
+.gsLookupField-select-height-override3 {
+    height:240px;
+}
+.vpFixedTableLayout         {table-layout: fixed;}
+.vpTag-img {
+    width: 18px;
+    height: 19px;
+    float: none; // was align=middle 
+    vertical-align: middle;
+    border: 0;
+}
+.vpTag-img-expandable {
+    width: 18px;
+    height: 19px;
+    float: none; // was align="middle"; 
+    vertical-align: middle;
+    border: 0;
+    display: inline
+}
+.vpTag-img-collapsible {
+    width: 18px;
+    height: 19px;
+    float: none; // was align="middle"; 
+    vertical-align: middle;
+    border: 0;
+    display: none;
+}
+.vpTreeList-get {
+    border: 1px solid $j-control-border-color;
+    background-color: $j-control-text-background-color;
+    overflow: auto;
+    cursor: default;
+}
+.vpCal-date-selected        {border: $j-base-border-color solid 2px;}
+//*****************
+// Suwanto - END
+//*****************
+//*********************
+// Ed Kennedy - START
+//*********************
+.form-inline-display        {display: inline;}
+.select-20-220px {
+    height: 20px;
+    width: 220px;
+}
+.column-height-0px          {line-height: 0px;}
+.column-width-20px          {width: 20px;}
+.vpCatalogMgrDiv {
+    /* height: 500px; */
+    overflow: auto;
+}
+.vpCatalogPageDiv {
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+}
+.vpHomePageErrorSection {
+  position:absolute;
+  left:15px;
+  top:40px;
+  visibility:visible;
+}
+.width-21px                 {width: 21px;}
+.width-100px                {width: 100px;}
+.width-260px                {width: 260px;}
+.height-19px                {height: 19px;}
+//*********************
+// Ed Kennedy - END
+//*********************
+//*********************
+// Rakesh Kumar - START
+//*********************
+.vpDynamicGrid-div          {display: inline;}
+.vpDynamicGrid-hidden-div   {display: none;}
+.vpDynamicGrid-table-td{
+    text-align:left;
+    vertical-align:top;
+}
+.vpDynamicGrid-ColHeaderDiv-td{
+    width:100%;
+    background-color: $j-grid-col-header-background-color;
+}
+.vpDynamicGrid-RowHeaderDiv-td  {background-color: $j-grid-col-header-background-color;}
+.vpDynamicGrid-CornerDiv{
+    float:left;
+    overflow:hidden;
+}
+.vpDynamicGrid-ColHeaderDiv{
+    float:left;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    background-color: $j-grid-background-color;
+}
+.vpDynamicGrid-RowHeaderDiv{
+    float:left;
+    overflow-x:auto;
+    overflow-y:hidden;
+    background-color: $j-grid-background-color;
+}
+.vpDynamicGrid-DataDiv{
+    float:left;
+    overflow:scroll;
+    background-color: $j-grid-background-color;
+}
+.vpDynamicGrid-ContentDivs-table{
+//    border-bottom:solid $j-base-border-color 1px;
+//    border-right:solid $j-base-border-color 1px
+}
+.vpDynamicGrid-HeaderDivs-table {
+//border-right:solid $j-base-border-color 1px;
+  background-color: $j-grid-col-header-background-color;
+}
+.vpDynamicGrid-miniColumnHeader {width:12px;}
+.vpDynamicGrid-columnHeader     {width:24px;}
+.vpDynamicGrid-miniRowHeader    {width:20px;}
+.vpDynamicGrid-rowHeader        {width:24px;}
+.vpDynamicGrid-headerDivs-img{
+    vertical-align:middle;
+    margin: 0px 1px
+}
+.vpDynamicGrid-contentDivs-img{
+    margin-left:4px;
+    vertical-align:middle;
+}
+.vpDynamicGrid-cell-img         {vertical-align:middle;}
+.vpDynamicGrid-widthHolderDiv   {height: 0px;}
+.vpDynamicGrid-HeaderDivs-table > tbody > tr > td.columnHeader, .vpDynamicGrid-ContentDivs-table > tbody > tr.data > td {
+  padding: $j-grid-header-padding-normal;
+  margin: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  border-style: none;
+  border-width: 0px;
+  line-height: $j-grid-row-min-height-normal;
+  font-size: $j-grid-text-size-normal;
+}
+
+
+.vpDynamicGrid-HeaderDivs-table > tbody > tr > td.miniColumnHeader, .vpDynamicGrid-ContentDivs-table > tbody > tr.miniData > td {
+  padding: $j-grid-header-padding-compact;
+  margin: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  border-style: none;
+  border-width: 0px;
+  line-height: $j-grid-row-min-height-compact;
+  font-size: $j-grid-text-size-compact;
+}
+
+
+.vpDynamicGrid-HeaderDivs-table > tbody > tr > td.columnHeader, .vpDynamicGrid-HeaderDivs-table > tbody > tr > td.miniColumnHeader{
+  color: $j-grid-col-header-text-color;
+
+  text-align : center;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include image("theme/gridColHeaderSeparator.gif", $repeat: no-repeat);
+  background-size: 2px 18px;
+  background-position: right;
+  position: relative;
+}
+
+.vpDynamicGrid-ContentDivs-table > tbody > tr.data > td, .vpDynamicGrid-ContentDivs-table > tbody > tr.miniData > td {
+  color: $j-base-foreground-color;
+}
+
+
+.img-14-14 {
+    width : 14px;
+    height : 14px;
+}
+.img-12-12 {
+    width : 12px;
+    height : 12px;
+}
+// Parameter Workbench Start 
+.paramWB-RuleFilterForm     {display:inline;}
+.paramWB-ruleDetails-table  {display:none;}
+.paramWB-ruleNameBarDiv {
+    overflow:hidden;
+    width:100%;
+}
+.paramWB-ruleCommentDiv {
+    overflow:auto;
+    height:224px
+}
+.paramWB-ruleHierarchyDiv {
+    overflow:auto;
+    height:36px;
+    width:100%;
+}
+.paramWB-GroupFilterForm    {display:inline;}
+.paramWB-groupDetails-table {display:none;}
+.paramWB-groupNameBarDiv {
+    overflow:hidden;
+    width:100%;
+}
+.paramWB-groupCommentDiv {
+    overflow:auto;
+    height:224px
+}
+.paramWB-SKUReportForm      {display:inline;}
+.paramWB-OptionSetPropertiesDiv-td {
+    position:relative;
+    display:none;
+    vertical-align: top;
+    top:1px;
+}
+.top-4px {
+	top: 4px;	
+}
+.paramWB-OptionSetPropertiesDivSpacer-td    {display:none;}
+.paramWB-OptionSetPropertiesDivSpacer       {width:28px;}
+.paramWB-auditDate1Disabled                 {display:inline;}
+.paramWB-auditDate2Disabled                 {display:inline;}
+.paramWB-auditDate1Enabled                  {display:none;}
+.paramWB-auditDate2Enabled                  {display:none;}
+.paramWB-SKUDiv                             {display:none;}
+.paramWB-NormalGridLabel                    {display:inline;}
+.paramWB-AuditGridLabel                     {display:none;}
+.paramWB-NormalGridModifiedDays             {display:inline;}
+.paramWB-AuditGridModifiedDays              {display:none;}
+.paramWB-NormalGrid                         {display:inline;}
+.paramWB-auditDataGrid1                     {display:none;}
+.paramWB-auditDataGrid2                     {display:none;}
+.paramWB-ruleDetailsTab {
+    width:700px;
+    height:300px;
+}
+.paramWB-RuleEntryForm                      {display:inline;}
+.paramWB-ruleHierarchiesTab {
+    width:700px;
+    height:300px;
+}
+.paramWB-pHierarchyGridDiv {
+    overflow:auto;
+    height:255px;
+}
+.paramWB-sHierarchyGridDiv {
+    overflow:auto;
+    height:255px;
+}
+.paramWB-ruleGroupsTab {
+    width:700px;
+    height:300px;
+}
+.paramWB-ruleValuesTab {
+    overflow:auto;
+    width:700px;
+    height:300px;
+}
+.paramWB-RuleValuesForm     {display:inline;}
+.paramWB-ruleValuesDiv {
+    overflow:auto;
+    width:700px;
+    height:280px;
+}
+.paramWB-CopyRuleForm               {display:inline;}
+.paramWB-ParameterGroupEntryForm    {display:inline;}
+.paramWB-isTimePhasedcbox           {display:none;}
+.paramWB-ParamGroupPopupNotTP {
+    padding:4px;
+    display:compact;
+}
+.paramWB-ParamGroupPopupTP {
+    padding:4px;
+    display:none;
+}
+.paramWB-ParameterUsageForm     {display:inline;}
+.paramWB-HierarchyValuesForm    {display:inline;}
+.paramWB-availableValues {
+    height:250px;
+    width:100%;
+}
+.paramWB-addSelectedValuesOn        {display:block;}
+.paramWB-addSelectedValuesOff       {display:none;}
+.paramWB-addAllSelectedValuesOn     {display:block;}
+.paramWB-addAllSelectedValuesOff    {display:none;}
+.paramWB-selectedValues {
+    height:250px;
+    width:240px;
+}
+.paramWB-removeSelectedValuesOn     {display:block;}
+.paramWB-removeSelectedValuesOff    {display:none;}
+.paramWB-removeAllSelectedValuesOn  {display:block;}
+.paramWB-removeAllSelectedValuesOff {display:none;}
+.paramWB-hiddenImagesDiv            {display:none;}
+.paramWB-expandNode-img             {display:inline;}
+.paramWB-collapseNode-img           {display:none;}
+.paramWB-duration-td                {position:relative;}
+.paramWB-duration-flyout-td         {position:relative;}
+.paramWB-duration-flyoutIconDiv {
+    display:inline;
+    left:-5px;
+    top:-2px;
+    z-index:200;
+}
+.paramWB-duration-flyoutActiveIconDiv {
+    display:none;
+    left:-12px;
+    top:-8px;
+    z-index:202;
+}
+.paramWB-duration-flyoutContentDiv {
+    display:none;
+    left:-14px;
+    top:20px;
+    z-index:201;
+}
+.paramWB-duration-flyoutInnerContentDiv {
+    overflow:hidden;
+    display:inline;
+}
+.paramWB-duration-flyoutHiddenContentDiv    {display:block;}
+.paramWB-TimePhasedGridDiv {
+    display:inline;
+    overflow-x:auto;
+    width:100%;
+}
+.paramWB-TimePhasedData-table{
+    border-bottom:solid $j-base-border-color 1px;
+    border-right:solid $j-base-border-color 1px;
+}
+.paramWB-TimePhasedData-table-rowHeader-td      {padding:0px;}
+.paramWB-TimePhasedData-table-rowHeader-td-span {display:inline;}
+.img-18-19 {
+    width : 18px;
+    height : 19px;
+}
+.img-16-14 {
+    width : 16px;
+    height : 14px;
+}
+.img-7-5 {
+    width : 7px;
+    height : 5px;
+}
+.img-16-5 {
+    width : 16px;
+    height : 5px;
+}
+.img-7-7 {
+    width : 7px;
+    height : 7px;
+}
+.img-7-16 {
+    width : 7px;
+    height : 16px;
+}
+.img-16-7 {
+    width : 16px;
+    height : 7px;
+}
+.img-16-14 {
+    width : 16px;
+    height : 14px;
+}
+.img-19-9 {
+    width : 19px;
+    height : 9px;
+}
+.padding-5                  {padding: 5px;}
+.width-49pct                {width: 49%;}
+.width-2pct                 {width: 2%;}
+.width-24px                 {width: 24px;}
+.width-45px                 {width: 45px;}
+.width-650px                {width: 650px;}
+.height-100pct              {height: 100%;}
+.height-20px                {height: 20px;}
+.height-24px                {height: 24px;}
+.column-width-28px          {width: 28px;}
+.border-1pxSolid            {border: 1px solid $j-base-border-color;}
+// Parameter Workbench End
+.vpWrappable {white-space : normal;}
+.platform_datetimepicker .x-datepicker-today {
+  border-color: white;
+}
+// Hide clear icon from input boxes in IE to maintain consistency across browsers.
+input::-ms-clear {
+    display: none;
+}
+
+//*********************
+// Pradeep - BEGIN
+//*********************
+// DB Toolkit Styles 
+.dbToolkit-tree-div {
+    width: 99.5%;
+    height: 410px;
+    overflow: auto;
+}
+.dbToolkit-tree-div2 {
+    width: 100%;
+    height: 470px;
+    overflow: auto;
+}
+.dbToolkit-tree-div2 td     {padding: 5px 0;}
+.dbToolkit-summaryscroll-div {
+    width: 100%;
+    height: 475px;
+    overflow: auto;
+}
+.dbToolkit-summaryscroll-div td {padding: 5px 0;}
+.border-1px                 {border-width: 1px;}
+.height-99pct               {height: 99%;}
+.inlineForm                 {display:inline;}
+// vp date field styles 
+.width-87px                 {width: 87px;}
+.nowrap                     {white-space: nowrap;}
+// vp lookupfield 
+.width-05px                 {width: 5px;}
+.width-30px                 {width: 30px;}
+.width-300px                {width: 300px;}
+.width-310px                {width: 310px;}
+.height-05px                {height: 5px;}
+.height-10px                {height: 10px;}
+.height-37px                {height: 37px;}
+.body-no-margins {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.width-99_5pct {
+    width: 99.5%;
+}
+
+// monitor
+.width-15px                 {width: 15px;}
+.width-20px                 {width: 20px;}
+.width-38px                 {width: 38px;}
+.width-62px                 {width: 62px;}
+.width-200px                {width: 200px;}
+.bgcolor-DAECF5 {
+    background-color: #DAECF5;
+}
+.ruleProcessPopup {
+    width: 750px;
+    height: 70px;
+    overflow: auto;
+}
+.excepCriteriaTemplate {
+    border: 1px solid black;
+    background-color: white;
+    overflow: auto;
+    cursor: default;
+}
+.excepRowFooterBg {
+  background-color: #d2d2d2;
+}
+.displayNone                {display: none;}
+
+// class for disabling scrolling vpMainAppAreaDiv while modal popup is on
+.modal-open {
+    overflow: hidden;
+}
+
+//*********************
+// Pradeep - END
+//*********************
+//*********************
+// Paromita - START
+//*********************
+.width-120px                {width: 120px;}
+.width-140px                {width: 140px;}
+//*********************
+// Paromita - END
+//*********************
+
+
+// Mods from 3/24
+
+.vpTopLeftCorner {
+    top: 0;
+    left: 0;
+}
+
+.vpNotVisible {
+    visibility: hidden;
+}
+
+.vpVisible {
+    visibility: visible;
+}
+.vpLineHeight1 {
+    line-height: 1;
+}
+.vpOverflow-hidden {
+    overflow: hidden;
+}
+.vpGridError {
+    color: $j-error-text-color;
+}
+.vpHeight-22px {
+    height: 22px;
+}
+.vpGrid-cell-error {
+    background: $j-data-error-background-color;
+}
+
+.vpGrid-left0-absolute {
+    position: absolute;
+    left: 0;
+}
+
+.vpGrid-top0-absolute {
+    position: absolute;
+    top: 0;
+}
+
+.vpGrid-width-2000px {
+    width: 2000px;
+    position: absolute;
+    overflow: auto;
+}
+
+.vpGrid-editor-boolean {
+    border: solid 1px $j-control-border-color;
+    background: $j-control-text-background-color;
+}
+
+.vpImg-middle {
+    border: 0;
+    vertical-align: middle;
+}
+
+.vpImg-size22 {
+    width: 22px;
+    height: 22px;
+    border: 0;
+}
+.width-1px {
+    width: 1px;
+}
+.width-7px {
+    width: 7px;
+}
+.width-132px {
+    width: 132px;
+}
+.width-9px {
+    width: 9px;
+}
+.width-141px {
+    width: 141px;
+}
+.width-142px {
+    width: 142px;
+}
+.border-0 {
+    border:0 ;
+}
+.hspace1 {
+    margin: 0px 1px;
+}
+// stdhtmlRenderStatus - seemingly no longer used
+.bgcolor-336699 {
+    background-color:#336699;
+}
+/* VPFlyout Dialog Start */
+.vpFlyoutIconDiv {
+    display:inline;
+}
+.vpFlyoutActiveIconDiv , .vpFlyoutContentDiv{
+    display:none;
+}
+.vpFlyoutInnerContent {
+    overflow:hidden;
+    display:inline-block;
+}
+.vpFlyoutHiddenContent {
+    display:block;
+}
+
+/* VPFlyout Dialog End */
+
+/* VPAccumulator Start */
+.vpAccumulator-ContentDiv {
+    border:1px solid $j-control-border-color;
+    background-color: $j-control-text-background-color;
+    outline:0;
+    overflow:auto;
+    cursor:default;
+}
+/* VPAccumulator End */
+
+/* VPColorPicker Start */
+.vpColorSwatchDiv {
+    cursor:none;
+}
+.vpColorSwatchTable-td {
+    position:relative;
+}
+/* VPColorPicker End */
+
+/* VPDurationField Start */
+
+.vpDurationFlyout-parent-td {
+    position:relative;
+}
+
+/* VPDurationField End */
+
+/* VPHierarchyControlTag Start */
+
+.vpHierarchyControl-selectBox {
+    height:250px;
+    width:240px;
+}
+
+.vpHierarchyControl-label {
+    color: $j-label-color;
+}
+
+.vpInlineDisplay {
+    display: inline;
+}
+
+.vpOverflow-hidden {
+    overflow: hidden;
+}
+
+.vpHierarchyLevelGridDiv {
+    overflow:auto;
+    padding:0px;
+}
+
+/* VPHierarchyControlTag End */
+
+/* VPDynamicHierarchyTag Start */
+.vpHierarchyDataTreeContainer {
+    border: 1px solid $clr-gray-c01;
+    height: 100%;
+}
+
+.vpTableColumnTreeContainer {
+  border: 1px solid $clr-gray-c01;
+  height: 250px;
+  width: 250px;
+}
+/* VPDynamicHierarchyTag End */
+
+/* VPLayout Start */
+
+.vpLayoutDiv {
+    position:relative;
+}
+
+/* VPLayout End */
+
+/* VPPagedGridTag Start */
+
+.vpPagedGrid-FlyoutDiv {
+    position:absolute;
+    top:-1500px;
+    left:-1500px;
+}
+
+/* VPPagedGridTag End */
+
+/* VPTimeOfDay Start */
+
+.vpTimeOfDayFlyout-parent-td {
+    position:relative;
+}
+
+/* VPTimeOfDay End */
+
+/* VPHeader Start */
+
+.vpPagingHeaderTable {
+    border-top:none;
+}
+.vpHeaderActionControlsTable > tbody > tr > td.vpHeaderMenuControls-parent-td {
+    padding:0;
+    padding-right:3px;
+    padding-left:3px;
+    padding-bottom:2px;
+}
+.vpHeaderActionControlsTable > tbody > tr > td.vpHeaderIconControls-td {
+    padding-left:1px;
+    padding-right:1px;
+}
+.vpHeaderIconControls-parent-td {
+    border-top:none;
+}
+.vpHeaderActionIconsTable > tbody > tr > td.vpHeaderIconsBar-td
+{
+    padding-left:1px;
+    padding-right:1px;
+}
+/* VPHeader End */
+/* vp properties */
+
+.vpDiv-AvailableCols {
+    border: 1px solid $j-control-border-color;
+    background-color: $j-control-text-background-color;
+    overflow: auto;
+    cursor: default;
+    width: 300px;
+    height: 400px;
+}
+
+/* vp tree control */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.img-hspace-0-vspace-0 {
+    margin: 0px 0px;
+}
+
+.img-18-16 {
+    width : 18px;
+    height : 16px;
+}
+
+.img-02-16 {
+    width : 2px;
+    height : 16px;
+}
+/* dhtmlx-clist */
+.dhtmlx-clist {
+    width:250px;
+    height:150px;
+    overflow:auto;
+}
+
+/* VpWizard Styling */
+ .stepDiv{
+   position:absolute;
+     width:800px;
+     height:400px;
+     z-index:15;
+
+     left:50%;
+     margin:-100px 0 0 -150px;
+
+ border:1px solid #ccc;
+ }
+ .body, html{
+    display:table;
+    height:100%;
+    width:100%;
+}
+.container{
+    vertical-align:middle;padding:10px;
+    height:400px;
+    overflow:auto;
+}
+.container .box{
+    width:1400px;
+    height:400px;
+    border:1px solid #ccc;
+    margin:0 auto;
+
+}
+.vpWizardButton {
+  display:block;
+  cursor:pointer;
+  margin:0;
+  margin-top:3px;
+  margin-right:10px;
+  padding:0;
+  padding-top:5px;
+  text-decoration: none;
+  height:25px;
+  width:120px;
+  color:#FFF;
+  font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+  outline-style:none;
+  text-align:center;
+  background-color:   #5A5655;
+  border: 1px solid #5A5655;
+  -webkit-border-radius: 5px;
+  -moz-border-radius  : 5px;
+  	-khtml-border-radius: 5px;
+	border-radius: 5px;
+  float:right;
+}
+
+.steps {
+	margin-left: 275px;
+}
+.steps ol {
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.steps li {
+	float: left;
+}
+.steps li.level0 {
+	z-index: 1;
+	width: 15%;
+}
+.steps li.level1 {
+	z-index: 1;
+	width: 15%;
+}
+.steps li.level2 {
+	z-index: 2;
+	width: 15%;
+}
+.steps li.level3 {
+	z-index: 3;
+	width: 15%;
+}
+.steps li.level4 {
+	z-index: 4;
+	width: 15%;
+}
+.steps li.level5 {
+	z-index: 5;
+	width: 15%;
+}
+.steps li div {
+	font-family: 'Verdana Bold', 'Verdana';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 10px;
+	color: #666666;
+	text-align: center;
+	padding: 6px 0 6px 40px;
+	background-color: #E7E7E7;
+	position: relative;
+	text-transform: uppercase;
+}
+.steps li div:after {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	/* Go big on the size, and let overflow hide */
+
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #E7E7E7;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 100%;
+	z-index: 5;
+}
+.steps li div:before {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	/* Go big on the size, and let overflow hide */
+
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid #cfcfcf;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1;
+}
+.steps li:last-child div:before {
+	content: normal;
+}
+.steps li div span {
+	color: #bababa;
+	display: inline-block;
+	width: 32px;
+	height: 35px;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 24px;
+	background-color: #E8E8E8;
+	font-size: 14px;
+}
+.steps li.current div {
+	color: #FFFFFF;
+	background-color: #448CC5
+}
+.steps li.current div span {
+	color: #FFFFFF;
+	background-color: #448CC5
+}
+.steps li.completed div {
+	color: #395e00
+}
+.steps li.completed div span {
+	color: #66A4E5;
+	color: transparent;
+}
+.steps li.current div:after {
+	border-left: 30px solid #448CC5
+}
+.steps li:first-child div {
+	padding-left: 10px;
+}
+.steps li.nonvisited div {
+	color: #ccc;
+	background-color: #F6F6F6
+}
+.steps li.nonvisited div span {
+	color: #ccc;
+	background-color: #F6F6F6
+}
+.steps li.nonvisited div:after {
+	border-left: 30px solid #F6F6F6
+}
+.steps li.nonvisited a {
+	pointer-events: none;
+	cursor: default;
+}
+
+// Light backgrounds
+.background-light1 {
+  background-color: $clr-white;
+  color: $clr-gray-5;
+}
+
+.background-light2 {
+  background-color: $clr-gray-f01;
+  color: $clr-gray-5;
+}
+
+// Mid backgrounds
+.background-mid1 {
+  background-color: $clr-catskill-white;
+  color: $clr-gray-5;
+}
+
+.background-mid2 {
+  background-color: $clr-botticelli;
+  color: $clr-gray-5;
+}
+
+// Dark backgrounds
+.background-dark1 {
+  background-color: #33444C;
+  color: $clr-gray-f01;
+}
+
+.background-dark2 {
+  background-color: #1F3138;
+  color: $clr-gray-f01;
+}
+
+//******************
+// Notification
+//******************
+.notificationCountCls {
+  border-radius: 5px;
+  font-family: Roboto, arial, sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  padding: 2px 4px 2px 4px;
+  text-align: right;
+}
+
+.inProgressNotificationState {
+  color: $j-indicator-good-color !important;
+}
+
+.onHoldNotificationState {
+  color: $j-indicator-average-color !important;
+}
+
+.completedNotificationState {
+  color: $j-button-icon-color !important;
+}
+.inProgressNotificationState, .onHoldNotificationState, .completedNotificationState {
+  display: inline !important;
+}
+
+.showIconOnHover {
+  display: none;
+  .notificationMouseOver & {
+    display: inline;
+  }
+}
+
+.user-avatar-text {
+  background-color: #374247;
+  color: $clr-gray-f01;
+  width:32px;
+  height:32px;
+  line-height:32px;
+  font-size: 18px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0px 4px 0px 4px;
+}
+
+.notificationDetailHeader {
+  background-color: $j-grid-selected-background-color;
+  color: $j-grid-selected-foreground-color;
+}
+
+/*
+adding below workaround to avoid a border around the inner input field generated by tagfield
+*/
+.x-tagfield-input-field {
+  border: 0 !important;
+}
+/*
+Add message popup styling
+*/
+.screenShotPreview .x-autocontainer-outerCt {
+  width: 100%;
+}
+.screenShotDiv {
+  width:100%;
+  height:100px;
+  border:1px solid #b5b8c8;
+  -webkit-user-select: auto;
+  -webkit-user-drag: auto;
+}
+.screenShotPreviewImg {
+  width:100%;
+  height:100%;
+  visibility:hidden;
+}
+
+.loadMoreRecord {
+  background-color: #f5f5f5;
+}
+
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

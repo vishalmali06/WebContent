@@ -1,0 +1,30 @@
+@import 'jda-pivot-filter';
+
+
+
+/**************** Measure Filter Wrapper *****************************/
+
+.j-pvt-measurefilter-wrapper{
+	.j-pvt-measurefilter-panel-body{
+	      padding-left:$j-pvt-filter-view-panel-button-area-left-padding;
+		  padding-right:$j-pvt-filter-view-panel-button-area-right-padding;
+		  padding-top:$j-pvt-filter-view-panel-grid-panel-top-padding;
+		  padding-bottom:$j-pvt-filter-view-panel-grid-panel-bottom-padding;
+	}
+}
+
+.j-pvt-measurefilter-moveallleft-img {
+  background-image: url("../../../images/move_all_left_normal_24.png");
+}
+
+.j-pvt-measurefilter-moveallright-img {
+  background-image: url("../../../images/move_all_right_normal_24.png");
+}
+
+.j-pvt-measurefilter-moveleft-img {
+  background-image: url("../../../images/left_normal_24.png");
+}
+
+.j-pvt-measurefilter-moveright-img {
+  background-image: url("../../../images/right_normal_24.png");
+}

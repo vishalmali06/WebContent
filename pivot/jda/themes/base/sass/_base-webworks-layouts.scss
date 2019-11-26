@@ -1,0 +1,53 @@
+@for $cell-spacing from 0 through 5 {
+    @for $cell-padding from 0 through 5 {
+        .table-#{$cell-spacing}-#{$cell-padding} {
+            @include table($cell-spacing, $cell-padding);
+        }
+    }
+}
+
+@for $padding from 0 through 3 {
+    .padding-#{$padding} {
+        @include padding(#{$padding}px);
+    }
+}
+
+.width-1pct {
+    width: 1%;
+}
+
+@for $w from 1 through 20 {
+    .width-#{($w*5)}pct {
+        width: (($w*5) * 1%);
+    }
+}
+
+@for $h from 1 through 20 {
+    .height-#{($h*5)}pct {
+        height: (($h*5) * 1%);
+    }
+}
+
+@each $pos in bottom, top, middle {
+    .valign-#{$pos} {
+        vertical-align: $pos;
+    }
+}
+
+@each $pos in left, right, center {
+    .align-#{$pos} {
+        text-align: $pos;
+    }
+}
+
+@each $pos in left, right, center, justify {
+    th[align="#{$pos}"], td[align="#{$pos}"] {
+        text-align: $pos;
+    }
+}
+
+@each $pos in top, middle, bottom {
+    th[valign="#{$pos}"], td[valign="#{$pos}"], tr[valign="#{$pos}"] {
+        vertical-align: $pos;
+    }
+} 

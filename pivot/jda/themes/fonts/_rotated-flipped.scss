@@ -1,0 +1,10 @@
+// Rotated & Flipped Icons
+// -------------------------
+
+.#{$jf-css-prefix}-rotate-0   { @include jf-icon-rotate(0deg, 0);  }
+.#{$jf-css-prefix}-rotate-90  { @include jf-icon-rotate(90deg, 1);  }
+.#{$jf-css-prefix}-rotate-180 { @include jf-icon-rotate(180deg, 2); }
+.#{$jf-css-prefix}-rotate-270 { @include jf-icon-rotate(270deg, 3); }
+
+.#{$jf-css-prefix}-flip-horizontal { @include jf-icon-flip(-1, 1, 0); }
+.#{$jf-css-prefix}-flip-vertical   { @include jf-icon-flip(1, -1, 2); }

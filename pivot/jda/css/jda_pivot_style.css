@@ -1,0 +1,1469 @@
+
+.dhx_ss_hscroll .subScrollX {
+ display: inline-block;
+ border-left: 1px dotted gray;
+}
+
+.pivotLayerElement {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+}
+
+.pivotLayerElement .imageGrid{
+  padding: 0px 4px 4px 0px;
+  margin:0px;
+  list-style: none; 
+}
+
+
+.pivotLayerElement .imageGrid img a{
+  padding: 0;
+  list-style: none; 
+}
+
+.pivotLayerElement .imageGrid img{
+  float:left;
+  margin: 3px;
+  padding: 0;
+  border: 3px solid black;
+   display: inline-block;
+}
+
+.pivotParentContainer { height: 100%;width:100%;    overflow:hidden; }
+
+ .pivotWrapper {
+    width:100%;
+    height:100%;
+}
+.pivotLayerElement .imageGrid img:hover {
+    border: solid 3px #CCC;
+    -moz-box-shadow: 3px 3px 5px #000; 
+    -webkit-box-shadow: 3px 3px 5px #000; 
+    box-shadow: 3px 3px 5px #000; 
+}
+
+
+.pp_details fieldset {
+    border: 1px solid #ddd;
+    padding: 0 0.5em 0.5em;
+  }
+.pp_details fieldset div {
+    margin: 0.3em 0;
+    clear: both;
+}  
+.pp_details fieldset label {
+    width: 8em;
+    text-align: right;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.pp_details fieldset input {border:0px}
+
+.pivotLayerElement .image-type .ribbon-wrapper-blue {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+}
+
+.pivotLayerElement .image-type .ribbon-blue {  
+  font: bold 11px Sans-Serif;
+  color: #fff;
+  text-align: center;
+  letter-spacing:1px;
+  text-shadow:1px -1px 3px rgba(0,0,0,0.5) ;
+  -webkit-transform: rotate(315deg);
+  -moz-transform:    rotate(315deg);
+  -ms-transform:     rotate(315deg);
+  -o-transform:      rotate(315deg);
+  position: relative;
+  padding: 3px 0;
+  right: 35px;
+  top: 30px;
+  width: 150px;
+  background: rgba(167,207,223,0.5);
+  background: -moz-linear-gradient(top, rgba(167,207,223,0.5) 0%, rgba(35,83,138,0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(167,207,223,0.5)), color-stop(100%,rgba(35,83,138,0.5)));
+  background: -webkit-linear-gradient(top, rgba(167,207,223,0.5) 0%,rgba(35,83,138,0.5) 100%);
+  background: -o-linear-gradient(top, rgba(167,207,223,0.5) 0%,rgba(35,83,138,0.5) 100%);
+
+  color: #fff;
+ background: linear-gradient(top, rgba(167,207,223,0.5) 0%,rgba(35,83,138,0.5) 100%);
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-blue:before, .ribbon-blue:after {
+  content: "";
+  border-top:   3px solid #23538a;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+.ribbon-blue:before {left: 0;}
+.ribbon-blue:after {right: 0;}
+
+
+.dhx_cell{
+    text-align:center;
+    overflow:hidden;
+    height:auto;
+    height:18px;
+    min-height:0%;
+}
+
+/*
+.pivotLayerElement table>thead>th,.pivotLayerElement table>tr>td, .pivotLayerElement  .dhx_column
+{
+ box-sizing: content-box;
+ -moz-box-sizing: content-box; 
+}
+
+.pivotLayerElement table>thead>th
+{
+ box-sizing: content-box;
+ -moz-box-sizing: content-box; 
+}
+
+*/
+/* Change the width of the resize handle*/
+.ui-resizable-e { cursor: e-resize; width: 20px; right: -10px; top: 0; height: 100%; }
+
+.waitIndicator .ui-dialog-titlebar {
+  display: none;
+}
+.waitIndicator .ui-dialog-content{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: tahoma, arial, helvetica, verdana, sans-serif; 
+    overflow-x: hidden;
+}
+
+ .facet_member_spacer { 
+    font-size: 14px;
+/*     line-height: 18px; */
+    float: left;
+    min-width: 14px;
+    height: 1px;
+}
+
+.facet_member_spacer:after
+{ 
+    content:"\00a0\00a0";
+}
+
+.resizableColumn{
+    position:relative;
+}
+
+.highlightedChangedCell {
+    background-color: 00FFFF;
+}
+
+.facet_member_bullet_spacer {
+    float: left;
+}
+.pivot_member_name
+{
+    position:relative;
+    overflow:hidden;
+    white-space : nowrap;
+    text-overflow : ellipsis;
+    
+}
+
+.facet_member_collapsed {
+    background: url(../images/collapsed_arrow.png);
+    background-repeat: no-repeat;
+    background-position: -1px 5px;
+    background-position: center;
+    float: left;
+    width: 15px;
+    height: 12px;
+    margin-left: 0px;
+}
+
+
+.facet_member_collapsed_highlight {
+    background: url(../images/collapsed_arrow_highlight.png);
+    background-repeat: no-repeat;
+    background-position: -1px 5px;
+    background-position: center;
+    float: left;
+    width: 15px;
+    height: 12px;
+    margin-left: 0px; 
+}
+
+.facet_member_expanded {
+    background: url(../images/expanded_arrow.png);
+    background-repeat: no-repeat;
+    background-position: -4px 5px;
+    background-position: center bottom;
+    float: left;
+    width: 15px;
+    height: 10px;
+     margin-left: 0px; 
+}
+
+.facet_member_expanded_highlight {
+    background: url(../images/expanded_arrow_highlight.png);
+    background-repeat: no-repeat;
+    background-position: -4px 5px;
+    background-position: center bottom;
+    float: left;
+    width: 15px;
+    height: 10px;
+    margin-left: 0px;
+}
+
+/* style for dimension columns */
+div.dhx_cell_dimension {
+    font-family: Tahoma, Verdana, Franklin Gothic Medium, Georgia;
+    font-size: 12px;
+    text-align: left;
+    text-indent: 5px;
+    padding-left: 1px;
+    margin-left: 0px;
+    color: black;
+    font-weight: normal;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.dhx_column>div,.dhx_table_cell {
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+}
+
+div.dhx_column>div,.dhx_table_cell {
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+    color: #000000;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+
+.pivotLayerElement .fillerCell {
+    border-bottom: 1px solid white;
+}
+
+div.dhx_block_selection {
+    
+}
+
+.dhtmlx-error div {
+    background-color: #d81b1b;
+    border: 1px solid #940000;
+    color: #000;
+}
+
+div.dhx_column>div,.dhx_table_cell,div.dhx_cell.dhx_cell_dimension.dhx_cell_even,div.dhx_cell.dhx_cell_dimension.dhx_cell_odd
+    {
+    
+}
+
+div.dhx_column.colBoundry {
+    border-right: 1px solid DarkSlateGray;
+    z-index: 1;
+}
+
+div.dhx_dtable div.dhx_column div.rowBoundry.dhx_cell {
+    border-bottom: 1px solid DarkSlateGray;
+}
+
+div.dhx_dtable div.dhx_column  div.dhx_value {
+    font-family: Tahoma, Franklin Gothic Medium, Georgia, Verdana;
+    padding: 0px 3px 0px 0px;
+    vertical-align: middle;
+}
+
+div.dhx_dtable div.dhx_column  div.dhx_value input[type='checkbox'] {
+    margin: 2px 0px 1px 0px;
+}
+div.dhx_dtable div.dhx_column  div.dhx_value span.cell_content.string {
+    float:left;
+    width:100%;
+    overflow-x:hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+}
+
+div.dhx_value span.cell_content.negative {
+    color:red;
+}
+
+div.dhx_attr_cell.dhx_value>span.cell_editor_wrapper{
+	width:100%;
+}
+div.dhx_cell.dhx_value>span.cell_editor_wrapper {
+    text-align: right;
+    padding: 0px 0px 0px 0px;
+    border: 0px 0px 0px 0px;
+    border-top-width: 1px;
+    margin: 0px 0px 0px 0px;
+    height: 100%;
+    float:right;
+    position:relative;
+    cursor:text;
+}
+
+div.dhx_cell.dhx_value>span.cell_editor_wrapper>.cell_editor {
+    text-align: right;
+    padding: 0px 0px 0px 0px;
+    border-width: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;  
+}
+
+.sideCellMember>div ,.topCellMember>div {
+    position:relative;
+}
+.topCellMember {
+    position:relative;
+    height: 100%;
+}
+
+.pivotLayerElement  .topFacet {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.pivotLayerElement  .dhx_ss_header th {
+    border-width: 0px;
+    padding: 0px;
+}
+
+.pivotLayerElement .dhx_column>div.editingCell.editabledata.dhx_cell {
+    padding: 0px;
+}
+
+.pivotLayerElement .dhx_cell {
+    text-overflow: ellipsis;
+}
+
+.pivotLayerElement .dhx_cell>span
+{
+     cursor: default;
+}
+
+.dhx_ss_header td{
+    
+}
+
+.pivotLayerElement .dhx_ss_header table
+{
+    height:auto; 
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-left-width: 0px;
+}
+
+.pivotLayerElement .dhx_ss_header table td
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pivotLayerElement .sideFacetsHeaderWrapper{
+    /* height:100%; */
+}
+
+.dhx_ss_header>*{
+    display: table-cell;
+}
+
+.dhx_ss_header{
+    /* display: table-row; */
+}
+
+.dhx_hcell {
+    padding: 0px 0px 0px 0px;
+    margin:0px;
+    white-space:nowrap;
+}
+
+.droppableFacet {
+    padding: 0px 0px 0px 0px;
+}
+
+.dhx_view:focus {
+    color: inherit;
+}
+
+div.topFacetNames:not (:last-child ){
+    border-bottom-color: rgb(160, 160, 160);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    white-space: nowrap;
+}
+
+div.topFacetNames:not (:first-child ){
+    border-top-color: rgb(255, 255, 255);
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.resizableColumn  {
+    overflow:hidden;
+    z-index:1;
+}
+
+.pivotLayerElement  .cell_lock {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.pivotLayerElement .ui-icon-phy {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_228b22_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.pivotLayerElement .ui-icon-non {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.pivotLayerElement .ui-icon-tmp {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.pivotLayerElement div.dhx_column>div.tBucket-P,.pivotLayerElement .dhx_table_cell.tBucket-P {
+    background-color :#d2d2d2  ;
+    color :black;
+    opacity: 1;
+}
+
+.pivotLayerElement div.dhx_column>div.tBucket-C,.pivotLayerElement .dhx_table_cell.tBucket-C {
+    background-color :lightblue;
+    color :black;
+}
+
+.pivotLayerElement div.dhx_column>div.tBucket-P.editabledata,.pivotLayerElement .dhx_table_cell.tBucket-P.editabledata {
+    background-color :lightgrey;
+
+    background: -webkit-linear-gradient(left, #e5d8a5 , #e5d8a5 );
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#e5d8a5', endColorstr='#e5d8a5');
+    color :black;
+}
+
+.pivotLayerElement div.dhx_column>div.tBucket-C.editabledata,.pivotLayerElement .dhx_table_cell.tBucket-C.editabledata {
+    background: -webkit-linear-gradient(left, lightblue, #f6edc5);  
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#ADD8E6', endColorstr='#f6edc5');
+/*  background-color :lightblue; */
+    color :black;
+}
+
+.pivotLayerElement div.dhx_column>div.protectedcelldata,.pivotLayerElement .dhx_table_cell.protectedcelldata {
+    background-color :#C29EF7;
+    color :black;
+    opacity: 1;
+}
+.pivotLayerElement div>div.dhx_cell_select.dhx_cell ,.pivotLayerElement div>div.dhx_column>div.dhx_cell_select.dhx_cell {
+    border-bottom: 1px solid #a6d074;
+    border-bottom-width: 0px;
+    border-top: 1px solid #a6d074;
+    border-top-width: 0px;
+    padding-top: 0px;
+    border-right: 1px solid #a6d074;
+    border-left: 1px solid #a6d074;
+    padding-left: inherit;
+}
+
+.pivotLayerElement div>div.dhx_column>div.dhx_cell_select.dhx_cell,.pivotLayerElement div>div.dhx_column>div.dhx_column_select.dhx_cell,.pivotLayerElement div>div.dhx_column>div.dhx_row_select.dhx_cell,.pivotLayerElement tr.pivotHdrRow>td.dhx_cell_select
+    {
+    background-Image: none;
+    opacity: 1.0;
+    background-color: #dbffb0; 
+    background-Color: #dbffb0; 
+    background: -ms-linear-gradient(top, #cff4a3 0%, #dbffb0 20%, #dbffb0 80%, #cff4a3
+        100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cff4a3),
+        color-stop(20%, #dbffb0), color-stop(80%, #dbffb0),
+        color-stop(100%, #cff4a3) ); 
+    filter: none;
+    color:inherit;
+}
+
+.pivotLayerElement div.dhx_column>div.highlightedChangedCell.dhx_value.dhx_value,.pivotLayerElement .dhx_table_cell.highlightedChangedCell.dhx_value
+{
+    background-color: #00FFFF;
+    background-Image: none;
+    opacity: 1.0;
+    filter: none;
+    color:inherit;
+}
+
+.pivotLayerElement div.dhx_column>div.multiEditHighlight.dhx_value.dhx_value,.pivotLayerElement .dhx_table_cell.multiEditHighlight.dhx_value
+{
+    background-color: #FDFD10;
+    background-Image: none;
+    opacity: 1.0;
+    filter: none;
+    color:inherit;
+}
+.selection-box {
+    position:    absolute;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+    border:     1px dotted white;
+    z-index: 9999;
+  }
+  
+.pivotClipboardElement {
+    position:    absolute;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.0);
+    border:     0px dotted white;
+    z-index: -9999; 
+}  
+
+.unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.multi-selected {
+    background-color: rgba(183,219,255,0.5) !important;
+    background-Image: none !important;
+    color: black !important;
+  }
+
+/* SIDE CONTENT */
+
+.pivotSidePanelpullout {
+    background-color: White;
+    color: #2e6e9e;
+    padding: 4px 8px;
+    font-size: 1.1em;
+ /*    font-weight: bold; */
+    -moz-border-radius-bottomleft: 1em;
+    -moz-border-radius-topleft: 1em;
+    -webkit-border-bottom-left-radius: 1em;
+    -webkit-border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    border: 1px solid #79b7e7;
+}
+
+.pivotSidePanelpullout:hover {
+    background: #dfeffc ; 
+    color: #2e6e9e;
+    opacity:1.0;
+}
+
+.pivotSidePanel{
+    min-height:300px;
+    background: #dfeffc ; 
+    color: #2e6e9e;
+    -moz-border-radius-bottomleft: 1em;
+    -webkit-border-bottom-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.pivotSidePanel > div > div {
+    padding-left: 10px;
+    padding-right: 40px;
+}
+
+.pivotSidePanel a {
+    color: White;
+}
+/****  End of side panel ***/
+.pivotLayerElement .ui-icon.ui-icon-red {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_cd0a0a_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.ui-icon-green {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_228b22_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.ui-icon-yellow {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_ef8c08_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.ui-icon-white {
+    background-image:
+        url(../../vendor/jquery/css/jda-theme/images/ui-icons_bebebe_256x240.png);
+    float: left;
+    opacity: 1;
+}
+
+.dhx_ss_left {
+    color: black;
+}
+
+.pivotHdrRow {
+    position : relative;
+}
+.pivotHdrRow>TD {
+    overflow-x : hidden;
+    
+}
+.dhx_ss_header *, .dhx_ss_center_scroll *,.pivotSandBox
+{
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+}
+.dhx_ss_header .dhx_hs_attr
+{
+	border-right: 1px solid #ffffff;
+}
+.dhx_ss_header table, .dhx_ss_footer table {
+
+}
+
+.dhx_ss_header TD,.dhx_ss_footer TD,.pivotDraggable {
+    font-family: Tahoma, Verdana;
+    font-weight: normal;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+/*  height: 20px;*/
+    background-color: #d2d2d2;
+    text-align: left;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width : 0px;
+/*    border-left-width: 1px; */
+    border-right-width: 1px;
+
+/*  border-right-color: #a0a0a0;
+    border-bottom-color: #a0a0a0;
+    padding-right: 3px;
+    padding-right: 3px;
+    padding-left: 3px; */
+    background: #d2d2d2;
+    
+}
+
+.dhx_ss_header .dhx_hs_left TD,.dhx_ss_footer TD,.pivotDraggable {
+    padding-left: 4px;
+}
+
+
+.dhx_ss_header .dhx_hs_center  TR:not(:last-child) TD{
+    border-bottom: 1px solid #ffffff;
+}
+
+.dhx_ss_header   TR:not(:last-child) TD {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1px;
+}
+
+.dhx_ss_header .dhx_hs_left  TR>TD:last-child {
+    border-right-width: 1px;
+}
+
+.dhx_ss_header .dhx_hs_left  TR:only-child TD {
+    border-bottom-width: 0px;
+}
+
+.goodCommentTriangle {
+    width: 0;
+    height: 0;
+    border-right: 4px solid #00FF85;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #00FF85;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.badCommentTriangle {
+    width: 0;
+    height: 0;
+    border-right: 4px solid #FC1B08;
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #FC1B08;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.ui-tooltip-content {
+    position: relative;
+    padding: 5px 26px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100px;
+    text-align: left;
+    word-wrap: break-word;
+    background: #FFFFFF;
+}
+
+.headerTooltipTriangle {
+    width: 0;
+    height: 0;
+    border-right: 5px solid green;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid green;
+    float: right;
+}
+
+.dhx_view dhx_dtable {
+    font-family: Tahoma, Verdana;
+}
+
+.pivotLayerElement >.dhx_view.dhx_dtable {
+    position:absolute;
+}
+.pivotLayerElement {
+    font-family: Tahoma, Verdana;
+}
+
+.dhx_cell.dhx_cell_dimension div.dhx_cell {
+    text-align: left;
+}
+
+
+
+
+#jda_pivot_corner {
+    background-color: #d2d2d2;
+    text-align: center;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 2px;
+    background: #d2d2d2;
+}
+
+
+div.dhx_column div.sideCellMember {
+/*    background-color: #d2d2d2;*/
+/*  border: 1px solid #ffffff; 
+    border-right-color: #a0a0a0;
+    border-bottom-color: #a0a0a0;*/
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: white;
+/*  padding-top: 2px;
+    padding-bottom: 2px; */
+}
+
+.pivotHdrRow div[id^='hdr_fc'] {
+    background-color: #d2d2d2;
+    padding-right: 3px;
+    padding-left: 3px;
+    /* padding-top: 2px; */
+    /* padding-bottom: 2px; */
+}
+
+div.dhx_ss_center_scroll div.dhx_column div:last-child {
+    border-bottom-color: #a0a0a0;
+}
+
+.pivotLayerElement .hover {
+    background: #A7C4EE !important;
+}
+
+td.sideFacet {
+    padding-top: 1px;
+    padding-bottom:1px;
+}
+
+td.sideFacet div.topFacetNames {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    border-bottom-color: rgb(160, 160, 160);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-style: solid;
+    border-top-width: 1px;
+    text-align: left;
+    
+}
+
+td.sideFacet div.topFacetNames:first-child {
+    padding-top: 3px; 
+    border-top-width: 0px;
+}
+
+td.sideFacet div.topFacetNames:last-child {
+    border-bottom-width: 0px;
+    padding-bottom: 3px; 
+
+}
+
+.pivotLayerElement .cell-err {
+    opacity: 0.5;
+}
+
+div.dhx_cell.dhx_value {
+    text-align: right;
+    overflow: hidden;
+    position: relative;
+}
+
+div.dhx_cell.dhx_value.string-type {
+    text-align: left;
+}
+
+div.dhx_hcell {
+    padding-left: 4px;
+}
+
+/** This span is the icon info - the one on the most left**/
+div.dhx_cell.dhx_value span.errorInd  {
+
+    
+}
+div.dhx_cell.dhx_value span.metaInfo {
+    margin-left:0px;
+    margin-right:0px;
+    padding:0px;
+    position:absolute;
+    left:0px;
+    display: inline;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0);    
+}
+
+div.dhx_cell.dhx_value span.metaInfo>span {
+    margin-left:-2px;
+    margin-right:0px;
+    display: inline;
+}
+
+.droppableMeasures {
+    border: 1px solid yellow;
+}
+
+.dhx_ss_editor {
+    
+}
+
+/* .draggableFacet,.draggableMeasures {
+    color: black;
+} */
+
+.dhx_hs_center .draggableMeasures {
+    padding-left: 4px;
+}
+
+
+.leftDrop {
+    border-left: thick double #ff0000;
+    border-left-color: blue;
+}
+
+.rightDrop {
+    border-right: thick double #ff0000;
+    border-right-color: blue;
+}
+
+.topDrop {
+    border-top: thick double #ff0000;
+    border-top-color: blue;
+}
+
+.bottomDrop {
+    border-bottom: thick double #ff0000;
+    border-bottom-color: blue;
+}
+
+.dhx_view:focus {
+    color: black;
+}
+
+.pivotLayerElement div.dhx_column>div.naValue {
+    background-color:inherit;
+    background:
+        url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKhoSnGjDA+iLN69ZyzYAEYB8RmROaABABtSg1GJNPnNAAAAABJRU5ErkJggg==);
+}
+
+
+
+div.blockOverlay {
+    background-color: #013366;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50 );
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50 );
+    -moz-opacity: 0.50;
+    opacity: .5;
+    font-weight: normal;
+}
+
+.grip {
+    width: 10px;
+    height: 30px;
+    margin-top: -3px;
+    margin-left: -5px;
+    position: relative;
+    z-index: 88;
+    cursor: e-resize;
+}
+
+
+.grip:hover {
+    background-position-x: -20px;
+}
+
+#hdr_mr {
+/*  display: inline; */
+    width: 100%;
+    height: 100%;
+}
+
+.dragging .grip {
+    background-position-x: -40px;
+}
+
+.pivotLayerElement .errorInd {
+    float: right;
+    margin-right: -5px;
+    min-width: 16px;
+}
+
+.sortableJDALList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+.sortableJDALList li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 1.4em;
+    height: 18px;
+}
+
+.sortableJDALList li span {
+    position: absolute;
+    margin-left: -1.3em;
+}
+
+/**
+Fix to show the lasso over the in the list of the properties tab which has a high z-index
+**/
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 1000;
+    border: 1px dotted black;
+}
+
+
+.pivotCellTooltipStyle {
+    background-color: #a7c4ee;
+    border-color: #000000;
+    color: #000000;
+    max-width: 3000px;
+    max-height: 5000px;
+    min-width: 0px;
+    min-height: 0px;
+    border-radius: 3px;
+}
+
+.pivotCellTooltip li {
+    font-size: 1em;
+}
+
+.pivotCellTooltip table {
+    border-collapse: collapse;
+}
+
+.pivotCellTooltip table td,.pivotCellTooltip table th {
+    border : 1px #000 solid;
+    padding : 2px;
+}
+
+.pivotCellTooltip td {
+    padding: 1px;
+    vertical-align: top;
+}
+
+.pivotCellTooltip th {
+    background-color: #e3efff;
+    font-size: 1em;
+    padding: 0px;
+}
+
+.pivotCellTooltip  .topAxisToolTippCoor UL {
+    text-align: right;
+    padding: 2px;
+}
+
+.pivotCellTooltip    li {
+    margin: 1px;
+    padding-right: 3px;
+}
+
+.pivotCellTooltip  UL {
+    list-style: none;
+    margin: 1px;
+    padding: 1px;
+    padding-right: 3px;
+}
+
+.pivotCellTooltip  .topAxisToolTipCoor UL li:not (:first-child ):before
+    {
+    content: "\00BB \0020";
+}
+
+.pivotCellTooltip div {
+    float: left;
+    margin: 5px;
+}
+
+
+
+.mainPivotStatusBar {
+    border-left: 1px dotted grey;
+    margin-left: 2em;
+}
+
+.mainPivotStatusBar .pivotStatusBarElement {
+    margin-left: 2em;
+    float: left; 
+    vertical-align: middle;
+    margin-bottom: 3px;
+    display: table-cell;
+    height:100%;
+}
+
+.mainPivotStatusBar .pivotStatusBarElement>* {
+    margin-left: 0.5em;
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+}
+
+.mainPivotStatusBar .sortStatusElement li {
+    display: table;
+}
+
+.mainPivotStatusBar .sortStatusElement ul {
+    padding-left: 2px;
+    display: table-cell;
+}
+
+.mainPivotStatusBar .sortStatusElement li>* {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mainPivotStatusBar .notFirstVisibleElement.pivotStatusBarElement {
+    border-left: 1px dotted grey;
+}
+
+.mainPivotStatusBar .statusBarContentWrapper {
+    position: relative;
+}
+
+.mainPivotStatusBar .statusElementContent {
+    max-width: 15em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    z-index: 100;
+    float: left;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #E0EAF1;
+    border-bottom: 1px solid #3E6D8E;
+    border-right: 1px solid #7F9FB6;
+    padding: 0px 4px 0px 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: auto;
+    
+}
+.mainPivotStatusBar 
+{
+    display: table;
+}
+
+.mainPivotStatusBar .statusElementContent>*
+{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.mainPivotStatusBar .noneFirstElement {
+    margin-left: 12em;
+}
+
+.mainPivotStatusBar .pivotCellTooltip table td,.pivotCellTooltip table th {
+    border : 1px #000 solid;
+    padding : 1px;
+    margin : 0px;
+}
+
+.mainPivotStatusBar .sortDivContent {
+    height: 19px;
+    list-style-type: none;
+    margin: 0px 0px
+}
+
+.mainPivotStatusBar .sortDivContent {
+    height: 19px;
+    list-style-type: none;
+    margin: 0px 0px
+}
+
+.mainPivotStatusBar .sortDivContent li {
+    padding-left: 1.5em;
+/*  padding-right: 1.5em; */
+}
+
+.mainPivotStatusBar .sortDivContent .topAxisToolTipCoor li {
+    padding-left: 1px;
+}
+
+
+.mainPivotStatusBar .sortDivContent li button:first-child{
+    margin-left: -1.5em;
+}
+
+.mainPivotStatusBar .sortDivContent li button:last-child{
+    margin-right: 1.5em;
+}
+
+.mainPivotStatusBar .sortHoverMeasure ,.mainPivotStatusBar .anchorsList {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mainPivotStatusBar .sortHoverMeasure  {
+    padding: 2px 2px 2px;
+}
+
+.inLineBlockItem
+{
+    display: inline-block;
+}
+
+.mainPivotStatusBar .sortHoverAxisPath {
+    padding: 4px;
+}
+
+.mainPivotStatusBar .anchorHoverAxisPath{
+    max-width:5em;
+}
+
+ol.pivotButtonedList
+{
+    padding: 0 0 0 0; 
+    margin: 0 0 0 0; 
+    text-decoration: none;  
+}
+
+li.pivotButtonedList 
+{
+    display: block;
+    padding: 2px 3px;
+    text-decoration: none;  
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+li.pivotButtonedList:not(:first-child)
+{
+    display: none;
+}
+
+li.pivotButtonedList span, .mainPivotStatusBar .statusElementContent
+{
+    font-size: 0.95em;
+    vertical-align: middle;
+    padding: 2px 2px;
+}
+
+li.pivotButtonedList .ui-button .ui-button-text
+{
+ line-height: 1.0;
+}
+li.pivotButtonedList button, .mainPivotStatusBar .sortDivContent button {
+   font-size: .7em !important;
+}
+
+.pivotLayerElement table td.sortedContent, .pivotLayerElement div.dhx_column div.sortedContent
+{
+    font-style: italic;
+    font-weight:bold;
+}
+
+body div.qtip div.content{
+   padding: 0;
+   margin: 0;
+   height: auto; min-height: auto;
+   width: auto; min-width: auto;
+}
+
+.pivotHeaderResize{
+   z-index: 9999;
+}
+
+.ui-tooltip{
+    padding:1px;
+}
+
+.ui-tooltip-default, .ui-tooltip-content
+{
+    border-color: #013366;
+    background-color: #A7C4EE;
+/*  color: #000;     */
+}
+/*** comment color picker ***/
+
+
+.cmtRelation-SELF {
+border-color: red red transparent transparent;
+border-style: solid;
+border-width: 3px 3px 3px 3px;
+height: 0px;
+width: 0px;
+float: right;
+position:absolute;
+right:0px;
+}
+.cmtRelation-ANCESTORS{
+border-color: blue blue transparent transparent;
+border-style: solid;
+border-width: 3px 3px 3px 3px;
+height: 0px;
+width: 0px;
+float: right;
+position:absolute;
+right:0px;
+}
+.cmtRelation-DESCENDANTS{
+border-color: blue blue transparent transparent;
+border-style: solid;
+border-width: 3px 3px 3px 3px;
+height: 0px;
+width: 0px;
+float: right;
+position:absolute;
+right:0px;
+}
+
+
+/*** Test color picker **/
+.pivotAccordion.ui-accordion .state-preview{
+    padding:2px;
+    display:inline-block;
+    float:right;
+}
+
+.pivotAccordion.ui-accordion {
+    max-width:300px;
+    font-size:0.8em;
+    opacity: 1.0;
+    
+}
+
+.pivotAccordion.ui-accordion div p{
+    font-size:0.9em;
+}
+
+.pivotAccordion.ui-accordion .ruleHeaderLabel{
+    text-overflow: ellipsis;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    /* for good looks */
+    padding-right: 10px;   
+}
+.pivotAccordion.ui-accordion .ruleBackground{
+    float:left;
+}
+.pivotAccordion.ui-accordion .ruleText{
+    margin-left:1em;
+    float:left;
+    background:blue;
+    color:white;
+}
+.pivotAccordion.ui-accordion .styleRule_1{
+    background-color:red;
+    color:blue;
+}
+.pivotAccordion.ui-accordion .styleRule_2{
+    background-color:yellow;
+    color:red;
+}
+.pivotAccordion.ui-accordion .styleRule_3{
+    background-color:black;
+    color:yellow;
+}
+.pivotAccordion.ui-accordion .styleRule_4{
+    background-color:green;
+    color:black;
+}
+
+.buttonClose {
+    background-color: #2b91af;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.buttonClose.small {
+    border-radius: 15px;
+    float: right;
+    margin: 22px 5px 0;
+    padding: 6px 15px;
+}
+
+.buttonClose:hover {
+    background-color: #1e1e1e;
+}
+
+.buttonClose>span {
+    font-size: 84%;
+}
+#pivotErrorLayer {
+    background-color:#fff;
+    border-radius:15px;
+    color:#000;
+    display:none; 
+    padding:20px;
+    min-width:10px;
+    min-width:10px;
+    max-width:600px;
+    max-height: 400px;  
+}
+
+#pivotErrorLayer .pivotErrorLayerStacktrace {
+
+}
+#pivotErrorLayer .pivotErrorLayerStacktraceWrap {
+    max-height: 500px;
+    min-height: 200px;          
+}
+
+#pivotErrorLayer .ui-accordion .ui-accordion-header {
+    margin-top: 4px;
+    padding: .2em .2em .2em 2.2em;
+    background: inherit;
+    border: none;
+}
+#pivotErrorLayer .ui-accordion .ui-accordion-content {
+    border-top: 1px solid #A6C9E2;  
+}
+
+#pivotErrorLayer .ui-state-active .ui-icon {
+    background-image: url(../../vendor/jquery/css/jda-theme/images/ui-icons_6da8d5_256x240.png);    
+}
+
+#pivotErrorLayer .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    color: #2e6e9e;
+}
+
+#pivotErrorLayer  .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 5px;
+}
+
+
+.buttonClose.b-close,.button.bClose {
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: none;
+    font: bold 131% sans-serif;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    padding: 0 6px 2px;
+}
+
+@media screen and (max-width: 1000px) {
+    .dhx_ss_header td, .dhx_ss_footer td, .pivotdraggable,div.dhx_cell_dimension,div.dhx_column > div, .dhx_table_cell ,div.dhx_column>div, .dhx_table_cell
+    {
+        font-size: 10px;
+    }
+    .dhx_ss_header TD,.dhx_ss_footer TD,.pivotDraggable {
+    }
+    .dhx_ss_header TD {
+        min-height: 13px;
+        max-height: 13px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+    .dhx_ss_header td, .dhx_ss_footer td, .pivotdraggable,div.dhx_cell_dimension,div.dhx_column > div, .dhx_table_cell ,div.dhx_column>div, .dhx_table_cell
+    {
+        font-size: 11px;
+    }
+    .dhx_ss_header TD {
+        min-height: 15px;
+        max-height: 15px;
+    }
+    td.sideFacet div.topFacetNames {
+        padding-top: 4px;
+        padding-bottom: 2px;
+        
+    }
+    
+    td.sideFacet div.topFacetNames:first-child {
+        padding-top: 4px; 
+    }
+    
+    td.sideFacet div.topFacetNames:last-child {
+         padding-top: 4px; 
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .dhx_ss_header td, .dhx_ss_footer td, .pivotdraggable,div.dhx_cell_dimension,div.dhx_column > div, .dhx_table_cell , div.dhx_column>div, .dhx_table_cell
+    {
+        font-size: 12px;
+    }
+    .dhx_ss_header TD {
+        min-height: 17px;
+        max-height: 17px;
+    }
+}

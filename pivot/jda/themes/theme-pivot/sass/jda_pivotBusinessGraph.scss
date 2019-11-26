@@ -1,0 +1,99 @@
+@import "_pivot-global";
+
+$j-pvt-graph-font : normal normal normal 11px/normal Verdana;
+
+$j-pvt-edit-background:#FFFFFF;
+$j-pvt-cmt-edit-hover-img:edit-white;
+$j-pvt-cmt-delete-hover-img:graph-slide-in;
+
+/***********************************************  Business Graph Flyout  *******************************************************/
+.pivotBusinessGraphWrapper{
+	/*min-width: 600px; 	
+	min-height: 350px;*/
+
+	#pivotBusinessGraphFlyout{
+		margin-left:0px !important;
+		left:0% !important;
+		padding-left:5px;
+		padding-right:5px; 
+		overflow: hidden;	
+		height: 350px;
+		font : $j-pvt-graph-font;
+	}
+}
+.j-pvt-styling-panel{
+	.j-bg-addconfig {
+  		background-image: url("../../../../jda/images/expand.png");
+  		background-size: 30px 30px;
+  	}
+  	.j-bg-editconfig {
+  		background-image: url("../../../../jda/images/edit-white.png");
+  		background-size: 15px 15px;
+  	}
+}
+
+.custom-row-disabled{
+	.x-grid-cell{
+	 	color: #999;
+	}
+}
+
+.custom-row-hidden{
+	.x-grid-cell{
+		display:none;
+	}
+}
+	
+.x-grid-row{
+	.custom-row-background { 
+		background-color: #FFFF00;
+	}
+	.custom-tagfield-column-1 { 
+	   background-color: #F5F5F5;
+	   border-style: solid;
+	   border-width: 2px 0px 2px 2px;
+	   border-color:#FFFFFF !important;
+	   color: #000000 !important;
+	}
+	 .custom-tagfield-column-2 { 
+		background-image: url("../../../images/close-filter.png");
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    border-style: solid;
+	    border-color:#FFFFFF !important;
+	    border-width: 2px 2px 2px 0px;
+	    background-color: #F5F5F5;
+	    color: #000000 !important;
+	    cursor: pointer;
+	}
+	.custom-bar-chart { 
+		background-image: url("../../../images/chart_column.PNG");
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    border-style: solid;
+	    border-color:#FFFFFF !important;
+	    border-width: 2px 2px 2px 2px;
+	    background-color: #F5F5F5;
+	    color: #000000 !important;
+	}
+}
+
+.x-grid-item-focused .x-grid-cell-inner:before  
+{     
+ 	display: none; 
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.split-panel-separation{
+	background-color: #F0F6F8;
+}
+#buildgraphpanel div.x-splitter{
+  background-repeat: no-repeat;
+  background-image: url("../../../../jda/images/drag-handle-rectangular.png");
+  background-position: center;
+}

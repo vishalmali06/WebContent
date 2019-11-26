@@ -1,0 +1,96 @@
+$j-base-text-vpadding:      0px;
+$j-base-text-hpadding:      3px;
+$j-base-text-padding:       $j-base-text-vpadding $j-base-text-hpadding $j-base-text-vpadding $j-base-text-hpadding;
+$j-page-banner-height:      37px;
+$j-page-margin:             6px;
+$j-component-margin:        16px;
+$j-border-padding:          8px;
+$j-button-spacing:          4px;
+$j-icon-spacing:            4px;
+$j-icon-size-small:         16px;
+$j-icon-size-normal:        24px;
+$j-button-corner-radius:    0px;
+$j-button-min-height:       20px;       
+$j-button-dialog-min-width: 34px;
+$j-button-toolbar-min-width:75px;
+$j-button-text-padding:     3px;
+$j-button-padding:          2px $j-button-text-padding 2px $j-button-text-padding;
+$j-button-icon-size:        12px;
+$j-menu-shadow:             none;
+$j-menu-item-height:        24px;
+
+$j-group-header-shadow:                 0 1px 1px 0 $j-group-header-shadow-color;
+
+$j-dialog-box-shadow:                   0 2px 2px -1px $j-dialog-box-shadow-color;
+$j-dialog-box-header-text-shadow:       0 1px 1px $j-dialog-box-header-text-shadow-color;
+$j-dialog-box-corner-radius:            5px; 
+$j-dialog-box-border-width:             5px;
+$j-dialog-box-header-height:            28px;
+$j-dialog-box-content-padding:          20px;
+$j-dialog-box-content-corner-radius:    5px; 
+$j-dialog-box-header-tool-size:         12px;
+$j-modal-dialog-box-mask-opacity:       .75;
+
+$j-standard-header-height:              36px;
+$j-standard-header-padding:             2px 6px 2px 6px;
+$j-label-height:                        20px;
+$j-label-padding:                       3px;
+
+$j-form-label-width-normal:             150px;
+$j-form-label-width-long:               200px;
+$j-form-field-width-normal:             300px;
+$j-form-field-width-long:               350px;
+$j-form-field-padding:                  10px;
+$j-form-field-padding-plus-margin:      50px;
+
+$j-form-compact-label-width-normal:         120px;
+$j-form-compact-label-width-long:           160px;
+$j-form-compact-field-width-normal:         225px;
+$j-form-compact-field-width-long:           275px;
+$j-form-compact-field-padding:              5px;
+$j-form-compact-field-padding-plus-margin:  25px;
+
+$j-grid-header-padding-normal:              5px 16px 6px 16px;
+$j-grid-header-padding-sortable-normal:     5px 24px 6px 16px;
+$j-grid-header-min-height-normal:           26px;
+$j-grid-header-line-height-normal:          26px;
+$j-grid-data-padding-normal:                5px 16px 6px 16px;
+$j-grid-data-padding-sortable-normal:       5px 24px 6px 16px;
+$j-grid-row-min-height-normal:              24px;
+$j-grid-text-size-normal:                   11px;
+
+$j-grid-header-padding-compact:             3px 16px 5px 16px;
+$j-grid-header-padding-sortable-compact:    3px 24px 5px 16px;
+$j-grid-header-min-height-compact:          26px;
+$j-grid-header-line-height-compact:         26px;
+$j-grid-data-padding-compact:               3px 16px 5px 16px;
+$j-grid-data-padding-sortable-compact:      3px 24px 5px 16px;
+$j-grid-row-min-height-compact:             20px;
+$j-grid-text-size-compact:                  10px;
+
+$j-grid-header-padding-comfort:             8px 16px 9px 16px;
+$j-grid-header-padding-sortable-comfort:    8px 24px 9px 16px;
+$j-grid-header-min-height-comfort:          36px;
+$j-grid-header-line-height-comfort:         36px;
+$j-grid-data-padding-comfort:               8px 16px 9px 16px;
+$j-grid-data-padding-sortable-comfort:      8px 24px 9px 16px;
+$j-grid-row-min-height-comfort:             32px;
+$j-grid-text-size-comfort:                  12px;
+
+$j-tab-height:                          24px;
+$j-small-tab-height:                    20px;
+$j-tab-border-width:                    1px;
+$j-tab-selected-border-width:			1px 1px 0px 1px;
+$j-tab-corner-radius:                   3px;
+$j-tab-padding:							0px 7px 0px 7px;
+$j-tab-margin:							0px 0px 10px 0px;
+$j-tab-margin-right:					3px;
+$j-tab-margin-bottom:					10px;
+$j-small-tab-padding:					0px 4px 0px 4px;
+$j-small-tab-margin:					0px 0px 0px 0px;
+
+$j-graph-header-vertical-padding:       13px;
+$j-graph-header-horizontal-padding:     16px;
+$j-graph-body-padding:                  0px;
+
+$j-tooltip-padding:                     7px;

@@ -1,0 +1,39 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/**************** Filters Wrapper *****************************/
+/* line 15, ../sass/jda-pivot-filter.scss */
+.j-pvt-filter-wrapper .j-pvt-filter-panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/**************** Measure Filter Wrapper *****************************/
+/* line 8, ../sass/jda-pivot-measurefilter.scss */
+.j-pvt-measurefilter-wrapper .j-pvt-measurefilter-panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 16, ../sass/jda-pivot-measurefilter.scss */
+.j-pvt-measurefilter-moveallleft-img {
+  background-image: url("../../../images/move_all_left_normal_24.png");
+}
+
+/* line 20, ../sass/jda-pivot-measurefilter.scss */
+.j-pvt-measurefilter-moveallright-img {
+  background-image: url("../../../images/move_all_right_normal_24.png");
+}
+
+/* line 24, ../sass/jda-pivot-measurefilter.scss */
+.j-pvt-measurefilter-moveleft-img {
+  background-image: url("../../../images/left_normal_24.png");
+}
+
+/* line 28, ../sass/jda-pivot-measurefilter.scss */
+.j-pvt-measurefilter-moveright-img {
+  background-image: url("../../../images/right_normal_24.png");
+}

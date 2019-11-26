@@ -1,0 +1,63 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/**************** Filters Wrapper *****************************/
+/* line 15, ../sass/jda-pivot-filter.scss */
+.j-pvt-filter-wrapper .j-pvt-filter-panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/**************** Data Filter Wrapper *****************************/
+/* line 5, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* line 12, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body .x-grid-item-over .x-selmodel-column.x-grid-cell-first {
+  background-repeat: no-repeat;
+  background-image: url("../../../../jda/images/drag-handle-rectangular_24.png");
+}
+/* line 15, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body .x-grid-item-over .x-selmodel-column.x-grid-cell-first .x-grid-cell-inner {
+  background-color: #F3F3F3;
+}
+/* line 20, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body .x-selmodel-column.x-column-header-first {
+  padding-left: 5px;
+}
+/* line 23, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body .x-selmodel-column.x-grid-cell-first {
+  padding-left: 5px;
+  padding-top: 2px;
+}
+/* line 28, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-panel-body .x-grid-item-over .x-grid-row .x-grid-td {
+  cursor: move;
+}
+/* line 33, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-wrapper .j-pvt-datafilter-config-window .x-form-text-default.x-form-textarea {
+  min-height: 20px !important;
+}
+
+/* line 39, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-filter-img {
+  background-image: url("../../../../jda/images/filter.png");
+  background-size: 15px 15px;
+}
+
+/* line 44, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-refresh-img {
+  background-image: url("../../../../jda/images/refresh_normal_24.png");
+  background-size: 15px 15px;
+}
+
+/* line 49, ../sass/jda-pivot-datafilter.scss */
+.j-pvt-datafilter-removeFilter-img {
+  background-image: url("../../../images/close-filter.png");
+  background-size: 20px 20px;
+}

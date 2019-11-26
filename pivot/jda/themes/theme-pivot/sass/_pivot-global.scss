@@ -1,0 +1,237 @@
+/* @import 'all'; */
+$j-pvt-global-font:normal 11px Verdana;
+$j-pvt-global-border:1px solid #DADADB;
+$j-pvt-dialog-border:1px solid #000000;
+$j-pvt-dialog-background-color:#000000;
+$j-pvt-textarea-border:1px solid #C7C7C7;
+$j-pvt-textarea-boxshadow:inset 1px 1px 1px #cccccc;
+$j-pvt-button-padding:15px;
+$j-pvt-button-margin:8px;
+$j-pvt-button-corner-radius:3px;
+$j-pvt-button-height:22px;
+/*** TODO: GK - please change here to the proper global colors **/
+$j-pvt-small-button-background-color:#FFFFFF;
+$j-pvt-small-button-color:$j-pvt-dialog-background-color;
+
+$j-pvt-panel-toolbar-gradiant-top:#F6F6F6;
+$j-pvt-panel-toolbar-gradiant-bottom:#EFEFF2;
+
+$j-pvt-panel-header-gradiant-top:#F6F6F6;
+$j-pvt-panel-header-gradiant-bottom:#EFEFF2;
+
+$j-pvt-button-font-color:#424749;
+$j-pvt-button-primary-font-color:#FFFFFF;
+$j-pvt-button-hover-font-color:#FFFFFF;
+$j-pvt-button-down-font-color:#FFFFFF;
+$j-pvt-button-disabled-font-color:#9B9D9F;
+
+$j-pvt-button-background-gradient-top:#FFFFFF;
+$j-pvt-button-background-gradient-bottom:#EAECEE;
+$j-pvt-button-background-gradient-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#EAECEE');
+$j-pvt-button-background-gradient-border:1px solid #C7C7C7;
+
+$j-pvt-button-primary-background-gradient-top:#5BA1D4;
+$j-pvt-button-primary-background-gradient-bottom:#2B75B4;
+$j-pvt-button-primary-background-gradient-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5BA1D4', endColorstr='#2B75B4');
+$j-pvt-button-primary-background-gradient-border:1px solid #EBECEE;
+
+$j-pvt-button-hover-background-gradient-top:#5A5B5C;
+$j-pvt-button-hover-background-gradient-bottom:#4B4B4B;
+$j-pvt-button-hover-background-gradient-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5A5B5C', endColorstr='#4B4B4B');
+$j-pvt-button-hover-background-gradient-border:1px solid  #4B4B4B;
+
+$j-pvt-button-down-background-gradient-top:#5A5B5C;
+$j-pvt-button-down-background-gradient-bottom:#4B4B4B;
+$j-pvt-button-down-background-gradient-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5A5B5C', endColorstr='#4B4B4B');
+$j-pvt-button-down-background-gradient-border:1px solid  #4B4B4B;
+
+$j-pvt-button-disabled-background-gradient-top:#FEFEFE;
+$j-pvt-button-disabled-background-gradient-bottom:#EDEFF0;
+$j-pvt-button-disabled-background-gradient-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FEFEFE', endColorstr='#EDEFF0');
+$j-pvt-button-disabled-background-gradient-border:1px solid  #DADADA;
+
+$j-pvt-checkbox-on:checkbox-tick;
+$j-pvt-checkbox-off:checkbox-blank;
+$j-pvt-checkbox-partial:checkbox-partial;
+
+@mixin intersection-delimiter{
+		.intersectionDelimiter{
+				background-color:#5E5E5E;
+				width:6px;
+				height:6px;
+				-moz-border-radius:3px;
+				-webkit-border-radius:3px;
+				border-radius:3px;
+				display:inline-block
+			}
+}
+@mixin hidden{
+	.pvt-hidden{
+	  display:none;
+	}
+}
+
+
+@mixin button-disabled{
+	
+   	  .j-pvt-button:disabled,.j-pvt-primary-button:disabled{
+	    @include linear-gradient($j-pvt-button-disabled-background-gradient-top,$j-pvt-button-disabled-background-gradient-bottom);
+     	border:$j-pvt-button-disabled-background-gradient-border;
+     	color:$j-pvt-button-disabled-font-color;
+	  
+	  }
+}
+@mixin error-tooltip($fcolor,$bcolor){
+
+  .validationErrorToolTip{
+ 	 border:1px solid $bcolor;
+  	color:$fcolor;
+  	border-radius:3px;
+  	background-color:$bcolor;
+  }
+}
+@mixin button(){
+	.j-pvt-button{
+	   @include linear-gradient($j-pvt-button-background-gradient-top,$j-pvt-button-background-gradient-bottom);
+	   color:$j-pvt-button-font-color;
+	   border:$j-pvt-button-background-gradient-border;   
+	   cursor:pointer;
+	     .x-btn-inner{
+	    	color:$j-pvt-button-font-color;
+	   	}
+	  }
+	  
+	  	
+}
+@mixin button-primary(){
+	 .j-pvt-primary-button{
+	    @include linear-gradient($j-pvt-button-primary-background-gradient-top,$j-pvt-button-primary-background-gradient-bottom);
+	    color:$j-pvt-button-primary-font-color;
+	    border:$j-pvt-button-primary-background-gradient-border;   
+	    cursor:pointer;	 
+	     .x-btn-inner{
+	    	color:$j-pvt-button-primary-font-color;
+	   	}
+	  }
+	  
+	  
+}
+@mixin button-hover(){
+	.j-pvt-button:hover:not(:disabled),.j-pvt-primary-button:hover:not(:disabled),.j-pvt-button:focus,.j-pvt-primary-button:focus{
+	    @include linear-gradient($j-pvt-button-hover-background-gradient-top,$j-pvt-button-hover-background-gradient-bottom);
+	   color:$j-pvt-button-hover-font-color;
+	   border:$j-pvt-button-hover-background-gradient-border;   
+	   cursor:pointer;	
+	     .x-btn-inner{
+	    	color:$j-pvt-button-hover-font-color;
+	   	}
+	  }
+	   
+}
+@mixin button-selected(){
+	   @include linear-gradient($j-pvt-button-down-background-gradient-top,$j-pvt-button-down-background-gradient-bottom);
+	   color:$j-pvt-button-down-font-color;
+	   border:$j-pvt-button-down-background-gradient-border; 
+	   
+}
+@mixin linear-gradient-header(){
+			background:-webkit-linear-gradient($j-pvt-panel-header-gradiant-top,$j-pvt-panel-header-gradiant-bottom) ;
+	       	background:-ms-linear-gradient($j-pvt-panel-header-gradiant-top,$j-pvt-panel-header-gradiant-bottom) ;  
+	       	background:-moz-linear-gradient($j-pvt-panel-header-gradiant-top,$j-pvt-panel-header-gradiant-bottom) ;
+	       	background:linear-gradient($j-pvt-panel-header-gradiant-top,$j-pvt-panel-header-gradiant-bottom) ; 
+	       	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{ie-hex-str($j-pvt-panel-header-gradiant-top)}', endColorstr='#{ie-hex-str($j-pvt-panel-header-gradiant-bottom)}');
+	
+}
+@mixin linear-gradient($top,$bottom) {
+  			background:-webkit-linear-gradient($top,$bottom) ;
+	       	background:-ms-linear-gradient($top,$bottom) ;  //IE 10
+	       	background:-moz-linear-gradient($top,$bottom) ;
+	       	background:linear-gradient($top,$bottom) ; 
+	       	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$top}, endColorstr=#{$bottom})"; // IE 9
+}
+
+@mixin linear-gradient-button($top,$bottom){
+	 		background-size:16px 16px; 
+			background-color:$bottom;
+			box-shadow: inset 0 -8px 6px -2px rgba( 0, 0, 0, .20); 
+			-webkit-box-shadow:inset 0 -8px 6px -2px rgba
+			   ( 0, 0, 0, .40);
+}
+@mixin linear-gradient-img($top,$bottom,$img) {
+  			/* background-image:url("../../../../jda/images/#{$img}.png"),-webkit-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/#{$img}.png"),-ms-linear-gradient($top,$bottom);  
+	       	background-image:url("../../../../jda/images/#{$img}.png"),-moz-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/#{$img}.png"),linear-gradient($top,$bottom); 
+	       	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../../jda/images/#{$img}.png')  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{ie-hex-str($top)}', endColorstr='#{ie-hex-str($bottom)}');
+ */			background-image: url("../../../../jda/images/#{$img}.png"); 
+ 			background-size:16px 16px; 
+			background-color:$bottom;
+			box-shadow: inset 0 -8px 6px -2px rgba( 0, 0, 0, .20); 
+			-webkit-box-shadow:inset 0 -8px 6px -2px rgba
+			   ( 0, 0, 0, .40);
+            /* -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($top)}', endColorstr='#{ie-hex-str($bottom)}'), url("../../../../jda/images/#{$img}.png");
+ */ background-repeat: no-repeat, repeat;
+}
+
+@mixin background-img($img){
+	background-image: url("../../../../jda/images/#{$img}.png"); 
+ 	background-size:16px 16px; 
+ 	background-repeat: no-repeat, repeat;
+}
+
+@mixin text-ellipsis{
+			 text-overflow: ellipsis;
+			 overflow: hidden;
+	         white-space: nowrap;
+	         display:inline-block;
+}
+
+@mixin box-sizing-border-box{
+	     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin input-text{
+	 
+	  input[type=text]{
+	        height: 24px;
+			/* width: auto; */
+			box-shadow:$j-pvt-textarea-boxshadow;
+			min-width:26px;
+			border-radius:1px;
+			font:$j-pvt-global-font;			   	
+	  }
+	input[type=text]::-ms-clear {
+    	display: none;
+    	width:0px;
+    	height:0px;
+	}
+}
+@mixin input-textarea{
+	
+	  textarea{
+	 	  border:$j-pvt-textarea-border;
+	 	  box-shadow:$j-pvt-textarea-boxshadow;
+	 	  box-sizing: border-box;
+	 	  border-radius:$j-pvt-button-corner-radius;
+	 	  resize: none;
+	 	  overflow-y:auto;
+		  overflow-x:hidden;
+	 	}
+	
+}
+@mixin input-button{
+	  
+	  input{
+			height: $j-pvt-button-height;
+			width: auto;
+			min-width:26px;
+			border-radius:$j-pvt-button-corner-radius;
+			padding-left:$j-pvt-button-padding;
+			padding-right:$j-pvt-button-padding;
+			margin-right:$j-pvt-button-margin;
+			font:$j-pvt-global-font;			   	
+	 	 }
+	  
+}

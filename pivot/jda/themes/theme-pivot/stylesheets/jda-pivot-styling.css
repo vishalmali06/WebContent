@@ -1,0 +1,263 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/**************** Add new rule pop up styling *****************************/
+/**************** Add new rule Main area where rule title, target measures, rule definition present ***********************************/
+/**************** Add new rule Cell format components defined area ***********************************/
+/**************** Add new rule button area for Save and Cancel  ***********************************/
+/**************** CF view Panel *****************************/
+/* line 67, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel {
+  border-top: none;
+}
+/* line 73, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-header {
+  background: -webkit-linear-gradient(#F6F6F6, #EFEFF2);
+  background: -ms-linear-gradient(#F6F6F6, #EFEFF2);
+  background: -moz-linear-gradient(#F6F6F6, #EFEFF2);
+  background: linear-gradient(#F6F6F6, #EFEFF2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFF6F6F6', endColorstr='#FFEFEFF2');
+  border: 1px solid #DADADB !important;
+}
+/* line 107, ../sass/_pivot-global.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button {
+  background: -webkit-linear-gradient(#5BA1D4, #2B75B4);
+  background: -ms-linear-gradient(#5BA1D4, #2B75B4);
+  background: -moz-linear-gradient(#5BA1D4, #2B75B4);
+  background: linear-gradient(#5BA1D4, #2B75B4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5BA1D4, endColorstr=#2B75B4)";
+  color: #FFFFFF;
+  border: 1px solid #EBECEE;
+  cursor: pointer;
+}
+/* line 112, ../sass/_pivot-global.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 120, ../sass/_pivot-global.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-button:hover:not(:disabled), .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button:hover:not(:disabled), .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-button:focus, .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-button:hover:not(:disabled) .x-btn-inner, .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-button:focus .x-btn-inner, .j-pvt-south-panel .j-pvt-styling-panel .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 82, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body {
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 1px solid #DADADB;
+}
+/* line 90, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid {
+  font: normal 11px Verdana;
+  border: 1px;
+}
+/* line 93, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-column-header {
+  height: 33px;
+  font: inherit;
+}
+/* line 98, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-header-ct {
+  border: 1px;
+}
+/* line 101, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .j-pvt-styling-grid-body {
+  border: 1px;
+}
+/* line 103, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .j-pvt-styling-grid-body .x-grid-view {
+  overflow-x: hidden !important;
+}
+/* line 109, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-column-header {
+  border-right: 1px solid silver;
+  color: #666666;
+  font: bold 12px/15px verdana, arial, sans-serif;
+  background-color: #f5f5f6;
+}
+/* line 116, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-row {
+    /* .x-action-col-cell{
+	  cursor:pointer;
+   } */
+  height: 42px;
+}
+/* line 118, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-row .x-grid-td {
+  font: normal 11px Verdana;
+  vertical-align: middle;
+  cursor: move;
+}
+/* line 133, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-item-over .x-grid-cell-first {
+  background-repeat: no-repeat;
+  background-image: url("../../../../jda/images/drag-handle-rectangular.png");
+}
+/* line 141, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-item-selected .x-grid-td {
+  background-color: #4B4B4B;
+  color: #ffffff;
+}
+/* line 145, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-item-selected .j-cf-grid-delete {
+  background-image: url("../../../../jda/images/delete-white.png");
+}
+/* line 154, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-item-over .x-grid-td {
+  background-color: #eff0f2;
+  color: black;
+}
+/* line 158, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-item-over .j-cf-grid-delete {
+  background-image: url("../../../../jda/images/delete.png");
+}
+/* line 163, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-grid-row {
+  border: 1px solid #DADADB;
+}
+/* line 166, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .x-action-col-icon {
+  height: 20px;
+  width: 20px;
+}
+/* line 171, ../sass/jda-pivot-styling.scss */
+.j-pvt-south-panel .j-pvt-styling-panel .j-pvt-styling-panel-body .j-pvt-styling-grid .j-cf-grid-delete {
+  background-image: url("../../../../jda/images/delete.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* line 184, ../sass/jda-pivot-styling.scss */
+body .x-color-picker {
+  width: 250px;
+  height: 120px;
+  background-color: white;
+  border-color: white;
+  border-width: 0;
+  border-style: solid;
+}
+/* line 192, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog-colorpicker {
+  background-color: #ffffff;
+  height: auto;
+  box-shadow: #888888 0px 0px 6px;
+}
+/* line 198, ../sass/jda-pivot-styling.scss */
+body #pivotLayer .x-border-layout-ct {
+  background-color: #F6F6F6;
+}
+/* line 202, ../sass/jda-pivot-styling.scss */
+body #pivotLayer .x-splitter-horizontal .x-layout-split-bottom {
+  display: none;
+}
+/* line 207, ../sass/jda-pivot-styling.scss */
+body #vpMainAppAreaDiv {
+  position: absolute;
+}
+/* line 210, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog {
+  border-color: #000000;
+}
+/* line 212, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog .x-window-header {
+  border: 1px solid #000000;
+  background-color: #000000;
+}
+/* line 216, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog .j-pvt-rule-dialog-body {
+  border-color: #000000;
+}
+/* line 218, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog .j-pvt-rule-dialog-body .j-cf-validate-rule {
+  background-image: url("../../../../jda/images/commitOff.png");
+  background-position: 50% 50%;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+/* line 225, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog .j-pvt-rule-dialog-body .j-cf-validate-button {
+  background-color: #000000;
+}
+/* line 230, ../sass/jda-pivot-styling.scss */
+body .j-pvt-rule-dialog .x-tool-img {
+  background-color: #000000;
+  background-image: url("../../../../jda/images/close-white.png");
+  background-position: 50% 50%;
+}
+/* line 94, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-button {
+  background: -webkit-linear-gradient(#FFFFFF, #EAECEE);
+  background: -ms-linear-gradient(#FFFFFF, #EAECEE);
+  background: -moz-linear-gradient(#FFFFFF, #EAECEE);
+  background: linear-gradient(#FFFFFF, #EAECEE);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#EAECEE)";
+  color: #424749;
+  border: 1px solid #C7C7C7;
+  cursor: pointer;
+}
+/* line 99, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-button .x-btn-inner {
+  color: #424749;
+}
+/* line 107, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-primary-button {
+  background: -webkit-linear-gradient(#5BA1D4, #2B75B4);
+  background: -ms-linear-gradient(#5BA1D4, #2B75B4);
+  background: -moz-linear-gradient(#5BA1D4, #2B75B4);
+  background: linear-gradient(#5BA1D4, #2B75B4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5BA1D4, endColorstr=#2B75B4)";
+  color: #FFFFFF;
+  border: 1px solid #EBECEE;
+  cursor: pointer;
+}
+/* line 112, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-primary-button .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 120, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-button:hover:not(:disabled), body .j-pvt-rule-dialog .j-pvt-primary-button:hover:not(:disabled), body .j-pvt-rule-dialog .j-pvt-button:focus, body .j-pvt-rule-dialog .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+body .j-pvt-rule-dialog .j-pvt-button:hover:not(:disabled) .x-btn-inner, body .j-pvt-rule-dialog .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, body .j-pvt-rule-dialog .j-pvt-button:focus .x-btn-inner, body .j-pvt-rule-dialog .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+
+/* line 241, ../sass/jda-pivot-styling.scss */
+.pivotLayerElement .x-splitter-collapsed {
+  display: none;
+}
+
+/* line 246, ../sass/jda-pivot-styling.scss */
+.pivot-data-cell-tooltip {
+  border-color: black;
+  background-color: white;
+  font-size: 12px;
+  line-height: 2px;
+  box-shadow: 2px 3px #CACACA;
+  min-width: 10px;
+  padding: 2px 0px 2px 0px;
+}
+
+/* line 257, ../sass/jda-pivot-styling.scss */
+input.cell_editor.dhx_table_cell::-ms-clear {
+  display: none;
+}

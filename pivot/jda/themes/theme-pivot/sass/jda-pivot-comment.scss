@@ -1,0 +1,689 @@
+@import 'pivot-global';
+
+$j-pvt-cmt-global-font:normal 11px Verdana;
+$j-pvt-cmt-global-border:1px solid #DADADB;
+$j-pvt-cmt-header-height:34px;
+$j-pvt-cmt-header-background:#CECECE;
+$j-pvt-cmt-panel-border:8px solid #CDCDCD;
+$j-pvt-cmt-desc-padding-top:8px;
+$j-pvt-cmt-center-acc-header-background:#C3C2C1;
+$j-pvt-cmt-default-font-color:#838383;
+$j-pvt-cmt-padding:15px;
+$j-pvt-cmt-padding-buttonArea:11px;
+$j-pvt-cmt-west-panel-header-font:bold 12px Verdana;
+$j-pvt-cmt-west-panel-header-font-color:#5E5E5E;
+$j-pvt-cmt-west-panel-body-font:normal 12px Verdana;
+$j-pvt-cmt-center-panel-header-font:normal 12px Verdana;
+$j-pvt-cmt-toggle-button-stroke:1px solid #C7CAC4;
+$j-pvt-cmt-toggle-button-off-background:#DDDDDD;
+$j-pvt-cmt-toggle-button-parent-on-background:#249F33;
+$j-pvt-cmt-ok-button-color: $j-pvt-cmt-toggle-button-parent-on-background;
+$j-pvt-cmt-cancel-button-color: firebrick;
+
+$j-pvt-cmt-toggle-button-on-font-color:#ffffff;
+$j-pvt-cmt-toggle-button-off-font-color:#000000;
+$j-pvt-cmt-toggle-button-child-on-background:#2073BC;
+$j-pvt-cmt-toggle-button-showCmt-on-background:#000000;
+
+$j-pvt-cmt-expandAll-font-color:#2073BC;
+$j-pvt-cmt-showCmt-font-color:#000000;
+$j-pvt-cmt-parent-font-color:#249F33;
+$j-pvt-cmt-child-font-color:#2073BC;
+$j-pvt-cmt-self-font-color:#5E5E5E;
+
+$j-pvt-cmt-panel-accordionHeader-padding-right:10px;
+$j-pvt-cmt-panel-accordionHeader-padding-top:5px;
+$j-pvt-cmt-panel-accordionHeader-gradiant-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#F6F6F6');
+$j-pvt-cmt-panel-accordionHeader-gradiant-top:#FFFFFF;
+$j-pvt-cmt-panel-accordionHeader-gradiant-bottom:#F6F6F6;
+$j-pvt-cmt-panel-header-gradiant-ie:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F6F6F6', endColorstr='#EFEFF2');
+$j-pvt-cmt-panel-header-gradiant-top:#F6F6F6;
+$j-pvt-cmt-panel-header-gradiant-bottom:#EFEFF2;
+$j-pvt-cmt-accordionHeader-sub-font:bold 12px Verdana;
+$j-pvt-cmt-accordionHeader-desc-font:normal 12px Verdana;
+$j-pvt-cmt-accordionHeader-desc-intersection-font:bold 11px Verdana;
+$j-pvt-cmt-accordionHeader-desc-font-color:#5E5E5E;
+$j-pvt-cmt-accordionHeader-desc-intersection-font-color:#838383;
+
+
+$j-pvt-edit-background:#FFFFFF;
+$j-pvt-cmt-edit-hover-img:edit-white;
+$j-pvt-cmt-delete-hover-img:delete-white;
+$j-pvt-cmt-container-title:bold 12px Verdana;
+$j-pvt-cmt-general-text:normal 12px Verdana;
+$j-pvt-cmt-general-text-color:#505050;
+$j-pvt-cmt-general-instruction-color:#929292;
+$j-pvt-cmt-body-content-padding-left:45px;
+$j-pvt-cmt-dropdown-border:1px solid #D8DFE2;
+
+@include error-tooltip(#ffffff,#ff0000);
+.pivotComment{
+
+	 .j-pvt-cmt-wrapper{
+		   width:inherit;
+		   height: inherit;
+		   display:table;
+		   font:$j-pvt-cmt-global-font;
+		   table-layout:fixed;
+	@include hidden;
+	@include intersection-delimiter;
+	.pvtAlert{
+	       background-image:url(../../../../jda/images/warning.png);
+		   background-repeat:no-repeat;
+		   background-position: 97% 50%;
+		   padding-right:$j-pvt-cmt-padding;
+		  
+	}
+       .j-pvt-cmt-west{
+       	 width:35%;
+       	  border-right:$j-pvt-cmt-panel-border;
+       	  border-bottom:$j-pvt-cmt-global-border;
+		  border-top:$j-pvt-cmt-global-border;
+	      border-left:$j-pvt-cmt-global-border;
+       	 display:table-cell;
+       	 vertical-align:top; 
+       }
+
+ 		.j-pvt-cmt-center{
+ 		 width:65%;
+ 		 height: inherit;
+ 		 border:$j-pvt-cmt-global-border;
+ 		 display:table-cell;
+ 		 vertical-align:top; 
+ 		}  
+	}
+}
+
+// Center Panel Comment Area
+.j-pvt-cmt-center{
+		 
+	.j-pvt-cmt-center-header{
+		     border-bottom:$j-pvt-cmt-global-border;
+			 height:$j-pvt-cmt-header-height;	
+			 padding-left:$j-pvt-cmt-padding;
+	 	     padding-right:$j-pvt-cmt-padding; 
+	 	     font:$j-pvt-cmt-center-panel-header-font;
+	 	    /*  line-height:2.5;		 */
+	 	     padding-top:5px;
+			 width:auto;				
+			 @include linear-gradient($j-pvt-cmt-panel-header-gradiant-top,$j-pvt-cmt-panel-header-gradiant-bottom);
+		
+		@include input-text;
+		@include hidden;
+		.pvtExpandAll{
+		   position:absolute;
+		   /* padding-right:3%; */
+		   color:$j-pvt-cmt-expandAll-font-color;
+		   padding-top:2px;
+		    cursor:pointer;
+		   .expand{
+			   vertical-align:middle;
+		       cursor:pointer;
+		   }
+		}
+		 
+		.pvtCollapseAll{
+		   @extend .pvtExpandAll;
+		   /*  background-image:url(../../../../jda/images/collapse.png); */
+		   .collapse{
+		    vertical-align:middle;
+		    cursor:pointer;
+		   }
+		}
+		
+		.addComment{
+			padding-left:20%;
+			padding-right:2%;
+			padding-top:5px;
+			@include input-button();
+			@include button-disabled();
+			@include button-hover();
+			@include button(); 	
+			@include button-primary();
+		}
+		 .showCmtText{
+		   color:$j-pvt-cmt-showCmt-font-color;
+		   /* float:right; */
+		   /* padding-right:$j-pvt-cmt-padding;
+		   padding-left:12%; */
+		   font:$j-pvt-cmt-global-font;
+		   margin-top: 5px;
+		 }
+		 .parentCmtText{
+		   color:$j-pvt-cmt-parent-font-color;
+		   /* float:right; */
+		   /* padding-right:$j-pvt-cmt-padding; */
+		   padding-left:12%;
+		   font:$j-pvt-cmt-global-font;
+		   margin-top: 5px;
+		  
+		 }
+		 
+		 .showCmtContentText{
+			@include text-ellipsis;
+		 	max-width:17%;
+			margin-top: 5px;
+		}
+		 .parentContentText{
+		 @include text-ellipsis;
+		 max-width:17%;
+		/*  vertical-align: middle; */
+		 }
+		 
+		  .parentContentText{ 
+		 	@extend .showCmtContentText;
+		 	max-width:12%;
+		 }
+		 .parentCmtText{
+			@extend .showCmtText;
+			padding-left:2%;
+		  	color:$j-pvt-cmt-parent-font-color;
+		 }
+		 
+		 .childContentText{
+			@extend .showCmtContentText;
+			max-width:12%;
+		 @extend .parentContentText;
+		 }
+		 .childCmtText{
+		   @extend .showCmtText;
+		   padding-left:2%;
+		   @extend .parentCmtText;
+		   padding-left:2%;
+		   color:$j-pvt-cmt-child-font-color;
+		    
+		   
+		 }
+		 
+		 .filtertext{
+		   float:right;
+		   width:15%;
+		   font:$j-pvt-cmt-accordionHeader-desc-font;
+		   color:$j-pvt-cmt-accordionHeader-desc-font-color;
+		   border:$j-pvt-textarea-border;
+		  /*  margin-top:5px; */
+		   background-image:url(../../../../jda/images/filter.png);
+		   background-repeat:no-repeat;
+		   background-position: 97% 50%;
+		   padding-right:$j-pvt-cmt-padding;
+		   padding-left:5px; 
+		 }
+		 .default-value{
+	 	  color:$j-pvt-cmt-default-font-color;
+	 	}
+		  .switch {
+			  position: relative;
+			  display: inline-block;
+			  width: 30px;
+			  height: 12px;
+			}
+
+			.switch input {display:none;}
+
+			.slider, .slider0, .slider1, .slider2 {
+			  position: absolute;
+			  cursor: pointer;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background-color: #c8d2d7;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+
+			.slider:before {
+			  position: absolute;
+			  content: "";
+			  height: 18px;
+			  width: 18px;
+			  left: 0px;
+			  top: -3px;
+			  background-color: #5e747e;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+
+			.slider0:before {
+			  @extend .slider:before;
+			  -webkit-transform: translateX(12px);
+			  -ms-transform: translateX(12px);
+			  transform: translateX(12px);
+			  background-color: #000000;
+			}
+
+			.slider1:before {
+			  @extend .slider:before;
+			  -webkit-transform: translateX(12px);
+			  -ms-transform: translateX(12px);
+			  transform: translateX(12px);
+			  background-color: #249F33;
+			}
+
+			.slider2:before {
+			  @extend .slider:before;
+			  -webkit-transform: translateX(12px);
+			  -ms-transform: translateX(12px);
+			  transform: translateX(12px);
+			  background-color: #007ab4;
+			}
+
+			input:focus + .slider, input:focus + .slider0, input:focus + .slider1, input:focus + .slider2 {
+			  box-shadow: 0 0 1px #2196F3;
+			}
+
+			.slider.round, .slider0.round, .slider1.round, .slider2.round {
+			  border-radius: 4px;
+			}
+
+			.slider.round:before, .slider0.round:before, .slider1.round:before, .slider2.round:before {
+			  border-radius: 50%;
+			}
+	}
+	
+	.j-pvt-cmt-center-body{
+		height: 91%;
+		display: flex;
+		flex-direction: column;
+		overflow-x:hidden;
+		overflow-y:auto;
+		
+		.pvtComments, .newCommentPanel{
+			flex-shrink: 0;
+		}
+	}
+}
+
+// Center Panel Comment Accordion 
+
+.j-pvt-cmt-center-body{
+	
+	.pvtComments{
+		@include input-textarea;
+	 	 	textarea{
+	 	  		font:$j-pvt-cmt-accordionHeader-desc-font;
+	 	  		color:$j-pvt-cmt-accordionHeader-desc-font-color;
+	 	    }
+	 	 
+	 	 .cmtHeader:not(.editingModeHeader){
+	 	 	.ANCESTORS{
+	     	color:$j-pvt-cmt-parent-font-color;
+	   	    }
+	       .DESCENDANTS{
+	         color:$j-pvt-cmt-child-font-color;
+	       }
+           .SELF{
+            color:$j-pvt-cmt-self-font-color
+           }
+           .pvtAccordionDate{
+            color:$j-pvt-cmt-west-panel-header-font-color;
+           }
+	 	 }
+	     .cmtHeader{
+	     	   border-top:$j-pvt-cmt-global-border;
+	     	   border-bottom:$j-pvt-cmt-global-border;
+	     	   padding-left:$j-pvt-cmt-padding;
+	 		   padding-right:$j-pvt-cmt-padding;
+	 		   padding-top:$j-pvt-cmt-panel-accordionHeader-padding-top;
+		       height:30px;
+		       /* line-height:3; */
+		       @include linear-gradient($j-pvt-cmt-panel-accordionHeader-gradiant-top,$j-pvt-cmt-panel-accordionHeader-gradiant-bottom);
+		   
+// TODO GK: Add comment to move to glyphs. Start of section		   
+		   .okButton{
+			background-image: url(../../../../jda/images/ok.png);
+			background-color:$j-pvt-cmt-panel-accordionHeader-gradiant-top;
+			background-size: 16px 16px;
+			border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+			box-shadow:none;
+		   }
+		  .cancelButton{
+		    @extend .okButton;
+			background-image: url(../../../../jda/images/cancel.png);
+			
+		   }  
+		   .okButton:hover{
+		     @extend .okButton;
+		     
+		   }      
+		   .cancelButton:hover{
+		     @extend .cancelButton;
+		   }       
+// TODO GK: Add comment to move to glyphs. End of section		   
+// TODO GK: Remove comment to move to glyphs
+		  /* .okButton{
+            color: $j-pvt-cmt-ok-button-color;
+            @include fontawesome-icon($fa-var-check,1.7);
+			border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+			box-shadow:none;
+		   }
+		  .cancelButton{
+		    border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+            color: $j-pvt-cmt-cancel-button-color;
+            @include fontawesome-icon($fa-var-times,1.7);
+			
+		   }  
+		   .okButton:hover{
+		     border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+             color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+             background-color : $j-pvt-cmt-ok-button-color;
+           }
+		   .cancelButton:hover{
+		     border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+             color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+             background-color : $j-pvt-cmt-cancel-button-color;
+           }*/
+		   
+	     }
+	     .editingModeHeader{
+	 	     @include linear-gradient($j-pvt-button-hover-background-gradient-top,$j-pvt-button-hover-background-gradient-bottom);
+	 	     color:#ffffff;
+	 	 }
+	     .cmtBody{
+				padding-left:$j-pvt-cmt-padding;
+	 		  	padding-right:$j-pvt-cmt-padding;
+	 		  	padding-bottom:5px;
+	 		  	.contentCmtSubject{
+					.editSubCmt{
+						@extend textarea;
+						width:100%;
+						padding-left:5px;
+						height:25px;
+						word-wrap:normal;
+						vertical-align: super;
+						background-position:99% 50%;
+					}
+					font:$j-pvt-cmt-container-title;
+	           		color:$j-pvt-cmt-general-text-color;
+				    padding-top: 10px;
+			        padding-left:$j-pvt-cmt-body-content-padding-left;
+				}
+				.contentCmtSubject:not(.editingMode){
+					@include text-ellipsis;
+					vertical-align: bottom;
+					max-width: 100%;
+				}
+	 		  	.commentTextContent{
+			        font:$j-pvt-cmt-general-text;
+			        color:$j-pvt-cmt-general-text-color;
+				    padding-top: 5px;
+			        padding-left:$j-pvt-cmt-body-content-padding-left;
+	           	}
+           		.contentCmtMeasureValues{
+	           		font:$j-pvt-cmt-general-text;
+	           		color:$j-pvt-cmt-general-instruction-color;
+				    padding-top: 5px;
+			        padding-left:$j-pvt-cmt-body-content-padding-left;
+           		}
+	           	
+	 		  	.intersectionName{
+					font:$j-pvt-cmt-accordionHeader-desc-intersection-font;
+		 		   	color:$j-pvt-cmt-accordionHeader-desc-intersection-font-color;
+		 		   	padding-top: 5px;
+				    padding-left:$j-pvt-cmt-body-content-padding-left;
+	 		  	}
+	 		  
+	 		  .editDescCmt{
+	 		    width:100%;
+	 		    height:100px;
+	 		    background-position:99.5% 5%;	
+	 		  }
+	     }
+	    
+	    
+
+	     .expand{
+	       padding-right:5px;
+	       cursor: pointer;
+	     }
+	     .collapse{
+	     @extend .expand;
+	     }
+	     .pvtDisable:not(.okButton):not(.cancelButton){
+	       opacity:0.5;
+	     }
+	     .pvt-update-disable{
+	       opacity:0.5;
+	     }
+	     .signComment{
+			 padding-bottom: 3px ;
+			/*  vertical-align:middle; */
+	
+		 }
+		 .contentUserHeader{
+		    @include text-ellipsis;			
+			padding-left:2px;
+			padding-bottom:3px;
+		   /*  vertical-align:super; */	
+			max-width:15%;
+			
+		 }
+		 
+		.contentSubHeader{
+			font:$j-pvt-cmt-accordionHeader-sub-font;			
+		    padding-left:5px;
+		    /* vertical-align:super;   */  
+		    .editSubCmt{
+		    @extend textarea;
+		 	  width:45%;
+		 	  padding-left:5px;	  
+		 	  height:20px;
+		 	  word-wrap:normal;	
+		 	  vertical-align: super; 	
+		 	  background-position:99% 50%;	
+		    }
+		}
+		.contentSubHeader:not(.editingMode){
+			@include text-ellipsis;			
+			max-width: 45%;
+			padding-bottom:3px;
+		   /*  vertical-align:super; */			 
+		}
+				
+			 
+			
+		.contentReasonCode{
+			font:$j-pvt-cmt-accordionHeader-sub-font;			
+		    padding-left:5px;
+		    .editReasonCodes{
+		     	@extend textarea;
+		 	  	padding-left:5px;	  
+		 	  	height:20px;
+		 	  	word-wrap:normal;	
+		 	  	vertical-align: super; 	
+		 	  	background-position:99% 50%;
+		 	  	max-width: 30%;
+		 	  	border:$j-pvt-cmt-dropdown-border;
+		    }
+		}
+		
+		.contentReasonCode:not(.reasonCodeEditingMode){
+			@include text-ellipsis;			
+			max-width: 30%;
+			padding-bottom:3px;	
+		}
+		
+		.pvtAccordionDate{
+		    font:$j-pvt-cmt-accordionHeader-sub-font;
+		    padding-right:$j-pvt-cmt-panel-accordionHeader-padding-right;
+			float:right;
+			line-height:2;
+			display:inline-block;
+		}
+		
+		.commentButton{
+		    height:20px;
+		    width:20px;
+		    margin:0px 0px 0px 3px;
+		 	float:right;
+		 	 /* border:$j-pvt-cmt-toggle-button-stroke;*/
+		 	vertical-align: middle; 	
+		 	text-align: center;
+            /* color : $j-pvt-small-button-color;
+            background-color : $j-pvt-small-button-background-color; */
+            background-image: url(../../../../jda/images/delete.png);
+			background-repeat: no-repeat;
+			background-position:50% 50%;
+			background-size:16px 16px;
+        }
+              
+		 .deleteCommentWrapper{
+		 	@extend .commentButton;
+		}
+		.editCommentWrapper{
+			margin:0px 2px 0px 0px;
+		 	@extend .commentButton;
+		 	background-image: url(../../../../jda/images/edit.png);
+		 	
+		} 
+		.deleteCommentWrapper:hover{
+ 		  @include linear-gradient-img($j-pvt-button-hover-background-gradient-top,$j-pvt-button-hover-background-gradient-bottom,$j-pvt-cmt-delete-hover-img);
+ 		  border:$j-pvt-button-hover-background-gradient-border;
+ 		  cursor: pointer;
+		}
+						
+		.editCommentWrapper:hover{		   
+		   @include linear-gradient-img($j-pvt-button-hover-background-gradient-top,$j-pvt-button-hover-background-gradient-bottom,$j-pvt-cmt-edit-hover-img);
+		    border:$j-pvt-button-hover-background-gradient-border;
+		    cursor: pointer;
+		 } 
+// TODO GK: Remove comment to move to glyphs. End 		 
+// TODO GK: Remove comment to move to glyphs		 
+		/*.deleteCommentWrapper:not(.cancelButton){
+		 	@include fontawesome-icon($fa-var-trash-o,1.5);
+		}
+		.editCommentWrapper:not(.okButton){
+			@include fontawesome-icon($fa-var-pencil,1.5);
+		}
+ 		.commentButton:hover{
+		 	background-color : $j-pvt-cmt-default-font-color;
+		 	color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+		}*/		
+	}
+
+	.newCommentPanel{
+		@include input-textarea;
+	 	 	textarea{
+	 	  		font:$j-pvt-cmt-accordionHeader-desc-font;
+	 	  		color:$j-pvt-cmt-accordionHeader-desc-font-color;
+	 	    }
+			.errorValue{
+					border: 1px solid black;
+					outline-style: solid;
+					outline-color: red;
+				}
+				
+	     .cmtHeader{
+	     	   border-top:$j-pvt-cmt-global-border;
+	     	   border-bottom:$j-pvt-cmt-global-border;
+	     	   padding-left:$j-pvt-cmt-padding;
+	 		   padding-right:$j-pvt-cmt-padding;
+	 		   padding-top:$j-pvt-cmt-panel-accordionHeader-padding-top;
+		       height:30px;
+		       @include linear-gradient($j-pvt-cmt-panel-accordionHeader-gradiant-top,$j-pvt-cmt-panel-accordionHeader-gradiant-bottom);
+		   
+		   .okButton{
+				background-image: url(../../../../jda/images/ok.png);
+				background-color:$j-pvt-cmt-panel-accordionHeader-gradiant-top;
+				background-size: 16px 16px;
+				border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+				box-shadow:none;
+		   }
+		  .cancelButton{
+				@extend .okButton;
+				background-image: url(../../../../jda/images/cancel.png);
+		   }  
+		   .okButton:hover{
+		     @extend .okButton;
+		   }      
+		   .cancelButton:hover{
+		     @extend .cancelButton;
+		   }
+		   
+		   .expand{
+		       cursor:pointer;
+		   }
+		   
+		   .collapse{
+		       cursor:pointer;
+		   }
+		   
+	     }
+	     .newCmtHeader{
+	 	     @include linear-gradient($j-pvt-button-hover-background-gradient-top,$j-pvt-button-hover-background-gradient-bottom);
+	 	     color:#ffffff;
+	 	 }
+		 .signComment{
+			 padding-left:5px;
+			 padding-bottom: 3px ;	
+		 }
+		 .reasonCodesCombo{
+					@extend textarea;
+					margin-left:5px;
+					padding-top: 2px ;					
+					height:20px;
+					max-width: 30%;
+					word-wrap:normal;	
+					vertical-align: super;
+					border:$j-pvt-cmt-dropdown-border;
+		 }
+			select,input,textarea{
+				padding-left:5px;
+			}
+	     .cmtBody{
+				padding-left:4%;
+	 		  	padding-right:$j-pvt-cmt-padding;
+	 		  	padding-bottom:5px;
+				padding-top: 10px;
+				
+				.intersectionName{
+					font:$j-pvt-cmt-accordionHeader-desc-intersection-font;
+		 		   	color:$j-pvt-cmt-accordionHeader-desc-intersection-font-color;
+		 		   	padding-top: 5px;
+	 		  	}
+				input.cmtSubArea{
+						@extend textarea;
+						width:100%;
+						height:25px;
+						margin-top: 10px;						
+						word-wrap:normal;
+						vertical-align: super;
+						background-position:99% 50%;
+				}
+				textarea.cmtDescArea{
+		 			width:100%;
+		 		    height:100px;
+					margin-top: 5px;
+		 		    background-position:99.5% 5%;	
+		 		}
+	     }
+		.commentButton{
+		    height:20px;
+		    width:20px;
+		    margin:0px 0px 0px 3px;
+		 	float:right;
+		 	vertical-align: middle; 	
+		 	text-align: center;
+            background-image: url(../../../../jda/images/delete.png);
+			background-repeat: no-repeat;
+			background-position:50% 50%;
+			background-size:16px 16px;
+        }    
+		.cancelComment{
+		 	@extend .commentButton;
+		 	cursor: pointer;
+		}
+		.saveComment{
+			margin:0px 2px 0px 0px;
+		 	@extend .commentButton;
+		 	cursor: pointer;
+		 	background-image: url(../../../../jda/images/edit.png);
+		}
+		.saveComment-disable{
+			opacity: 0.5;
+		} 
+	}	
+}
+

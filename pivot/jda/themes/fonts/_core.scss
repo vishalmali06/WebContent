@@ -1,0 +1,12 @@
+// Base Class Definition
+// -------------------------
+
+.#{$jf-css-prefix} {
+  display: inline-block;
+  font-family: JDAIconsFamily-Regular;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

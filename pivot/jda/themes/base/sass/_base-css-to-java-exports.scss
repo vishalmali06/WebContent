@@ -1,0 +1,394 @@
+platformCssElements {
+  grid-hidden-column-width: 8px;
+  grid-column-header-default-height: $j-grid-header-min-height-normal;
+  grid-row-header-checkbox-width: 20px;
+  grid-row-header-icon-width: 10px;
+  grid-row-header-default-width: 19px;
+  grid-row-header-background-color-default: $j-grid-header-background-color;
+
+  grid-cell-background-editable-color-default: $j-editable-data-background-color;
+  grid-cell-background-color-red: #FF6666;
+  grid-cell-background-color-orange: #FFCC66;
+  grid-cell-background-color-default: $j-grid-background-color;
+  grid-cell-background-color-none: inherit;
+  grid-cell-color-yellow: #FFFF99;
+  grid-cell-color-lightgreen: #BEEDBE;
+  grid-cell-color-lightblue: #BDD3EE;
+  grid-cell-color-red: #FF0000;
+  grid-cell-color-orange: #FF9900;
+  grid-cell-color-default: $j-base-foreground-color;
+  grid-cell-color-lavender: #CCCCFF;
+  grid-cell-color-black: #000000;
+  grid-cell-color-gray: #CCCCCC;
+  grid-cell-color-white: #FFFFFF;
+  grid-cell-color-darkred: #CC3333;
+  grid-cell-color-darkblue: #006699;
+  grid-cell-color-highlight: $j-grid-selected-background-color;
+ 
+  font-default: $j-base-font-family;
+  font-arial: arial;
+  font-tahoma: Tahoma;
+  font-timesnewroman: Times New Roman;
+  font-courier: Courier;
+  font-msgothic: MSGothic;
+  font-verdana: verdana;
+  font-helvetica: helvetica;
+  font-sansserif: sans-serif;
+  
+  text-font-color-default: $j-base-foreground-color;
+  text-font-family-default: $j-base-font-family;
+  
+  font-size-default: $j-base-font-size;
+  font-size-8: 8px; 
+  font-size-9: 9px; 
+  font-size-10: 10px; 
+  font-size-11: 11px; 
+  font-size-12: 12px; 
+  font-size-13: 13px; 
+  font-size-14: 14px; 
+  font-size-15: 15px; 
+ 
+  horizontal-alignment-default: left;
+  vertical-alignment-default: middle;
+}
+
+$medium-font: plain 12px Dialog;
+$medium-bold-font: bold 12px Dialog;
+$small-font: plain 10px Dialog;
+$title-font: bold 16px Dialog;
+
+platformAppletCssElements {
+  desktop: #86A2BE;
+  activeCaption: #244E7A;
+  activeCaptionText: #FFFFFF;
+  activeCaptionBorder: #CCCCCC;
+  inactiveCaption: #999999;
+  inactiveCaptionText: #FFFFFF;
+  inactiveCaptionBorder: #CCCCCC;
+  window: #FFFFFF;
+  windowBorder: #999999;
+  windowText: #000000;
+  text: #FFFFFF;
+  textText: #000000;
+  textHighlight: #244E7A;
+  textHighlightText: #FFFFFF;
+  textInactiveText: #999999;
+  control: #CCCCCC;
+  controlText: #000000;
+  controlHighlight: #E2E0E0;
+  controlLtHighlight: #FFFFFF;
+  controlShadow: #CCCCCC;
+  controlDkShadow: #999999;
+  scrollbar: #FFFFFF;
+  info: #CCCCCC;
+  infoText: #006699;
+
+  Applet-background: #C2DBF1;
+  Applet-titleColor: #86ABE3;
+
+  EditorPane-font: $medium-font;
+  Label-font: $medium-font;
+  FormLabel-font: $medium-font;
+  List-font: $medium-font;
+  Panel-font: $medium-font;
+  PopupMenu-font: $medium-font;
+  TextArea-font: $medium-font;
+  TextField-font: $medium-font;
+  TextPane-font: $medium-font;
+  TitledBorder-font: $medium-font;
+  ToggleButton-font: $medium-font;
+  Viewport-font: $medium-font;
+  Button-font: $medium-font;
+  CheckBox-font: $medium-font;
+  CheckBoxMenuItem-font: $medium-font;
+  ComboBox-font: $medium-font;
+  ColorChooser-font: $medium-font;
+  MenuBar-font: $medium-font;
+  Menu-font: $medium-font;
+  MenuItem-font: $medium-font;
+  Table-font: $medium-font;
+  OptionPane-font: $medium-font;
+  Tree-font: $medium-font;
+  Panel-font: $medium-font;
+  PasswordField-font: $medium-font;
+  ProgressBar-font: $medium-font;
+  RadioButton-font: $medium-font;
+  RadioButtonMenuItem-font: $medium-font;
+  FormattedTextField-font: $medium-font;
+  TableHeader-font: $medium-font;
+  ToolBar-font: $medium-font;
+
+  ToolTip-font: $small-font;
+
+  Calendar-weekDaysBackground: #86A2BE;
+  Calendar-weekDaysForeground: #FFFFFF;
+  Calendar-weekDaysFont: $medium-bold-font;
+  Calendar-daysForeground: #000000;
+  Calendar-daysBackground: #FFFFFF;
+  Calendar-selectedBackground: #BED1E9;
+  Calendar-selectedForeground: #000000;
+  Calendar-windowBackground: #FFFFFF;
+
+  List-focusCellHighlightBorder: #000000;
+  InternalFrame-activeTitleBackground: #86ABE3;
+  InternalFrame-inactiveTitleBackground: #B0D4FC;
+  InternalFrame-titleFont: $medium-font;
+
+  MenuItem-foreground: #000000;
+  MenuItem-selectionForeground: #000000;
+  Menu-selectionForeground: #000000;
+  Menu-foreground: #000000;
+  MenuItem-selectionBackground: #DAE8FA;
+  Menu-selectionBackground: #CCCCCC;
+  MenuBar-foreground: #000000;
+  MenuBar-background: #D0E4FC;
+  PopupMenu-background: #EDF3F9;
+
+  Tree-hash: #BB2B45;
+  Tree-selectionBackground: #BED1E9;
+  Tree-selectionForeground: #000000;
+
+  ProgressBar-background: #999999;
+  ProgressBar-foreground: #264C77;
+
+  Table-focusCellHighlightBorder: #BED1E9;
+  Table-focusCellForeground: #000000;
+  Table-focusCellBackground: #BED1E9;
+  Table-selectionForeground: #000000;
+  Table-selectionBackground: #BED1E9;
+  Table-selectionBorderColor: #BED1E9;
+  Table-rowHighlight: #BED1E9;
+
+  Table-headerFont: $medium-font;
+  Table-foreground: #000000;
+  Table-background: #FFFFFF;
+  Table-panelBackgroundColor: #999999;
+  Table-readOnlyBackgroundColor: #ECECEC;
+  Table-readOnlyForegroundColor: #7B7B7B;
+  Table-readOnlySelectionBackgroundColor: #B7C5EE;
+  Table-cellErrorBackgroundColor: #CC5252;
+  Table-computedCellBackground: #DEEBFF;
+
+  TabbedPane-tabNotSelected: $j-tab-background-color;
+  TabbedPane-tabSelected: $j-tab-selected-background-color;
+  TabbedPane-selected: #264C77;
+  TabbedPane-focus: #86A2BE;
+  TabbedPane-darkShadow: #CECFCE;
+  TabbedPane-lightHighlight: #CECFCE;
+  TabbedPane-highlight: #CECFCE;
+  TabbedPane-shadow: #7391AC;
+  TabbedPane-selectedFont: $medium-font;
+  TabbedPane-unselectedFont: $medium-font;
+  TabbedPane-background: #FFFFFF;
+
+  PrimaryTabbedPane-selectedBackground: $j-tab-selected-background-color;
+  PrimaryTabbedPane-unselectedBackground: $j-tab-background-color;
+  PrimaryTabbedPane-selectedFont: $medium-font;
+  PrimaryTabbedPane-unselectedFont: $medium-font;
+  PrimaryTabbedPane-foreground: $j-tab-foreground-color;
+  PrimaryTabbedPane-selectedForeground: $j-tab-selected-foreground-color;
+
+  ToolTip-background: #FFFFE1;
+  ToolTip-foreground: #000000;
+
+  ToolBar-background: #CCCCCC;
+  ToolBar-foreground: #000000;
+  ToolBar-mainBackground: #FFFFFF;
+  ToolBar-mainTitleFont: $title-font;
+  ToolBar-mainTitleForeground: #244E7A;
+  ToolBar-menuItemBackground: $j-menu-background-color;
+  ToolBar-menuBackground: #e7e8e8;
+
+  Button-background: #FF0000;
+  Button-foreground: #000000;
+  Button-font: $medium-font;
+  Button-focus: #00FF00;
+  Button-select: #0000FF;
+  Button-disabledText: #808080;
+
+  Hypertext-foreground: #006699;
+  Hypertext-font: $medium-font;
+  Hypertext-selectedFont: $medium-font;
+  Hypertext-selectedForeground: #CC3333;
+
+  VPSLinkbar-background: #EDF3F9;
+  VPSLinkbar-separatorColor: #264C77;
+  VPSLinkbar-lineColor: #244E7A;
+
+  FlyoutBar-background: #EDF3F9;
+  FlyoutBar-panelBackground: #ECECEC;
+  FlyoutBar-panelTransparentBackground: #ECECEC;
+  FlyoutBar-panelTitleBackground: #CCCCCC;
+  FlyoutBar-titleForeground: #264C77;
+  FlyoutBar-titleFont: $medium-bold-font;
+
+  DynamicNavMenu-itemBackground: #EDF3F9;
+  DynamicNavMenu-itemSelectedBackground: #BED1E9;
+  DynamicNavMenu-searchBackground: #86A2BE;
+  DynamicNavMenu-targetInfoBackground: #BED1E9;
+  DynamicNavMenu-manageTitleBackground: #264C77;
+
+  AttributePointSelector-itemBackground: #EDF3F9;
+  AttributePointSelector-titleBackground: #86A2BE;
+  AttributePointSelector-itemSelectedBackground: #BED1E9;
+
+  IconBar-background: #CCCCCC;
+  IconBar-foreground: #999999;
+  IconBar-separatorBackground: #FFFFFF;
+
+  IconContainer-background: #DAE8FA;
+  IconContainer-borderColor: #244E7A;
+
+  StandardText-font: $medium-font;
+  StandardText-foreground: #000000;
+
+  StandardTitle-font: $medium-bold-font;
+  StandardTitle-foreground: #000000;
+
+  ErrorText-font: $medium-font;
+  ErrorText-foreground: #FF0000;
+
+  HorizonDisplay-foreground: #FFFFFF;
+  HorizonDisplay-background: #264C77;
+  HorizonDisplay-horizonDateTextColor: #CECFCE;
+  HorizonDisplay-displayDateTextColor: #FFFFFF;
+  HorizonDisplay-font: $small-font;
+
+  Graph-font: $small-font;
+  Graph-backgroundColor: #EDF3F9;
+  Graph-plotAreaBackgroundLight: #FFFFFF;
+  Graph-plotAreaBackgroundDark: #2C4051;
+  Graph-editedPointColor: #FF0000;
+  Graph-selectedPointColor: #2C4051;
+  Graph-highlightedPointColor: #FFFF80;
+  Graph-gridLineColor: #ECECEC;
+  Graph-indicatorColor: #264C77;
+  Graph-rangeSelectorColor: #2C4051;
+  Graph-attributeMarkerColor: #264C77;
+  Graph-attributeMarkerBorderColor: #FFFFFF;
+
+  Viewport-background: #999999;
+  ColumnFilterDropDown-unfilteredArrowColor: #264C77;
+  ColumnFilterDropDown-filteredArrowColor: #CC3333;
+
+  QuickSearch-background: #ECECEC;
+
+  Slider-trackColor: #666666;
+  DynamicSlider-font: $small-font;
+  DynamicSlider-backgroundColor: #ECECEC;
+
+  CoordinatedHighlighting-backgroundColor: #FFFF80;
+  CoordinatedHighlighting-selectedBackgroundColor: #DDECB8;
+}
+
+platformGraphCssElements {
+  Background-color: $j-graph-background-color;
+  Background-transparency: $j-graph-data-color-opacity;
+
+  Element-spacing: $j-graph-element-spacing;
+
+  Chart-shadow-visibility: 0;
+  Chart-border-visibility: 0;
+  Chart-margin: 16;
+  Chart-alternate-grid-color-visibility: 0;
+
+  Canvas-border-visibility: 1;
+  Canvas-border-thickness: 0.1;
+
+  Plot-space-pct: 10;
+  Plot-border-visibility: 0;
+  Plot-border-thickness: 0;
+
+  Font-size: $j-base-font-size;
+  Font-family: $j-graph-font-family;
+
+  Palette-color-name-01: JDA_SOFTWARE_BLUE;
+  Palette-color-name-02: JDA_SUNSET_ORANGE;
+  Palette-color-name-03: JDA_MINT_GREEN;
+  Palette-color-name-04: JDA_DAMAS_PURPLE;
+  Palette-color-name-05: JDA_AZURE;
+  Palette-color-name-06: JDA_SUNFLOWER_YELLOW;
+  Palette-color-name-07: JDA_JELLYBEAN_GREEN;
+  Palette-color-name-08: JDA_VIOLET;
+
+  Palette-normal-color-error: $j-graph-error-color;
+  Palette-normal-color-comparison: $j-graph-comparison-color;
+  Palette-normal-color-01: $j-graph-data-color-01;
+  Palette-normal-color-02: $j-graph-data-color-02;
+  Palette-normal-color-03: $j-graph-data-color-03;
+  Palette-normal-color-04: $j-graph-data-color-04;
+  Palette-normal-color-05: $j-graph-data-color-05;
+  Palette-normal-color-06: $j-graph-data-color-06;
+  Palette-normal-color-07: $j-graph-data-color-07;
+  Palette-normal-color-08: $j-graph-data-color-08;
+
+  Data-transparency: $j-graph-data-color-opacity;
+
+  Pivot-line-width: 1;
+  Pivot-line-color: #333333;
+
+  Palette-hover-color-error: $j-graph-error-hover-color;
+  Palette-hover-color-comparison: $j-graph-comparison-hover-color;
+  Palette-hover-color-01: $j-graph-data-hover-color-01;
+  Palette-hover-color-02: $j-graph-data-hover-color-02;
+  Palette-hover-color-03: $j-graph-data-hover-color-03;
+  Palette-hover-color-04: $j-graph-data-hover-color-04;
+  Palette-hover-color-05: $j-graph-data-hover-color-05;
+  Palette-hover-color-06: $j-graph-data-hover-color-06;
+  Palette-hover-color-07: $j-graph-data-hover-color-07;
+  Palette-hover-color-08: $j-graph-data-hover-color-08;
+
+  Title-font-size: $j-graph-title-font-size;
+  Title-font-weight: $j-graph-title-font-weight;
+
+  Time-range-font-weight: $j-graph-time-range-font-weight;
+  Time-range-font-size: $j-graph-time-range-font-size;
+  Time-range-color: $j-graph-time-range-color;
+
+  Axis-units-font-weight: $j-graph-axis-units-font-weight;
+  Axis-units-font-size: $j-graph-axis-units-font-size;
+  Axis-units-color: $j-graph-axis-units-color;
+
+  Legend-visibility: 1;
+  Legend-position: BOTTOM; //or RIGHT
+  Legend-font-weight: $j-graph-legend-font-weight;
+  Legend-font-size: $j-graph-legend-font-size;
+  Legend-color: $j-graph-legend-color;
+
+  Label-orientation: DIAGONAL;
+  Label-axis-padding: 16;
+  Label-font-weight: $j-graph-label-font-weight;
+  Label-font-size: $j-graph-label-font-size;
+  Label-color: $j-graph-label-color;
+
+  Tooltip-visibility: 1;
+  Tooltip-shadow-visibility: 0;
+  Tooltip-font-weight: $j-graph-tooltip-font-weight;
+  Tooltip-font-size: $j-graph-tooltip-font-size;
+  Tooltip-color: $j-graph-tooltip-color;
+  Tooltip-border-color: $j-graph-tooltip-border-color;
+  Tooltip-background-color: $j-graph-background-color;
+
+  X-axis-width: $j-graph-x-axis-width;
+  X-axis-style: $j-graph-x-axis-style;
+  X-axis-color: $j-graph-x-axis-color;
+
+  Increment-line-width: $j-graph-increment-line-width;
+  Increment-line-style: $j-graph-increment-line-style;
+  Increment-line-color: $j-graph-increment-line-color;
+
+  Trend-line-width: $j-graph-trend-line-width;
+  Trend-line-style: $j-graph-trend-line-style;
+  Trend-line-color: $j-graph-trend-line-color;
+
+  Trend-zone-color: $j-graph-trend-zone-color;
+  Trend-zone-transparency: $j-graph-trend-zone-color-transparency;
+
+  Line-chart-line-width: $j-graph-line-chart-line-width;
+  Line-chart-intersection-point-radius: $j-graph-line-chart-intersection-point-radius;
+  Line-chart-intersection-point-border-color: $j-graph-line-chart-intersection-point-border-color;
+  Line-chart-intersection-point-border-width: $j-graph-line-chart-intersection-point-border-width;
+
+  Bubble-chart-fill-transparency: $j-graph-data-color-opacity;
+}
+

@@ -1,0 +1,241 @@
+// Primary theme colors
+// - use this first set of variables to name/define/swap out the primary colors 
+//   for the suite. Only use these within this color file
+$j-theme-color-main-banner:                     $clr-midnightblue;
+$j-theme-color-main-banner-001:                 $clr-bayofmany;
+$j-theme-color-secondary-banner:                $clr-linkwater;
+//=============================================================================
+
+$j-base-foreground-color:                       $clr-gray-5;
+$j-base-inverse-foreground-color:               $clr-white;
+$j-base-inverse-background-color:               $clr-gray-301;
+$j-base-background-color:                       $clr-white;
+$j-base-shadow-color:                           $clr-shadow;
+$j-base-shadow-darker-color:                    $clr-shadow-darker;
+
+$j-base-hyperlink-color:                        $clr-deepcerulean;
+$j-base-hyperlink-hover-color:                  $clr-deepcerulean;
+$j-base-hyperlink-disabled-color:               $clr-gray-601;
+
+$j-page-background-color:                       $j-base-background-color;
+$j-page-title-background-color:                 $j-theme-color-secondary-banner;
+
+$j-banner-bottom-border-color:                  $clr-gray-b01;
+
+$j-primary-banner-background-color:             $j-theme-color-main-banner;
+$j-secondary-banner-background-color:           $j-theme-color-secondary-banner;
+
+$j-primary-header-text-color:                   $clr-gray-5;
+$j-header-bar-background-gradient-color-start:  $clr-white;
+$j-header-bar-background-gradient-color-end:    $clr-gray-f;
+
+$j-highlighted-text-background-color:           Highlight;
+$j-highlighted-text-foreground-color:           HighlightText;
+
+$j-tree-node-foreground-color:                  $j-base-foreground-color;
+$j-highlighted-tree-node-foreground-color:      $j-base-foreground-color;
+$j-highlighted-tree-node-background-color:      $clr-gray-e04;
+$j-highlighted-tree-node-border-color:          $clr-gray-c01;
+
+// Borders 
+$j-base-border-color:                           $clr-gray-d03;
+$j-3dborder-upper-left-color:                   $clr-gray-d02;
+$j-3dborder-bottom-right-color:                 $clr-gray-701;
+$j-control-border-color:                        $clr-gray-c02;
+$j-control-border-disabled-color:               $clr-gray-e09;
+$j-rectangle-border-color:                      $clr-gray-3;
+
+// Dialog box
+$j-dialog-box-title-bar-color:                  $clr-perano;
+$j-dialog-box-background-color:                 $j-base-background-color;
+$j-dialog-box-top-left-border-color:            $clr-white;
+$j-dialog-box-bottom-right-border-color:        $clr-gray-e;
+
+$j-popup-banner-background-color:               $j-theme-color-main-banner-001;
+$j-popup-background-color:                      $j-base-background-color;
+
+// Header bars
+$j-primary-toolbar-color:                       $clr-perano;
+$j-secondary-toolbar-background-color:          $clr-gray-f02;
+$j-secondary-toolbar-foreground-color:          $clr-gray-401;
+
+$j-table-border-color:                          $j-base-border-color;
+
+$j-grid-paging-header-background-color:         $clr-gray-e01;
+$j-grid-paging-header-border-color:             $clr-white;
+
+$j-grid-background-color:                       $j-page-background-color;
+$j-grid-header-background-color:                $clr-gray-d01;
+$j-grid-readonly-header-background-color:       $clr-gray-e01;
+$j-grid-row-header-background-color:            $j-grid-header-background-color;
+$j-grid-col-header-text-color:                  $clr-gray-703;
+$j-grid-col-header-background-color:            $clr-catskill-white;
+$j-grid-header-highlighted-background-color:    $clr-azure;
+$j-grid-header-border-color:                    $clr-gray-c01;
+$j-grid-checkbook-color:                        $clr-astra;
+$j-grid-separator-color:                        $clr-gray-e07;
+$j-grid-selected-background-color:              $clr-tropical-blue;
+$j-grid-selected-foreground-color:              $clr-gray-001;
+$j-grid-selected-border-color:                  $clr-white;
+$j-grid-hover-background-color:                 $clr-gray-e08;
+$j-grid-hover-foreground-color:                 $clr-black;
+$j-grid-hover-border-color:                     $j-grid-hover-background-color;
+
+$j-grid-sort-indicator-foreground-color:            $clr-white;
+$j-grid-sort-indicator-hover-background-color:      $clr-black;
+$j-grid-sort-indicator-selected-background-color:   $clr-deepcerulean;
+
+$j-data-color:                                  $j-base-foreground-color;
+$j-data-background-color:                       $j-page-background-color;
+$j-data-error-background-color:                 $clr-chestnutrose;
+$j-editable-data-background-color:              $clr-derby;
+$j-control-text-foreground-color:               $j-base-foreground-color;
+$j-control-text-background-color:               $clr-white;
+$j-control-text-foreground-disabled-color:      $clr-gray-c01;
+$j-control-text-background-disabled-color:      $clr-gray-f07;
+$j-label-color:                                 $j-base-foreground-color;
+$j-label-background-color:                      $clr-gray-f05;
+$j-label-disabled-color:                        $clr-gray-9;
+$j-label-error-color:                           $clr-persianred;
+$j-label-optional-indicator-color:              $clr-gray-a01;
+$j-field-background-color:                      $clr-gray-f06;
+$j-form-section-header-background-color:        $clr-gray-e08;
+
+$j-mini-grid-col-header-color:                  $clr-gray-e01;
+$j-mini-grid-row-header-color:                  $clr-white;
+$j-mini-grid-col-border-color:                  $clr-gray-c01;
+$j-mini-grid-background-color:                  $clr-white;
+
+$j-cal-popup-foreground-color:                  $clr-azure;
+$j-cal-popup-highlight-color:                   $clr-persianred;
+$j-cal-popup-inactive-color:                    $clr-gray-a;
+
+$j-scrollbar-arrow-color:                       $clr-bayofmany;
+$j-scrollbar-track-color:                       $clr-spindle;
+$j-scrollbar-face-color:                        $clr-gray-e;
+$j-scrollbar-3dlight-color:                     $clr-gray-6;
+$j-scrollbar-highlight-color:                   $clr-white;
+$j-scrollbar-base-color:                        $clr-black;
+
+$j-alert-text-color:                            $clr-gray-5;
+$j-error-text-color:                            $clr-persianred;
+$j-info-text-color:                             $clr-black;
+
+$j-menu-background-color:                       $clr-white;
+$j-menu-background-color-active-gradient-start: $clr-porcelain-01;
+$j-menu-background-color-active-gradient-end:   $clr-gray-d02;
+$j-menu-foreground-color:                       $clr-gray-801;
+$j-menu-foreground-color-active:                $clr-gray-401;
+$j-menu-border-color:                           $j-base-border-color;
+$j-menu-shadow-color:                           $clr-gray-3;
+
+
+$j-button-background-color:                     $clr-gray-e;
+$j-button-text-color:                           $clr-gray-5;
+$j-button-text-hover-color:                     $clr-white;
+$j-button-text-pressed-color:                   $clr-white;
+$j-button-text-disabled-color:                  $clr-gray-803;
+$j-button-top-left-border-color:                $clr-gray-b01;
+$j-button-bottom-right-border-color:            $clr-gray-a01;
+$j-button-border-color:                         $clr-gray-c02;
+$j-button-border-hover-color:                   $clr-gray-402;
+$j-button-border-pressed-color:                 $clr-gray-402;
+$j-button-border-disabled-color:                $clr-gray-d05;
+$j-primary-button-text-color:                   $clr-white;
+$j-primary-button-text-hover-color:             $clr-white;
+$j-primary-button-text-pressed-color:           $clr-white;
+$j-primary-button-text-disabled-color:          $clr-gray-803;   
+$j-primary-button-border-color:                 $clr-bahamablue;       
+$j-primary-button-border-hover-color:           $clr-regalblue;       
+$j-primary-button-border-pressed-color:         $clr-regalblue;       
+
+// button gradients
+$j-button-background-gradient-color-start:          $clr-white;
+$j-button-background-gradient-color-end:            $clr-gray-e11;    
+$j-button-background-hover-gradient-color-start:    $clr-abbey-04;
+$j-button-background-hover-gradient-color-end:      $clr-gray-402;    
+$j-button-background-pressed-gradient-color-start:  $clr-gray-202;
+$j-button-background-pressed-gradient-color-end:    $clr-abbey-04;    
+$j-button-background-disabled-gradient-color-start: $clr-gray-f04;
+$j-button-background-disabled-gradient-color-end:   $clr-porcelain-02;
+$j-primary-button-background-gradient-color-start:          $clr-pacificblue;
+$j-primary-button-background-gradient-color-end:            $clr-deepcerulean;    
+$j-primary-button-background-hover-gradient-color-start:    $clr-deepcerulean;
+$j-primary-button-background-hover-gradient-color-end:      $clr-bahamablue;    
+$j-primary-button-background-pressed-gradient-color-start:  $clr-regalblue;
+$j-primary-button-background-pressed-gradient-color-end:    $clr-bahamablue;    
+
+$j-filter-control-border-color:                             $clr-gray-c;
+$j-filter-control-background-color:                         $clr-gray-f;
+$j-filter-control-close-button-border-color:                transparent;
+$j-filter-control-close-button-border-pressed-color:        $clr-gray-8;
+$j-filter-control-close-button-background-color:            transparent;
+$j-filter-control-close-button-foreground-color:            $clr-astronaut;
+$j-filter-panel-background-color:                           $clr-white;
+$j-filter-panel-border-color:                               $clr-gray-e01;
+
+$j-splitter-border-color:                       $clr-gray-d03;
+$j-splitter-background-color:                   $clr-gray-b01;
+$j-splitter-collapsed-color:                    $clr-gray-d02;
+
+$j-modal-overlay-background-color:              $clr-white;
+
+$j-cal-bucket-default-a-background-color:       $clr-casper;
+$j-cal-bucket-default-b-background-color:       $clr-blacksqueeze;
+$j-cal-bucket-combo-1a-background-color:        $clr-gray-a;
+$j-cal-bucket-combo-1b-background-color:        $clr-blacksqueeze;
+$j-cal-bucket-combo-2a-background-color:        $clr-azure;
+$j-cal-bucket-combo-2b-background-color:        $clr-anakiwa;
+$j-cal-bucket-combo-3a-background-color:        $clr-nepal;
+$j-cal-bucket-combo-3b-background-color:        $clr-goldenrod;
+
+$j-hierarchy-breadcrumb-background-color:       $clr-gray-e01;
+$j-hierarchy-breadcrumb-border-color:           $j-base-border-color;
+$j-hierarchy-breadcrumb-foreground-selected-color:  $clr-persianred;
+
+$j-load-status-text-color:                      $clr-japaneselaurel;
+$j-prompted-search-uparrow-background-color:    $clr-gray-f;
+$j-dropdown-arrow-color:                        $clr-bayofmany;
+$j-list-hover-color:                            Highlight;
+
+$j-dialog-box-frame-background-color:           $clr-gray-301;        
+$j-dialog-box-frame-foreground-color:           $clr-white;
+$j-dialog-box-shadow-color:                     $clr-gray-301;
+$j-dialog-box-header-text-shadow-color:         $clr-black;
+$j-modal-dialog-box-mask-color:                 $clr-white;
+
+$j-tab-border-color:                            $clr-geyser;
+$j-tab-hover-border-color:                      $clr-geyser;
+$j-tab-selected-border-color:                   $clr-geyser;
+$j-tab-foreground-color:                        $clr-dovegray;
+$j-tab-hover-foreground-color:                  $clr-gray-5;
+$j-tab-selected-foreground-color:               $clr-gray-5;
+$j-tab-background-color:						$clr-botticelli;
+$j-tab-hover-background-color:					$clr-botticelli;
+$j-tab-selected-background-color:				$clr-white;
+$j-group-header-shadow-color:                   $clr-gray-d03;
+
+$j-tooltip-foreground-color:                    $clr-gray-501;
+$j-tooltip-background-color:                    $clr-white;
+$j-tooltip-border-color:                        $clr-gray-501;
+
+$j-graph-background-color:                      $clr-white;
+$j-graph-header-background-gradient-color-start: $clr-gray-f04; 
+$j-graph-header-background-gradient-color-end:   $clr-gray-e06;
+
+$j-aboutbox-header-color:                       $clr-cerulean;
+$j-aboutbox-content-color:                      $clr-thunder;
+
+$j-button-icon-color:                           $clr-nevada;
+$j-button-icon-hover-color:                     $clr-black;
+$j-button-icon-hover-inverse-color:             $clr-white;
+$j-button-icon-disabled-color:                  $clr-gray-c03;
+$j-button-icon-pressed-color:                   $clr-white;
+
+$j-icon-color-blue:                             $clr-mariner;
+$j-icon-color-yellow:                           $clr-seabuckthorn;
+$j-icon-color-red:                              $clr-cardinal;
+
+$j-indicator-good-color:                        $clr-pigmentgreen-01;
+$j-indicator-average-color:                     $clr-mangoorange-01;
+$j-indicator-critical-color:                    $clr-alizarinred-01;

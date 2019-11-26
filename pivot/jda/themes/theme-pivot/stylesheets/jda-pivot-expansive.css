@@ -1,0 +1,3485 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Softs/ruby-2.4.1/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*!
+ *  JDA Font CSS 1.2.0 by JDA
+ *  Some SCSS/CSS utility methods taken with MIT license from Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'JDAIconsFamily-Regular';
+  src: url("../../fonts/JDAIconsFamily-Regular.otf?v=1.2.0");
+  src: url("../../fonts/JDAIconsFamily-Regular.eot?#iefix&v=1.2.0") format("embedded-opentype"), url("../../fonts/JDAIconsFamily-Regular.woff?v=1.2.0") format("woff"), url("../../fonts/JDAIconsFamily-Regular.ttf?v=1.2.0") format("truetype"), url("../../fonts/JDAIconsFamily-Regular.svg?v=1.2.0#JDAIconsFamily-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 4, ../../fonts/_core.scss */
+.jf, .j-graphic-space, .j-graphic-add, .j-graphic-add-btn, .j-graphic-add-comment, .j-graphic-add-favorites, .j-graphic-add-folder, .j-graphic-alert-require-field, .j-graphic-attachment, .j-graphic-audio, .j-graphic-back, .j-graphic-bottom, .j-graphic-calculate, .j-graphic-calendar, .j-graphic-cancel-close, .j-graphic-chart, .j-graphic-clock, .j-graphic-collapsed, .j-graphic-collapsed-all, .j-graphic-comments, .j-graphic-confrim, .j-graphic-copy, .j-graphic-copy-multiple, .j-graphic-critical-error, .j-graphic-delete, .j-graphic-down, .j-graphic-edit, .j-graphic-expanded, .j-graphic-expanded-all, .j-graphic-export, .j-graphic-export-to-database, .j-graphic-favorites, .j-graphic-filter, .j-graphic-find, .j-graphic-firstpage, .j-graphic-folder, .j-graphic-foward, .j-graphic-grid-view, .j-graphic-go-to, .j-graphic-graph, .j-graphic-grid, .j-graphic-help, .j-graphic-help-btn, .j-graphic-hierarchy, .j-graphic-home, .j-graphic-image, .j-graphic-import, .j-graphic-import-from-cloud, .j-graphic-import-from-database, .j-graphic-information, .j-graphic-last-page, .j-graphic-last-page-down, .j-graphic-last-page-up, .j-graphic-left, .j-graphic-library, .j-graphic-list-view, .j-graphic-lock, .j-graphic-log-in, .j-graphic-log-out, .j-graphic-maximize, .j-graphic-menu, .j-graphic-minimize, .j-graphic-more-options, .j-graphic-move, .j-graphic-move-back, .j-graphic-move-foward, .j-graphic-next, .j-graphic-next-down, .j-graphic-next-page, .j-graphic-open-folder, .j-graphic-open-tab, .j-graphic-pin, .j-graphic-preview, .j-graphic-previous, .j-graphic-previous-page, .j-graphic-previous-up, .j-graphic-print, .j-graphic-refresh, .j-graphic-refresh-database, .j-graphic-remove-folder, .j-graphic-report, .j-graphic-resources, .j-graphic-restore-reset, .j-graphic-right, .j-graphic-save, .j-graphic-scenario-management, .j-graphic-search, .j-graphic-settings, .j-graphic-sort-ascending, .j-graphic-sort-descending, .j-graphic-tab-overflow, .j-graphic-thumbs-down, .j-graphic-thumbs-up, .j-graphic-top, .j-graphic-unpin, .j-graphic-up, .j-graphic-upload-to-cloud, .j-graphic-video, .j-graphic-warning-error, .j-graphic-wizard, .j-graphic-zoom-in, .j-graphic-zoom-out, .j-graphic-collapse-up, .j-graphic-expand-down, .j-graphic-expand-right, .j-graphic-collapse-left, .j-graphic-arrow-down, .j-graphic-arrow-right, .j-graphic-arrow-left, .j-graphic-arrow-up, .j-graphic-dashboard-exception, .j-graphic-dashboard-kpi, .j-graphic-dashboard-graph, .j-graphic-dashboard-worklist, .j-graphic-confirm, .j-graphic-flag, .j-graphic-link {
+  display: inline-block;
+  font-family: JDAIconsFamily-Regular;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 5, ../../fonts/_larger.scss */
+.jf-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 10, ../../fonts/_larger.scss */
+.jf-2x {
+  font-size: 2em;
+}
+
+/* line 11, ../../fonts/_larger.scss */
+.jf-3x {
+  font-size: 3em;
+}
+
+/* line 12, ../../fonts/_larger.scss */
+.jf-4x {
+  font-size: 4em;
+}
+
+/* line 13, ../../fonts/_larger.scss */
+.jf-5x {
+  font-size: 5em;
+}
+
+/* line 3, ../../fonts/_fixed-width.scss */
+.jf-fw {
+  width: 1.28571em;
+  text-align: center;
+}
+
+/* line 4, ../../fonts/_list.scss */
+.jf-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none;
+}
+/* line 8, ../../fonts/_list.scss */
+.jf-ul > li {
+  position: relative;
+}
+
+/* line 10, ../../fonts/_list.scss */
+.jf-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center;
+}
+/* line 16, ../../fonts/_list.scss */
+.jf-li.jf-lg {
+  left: -1.85714em;
+}
+
+/* line 4, ../../fonts/_bordered-pulled.scss */
+.jf-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+/* line 10, ../../fonts/_bordered-pulled.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 11, ../../fonts/_bordered-pulled.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 14, ../../fonts/_bordered-pulled.scss */
+.jf.pull-left, .pull-left.j-graphic-space, .pull-left.j-graphic-add, .pull-left.j-graphic-add-btn, .pull-left.j-graphic-add-comment, .pull-left.j-graphic-add-favorites, .pull-left.j-graphic-add-folder, .pull-left.j-graphic-alert-require-field, .pull-left.j-graphic-attachment, .pull-left.j-graphic-audio, .pull-left.j-graphic-back, .pull-left.j-graphic-bottom, .pull-left.j-graphic-calculate, .pull-left.j-graphic-calendar, .pull-left.j-graphic-cancel-close, .pull-left.j-graphic-chart, .pull-left.j-graphic-clock, .pull-left.j-graphic-collapsed, .pull-left.j-graphic-collapsed-all, .pull-left.j-graphic-comments, .pull-left.j-graphic-confrim, .pull-left.j-graphic-copy, .pull-left.j-graphic-copy-multiple, .pull-left.j-graphic-critical-error, .pull-left.j-graphic-delete, .pull-left.j-graphic-down, .pull-left.j-graphic-edit, .pull-left.j-graphic-expanded, .pull-left.j-graphic-expanded-all, .pull-left.j-graphic-export, .pull-left.j-graphic-export-to-database, .pull-left.j-graphic-favorites, .pull-left.j-graphic-filter, .pull-left.j-graphic-find, .pull-left.j-graphic-firstpage, .pull-left.j-graphic-folder, .pull-left.j-graphic-foward, .pull-left.j-graphic-grid-view, .pull-left.j-graphic-go-to, .pull-left.j-graphic-graph, .pull-left.j-graphic-grid, .pull-left.j-graphic-help, .pull-left.j-graphic-help-btn, .pull-left.j-graphic-hierarchy, .pull-left.j-graphic-home, .pull-left.j-graphic-image, .pull-left.j-graphic-import, .pull-left.j-graphic-import-from-cloud, .pull-left.j-graphic-import-from-database, .pull-left.j-graphic-information, .pull-left.j-graphic-last-page, .pull-left.j-graphic-last-page-down, .pull-left.j-graphic-last-page-up, .pull-left.j-graphic-left, .pull-left.j-graphic-library, .pull-left.j-graphic-list-view, .pull-left.j-graphic-lock, .pull-left.j-graphic-log-in, .pull-left.j-graphic-log-out, .pull-left.j-graphic-maximize, .pull-left.j-graphic-menu, .pull-left.j-graphic-minimize, .pull-left.j-graphic-more-options, .pull-left.j-graphic-move, .pull-left.j-graphic-move-back, .pull-left.j-graphic-move-foward, .pull-left.j-graphic-next, .pull-left.j-graphic-next-down, .pull-left.j-graphic-next-page, .pull-left.j-graphic-open-folder, .pull-left.j-graphic-open-tab, .pull-left.j-graphic-pin, .pull-left.j-graphic-preview, .pull-left.j-graphic-previous, .pull-left.j-graphic-previous-page, .pull-left.j-graphic-previous-up, .pull-left.j-graphic-print, .pull-left.j-graphic-refresh, .pull-left.j-graphic-refresh-database, .pull-left.j-graphic-remove-folder, .pull-left.j-graphic-report, .pull-left.j-graphic-resources, .pull-left.j-graphic-restore-reset, .pull-left.j-graphic-right, .pull-left.j-graphic-save, .pull-left.j-graphic-scenario-management, .pull-left.j-graphic-search, .pull-left.j-graphic-settings, .pull-left.j-graphic-sort-ascending, .pull-left.j-graphic-sort-descending, .pull-left.j-graphic-tab-overflow, .pull-left.j-graphic-thumbs-down, .pull-left.j-graphic-thumbs-up, .pull-left.j-graphic-top, .pull-left.j-graphic-unpin, .pull-left.j-graphic-up, .pull-left.j-graphic-upload-to-cloud, .pull-left.j-graphic-video, .pull-left.j-graphic-warning-error, .pull-left.j-graphic-wizard, .pull-left.j-graphic-zoom-in, .pull-left.j-graphic-zoom-out, .pull-left.j-graphic-collapse-up, .pull-left.j-graphic-expand-down, .pull-left.j-graphic-expand-right, .pull-left.j-graphic-collapse-left, .pull-left.j-graphic-arrow-down, .pull-left.j-graphic-arrow-right, .pull-left.j-graphic-arrow-left, .pull-left.j-graphic-arrow-up, .pull-left.j-graphic-dashboard-exception, .pull-left.j-graphic-dashboard-kpi, .pull-left.j-graphic-dashboard-graph, .pull-left.j-graphic-dashboard-worklist, .pull-left.j-graphic-confirm, .pull-left.j-graphic-flag, .pull-left.j-graphic-link {
+  margin-right: .3em;
+}
+/* line 15, ../../fonts/_bordered-pulled.scss */
+.jf.pull-right, .pull-right.j-graphic-space, .pull-right.j-graphic-add, .pull-right.j-graphic-add-btn, .pull-right.j-graphic-add-comment, .pull-right.j-graphic-add-favorites, .pull-right.j-graphic-add-folder, .pull-right.j-graphic-alert-require-field, .pull-right.j-graphic-attachment, .pull-right.j-graphic-audio, .pull-right.j-graphic-back, .pull-right.j-graphic-bottom, .pull-right.j-graphic-calculate, .pull-right.j-graphic-calendar, .pull-right.j-graphic-cancel-close, .pull-right.j-graphic-chart, .pull-right.j-graphic-clock, .pull-right.j-graphic-collapsed, .pull-right.j-graphic-collapsed-all, .pull-right.j-graphic-comments, .pull-right.j-graphic-confrim, .pull-right.j-graphic-copy, .pull-right.j-graphic-copy-multiple, .pull-right.j-graphic-critical-error, .pull-right.j-graphic-delete, .pull-right.j-graphic-down, .pull-right.j-graphic-edit, .pull-right.j-graphic-expanded, .pull-right.j-graphic-expanded-all, .pull-right.j-graphic-export, .pull-right.j-graphic-export-to-database, .pull-right.j-graphic-favorites, .pull-right.j-graphic-filter, .pull-right.j-graphic-find, .pull-right.j-graphic-firstpage, .pull-right.j-graphic-folder, .pull-right.j-graphic-foward, .pull-right.j-graphic-grid-view, .pull-right.j-graphic-go-to, .pull-right.j-graphic-graph, .pull-right.j-graphic-grid, .pull-right.j-graphic-help, .pull-right.j-graphic-help-btn, .pull-right.j-graphic-hierarchy, .pull-right.j-graphic-home, .pull-right.j-graphic-image, .pull-right.j-graphic-import, .pull-right.j-graphic-import-from-cloud, .pull-right.j-graphic-import-from-database, .pull-right.j-graphic-information, .pull-right.j-graphic-last-page, .pull-right.j-graphic-last-page-down, .pull-right.j-graphic-last-page-up, .pull-right.j-graphic-left, .pull-right.j-graphic-library, .pull-right.j-graphic-list-view, .pull-right.j-graphic-lock, .pull-right.j-graphic-log-in, .pull-right.j-graphic-log-out, .pull-right.j-graphic-maximize, .pull-right.j-graphic-menu, .pull-right.j-graphic-minimize, .pull-right.j-graphic-more-options, .pull-right.j-graphic-move, .pull-right.j-graphic-move-back, .pull-right.j-graphic-move-foward, .pull-right.j-graphic-next, .pull-right.j-graphic-next-down, .pull-right.j-graphic-next-page, .pull-right.j-graphic-open-folder, .pull-right.j-graphic-open-tab, .pull-right.j-graphic-pin, .pull-right.j-graphic-preview, .pull-right.j-graphic-previous, .pull-right.j-graphic-previous-page, .pull-right.j-graphic-previous-up, .pull-right.j-graphic-print, .pull-right.j-graphic-refresh, .pull-right.j-graphic-refresh-database, .pull-right.j-graphic-remove-folder, .pull-right.j-graphic-report, .pull-right.j-graphic-resources, .pull-right.j-graphic-restore-reset, .pull-right.j-graphic-right, .pull-right.j-graphic-save, .pull-right.j-graphic-scenario-management, .pull-right.j-graphic-search, .pull-right.j-graphic-settings, .pull-right.j-graphic-sort-ascending, .pull-right.j-graphic-sort-descending, .pull-right.j-graphic-tab-overflow, .pull-right.j-graphic-thumbs-down, .pull-right.j-graphic-thumbs-up, .pull-right.j-graphic-top, .pull-right.j-graphic-unpin, .pull-right.j-graphic-up, .pull-right.j-graphic-upload-to-cloud, .pull-right.j-graphic-video, .pull-right.j-graphic-warning-error, .pull-right.j-graphic-wizard, .pull-right.j-graphic-zoom-in, .pull-right.j-graphic-zoom-out, .pull-right.j-graphic-collapse-up, .pull-right.j-graphic-expand-down, .pull-right.j-graphic-expand-right, .pull-right.j-graphic-collapse-left, .pull-right.j-graphic-arrow-down, .pull-right.j-graphic-arrow-right, .pull-right.j-graphic-arrow-left, .pull-right.j-graphic-arrow-up, .pull-right.j-graphic-dashboard-exception, .pull-right.j-graphic-dashboard-kpi, .pull-right.j-graphic-dashboard-graph, .pull-right.j-graphic-dashboard-worklist, .pull-right.j-graphic-confirm, .pull-right.j-graphic-flag, .pull-right.j-graphic-link {
+  margin-left: .3em;
+}
+
+/* line 4, ../../fonts/_rotated-flipped.scss */
+.jf-rotate-0, .j-graphic-arrow-down, .j-graphic-arrow-right, .j-graphic-arrow-left, .j-graphic-arrow-up {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 5, ../../fonts/_rotated-flipped.scss */
+.jf-rotate-90, .j-graphic-arrow-left {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 6, ../../fonts/_rotated-flipped.scss */
+.jf-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 7, ../../fonts/_rotated-flipped.scss */
+.jf-rotate-270, .j-graphic-arrow-right {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 9, ../../fonts/_rotated-flipped.scss */
+.jf-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 10, ../../fonts/_rotated-flipped.scss */
+.jf-flip-vertical {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 4, ../../fonts/_stacked.scss */
+.jf-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, ../../fonts/_stacked.scss */
+.jf-stack-1x, .jf-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, ../../fonts/_stacked.scss */
+.jf-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, ../../fonts/_stacked.scss */
+.jf-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, ../../fonts/_stacked.scss */
+.jf-inverse {
+  color: #fff;
+}
+
+/* line 21, ../../fonts/_icons.scss */
+.jf-space:before, .j-graphic-space:before {
+  content: " ";
+}
+
+/* line 22, ../../fonts/_icons.scss */
+.jf-add:before, .j-graphic-add:before {
+  content: "";
+}
+
+/* line 23, ../../fonts/_icons.scss */
+.jf-add-btn:before, .j-graphic-add-btn:before {
+  content: "";
+}
+
+/* line 24, ../../fonts/_icons.scss */
+.jf-add-comment:before, .j-graphic-add-comment:before {
+  content: "";
+}
+
+/* line 25, ../../fonts/_icons.scss */
+.jf-add-favorites:before, .j-graphic-add-favorites:before {
+  content: "";
+}
+
+/* line 26, ../../fonts/_icons.scss */
+.jf-add-folder:before, .j-graphic-add-folder:before {
+  content: "";
+}
+
+/* line 27, ../../fonts/_icons.scss */
+.jf-alert-require-field:before, .j-graphic-alert-require-field:before {
+  content: "";
+}
+
+/* line 28, ../../fonts/_icons.scss */
+.jf-attachment:before, .j-graphic-attachment:before {
+  content: "";
+}
+
+/* line 29, ../../fonts/_icons.scss */
+.jf-audio:before, .j-graphic-audio:before {
+  content: "";
+}
+
+/* line 30, ../../fonts/_icons.scss */
+.jf-back:before, .j-graphic-back:before {
+  content: "";
+}
+
+/* line 31, ../../fonts/_icons.scss */
+.jf-bottom:before, .j-graphic-bottom:before {
+  content: "";
+}
+
+/* line 32, ../../fonts/_icons.scss */
+.jf-calculate:before, .j-graphic-calculate:before {
+  content: "";
+}
+
+/* line 33, ../../fonts/_icons.scss */
+.jf-calendar:before, .j-graphic-calendar:before {
+  content: "";
+}
+
+/* line 34, ../../fonts/_icons.scss */
+.jf-cancel-close:before, .j-graphic-cancel-close:before {
+  content: "";
+}
+
+/* line 35, ../../fonts/_icons.scss */
+.jf-chart:before, .j-graphic-chart:before {
+  content: "";
+}
+
+/* line 36, ../../fonts/_icons.scss */
+.jf-clock:before, .j-graphic-clock:before {
+  content: "";
+}
+
+/* line 37, ../../fonts/_icons.scss */
+.jf-collapsed:before, .j-graphic-collapsed:before {
+  content: "";
+}
+
+/* line 38, ../../fonts/_icons.scss */
+.jf-collapsed-all:before, .j-graphic-collapsed-all:before {
+  content: "";
+}
+
+/* line 39, ../../fonts/_icons.scss */
+.jf-comments:before, .j-graphic-comments:before {
+  content: "";
+}
+
+/* line 40, ../../fonts/_icons.scss */
+.jf-confrim:before, .j-graphic-confrim:before {
+  content: "";
+}
+
+/* line 41, ../../fonts/_icons.scss */
+.jf-copy:before, .j-graphic-copy:before {
+  content: "";
+}
+
+/* line 42, ../../fonts/_icons.scss */
+.jf-copy-multiple:before, .j-graphic-copy-multiple:before {
+  content: "";
+}
+
+/* line 43, ../../fonts/_icons.scss */
+.jf-critical-error:before, .j-graphic-critical-error:before {
+  content: "";
+}
+
+/* line 44, ../../fonts/_icons.scss */
+.jf-delete:before, .j-graphic-delete:before {
+  content: "";
+}
+
+/* line 45, ../../fonts/_icons.scss */
+.jf-down:before, .j-graphic-down:before {
+  content: "";
+}
+
+/* line 46, ../../fonts/_icons.scss */
+.jf-edit:before, .j-graphic-edit:before {
+  content: "";
+}
+
+/* line 47, ../../fonts/_icons.scss */
+.jf-expanded:before, .j-graphic-expanded:before {
+  content: "";
+}
+
+/* line 48, ../../fonts/_icons.scss */
+.jf-expanded-all:before, .j-graphic-expanded-all:before {
+  content: "";
+}
+
+/* line 49, ../../fonts/_icons.scss */
+.jf-export:before, .j-graphic-export:before {
+  content: "";
+}
+
+/* line 50, ../../fonts/_icons.scss */
+.jf-export-to-database:before, .j-graphic-export-to-database:before {
+  content: "";
+}
+
+/* line 51, ../../fonts/_icons.scss */
+.jf-favorites:before, .j-graphic-favorites:before {
+  content: "";
+}
+
+/* line 52, ../../fonts/_icons.scss */
+.jf-filter:before, .j-graphic-filter:before {
+  content: "";
+}
+
+/* line 53, ../../fonts/_icons.scss */
+.jf-find:before, .j-graphic-find:before {
+  content: "";
+}
+
+/* line 54, ../../fonts/_icons.scss */
+.jf-firstpage:before, .j-graphic-firstpage:before {
+  content: "";
+}
+
+/* line 55, ../../fonts/_icons.scss */
+.jf-folder:before, .j-graphic-folder:before {
+  content: "";
+}
+
+/* line 56, ../../fonts/_icons.scss */
+.jf-foward:before, .j-graphic-foward:before {
+  content: "";
+}
+
+/* line 57, ../../fonts/_icons.scss */
+.jf-grid-view:before, .j-graphic-grid-view:before {
+  content: "";
+}
+
+/* line 58, ../../fonts/_icons.scss */
+.jf-go-to:before, .j-graphic-go-to:before {
+  content: "";
+}
+
+/* line 59, ../../fonts/_icons.scss */
+.jf-graph:before, .j-graphic-graph:before {
+  content: "";
+}
+
+/* line 60, ../../fonts/_icons.scss */
+.jf-grid:before, .j-graphic-grid:before {
+  content: "";
+}
+
+/* line 61, ../../fonts/_icons.scss */
+.jf-help:before, .j-graphic-help:before {
+  content: "";
+}
+
+/* line 62, ../../fonts/_icons.scss */
+.jf-help-btn:before, .j-graphic-help-btn:before {
+  content: "";
+}
+
+/* line 63, ../../fonts/_icons.scss */
+.jf-hierarchy:before, .j-graphic-hierarchy:before {
+  content: "";
+}
+
+/* line 64, ../../fonts/_icons.scss */
+.jf-home:before, .j-graphic-home:before {
+  content: "";
+}
+
+/* line 65, ../../fonts/_icons.scss */
+.jf-image:before, .j-graphic-image:before {
+  content: "";
+}
+
+/* line 66, ../../fonts/_icons.scss */
+.jf-import:before, .j-graphic-import:before {
+  content: "";
+}
+
+/* line 67, ../../fonts/_icons.scss */
+.jf-import-from-cloud:before, .j-graphic-import-from-cloud:before {
+  content: "";
+}
+
+/* line 68, ../../fonts/_icons.scss */
+.jf-import-from-database:before, .j-graphic-import-from-database:before {
+  content: "";
+}
+
+/* line 69, ../../fonts/_icons.scss */
+.jf-information:before, .j-graphic-information:before {
+  content: "";
+}
+
+/* line 70, ../../fonts/_icons.scss */
+.jf-last-page:before, .j-graphic-last-page:before {
+  content: "";
+}
+
+/* line 71, ../../fonts/_icons.scss */
+.jf-last-page-down:before, .j-graphic-last-page-down:before {
+  content: "";
+}
+
+/* line 72, ../../fonts/_icons.scss */
+.jf-last-page-up:before, .j-graphic-last-page-up:before {
+  content: "";
+}
+
+/* line 73, ../../fonts/_icons.scss */
+.jf-left:before, .j-graphic-left:before {
+  content: "";
+}
+
+/* line 74, ../../fonts/_icons.scss */
+.jf-library:before, .j-graphic-library:before {
+  content: "";
+}
+
+/* line 75, ../../fonts/_icons.scss */
+.jf-list-view:before, .j-graphic-list-view:before {
+  content: "";
+}
+
+/* line 76, ../../fonts/_icons.scss */
+.jf-lock:before, .j-graphic-lock:before {
+  content: "";
+}
+
+/* line 77, ../../fonts/_icons.scss */
+.jf-log-in:before, .j-graphic-log-in:before {
+  content: "";
+}
+
+/* line 78, ../../fonts/_icons.scss */
+.jf-log-out:before, .j-graphic-log-out:before {
+  content: "";
+}
+
+/* line 79, ../../fonts/_icons.scss */
+.jf-maximize:before, .j-graphic-maximize:before {
+  content: "";
+}
+
+/* line 80, ../../fonts/_icons.scss */
+.jf-menu:before, .j-graphic-menu:before {
+  content: "";
+}
+
+/* line 81, ../../fonts/_icons.scss */
+.jf-minimize:before, .j-graphic-minimize:before {
+  content: "";
+}
+
+/* line 82, ../../fonts/_icons.scss */
+.jf-more-options:before, .j-graphic-more-options:before {
+  content: "";
+}
+
+/* line 83, ../../fonts/_icons.scss */
+.jf-move:before, .j-graphic-move:before {
+  content: "";
+}
+
+/* line 84, ../../fonts/_icons.scss */
+.jf-move-back:before, .j-graphic-move-back:before {
+  content: "";
+}
+
+/* line 85, ../../fonts/_icons.scss */
+.jf-move-foward:before, .j-graphic-move-foward:before {
+  content: "";
+}
+
+/* line 86, ../../fonts/_icons.scss */
+.jf-next:before, .j-graphic-next:before {
+  content: "";
+}
+
+/* line 87, ../../fonts/_icons.scss */
+.jf-next-down:before, .j-graphic-next-down:before {
+  content: "";
+}
+
+/* line 88, ../../fonts/_icons.scss */
+.jf-next-page:before, .j-graphic-next-page:before {
+  content: "";
+}
+
+/* line 89, ../../fonts/_icons.scss */
+.jf-open-folder:before, .j-graphic-open-folder:before {
+  content: "";
+}
+
+/* line 90, ../../fonts/_icons.scss */
+.jf-open-tab:before, .j-graphic-open-tab:before {
+  content: "";
+}
+
+/* line 91, ../../fonts/_icons.scss */
+.jf-pin:before, .j-graphic-pin:before {
+  content: "";
+}
+
+/* line 92, ../../fonts/_icons.scss */
+.jf-preview:before, .j-graphic-preview:before {
+  content: "";
+}
+
+/* line 93, ../../fonts/_icons.scss */
+.jf-previous:before, .j-graphic-previous:before {
+  content: "";
+}
+
+/* line 94, ../../fonts/_icons.scss */
+.jf-previous-page:before, .j-graphic-previous-page:before {
+  content: "";
+}
+
+/* line 95, ../../fonts/_icons.scss */
+.jf-previous-up:before, .j-graphic-previous-up:before {
+  content: "";
+}
+
+/* line 96, ../../fonts/_icons.scss */
+.jf-print:before, .j-graphic-print:before {
+  content: "";
+}
+
+/* line 97, ../../fonts/_icons.scss */
+.jf-refresh:before, .j-graphic-refresh:before {
+  content: "";
+}
+
+/* line 98, ../../fonts/_icons.scss */
+.jf-refresh-database:before, .j-graphic-refresh-database:before {
+  content: "";
+}
+
+/* line 99, ../../fonts/_icons.scss */
+.jf-remove-folder:before, .j-graphic-remove-folder:before {
+  content: "";
+}
+
+/* line 100, ../../fonts/_icons.scss */
+.jf-report:before, .j-graphic-report:before {
+  content: "";
+}
+
+/* line 101, ../../fonts/_icons.scss */
+.jf-resources:before, .j-graphic-resources:before {
+  content: "";
+}
+
+/* line 102, ../../fonts/_icons.scss */
+.jf-restore-reset:before, .j-graphic-restore-reset:before {
+  content: "";
+}
+
+/* line 103, ../../fonts/_icons.scss */
+.jf-right:before, .j-graphic-right:before {
+  content: "";
+}
+
+/* line 104, ../../fonts/_icons.scss */
+.jf-save:before, .j-graphic-save:before {
+  content: "";
+}
+
+/* line 105, ../../fonts/_icons.scss */
+.jf-scenario-management:before, .j-graphic-scenario-management:before {
+  content: "";
+}
+
+/* line 106, ../../fonts/_icons.scss */
+.jf-search:before, .j-graphic-search:before {
+  content: "";
+}
+
+/* line 107, ../../fonts/_icons.scss */
+.jf-settings:before, .j-graphic-settings:before {
+  content: "";
+}
+
+/* line 108, ../../fonts/_icons.scss */
+.jf-sort-ascending:before, .j-graphic-sort-ascending:before, .j-graphic-arrow-up:before {
+  content: "";
+}
+
+/* line 109, ../../fonts/_icons.scss */
+.jf-sort-descending:before, .j-graphic-sort-descending:before, .j-graphic-arrow-down:before, .j-graphic-arrow-right:before, .j-graphic-arrow-left:before {
+  content: "";
+}
+
+/* line 110, ../../fonts/_icons.scss */
+.jf-tab-overflow:before, .j-graphic-tab-overflow:before {
+  content: "";
+}
+
+/* line 111, ../../fonts/_icons.scss */
+.jf-thumbs-down:before, .j-graphic-thumbs-down:before {
+  content: "";
+}
+
+/* line 112, ../../fonts/_icons.scss */
+.jf-thumbs-up:before, .j-graphic-thumbs-up:before {
+  content: "";
+}
+
+/* line 113, ../../fonts/_icons.scss */
+.jf-top:before, .j-graphic-top:before {
+  content: "";
+}
+
+/* line 114, ../../fonts/_icons.scss */
+.jf-unpin:before, .j-graphic-unpin:before {
+  content: "";
+}
+
+/* line 115, ../../fonts/_icons.scss */
+.jf-up:before, .j-graphic-up:before {
+  content: "";
+}
+
+/* line 116, ../../fonts/_icons.scss */
+.jf-upload-to-cloud:before, .j-graphic-upload-to-cloud:before {
+  content: "";
+}
+
+/* line 117, ../../fonts/_icons.scss */
+.jf-video:before, .j-graphic-video:before {
+  content: "";
+}
+
+/* line 118, ../../fonts/_icons.scss */
+.jf-warning-error:before, .j-graphic-warning-error:before {
+  content: "";
+}
+
+/* line 119, ../../fonts/_icons.scss */
+.jf-wizard:before, .j-graphic-wizard:before {
+  content: "";
+}
+
+/* line 120, ../../fonts/_icons.scss */
+.jf-zoom-in:before, .j-graphic-zoom-in:before {
+  content: "";
+}
+
+/* line 121, ../../fonts/_icons.scss */
+.jf-zoom-out:before, .j-graphic-zoom-out:before {
+  content: "";
+}
+
+/* line 122, ../../fonts/_icons.scss */
+.jf-collapse-up:before, .j-graphic-collapse-up:before {
+  content: "";
+}
+
+/* line 123, ../../fonts/_icons.scss */
+.jf-expand-down:before, .j-graphic-expand-down:before {
+  content: "";
+}
+
+/* line 124, ../../fonts/_icons.scss */
+.jf-expand-right:before, .j-graphic-expand-right:before {
+  content: "";
+}
+
+/* line 125, ../../fonts/_icons.scss */
+.jf-collapse-left:before, .j-graphic-collapse-left:before {
+  content: "";
+}
+
+/* line 128, ../../fonts/_icons.scss */
+.jf-dashboard-exception:before, .j-graphic-dashboard-exception:before {
+  content: "";
+}
+
+/* line 129, ../../fonts/_icons.scss */
+.jf-dashboard-kpi:before, .j-graphic-dashboard-kpi:before {
+  content: "";
+}
+
+/* line 130, ../../fonts/_icons.scss */
+.jf-dashboard-graph:before, .j-graphic-dashboard-graph:before {
+  content: "";
+}
+
+/* line 131, ../../fonts/_icons.scss */
+.jf-dashboard-worklist:before, .j-graphic-dashboard-worklist:before {
+  content: "";
+}
+
+/* line 134, ../../fonts/_icons.scss */
+.jf-flag:before, .j-graphic-flag:before {
+  content: "";
+}
+
+/* line 135, ../../fonts/_icons.scss */
+.jf-confirm:before, .j-graphic-confirm:before {
+  content: "";
+}
+
+/* line 136, ../../fonts/_icons.scss */
+.jf-link:before, .j-graphic-link:before {
+  content: "";
+}
+
+/* line 11, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-space {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 12, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-add {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 13, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-add-btn {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 14, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-add-comment {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 15, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-add-favorites {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 16, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-add-folder {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 17, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-alert-require-field {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 18, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-attachment {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 19, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-audio {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 20, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-back {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 21, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-bottom {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 22, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-calculate {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 23, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-calendar {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 24, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-cancel-close {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 25, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-chart {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 26, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-clock {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 27, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-collapsed {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 28, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-collapsed-all {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 29, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-comments {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 30, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-confrim {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 31, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-copy {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 32, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-copy-multiple {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 33, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-critical-error {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 34, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-delete {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 35, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-down {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 36, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-edit {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 37, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-expanded {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 38, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-expanded-all {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 39, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-export {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 40, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-export-to-database {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 41, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-favorites {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 42, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-filter {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 43, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-find {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 44, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-firstpage {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 45, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-folder {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 46, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-foward {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 47, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-grid-view {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 48, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-go-to {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 49, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-graph {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 50, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-grid {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 51, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-help {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 52, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-help-btn {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 53, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-hierarchy {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 54, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-home {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 55, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-image {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 56, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-import {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 57, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-import-from-cloud {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 58, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-import-from-database {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 59, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-information {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 60, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-last-page {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 61, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-last-page-down {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 62, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-last-page-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 63, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-left {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 64, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-library {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 65, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-list-view {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 66, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-lock {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 67, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-log-in {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 68, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-log-out {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 69, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-maximize {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 70, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-menu {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 71, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-minimize {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 72, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-more-options {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 73, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-move {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 74, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-move-back {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 75, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-move-foward {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 76, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-next {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 77, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-next-down {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 78, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-next-page {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 79, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-open-folder {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 80, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-open-tab {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 81, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-pin {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 82, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-preview {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 83, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-previous {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 84, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-previous-page {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 85, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-previous-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 86, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-print {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 87, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-refresh {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 88, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-refresh-database {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 89, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-remove-folder {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 90, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-report {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 91, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-resources {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 92, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-restore-reset {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 93, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-right {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 94, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-save {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 95, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-scenario-management {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 96, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-search {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 97, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-settings {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 98, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-sort-ascending {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 99, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-sort-descending {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 100, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-tab-overflow {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 101, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-thumbs-down {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 102, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-thumbs-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 103, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-top {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 104, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-unpin {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 105, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 106, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-upload-to-cloud {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 107, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-video {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 108, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-warning-error {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 109, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-wizard {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 110, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-zoom-in {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 111, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-zoom-out {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 112, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-collapse-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 113, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-expand-down {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 114, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-expand-right {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 115, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-collapse-left {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 117, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-arrow-down, .j-graphic-arrow-right, .j-graphic-arrow-left {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 118, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-arrow-up {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 123, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-dashboard-exception {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 124, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-dashboard-kpi {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 125, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-dashboard-graph {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 126, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-dashboard-worklist {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 129, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-confirm {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 130, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-flag {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* line 131, ../../base/sass/_base-font-graphics.scss */
+.j-graphic-link {
+  font-family: "JDAIconsFamily-Regular" !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/* line 63, ../sass/jda-pivot-expansive.scss */
+.pvt-center-panel .pivot-util-toolbar {
+  background: -webkit-linear-gradient(#ffffff, #f6f6f6);
+  background: -ms-linear-gradient(#ffffff, #f6f6f6);
+  background: -moz-linear-gradient(#ffffff, #f6f6f6);
+  background: linear-gradient(#ffffff, #f6f6f6);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#f6f6f6)";
+}
+/* line 120, ../sass/_pivot-global.scss */
+.pvt-center-panel .pivot-util-toolbar .j-pvt-button:hover:not(:disabled), .pvt-center-panel .pivot-util-toolbar .j-pvt-primary-button:hover:not(:disabled), .pvt-center-panel .pivot-util-toolbar .j-pvt-button:focus, .pvt-center-panel .pivot-util-toolbar .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5a5b5c, #4b4b4b);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+.pvt-center-panel .pivot-util-toolbar .j-pvt-button:hover:not(:disabled) .x-btn-inner, .pvt-center-panel .pivot-util-toolbar .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, .pvt-center-panel .pivot-util-toolbar .j-pvt-button:focus .x-btn-inner, .pvt-center-panel .pivot-util-toolbar .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 66, ../sass/jda-pivot-expansive.scss */
+.pvt-center-panel .pivot-util-toolbar .j-pvt-toolbar-buttons-close {
+  background-image: url("../../../../jda/images/graph-slide-in.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 0px;
+  width: 20px;
+}
+/* line 74, ../sass/jda-pivot-expansive.scss */
+.pvt-center-panel .pivot-util-toolbar .j-pvt-button-selected {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5a5b5c, #4b4b4b);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+}
+/* line 76, ../sass/jda-pivot-expansive.scss */
+.pvt-center-panel .pivot-util-toolbar .j-pvt-button-selected .x-btn-inner {
+  color: #FFFFFF;
+}
+
+/* line 84, ../sass/jda-pivot-expansive.scss */
+.pivotParentContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 90, ../sass/jda-pivot-expansive.scss */
+.pivotWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 95, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement {
+  margin: 0px;
+  padding: 0px;
+  line-height: 52px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Change the width of the resize handle*/
+ /*  div.dhx_column > div.tBucket-P.editabledata, .dhx_table_cell.tBucket-P.editabledata {
+    background-color: lightgrey;
+
+    background: -webkit-linear-gradient(left, #e5d8a5, #e5d8a5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#e5d8a5', endColorstr='#e5d8a5');
+    color: black;
+  }
+
+  div.dhx_column > div.tBucket-C.editabledata, .dhx_table_cell.tBucket-C.editabledata {
+    background: -webkit-linear-gradient(left, lightblue, #f6edc5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#ADD8E6', endColorstr='#f6edc5');
+     background-color :lightblue;
+    color: black;
+  } */
+  /* div > div.dhx_cell_select.dhx_cell, div > div.dhx_column > div.dhx_cell_select.dhx_cell {
+     border-bottom: 1px solid #a6d074;
+     border-bottom-width: 0px;
+     border-top: 1px solid #a6d074;
+     border-top-width: 0px;
+     padding-top: 0px;
+     border-right: 1px solid #a6d074;
+     border-left: 1px solid #a6d074;
+     padding-left: inherit;
+   }*/
+  /** This span is the icon info - the one on the most left**/
+  /* .draggableFacet,.draggableMeasures {
+      color: black;
+  } */
+}
+/* line 102, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div, .pivotLayerElement .dhx_table_cell {
+  font-family: Roboto, arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #505050;
+}
+/* line 105, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_hscroll {
+  line-height: 0px;
+}
+/* line 107, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_hscroll .subScrollX {
+  display: inline-block;
+  border-left: 1px dotted gray;
+}
+/* line 112, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_hscroll .cls-sideFacets {
+  border-left: 0px;
+}
+/* line 116, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_vscroll, .pivotLayerElement .dhx_ss_hscroll {
+  box-sizing: content-box;
+}
+/* line 121, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_hs_left td.sideFact, .pivotLayerElement .dhx_hs_left td.topFacet {
+  color: #FFFFFF;
+  background: #898989;
+}
+/* line 127, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_hs_attr {
+  border-right: 1px solid #FFFFFF;
+}
+/* line 132, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-0 {
+  background-color: #C3C3C3;
+  color: #545454;
+}
+/* line 137, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-1 {
+  background-color: #CFCFCF;
+  color: #545454;
+}
+/* line 142, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-2 {
+  background-color: #DBDBDB;
+  color: #545454;
+}
+/* line 147, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-3 {
+  background-color: #E7E7E7;
+  color: #545454;
+}
+/* line 152, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-4 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 157, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-5 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 162, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-6 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 167, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-7 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 172, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-8 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 177, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacetRow .facetLevel-9 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 184, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-0 {
+  background-color: #C3C3C3;
+  color: #545454;
+}
+/* line 189, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-1 {
+  background-color: #CFCFCF;
+  color: #545454;
+}
+/* line 194, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-2 {
+  background-color: #DBDBDB;
+  color: #545454;
+}
+/* line 199, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-3 {
+  background-color: #E7E7E7;
+  color: #545454;
+}
+/* line 204, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-4 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 209, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-5 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 214, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-6 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 219, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-7 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 224, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-8 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 229, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetColumn .facetLevel-9 {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 235, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.editabledata {
+  font-family: Roboto, arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #505050;
+  background-color: #FFEDD8;
+}
+/* line 240, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid {
+  padding: 0px 4px 4px 0px;
+  margin: 0px;
+  list-style: none;
+  /* style for dimension columns */
+}
+/* line 245, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid img {
+  float: left;
+  margin: 3px;
+  padding: 0;
+  border: 3px solid black;
+  display: inline-block;
+}
+/* line 252, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid img a {
+  padding: 0;
+  list-style: none;
+}
+/* line 258, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid img:hover {
+  border: solid 3px #CCC;
+  -moz-box-shadow: 3px 3px 5px #000;
+  -webkit-box-shadow: 3px 3px 5px #000;
+  box-shadow: 3px 3px 5px #000;
+}
+/* line 266, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid div.dhx_cell_dimension {
+  text-align: left;
+  text-indent: 5px;
+  padding-left: 1px;
+  margin-left: 0px;
+  color: black;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 279, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .imageGrid div.dhx_column > div, .pivotLayerElement .imageGrid .dhx_table_cell {
+  text-align: center;
+}
+/* line 287, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .image-type .ribbon-wrapper-blue {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+/* line 297, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .image-type .ribbon-blue {
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px -1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  position: relative;
+  padding: 3px 0;
+  right: 35px;
+  top: 30px;
+  width: 150px;
+  background: rgba(167, 207, 223, 0.5);
+  background: -moz-linear-gradient(top, rgba(167, 207, 223, 0.5) 0%, rgba(35, 83, 138, 0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(167, 207, 223, 0.5)), color-stop(100%, rgba(35, 83, 138, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(167, 207, 223, 0.5) 0%, rgba(35, 83, 138, 0.5) 100%);
+  background: -o-linear-gradient(top, rgba(167, 207, 223, 0.5) 0%, rgba(35, 83, 138, 0.5) 100%);
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(167, 207, 223, 0.5) 0%, rgba(35, 83, 138, 0.5) 100%);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 326, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_cell {
+  text-align: center;
+  overflow: hidden;
+  height: 52px;
+  min-height: 0%;
+}
+/* line 334, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-resizable-e {
+  cursor: e-resize;
+  width: 20px;
+  right: -10px;
+  top: 0;
+  height: 100%;
+}
+/* line 342, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_spacer {
+  font-size: 14px;
+  float: left;
+  min-width: 14px;
+  height: 1px;
+}
+/* line 349, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_spacer:after {
+  content: "\00a0\00a0";
+}
+/* line 353, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .resizableColumn {
+  position: relative;
+}
+/* line 357, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .highlightedChangedCell {
+  background-color: 00 FFFF;
+}
+/* line 361, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_bullet_spacer {
+  float: left;
+}
+/* line 364, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivot_member_name {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 372, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_collapsed {
+  background: url(../../../images/collapsed_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  float: left;
+  width: 18px;
+  height: 52px;
+  margin-left: 0px;
+}
+/* line 382, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_collapsed_highlight {
+  background: url(../../../images/collapsed_arrow_highlight.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  float: left;
+  width: 18px;
+  height: 52px;
+  margin-left: 0px;
+}
+/* line 392, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_expanded {
+  background: url(../../../images/expanded_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  float: left;
+  width: 18px;
+  height: 52px;
+  margin-left: 0px;
+}
+/* line 402, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .facet_member_expanded_highlight {
+  background: url(../../../images/expanded_arrow_highlight.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  float: left;
+  width: 18px;
+  height: 52px;
+  margin-left: 0px;
+}
+/* line 412, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .fillerCell {
+  border-bottom: 1px solid white;
+}
+/* line 420, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_ss_center div.dhx_column div.dhx_cell {
+  border-right: 1px solid #DEDEDE;
+}
+/* line 424, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_ss_center div.dhx_column div.dhx_cell:not(.rowBoundry):not(.cell-invalid) {
+  border-bottom: 1px solid #DEDEDE;
+}
+/* line 427, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column.colBoundry {
+  border-right: 1px solid #DEDEDE;
+  z-index: 1;
+}
+/* line 431, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_dtable div.dhx_column div.topMsrRow.dhx_cell:not(:first-of-type) {
+  border-top: 1px solid #A1A1A1;
+  border-top-right-radius: 1px;
+}
+/* line 435, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_dtable div.dhx_column div.rowBoundry.dhx_cell {
+  border-bottom: 2px solid #A1A1A1;
+  border-bottom-right-radius: 1px;
+}
+/* line 440, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_dtable div.dhx_column div.dhx_value, .pivotLayerElement div.dhx_column > div, .pivotLayerElement .dhx_table_cell {
+  padding: 0px 16px 0px 16px;
+  vertical-align: top;
+}
+/* line 445, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_dtable div.dhx_column div.dhx_value input[type='checkbox'] {
+  /* margin: 2px 0px 1px 0px; */
+  position: absolute;
+  top: 7px;
+  right: 5px;
+}
+/* line 451, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_dtable div.dhx_column div.dhx_value span.cell_content.string {
+  float: left;
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+/* line 459, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_value span.cell_content.negative {
+  color: red;
+}
+/* line 463, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value.editingCell {
+  padding: 0px 16px 0px 16px;
+}
+/* line 467, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value > span.cell_editor_wrapper {
+  text-align: right;
+  border: 0px 0px 0px 0px;
+  border-top: 1px solid #DEDEDE;
+  margin: 0px 0px 0px 0px;
+  height: 100%;
+  width: 100%;
+  float: right;
+  position: absolute;
+  display: inherit;
+  cursor: text;
+}
+/* line 481, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value > span.cell_editor_wrapper .cell_editor {
+  text-align: right;
+  border-width: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 493, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value > span.cell_editor_wrapper select.cell_editor {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 499, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideCellMember > div, .pivotLayerElement .topCellMember > div {
+  position: relative;
+}
+/* line 502, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topCellMember {
+  position: relative;
+  height: 100%;
+}
+/* line 507, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topFacet {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+/* line 512, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header th {
+  border-width: 0px;
+  padding: 0px;
+}
+/* line 517, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_column > div.editingCell.editabledata.dhx_cell {
+  padding: 0px;
+}
+/* line 521, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_cell {
+  text-overflow: ellipsis;
+}
+/* line 525, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_cell > span {
+  cursor: default;
+}
+/* line 533, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header table {
+  height: auto;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-left-width: 0px;
+}
+/* line 540, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 546, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .sideFacetsHeaderWrapper {
+  /* height:100%; */
+}
+/* line 550, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header > * {
+  display: table-cell;
+}
+/* line 554, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header {
+  /* display: table-row; */
+}
+/* line 558, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_hcell {
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 566, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_hcell div {
+  text-overflow: inherit;
+  overflow: inherit;
+}
+/* line 570, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .droppableFacet {
+  padding: 0px 0px 0px 0px;
+}
+/* line 574, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_view:focus {
+  color: inherit;
+}
+/* line 578, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.topFacetNames:not(:last-child) {
+  border-bottom: 1px solid #FFFFFF;
+  white-space: nowrap;
+}
+/* line 583, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.topFacetNames:not(:first-child) {
+  border-top: 1px solid #FFFFFF;
+}
+/* line 587, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .resizableColumn {
+  overflow: hidden;
+  z-index: 1;
+}
+/* line 592, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .cell_lock {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+  float: left;
+  opacity: 1;
+}
+/* line 598, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-phy {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+  float: left;
+  opacity: 1;
+}
+/* line 604, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-non {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_222222_256x240.png);
+  float: left;
+  opacity: 1;
+}
+/* line 610, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-tmp {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_228b22_256x240.png);
+  float: left;
+  opacity: 1;
+}
+/* line 616, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.tBucket-P, .pivotLayerElement .dhx_table_cell.tBucket-P {
+  /* background-color: #d2d2d2; */
+  color: black;
+}
+/* line 620, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.tBucket-F, .pivotLayerElement .dhx_table_cell.tBucket-F {
+  /* background-color: lightblue; */
+  color: #996600;
+  font-style: italic;
+}
+/* line 625, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.tBucket-C, .pivotLayerElement .dhx_table_cell.tBucket-C {
+  /* background-color: lightblue; */
+  color: #000000;
+  font-style: italic;
+}
+/* line 647, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.protectedcelldata, .pivotLayerElement .dhx_table_cell.protectedcelldata {
+  background-color: #D9DFFF;
+  opacity: 1;
+}
+/* line 662, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column div.dhx_cell_select.dhx_cell:not(.sideFacetMemberContainer) > div {
+  padding: 0px 16px 0px 16px;
+}
+/* line 665, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.highlightedChangedCell.dhx_value.dhx_value, .pivotLayerElement .dhx_table_cell.highlightedChangedCell.dhx_value {
+  background-color: #FFDFB7;
+  background-Image: none;
+  opacity: 1.0;
+  filter: none;
+  color: inherit;
+}
+/* line 673, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.multiEditHighlight.dhx_value.dhx_value, .pivotLayerElement .dhx_table_cell.multiEditHighlight.dhx_value {
+  background-color: #FFDFB7;
+  background-Image: none;
+  opacity: 1.0;
+  filter: none;
+  color: inherit;
+}
+/* line 680, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .selection-box {
+  position: absolute;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px dotted white;
+  z-index: 9999;
+}
+/* line 688, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotClipboardElement {
+  position: absolute;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px dotted white;
+  z-index: -9999;
+}
+/* line 696, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .unselectable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* line 700, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .selectable {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+/* line 704, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .multi-selected {
+  background-color: rgba(183, 219, 255, 0.5) !important;
+  background-Image: none !important;
+  color: black !important;
+}
+/* line 710, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .copy-selection-top {
+  border-top: 2px #707070 dashed;
+}
+/* line 714, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .copy-selection-bottom {
+  border-bottom: 2px #707070 dashed !important;
+}
+/* line 717, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .copy-selection-left {
+  border-left: 2px #707070 dashed;
+}
+/* line 720, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .copy-selection-right {
+  border-right: 2px #707070 dashed !important;
+}
+/* line 725, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon.ui-icon-red {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_cd0a0a_256x240.png);
+  float: left;
+  opacity: 1;
+  margin-left: 0px !important;
+}
+/* line 732, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-green {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_228b22_256x240.png);
+  float: left;
+  opacity: 1;
+}
+/* line 737, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-yellow {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_ef8c08_256x240.png);
+  float: left;
+  opacity: 1;
+  margin-left: 0px !important;
+}
+/* line 744, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-icon-blue {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_228ef1_256x240.png);
+  float: left;
+  opacity: 1;
+  margin-left: 0px !important;
+}
+/* line 751, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_left {
+  color: black;
+}
+/* line 755, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotHdrRow {
+  position: relative;
+}
+/* line 758, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotHdrRow > TD {
+  overflow-x: hidden;
+}
+/* line 763, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotLayerElement .dhx_ss_vscroll, .pivotLayerElement .pivotLayerElement .dhx_ss_hscroll {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+/* line 768, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header *, .pivotLayerElement .dhx_msr_center_scroll *, .pivotLayerElement .dhx_ss_center_scroll *, .pivotLayerElement .pivotSandBox {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 777, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_body .dhx_ss_left .dhx_ss_center_msr_scroll {
+  position: absolute;
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+}
+/* line 783, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_body .dhx_ss_left .dhx_ss_center_scroll {
+  float: left;
+  display: inline-block;
+}
+/* line 787, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header TD.measureCell {
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 791, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column.colBoundary, .pivotLayerElement .dhx_ss_header TD.colBoundary {
+  border-right: 2px solid #A1A1A1;
+  /*  border-bottom-right-radius: $j-pivot-cell-border-radius; */
+}
+/* line 795, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column.colBoundaryStart:not(.dhx_first), .pivotLayerElement .dhx_ss_header TD.colBoundaryStart:not(.dhx_first) {
+  border-left: 1px solid #A1A1A1;
+  /*   border-bottom-left-radius: $j-pivot-cell-border-radius; */
+}
+/* line 799, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header TD, .pivotLayerElement .dhx_ss_footer TD, .pivotLayerElement .pivotDraggable {
+  padding: 0px;
+  background-color: #898989;
+  color: #FFFFFF;
+  text-align: left;
+  border: 1px solid #FFFFFF;
+  border-width: 0px;
+  border-right-width: 1px;
+  background: #898989;
+}
+/* line 811, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header .dhx_hs_left TD, .pivotLayerElement .dhx_ss_footer TD, .pivotLayerElement .pivotDraggable {
+  padding: 0px 16px 0px 16px;
+}
+/* line 815, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header .dhx_hs_center TR:not(:last-child) TD {
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 819, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header TR:not(:last-child) TD {
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 1px;
+}
+/* line 824, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header .dhx_hs_left TR > TD:last-child {
+  border-right-width: 1px;
+}
+/* line 828, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_ss_header .dhx_hs_left TR:only-child TD {
+  border-bottom-width: 0px;
+}
+/* line 832, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .goodCommentTriangle {
+  width: 0;
+  height: 0;
+  border-right: 4px solid #5E5E5E;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid #5E5E5E;
+  float: right;
+  position: absolute;
+  right: 0;
+}
+/* line 844, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .badCommentTriangle {
+  width: 0;
+  height: 0;
+  border-right: 4px solid #FC1B08;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid #FC1B08;
+  float: right;
+  position: absolute;
+  right: 0;
+}
+/* line 856, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .ui-tooltip-content {
+  position: relative;
+  padding: 5px 26px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100px;
+  text-align: left;
+  word-wrap: break-word;
+  background: #FFFFFF;
+}
+/* line 867, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .headerTooltipTriangle {
+  width: 0;
+  height: 0;
+  border-right: 5px solid green;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid green;
+  float: right;
+}
+/* line 877, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_view.dhx_dtable {
+  position: absolute;
+}
+/* line 881, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_cell.dhx_cell_dimension div.dhx_cell {
+  text-align: left;
+}
+/* line 884, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.sideFacetMemberContainer {
+  border-right: 1px solid #FFFFFF;
+}
+/* line 887, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.lastMeasureCell {
+  border-bottom: 2px solid #A1A1A1;
+  border-bottom-right-radius: 1px;
+}
+/* line 891, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.firstMeasureCell:not(:first-of-type) {
+  border-top: 1px solid #A1A1A1;
+  border-top-right-radius: 1px;
+}
+/* line 895, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column div.sideCellMember:not(.lastMeasureCell) {
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 898, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column {
+  border-top: 1px solid #FFFFFF;
+}
+/* line 901, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_last div.sideCellMember {
+  border-right: 1px solid #DEDEDE;
+}
+/* line 905, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column div.sideCellMember:not(.dhx_cell_select) div.measureCell {
+  padding: 0px 16px 0px 16px;
+  background-color: #F3F3F3;
+  color: #545454;
+}
+/* line 912, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_attr_cell {
+  background-color: #F3F3F3;
+  border-left: 1px solid #FFFFFF;
+}
+/* line 917, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_column .sideFacetColumn {
+  background-color: white;
+}
+/* line 921, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotHdrRow div[id^='hdr_fc'] {
+  background-color: #d2d2d2;
+  padding: 0px 16px 0px 16px;
+}
+/* line 926, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_ss_center_scroll div.dhx_column div:last-child {
+  border-bottom-color: #a0a0a0;
+}
+/* line 930, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div > div.dhx_column > div.dhx_cell_select.dhx_cell, .pivotLayerElement div > div.dhx_column > div.dhx_column_select.dhx_cell, .pivotLayerElement div > div.dhx_column > div.dhx_row_select.dhx_cell, .pivotLayerElement tr.pivotHdrRow > td.dhx_cell_select {
+  background-Image: none;
+  opacity: 1.0;
+  background-Color: #494A4C;
+  filter: none;
+  color: #FFFFFF;
+}
+/* line 938, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .hover {
+  background: #A7C4EE !important;
+}
+/* line 942, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement td.sideFacet {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+/* line 947, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement td.sideFacet div.topFacetNames {
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+  text-align: left;
+}
+/* line 954, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement td.sideFacet div.topFacetNames:first-child {
+  padding-top: 3px;
+  border-top-width: 0px;
+}
+/* line 959, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement td.sideFacet div.topFacetNames:last-child {
+  border-bottom-width: 0px;
+  padding-bottom: 3px;
+}
+/* line 965, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .cell-err {
+  opacity: 0.5;
+}
+/* line 970, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotLayerElement div.dhx_column > div.dhx_cell_select.cell-invalid {
+  border: 1px solid #FF0000;
+}
+/* line 974, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value {
+  text-align: right;
+  overflow: hidden;
+  position: relative;
+}
+/* line 980, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value.string-type {
+  text-align: left;
+}
+/* line 984, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_hcell {
+  padding: 0px 16px 0px 16px;
+}
+/* line 992, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value span.metaInfo {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  position: absolute;
+  left: 0px;
+  display: inline;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0);
+}
+/* line 1003, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_cell.dhx_value span.metaInfo > span {
+  margin-left: -2px;
+  margin-right: 0px;
+  margin-top: 8px;
+  display: inline;
+}
+/* line 1010, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .droppableMeasures {
+  border: 1px solid yellow;
+}
+/* line 1022, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_hs_center .draggableMeasures {
+  padding-left: 4px;
+}
+/* line 1026, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .leftDrop {
+  border-left: thick double #ff0000;
+  border-left-color: blue;
+}
+/* line 1031, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .rightDrop {
+  border-right: thick double #ff0000;
+  border-right-color: blue;
+}
+/* line 1036, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .topDrop {
+  border-top: thick double #ff0000;
+  border-top-color: blue;
+}
+/* line 1041, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .bottomDrop {
+  border-bottom: thick double #ff0000;
+  border-bottom-color: blue;
+}
+/* line 1046, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .dhx_view:focus {
+  color: black;
+}
+/* line 1050, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement div.dhx_column > div.naValue {
+  background-color: inherit;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKhoSnGjDA+iLN69ZyzYAEYB8RmROaABABtSg1GJNPnNAAAAABJRU5ErkJggg==);
+}
+/* line 1055, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltipStyle {
+  background-color: #a7c4ee;
+  border-color: #000000;
+  color: #000000;
+  max-width: 3000px;
+  max-height: 5000px;
+  min-width: 0px;
+  min-height: 0px;
+  border-radius: 3px;
+}
+/* line 1066, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip li {
+  font-size: 1em;
+}
+/* line 1070, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip table {
+  border-collapse: collapse;
+}
+/* line 1074, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip table td, .pivotLayerElement .pivotCellTooltip table th {
+  border: 1px #000 solid;
+  padding: 2px;
+}
+/* line 1079, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip td {
+  padding: 1px;
+  vertical-align: top;
+}
+/* line 1084, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip th {
+  background-color: #e3efff;
+  font-size: 1em;
+  padding: 0px;
+}
+/* line 1090, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip .topAxisToolTippCoor UL {
+  text-align: right;
+  padding: 2px;
+}
+/* line 1095, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip li {
+  margin: 1px;
+  padding-right: 3px;
+}
+/* line 1100, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip UL {
+  list-style: none;
+  margin: 1px;
+  padding: 1px;
+  padding-right: 3px;
+}
+/* line 1107, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip .topAxisToolTipCoor UL li:not(:first-child):before {
+  content: "\00BB \0020";
+}
+/* line 1111, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotCellTooltip div {
+  float: left;
+  margin: 5px;
+}
+/* line 1116, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement table td.sortedContent, .pivotLayerElement div.dhx_column div.sortedContent {
+  font-style: italic;
+  font-weight: bold;
+}
+/* line 1121, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .pivotHeaderResize {
+  z-index: 9999;
+}
+
+/* line 1131, ../sass/jda-pivot-expansive.scss */
+.pp_details fieldset {
+  border: 1px solid #ddd;
+  padding: 0 0.5em 0.5em;
+}
+
+/* line 1136, ../sass/jda-pivot-expansive.scss */
+.pp_details fieldset div {
+  margin: 0.3em 0;
+  clear: both;
+}
+
+/* line 1141, ../sass/jda-pivot-expansive.scss */
+.pp_details fieldset label {
+  width: 8em;
+  text-align: right;
+  margin-right: 1em;
+  display: inline-block;
+}
+
+/* line 1148, ../sass/jda-pivot-expansive.scss */
+.pp_details fieldset input {
+  border: 0px;
+}
+
+/* line 1152, ../sass/jda-pivot-expansive.scss */
+.ribbon-blue:before, .ribbon-blue:after {
+  content: "";
+  border-top: 3px solid #23538a;
+  -left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px;
+}
+
+/* line 1161, ../sass/jda-pivot-expansive.scss */
+.ribbon-blue:before {
+  left: 0;
+}
+
+/* line 1165, ../sass/jda-pivot-expansive.scss */
+.ribbon-blue:after {
+  right: 0;
+}
+
+/* line 1169, ../sass/jda-pivot-expansive.scss */
+.waitIndicator .ui-dialog-titlebar {
+  display: none;
+}
+
+/* line 1173, ../sass/jda-pivot-expansive.scss */
+.waitIndicator .ui-dialog-content {
+  font-size: 16px;
+  font-weight: bold;
+  overflow-x: hidden;
+}
+
+/* line 1179, ../sass/jda-pivot-expansive.scss */
+.dhtmlx-error div {
+  background-color: #d81b1b;
+  border: 1px solid #940000;
+  color: #000;
+}
+
+/* SIDE CONTENT */
+/* line 1187, ../sass/jda-pivot-expansive.scss */
+.pivotSidePanelpullout {
+  background-color: White;
+  color: #2e6e9e;
+  padding: 4px 8px;
+  font-size: 1.1em;
+  /*    font-weight: bold; */
+  -moz-border-radius-bottomleft: 1em;
+  -moz-border-radius-topleft: 1em;
+  -webkit-border-bottom-left-radius: 1em;
+  -webkit-border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
+  border: 1px solid #79b7e7;
+}
+
+/* line 1202, ../sass/jda-pivot-expansive.scss */
+.pivotSidePanelpullout:hover {
+  background: #dfeffc;
+  color: #2e6e9e;
+  opacity: 1.0;
+}
+
+/* line 1208, ../sass/jda-pivot-expansive.scss */
+.pivotSidePanel {
+  min-height: 300px;
+  background: #dfeffc;
+  color: #2e6e9e;
+  -moz-border-radius-bottomleft: 1em;
+  -webkit-border-bottom-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+/* line 1217, ../sass/jda-pivot-expansive.scss */
+.pivotSidePanel > div > div {
+  padding-left: 10px;
+  padding-right: 40px;
+}
+
+/* line 1222, ../sass/jda-pivot-expansive.scss */
+.pivotSidePanel a {
+  color: White;
+}
+
+/****  End of side panel ***/
+/* line 1228, ../sass/jda-pivot-expansive.scss */
+#jda_pivot_corner {
+  background-color: #d2d2d2;
+  text-align: center;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-bottom: 2px;
+  background: #d2d2d2;
+}
+
+/* line 1237, ../sass/jda-pivot-expansive.scss */
+div.blockOverlay {
+  background-color: #013366;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  -moz-opacity: 0.50;
+  opacity: .5;
+  font-weight: normal;
+}
+
+/* line 1246, ../sass/jda-pivot-expansive.scss */
+.grip {
+  width: 10px;
+  height: 30px;
+  margin-top: -3px;
+  margin-left: -5px;
+  position: relative;
+  z-index: 88;
+  cursor: e-resize;
+}
+
+/* line 1256, ../sass/jda-pivot-expansive.scss */
+.grip:hover {
+  background-position-x: -20px;
+}
+
+/* line 1260, ../sass/jda-pivot-expansive.scss */
+#hdr_mr {
+  /*  display: inline; */
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1266, ../sass/jda-pivot-expansive.scss */
+.dragging .grip {
+  background-position-x: -40px;
+}
+
+/* line 1270, ../sass/jda-pivot-expansive.scss */
+.pivotLayerElement .errorInd {
+  float: right;
+  margin-right: -5px;
+  min-width: 16px;
+}
+
+/* line 1276, ../sass/jda-pivot-expansive.scss */
+.sortableJDALList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+}
+
+/* line 1283, ../sass/jda-pivot-expansive.scss */
+.sortableJDALList li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  height: 18px;
+}
+
+/* line 1291, ../sass/jda-pivot-expansive.scss */
+.sortableJDALList li span {
+  position: absolute;
+  margin-left: -1.3em;
+}
+
+/**
+Fix to show the lasso over the in the list of the properties tab which has a high z-index
+**/
+/* line 1299, ../sass/jda-pivot-expansive.scss */
+.ui-selectable-helper {
+  position: absolute;
+  z-index: 1000;
+  border: 1px dotted black;
+}
+
+/* line 1305, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar {
+  border-left: 1px dotted grey;
+  margin-left: 2em;
+}
+
+/* line 1310, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement {
+  /*margin-left: 2em;*/
+  float: left;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  display: table-cell;
+  height: 100%;
+}
+
+/* line 1320, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement > * {
+  margin-left: 0.5em;
+  display: table-cell;
+  vertical-align: middle;
+  float: left;
+  font: normal 10px verdana;
+  color: #545454;
+}
+
+/* line 1329, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement .ui-icon-close {
+  background-image: url("../../../../jda/images/close-filter.png");
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+
+/* line 1335, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement .ui-icon-circle-triangle-s {
+  background-image: url("../../../../jda/images/sort-descending.png");
+  background-position: 50% 50%;
+  background-size: 10px 12px;
+}
+
+/* line 1342, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement .ui-icon-circle-triangle-n {
+  background-image: url("../../../../jda/images/sort-ascending.png");
+  background-position: 50% 50%;
+  background-size: 10px 12px;
+}
+
+/* line 1347, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortStatusElement li {
+  display: table;
+}
+
+/* line 1350, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement .ui-state-default {
+  background-color: #dbeeff;
+}
+
+/* line 1353, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .statusElementContent ul {
+  /* padding-left: 8px; */
+  /*  padding-right: 8px; */
+  display: table-cell;
+}
+
+/* line 1359, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .statusElementContent .ui-button {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 1.2em;
+  padding: 0px 5px 0px 5px;
+  display: inline-block;
+}
+/* line 1367, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .statusElementContent .ui-button .ui-button-text {
+  height: 20px;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* line 1375, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .anchorDivContent .ui-button {
+  float: left;
+}
+
+/* line 1379, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .expandedStatusSection .j-pvt-anchor-textContent {
+  max-width: none;
+}
+
+/* line 1382, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .j-pvt-anchor-textContent {
+  max-width: 7.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px 4px 0px 0px;
+  display: inline-block;
+}
+
+/* line 1390, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar span.j-pvt-anchor-textContent {
+  display: inline-block;
+  padding-left: 0px;
+}
+
+/* line 1395, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortStatusElement li > * {
+  /* 	padding-left:8px; */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 1401, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .notFirstVisibleElement.pivotStatusBarElement {
+  border-left: 1px dotted grey;
+}
+
+/* line 1407, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .statusElementContent {
+  max-width: 15em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  z-index: 100;
+  float: left;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #dbeeff;
+  vertical-align: middle;
+  border-color: #dbeeff;
+  text-decoration: none;
+  white-space: nowrap;
+  width: auto;
+}
+
+/* line 1427, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar {
+  display: table;
+}
+
+/* line 1431, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .statusElementContent > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 1437, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .noneFirstElement {
+  margin-left: 12em;
+}
+
+/* line 1441, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotCellTooltip table td, .pivotCellTooltip table th {
+  padding: 1px;
+  margin: 0px;
+}
+
+/* line 1447, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortDivContent {
+  height: 20px;
+  list-style-type: none;
+  margin: 0px 0px;
+}
+
+/* line 1457, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortDivContent .topAxisToolTipCoor {
+  padding: 0px 0px;
+}
+
+/* line 1462, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortDivContent .topAxisToolTipCoor li {
+  padding-left: 1px;
+}
+
+/* line 1466, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortDivContent li button:first-child {
+  margin-left: -1.5em;
+}
+
+/* line 1470, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortDivContent li button:last-child {
+  /*margin-right: 1.5em;*/
+}
+
+/* line 1474, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortHoverMeasure, .mainPivotStatusBar .anchorsList {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 16px;
+}
+
+/* line 1480, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortHoverMeasure {
+  padding: 2px 2px 2px;
+}
+
+/* line 1484, ../sass/jda-pivot-expansive.scss */
+.inLineBlockItem {
+  display: inline-block;
+}
+
+/* line 1488, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .sortHoverAxisPath {
+  padding: 0px;
+}
+
+/* line 1492, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .anchorHoverAxisPath {
+  max-width: 5em;
+}
+
+/* line 1497, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar .pivotStatusBarElement ul {
+  padding-left: 4px;
+  padding-right: 4px;
+  /*  display: table-cell; */
+}
+
+/* line 1504, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar ol.pivotButtonedList {
+  padding: 0 8px 0 8px;
+  margin: 0 0 0 0;
+  text-decoration: none;
+}
+/* line 1510, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar li.pivotButtonedList {
+  display: block;
+  /* padding: 2px 3px; */
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* line 1518, ../sass/jda-pivot-expansive.scss */
+.mainPivotStatusBar li.pivotButtonedList:not(:first-child) {
+  display: none;
+}
+
+/*
+li.pivotButtonedList button span .ui-icon 
+{
+ background-image:url("../../../../jda/images/close-filter.png")
+}
+
+li.pivotButtonedList .ui-button .ui-button-text {
+  line-height: 20px;
+}
+*/
+/* line 1533, ../sass/jda-pivot-expansive.scss */
+body div.qtip div.content {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  min-height: auto;
+  width: auto;
+  min-width: auto;
+}
+
+/* line 1542, ../sass/jda-pivot-expansive.scss */
+.ui-tooltip {
+  padding: 1px;
+}
+
+/* line 1546, ../sass/jda-pivot-expansive.scss */
+.ui-tooltip-default, .ui-tooltip-content {
+  border-color: #013366;
+  background-color: #A7C4EE;
+  /*  color: #000;     */
+}
+
+/*** comment color picker ***/
+/* line 1555, ../sass/jda-pivot-expansive.scss */
+.dhx_cell_select .cmtRelation-SELF {
+  border-color: #FFFFFF #FFFFFF transparent transparent;
+}
+
+/* line 1559, ../sass/jda-pivot-expansive.scss */
+.cmtRelation-SELF {
+  border-color: #5E5E5E #5E5E5E transparent transparent;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  height: 0px;
+  width: 0px;
+  float: right;
+  position: absolute;
+  right: 0px;
+}
+
+/* line 1570, ../sass/jda-pivot-expansive.scss */
+.cmtRelation-ANCESTORS {
+  border-color: #249F33 #249F33 transparent transparent;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  height: 0px;
+  width: 0px;
+  float: right;
+  position: absolute;
+  right: 0px;
+}
+
+/* line 1581, ../sass/jda-pivot-expansive.scss */
+.cmtRelation-DESCENDANTS {
+  border-color: #2073BC #2073BC transparent transparent;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  height: 0px;
+  width: 0px;
+  float: right;
+  position: absolute;
+  right: 0px;
+}
+
+/*** Test color picker **/
+/* line 1593, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .state-preview {
+  padding: 2px;
+  display: inline-block;
+  float: right;
+}
+
+/* line 1599, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion {
+  max-width: 300px;
+  font-size: 0.8em;
+  opacity: 1.0;
+}
+
+/* line 1606, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion div p {
+  font-size: 0.9em;
+}
+
+/* line 1610, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .ruleHeaderLabel {
+  text-overflow: ellipsis;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  /* for good looks */
+  padding-right: 10px;
+}
+
+/* line 1620, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .ruleBackground {
+  float: left;
+}
+
+/* line 1624, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .ruleText {
+  margin-left: 1em;
+  float: left;
+  background: blue;
+  color: white;
+}
+
+/* line 1631, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .styleRule_1 {
+  background-color: red;
+  color: blue;
+}
+
+/* line 1636, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .styleRule_2 {
+  background-color: yellow;
+  color: red;
+}
+
+/* line 1641, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .styleRule_3 {
+  background-color: black;
+  color: yellow;
+}
+
+/* line 1646, ../sass/jda-pivot-expansive.scss */
+.pivotAccordion.ui-accordion .styleRule_4 {
+  background-color: green;
+  color: black;
+}
+
+/* line 1651, ../sass/jda-pivot-expansive.scss */
+.buttonClose {
+  background-color: #2b91af;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* line 1663, ../sass/jda-pivot-expansive.scss */
+.buttonClose.small {
+  border-radius: 15px;
+  float: right;
+  margin: 22px 5px 0;
+  padding: 6px 15px;
+}
+
+/* line 1670, ../sass/jda-pivot-expansive.scss */
+.buttonClose:hover {
+  background-color: #1e1e1e;
+}
+
+/* line 1674, ../sass/jda-pivot-expansive.scss */
+.buttonClose > span {
+  font-size: 84%;
+}
+
+/* line 1678, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer {
+  background-color: #fff;
+  border-radius: 15px;
+  color: #000;
+  display: none;
+  padding: 20px;
+  min-width: 10px;
+  min-width: 10px;
+  max-width: 600px;
+  max-height: 400px;
+}
+/* line 1692, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .pivotErrorLayerStacktraceWrap {
+  max-height: 500px;
+  min-height: 200px;
+}
+/* line 1698, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .ui-accordion .ui-accordion-header {
+  margin-top: 4px;
+  padding: .2em .2em .2em 2.2em;
+  background: inherit;
+  border: none;
+}
+/* line 1704, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .ui-accordion .ui-accordion-content {
+  border-top: 1px solid #A6C9E2;
+}
+/* line 1710, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .ui-state-active .ui-icon {
+  background-image: url(../../../../vendor/jquery/css/jda-theme/images/ui-icons_6da8d5_256x240.png);
+}
+/* line 1714, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .ui-state-active .ui-widget-content .ui-state-active, #pivotErrorLayer .ui-state-active .ui-widget-header .ui-state-active {
+  color: #2e6e9e;
+}
+/* line 1719, ../sass/jda-pivot-expansive.scss */
+#pivotErrorLayer .ui-corner-all, #pivotErrorLayer .ui-corner-bottom, #pivotErrorLayer .ui-corner-right, #pivotErrorLayer .ui-corner-br {
+  border-radius: 5px;
+}
+
+/* line 1727, ../sass/jda-pivot-expansive.scss */
+.buttonClose.b-close, .button.bClose {
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: none;
+  font: bold 131% sans-serif;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  padding: 0 6px 2px;
+}
+
+/* line 1737, ../sass/jda-pivot-expansive.scss */
+.j-button {
+  border-style: none;
+  background: none;
+}
+
+/* line 1742, ../sass/jda-pivot-expansive.scss */
+.j-button-disabled {
+  border-style: none;
+  background: none;
+}
+
+/* line 1747, ../sass/jda-pivot-expansive.scss */
+.j-page-banner-container {
+  width: auto;
+}
+
+/* line 1751, ../sass/jda-pivot-expansive.scss */
+.j-button-primary {
+  border-width: 0px;
+}
+
+/* line 1755, ../sass/jda-pivot-expansive.scss */
+.hideMultipleOption {
+  display: none;
+}
+
+/* line 226, ../sass/_pivot-global.scss */
+.pvt-east-panel input {
+  height: 22px;
+  width: auto;
+  min-width: 26px;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 8px;
+  font: normal 11px Verdana;
+}
+/* line 77, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-button:disabled, .pvt-east-panel .j-pvt-primary-button:disabled {
+  background: -webkit-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -ms-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -moz-linear-gradient(#FEFEFE, #EDEFF0);
+  background: linear-gradient(#fefefe, #edeff0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FEFEFE, endColorstr=#EDEFF0)";
+  border: 1px solid #DADADA;
+  color: #9B9D9F;
+}
+/* line 120, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-button:hover:not(:disabled), .pvt-east-panel .j-pvt-primary-button:hover:not(:disabled), .pvt-east-panel .j-pvt-button:focus, .pvt-east-panel .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5a5b5c, #4b4b4b);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-button:hover:not(:disabled) .x-btn-inner, .pvt-east-panel .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, .pvt-east-panel .j-pvt-button:focus .x-btn-inner, .pvt-east-panel .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 94, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-button {
+  background: -webkit-linear-gradient(#FFFFFF, #EAECEE);
+  background: -ms-linear-gradient(#FFFFFF, #EAECEE);
+  background: -moz-linear-gradient(#FFFFFF, #EAECEE);
+  background: linear-gradient(#ffffff, #eaecee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#EAECEE)";
+  color: #424749;
+  border: 1px solid #C7C7C7;
+  cursor: pointer;
+}
+/* line 99, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-button .x-btn-inner {
+  color: #424749;
+}
+/* line 107, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-primary-button {
+  background: -webkit-linear-gradient(#5BA1D4, #2B75B4);
+  background: -ms-linear-gradient(#5BA1D4, #2B75B4);
+  background: -moz-linear-gradient(#5BA1D4, #2B75B4);
+  background: linear-gradient(#5ba1d4, #2b75b4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5BA1D4, endColorstr=#2B75B4)";
+  color: #FFFFFF;
+  border: 1px solid #EBECEE;
+  cursor: pointer;
+}
+/* line 112, ../sass/_pivot-global.scss */
+.pvt-east-panel .j-pvt-primary-button .x-btn-inner {
+  color: #FFFFFF;
+}
+
+/* line 1765, ../sass/jda-pivot-expansive.scss */
+.pvt-east-panel .x-tool-collapse-right {
+  background-image: url(../../../images/close-grey.png);
+  background-position: 50% 100%;
+  /* background-size: 16px 16px; */
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+/* line 1773, ../sass/jda-pivot-expansive.scss */
+.x-collapsed-left .x-tool-expand-left {
+  background-image: url(../../../images/arrow_left.png);
+  background-position: 50% 100%;
+  /* background-size: 16px 16px; */
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}

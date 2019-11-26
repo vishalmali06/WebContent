@@ -1,0 +1,102 @@
+/*****************************************
+* Per deployment worksheet look and feel *
+******************************************/
+
+/****************************************************************
+*	Application team change below																	*
+*	Uncomment rules and change styles to change look and feel			*
+*****************************************************************/
+/** Side facet members **/
+/***
+.dhx_ss_header TD,.dhx_ss_footer TD,.pivotDraggable,div.dhx_column div.sideCellMember{
+	color: white;
+	background: fuchsia;
+}
+***/
+/** Resizable column border */
+.ui-resizable-helper {
+    border: 2px dotted yellow;
+} 
+
+/** Top facet names**/
+/*
+ td,.pivotHdrRow div[id^='hdr_fc'], .pivotDraggable{ 
+	color: white;
+	background: #013366;
+}
+*/
+/** Top facet members**/
+/*
+.dhx_ss_header TD:not(.dhx_cell_select),.dhx_ss_footer TD {
+	color: white;
+	background: #013366;
+}
+*/
+/** cell write status styling **/
+.wstat-rw {
+	
+}
+
+/* .wstat-prw {
+	opacity: 0.9;
+}
+
+.wstat-r {
+	opacity: 0.4;
+}
+
+ */
+/** Data cells Foreground/background  **/
+/***
+.pivotLayerElement .dhx_column div.editabledata.dhx_cell {
+	background: pink;
+	color: lawngreen;
+}
+***/
+
+/** Selected cell/members **/
+
+/* 
+.pivotLayerElement div>div.dhx_cell_select.dhx_cell ,.pivotLayerElement div>div.dhx_column>div.dhx_cell_select.dhx_cell {
+	background: OliveDrab;
+	color:inherit;
+}
+ */
+
+/**
+!!Internal use
+.pivotLayerElement .fname-DmdGroup .facetLevel-0{
+    background:red;
+}
+**/
+
+.dropZones {
+    border: 1px solid #fad42e;
+    background: #fbec88 url(images/ui-bg_flat_55_fbec88_40x100.png) 50% 50% repeat-x;
+    color: #363636;	
+}
+
+/*
+.pivotLayerElement .gradientFacetLevels-Loc
+{
+	background:#24538A;
+}
+
+
+.pivotLayerElement .gradientFacetLevels-DmdGroup
+{
+	background:#24538A;
+}
+
+.pivotLayerElement .gradientFacetLevels-DmdUnit
+{
+	background:#24538A;
+}
+
+.pivotLayerElement .gradientFacetLevels-TIME
+{
+	background:#24538A;
+}
+*/
+
+

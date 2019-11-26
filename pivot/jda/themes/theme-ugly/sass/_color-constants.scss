@@ -1,0 +1,28 @@
+// Color constants
+// As a principle, avoid using these directly in subsequent styles. Instead, color constants
+// are to be assigned to variables named for their use, and those variables should then be used in the styles
+
+// Note: except for the shades of gray from white to black, 
+// all other colors are given names from http://www.chir.ag/projects/name-that-color
+
+$clr-ugly-red:              #ff0000;
+$clr-ugly-green:            #00ff00;
+$clr-ugly-blue:             #0000ff;
+$clr-ugly-saffron:          #f4c430;
+$clr-ugly-electriclime:     #ccff00;
+$clr-ugly-electricviolet:   #8b00ff;
+$clr-ugly-energyyellow:     #f8dd5c;
+$clr-ugly-greenhaze:        #01a368;
+$clr-ugly-razzmatazz:       #e30b5c;
+$clr-ugly-manhattan:        #f5c999;
+$clr-ugly-screamingreen:    #66ff66;
+$clr-ugly-hotpink:          #ff69b4;
+$clr-ugly-anakiwa:          #9ce8fc;
+$clr-ugly-greenpea:         #1d6142;
+$clr-ugly-dodgerblue:       #1e90ff;
+$clr-ugly-aeroblue:         #c9ffe5;
+$clr-ugly-sweetpink:        #fd9fa2;
+$clr-ugly-tapestry:         #b05e81;
+$clr-ugly-classicrose:      #fbcce7;
+$clr-ugly-pineglade:        #c7cd90;
+$clr-ugly-texas:            #f8f99c;

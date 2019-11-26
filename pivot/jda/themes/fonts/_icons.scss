@@ -1,0 +1,136 @@
+// /* JDA font uses the Unicode Private Use Area (PUA) to ensure screen
+//    readers do not read off random characters that represent icons */
+// /**
+// Our quick search and replace:
+// ^\$jf-var-(.+): "(.+)";
+// .#{\\$jf-css-prefix}-$1:before { content: \\$jf-var-$1; }
+// */
+// 
+
+// Variables
+// --------------------------
+
+$jf-font-path:        "fonts" !default;
+//$jf-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+$jf-css-prefix:       jf !default;
+$jf-version:          "1.2.0" !default;
+$jf-border-color:     #eee !default;
+$jf-inverse:          #fff !default;
+$jf-li-width:         (30em / 14) !default;
+
+.#{$jf-css-prefix}-space:before { content: $jf-var-space; }
+.#{$jf-css-prefix}-add:before { content: $jf-var-add; }
+.#{$jf-css-prefix}-add-btn:before { content: $jf-var-add-btn; }
+.#{$jf-css-prefix}-add-comment:before { content: $jf-var-add-comment; }
+.#{$jf-css-prefix}-add-favorites:before { content: $jf-var-add-favorites; }
+.#{$jf-css-prefix}-add-folder:before { content: $jf-var-add-folder; }
+.#{$jf-css-prefix}-alert-require-field:before { content: $jf-var-alert-require-field; }
+.#{$jf-css-prefix}-attachment:before { content: $jf-var-attachment; }
+.#{$jf-css-prefix}-audio:before { content: $jf-var-audio; }
+.#{$jf-css-prefix}-back:before { content: $jf-var-back; }
+.#{$jf-css-prefix}-bottom:before { content: $jf-var-bottom; }
+.#{$jf-css-prefix}-calculate:before { content: $jf-var-calculate; }
+.#{$jf-css-prefix}-calendar:before { content: $jf-var-calendar; }
+.#{$jf-css-prefix}-cancel-close:before { content: $jf-var-cancel-close; }
+.#{$jf-css-prefix}-chart:before { content: $jf-var-chart; }
+.#{$jf-css-prefix}-clock:before { content: $jf-var-clock; }
+.#{$jf-css-prefix}-collapsed:before { content: $jf-var-collapsed; }
+.#{$jf-css-prefix}-collapsed-all:before { content: $jf-var-collapsed-all; }
+.#{$jf-css-prefix}-comments:before { content: $jf-var-comments; }
+.#{$jf-css-prefix}-confrim:before { content: $jf-var-confrim; }
+.#{$jf-css-prefix}-copy:before { content: $jf-var-copy; }
+.#{$jf-css-prefix}-copy-multiple:before { content: $jf-var-copy-multiple; }
+.#{$jf-css-prefix}-critical-error:before { content: $jf-var-critical-error; }
+.#{$jf-css-prefix}-delete:before { content: $jf-var-delete; }
+.#{$jf-css-prefix}-down:before { content: $jf-var-down; }
+.#{$jf-css-prefix}-edit:before { content: $jf-var-edit; }
+.#{$jf-css-prefix}-expanded:before { content: $jf-var-expanded; }
+.#{$jf-css-prefix}-expanded-all:before { content: $jf-var-expanded-all; }
+.#{$jf-css-prefix}-export:before { content: $jf-var-export; }
+.#{$jf-css-prefix}-export-to-database:before { content: $jf-var-export-to-database; }
+.#{$jf-css-prefix}-favorites:before { content: $jf-var-favorites; }
+.#{$jf-css-prefix}-filter:before { content: $jf-var-filter; }
+.#{$jf-css-prefix}-find:before { content: $jf-var-find; }
+.#{$jf-css-prefix}-firstpage:before { content: $jf-var-firstpage; }
+.#{$jf-css-prefix}-folder:before { content: $jf-var-folder; }
+.#{$jf-css-prefix}-foward:before { content: $jf-var-foward; }
+.#{$jf-css-prefix}-grid-view:before { content: $jf-var-grid-view; }
+.#{$jf-css-prefix}-go-to:before { content: $jf-var-go-to; }
+.#{$jf-css-prefix}-graph:before { content: $jf-var-graph; }
+.#{$jf-css-prefix}-grid:before { content: $jf-var-grid; }
+.#{$jf-css-prefix}-help:before { content: $jf-var-help; }
+.#{$jf-css-prefix}-help-btn:before { content: $jf-var-help-btn; }
+.#{$jf-css-prefix}-hierarchy:before { content: $jf-var-hierarchy; }
+.#{$jf-css-prefix}-home:before { content: $jf-var-home; }
+.#{$jf-css-prefix}-image:before { content: $jf-var-image; }
+.#{$jf-css-prefix}-import:before { content: $jf-var-import; }
+.#{$jf-css-prefix}-import-from-cloud:before { content: $jf-var-import-from-cloud; }
+.#{$jf-css-prefix}-import-from-database:before { content: $jf-var-import-from-database; }
+.#{$jf-css-prefix}-information:before { content: $jf-var-information; }
+.#{$jf-css-prefix}-last-page:before { content: $jf-var-last-page; }
+.#{$jf-css-prefix}-last-page-down:before { content: $jf-var-last-page-down; }
+.#{$jf-css-prefix}-last-page-up:before { content: $jf-var-last-page-up; }
+.#{$jf-css-prefix}-left:before { content: $jf-var-left; }
+.#{$jf-css-prefix}-library:before { content: $jf-var-library; }
+.#{$jf-css-prefix}-list-view:before { content: $jf-var-list-view; }
+.#{$jf-css-prefix}-lock:before { content: $jf-var-lock; }
+.#{$jf-css-prefix}-log-in:before { content: $jf-var-log-in; }
+.#{$jf-css-prefix}-log-out:before { content: $jf-var-log-out; }
+.#{$jf-css-prefix}-maximize:before { content: $jf-var-maximize; }
+.#{$jf-css-prefix}-menu:before { content: $jf-var-menu; }
+.#{$jf-css-prefix}-minimize:before { content: $jf-var-minimize; }
+.#{$jf-css-prefix}-more-options:before { content: $jf-var-more-options; }
+.#{$jf-css-prefix}-move:before { content: $jf-var-move; }
+.#{$jf-css-prefix}-move-back:before { content: $jf-var-move-back; }
+.#{$jf-css-prefix}-move-foward:before { content: $jf-var-move-foward; }
+.#{$jf-css-prefix}-next:before { content: $jf-var-next; }
+.#{$jf-css-prefix}-next-down:before { content: $jf-var-next-down; }
+.#{$jf-css-prefix}-next-page:before { content: $jf-var-next-page; }
+.#{$jf-css-prefix}-open-folder:before { content: $jf-var-open-folder; }
+.#{$jf-css-prefix}-open-tab:before { content: $jf-var-open-tab; }
+.#{$jf-css-prefix}-pin:before { content: $jf-var-pin; }
+.#{$jf-css-prefix}-preview:before { content: $jf-var-preview; }
+.#{$jf-css-prefix}-previous:before { content: $jf-var-previous; }
+.#{$jf-css-prefix}-previous-page:before { content: $jf-var-previous-page; }
+.#{$jf-css-prefix}-previous-up:before { content: $jf-var-previous-up; }
+.#{$jf-css-prefix}-print:before { content: $jf-var-print; }
+.#{$jf-css-prefix}-refresh:before { content: $jf-var-refresh; }
+.#{$jf-css-prefix}-refresh-database:before { content: $jf-var-refresh-database; }
+.#{$jf-css-prefix}-remove-folder:before { content: $jf-var-remove-folder; }
+.#{$jf-css-prefix}-report:before { content: $jf-var-report; }
+.#{$jf-css-prefix}-resources:before { content: $jf-var-resources; }
+.#{$jf-css-prefix}-restore-reset:before { content: $jf-var-restore-reset; }
+.#{$jf-css-prefix}-right:before { content: $jf-var-right; }
+.#{$jf-css-prefix}-save:before { content: $jf-var-save; }
+.#{$jf-css-prefix}-scenario-management:before { content: $jf-var-scenario-management; }
+.#{$jf-css-prefix}-search:before { content: $jf-var-search; }
+.#{$jf-css-prefix}-settings:before { content: $jf-var-settings; }
+.#{$jf-css-prefix}-sort-ascending:before { content: $jf-var-sort-ascending; }
+.#{$jf-css-prefix}-sort-descending:before { content: $jf-var-sort-descending; }
+.#{$jf-css-prefix}-tab-overflow:before { content: $jf-var-tab-overflow; }
+.#{$jf-css-prefix}-thumbs-down:before { content: $jf-var-thumbs-down; }
+.#{$jf-css-prefix}-thumbs-up:before { content: $jf-var-thumbs-up; }
+.#{$jf-css-prefix}-top:before { content: $jf-var-top; }
+.#{$jf-css-prefix}-unpin:before { content: $jf-var-unpin; }
+.#{$jf-css-prefix}-up:before { content: $jf-var-up; }
+.#{$jf-css-prefix}-upload-to-cloud:before { content: $jf-var-upload-to-cloud; }
+.#{$jf-css-prefix}-video:before { content: $jf-var-video; }
+.#{$jf-css-prefix}-warning-error:before { content: $jf-var-warning-error; }
+.#{$jf-css-prefix}-wizard:before { content: $jf-var-wizard; }
+.#{$jf-css-prefix}-zoom-in:before { content: $jf-var-zoom-in; }
+.#{$jf-css-prefix}-zoom-out:before { content: $jf-var-zoom-out; }
+.#{$jf-css-prefix}-collapse-up:before { content: $jf-var-collapse-up; }
+.#{$jf-css-prefix}-expand-down:before { content: $jf-var-expand-down; }
+.#{$jf-css-prefix}-expand-right:before { content: $jf-var-expand-right; }
+.#{$jf-css-prefix}-collapse-left:before { content: $jf-var-collapse-left; }
+
+//below classes are added for showing gadget icons on dashboard
+.#{$jf-css-prefix}-dashboard-exception:before { content: $jf-var-dashboard-exception; }
+.#{$jf-css-prefix}-dashboard-kpi:before { content: $jf-var-dashboard-kpi; }
+.#{$jf-css-prefix}-dashboard-graph:before { content: $jf-var-dashboard-graph; }
+.#{$jf-css-prefix}-dashboard-worklist:before { content: $jf-var-dashboard-worklist; }
+
+//below variable is added for showing flag icon for notifications
+.#{$jf-css-prefix}-flag:before { content: $jf-var-flag; }
+.#{$jf-css-prefix}-confirm:before { content: $jf-var-confirm; }
+.#{$jf-css-prefix}-link:before { content: $jf-var-link; }

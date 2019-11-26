@@ -1,0 +1,161 @@
+// Color constants
+// As a principle, avoid using these directly in subsequent styles. Instead, color constants
+// are to be assigned to variables named for their use, and those variables should then be used in the styles
+
+// Note: except for the shades of gray from white to black, 
+// all other colors are given names from http://www.chir.ag/projects/name-that-color
+
+// This file contains the base color constants that might be used in any theme
+
+$clr-white:             #ffffff;
+$clr-black:             #000000;
+
+// The first set of grays are named for their base grouping. 
+// Other specific grays are listed with numeric suffixes within these groupings
+$clr-gray-1:            #101010;
+$clr-gray-2:            #202020;
+$clr-gray-3:            #303030;
+$clr-gray-4:            #404040;
+$clr-gray-5:            #505050;
+$clr-gray-6:            #606060;
+$clr-gray-7:            #707070;
+$clr-gray-8:            #808080;
+$clr-gray-9:            #909090;
+$clr-gray-a:            #a0a0a0;
+$clr-gray-b:            #b0b0b0;
+$clr-gray-c:            #c0c0c0;
+$clr-gray-d:            #d0d0d0;
+$clr-gray-e:            #e0e0e0;
+$clr-gray-f:            #f0f0f0;
+
+$clr-gray-001:          #0e0e0e;
+
+$clr-gray-201:          #2e2f30;
+$clr-gray-202:          #2f3031;
+
+$clr-gray-301:          #333333;
+
+$clr-gray-401:          #505050;
+$clr-gray-402:          #4b4b4b;
+$clr-gray-403:          #454545;
+$clr-gray-404:          #424344;
+
+$clr-gray-501:          #545454;
+
+$clr-gray-601:          #666666;
+
+$clr-gray-701:          #7f7f7f;
+$clr-gray-702:          #777777;
+$clr-gray-703:          #7e7e7e;
+
+$clr-gray-801:          #818383;
+$clr-gray-802:          #838383;
+$clr-gray-803:          #8e8e8e;
+
+$clr-gray-901:          #999999;
+
+$clr-gray-a01:          #aaaaaa;
+
+$clr-gray-b01:          #bbbbbb;
+$clr-gray-b02:          #b5b5b5;
+$clr-gray-b03:          #b2b2b2;
+
+$clr-gray-c01:          #cccccc;
+$clr-gray-c02:          #c7c7c7;
+$clr-gray-c03:          #c7c6c6;
+
+$clr-gray-d01:          #d2d2d2;
+$clr-gray-d02:          #dcdcdc;
+$clr-gray-d03:          #dedede;
+$clr-gray-d04:          #d1d1d1;
+$clr-gray-d05:          #dadada;
+
+$clr-gray-e01:          #e2e2dd;
+$clr-gray-e02:          #ececec;
+$clr-gray-e03:          #e9eaea;
+$clr-gray-e04:          #e7e8e8;
+$clr-gray-e05:          #e9e9e9;
+$clr-gray-e06:          #efeff2;
+$clr-gray-e07:          #ededed;
+$clr-gray-e08:          #e5e6e7;
+$clr-gray-e09:          #e3e3e3;
+$clr-gray-e10:          #eaeaea;
+$clr-gray-e11:          #eaecee;
+
+$clr-gray-f01:          #fafafa;
+$clr-gray-f02:          #f5f5f6;
+$clr-gray-f03:          #f7f7f8;
+$clr-gray-f04:          #fefefe;
+$clr-gray-f05:          #f3f3f5;
+$clr-gray-f06:          #fafafb;
+$clr-gray-f07:          #f9f9f9;
+
+//Graph data color
+$clr-deepcerulean:      #007AB4;
+$clr-razzmatazz:        #c90a5a;
+$clr-seance:            #961D9C;
+$clr-trinidad:          #e85600;
+$clr-regalblue-chart:   #004f71;
+$clr-limeade:           #598100;
+$clr-lavender:          #db72e0;
+$clr-pictonblue:        #54c2ec;
+$clr-crimson:           #ea1914;
+
+//Graph Hover color
+$clr-orient:            #005780;
+$clr-jazzberryjam:      #990844;
+$clr-scarletgum:        #621366;
+$clr-fire:              #b34100;
+$clr-astronautblue:     #004461;
+$clr-verdungreen:       #344d00;
+$clr-wisteria:          #a958ad;
+$clr-bostonblue:        #4398ba;
+$clr-thunderbird:       #d81914;
+
+// Shadow constants
+$clr-shadow:            rgba(0,0,0,0.2);
+$clr-shadow-darker:     rgba(0,0,0,0.3);
+
+$clr-thunder:           #231F20;
+$clr-cerulean:          #00A9E0;
+$clr-mariner:           #2073BC;
+$clr-neoncarrot:        #FF9E36;
+$clr-forestgreen:       #249F33;
+$clr-butterflybush:     #6F51A1;
+$clr-dodgerblue:        #42B9FF;
+$clr-gorse:             #FFEB3B;
+$clr-pastelgreen:       #6CE07A;
+$clr-seance-01:         #9C27B0;
+$clr-milanored:         #BC0A0A;
+$clr-alto:              #D9D9D9;
+$clr-congressblue:      #024A8A;
+$clr-mangotango:        #E07400;
+$clr-camarone:          #02660E;
+$clr-victoria:          #5B4284;
+$clr-curiousblue:       #1F98DF;
+$clr-lightningyellow:   #FFC926;
+$clr-emerald:           #4DC65B;
+$clr-seance-02:         #7E1F8E;
+$clr-redberry:          #980000;
+$clr-nobel:             #B3B3B3;
+$clr-seabuckthorn:      #F89B3A;
+$clr-cardinal:          #BA2025;
+$clr-astra:             #F6F9FB;
+$clr-catskill-white:    #EDF4F7;
+$clr-tropical-blue:     #C3E8F6;
+
+$clr-pigmentgreen-01:   #00AB53;
+$clr-mangoorange-01:    #D68001;
+$clr-alizarinred-01:    #DB2C28;
+
+$clr-pigmentgreen-02:   #009046;
+$clr-mangoorange-02:    #B47104;
+$clr-alizarinred-02:    #C20F0F;
+
+$clr-pigmentgreen-03:   #00CD63;
+$clr-mangoorange-03:    #F09502;
+$clr-alizarinred-03:    #F24343;
+
+$clr-dovegray:          #6E6D6D;
+$clr-botticelli:        #D7E4EA;
+$clr-geyser:            #D8DFE2;

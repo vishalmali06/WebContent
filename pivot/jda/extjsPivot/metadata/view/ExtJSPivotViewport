@@ -1,0 +1,100 @@
+//=========================================================================================================
+//			Copyright <1995-2018> JDA Software Group, Inc. All rights reserved.
+//			LICENSE OF THIS PROGRAM IS ONLY ENTITLED TO ACCESS THE CONFIGURATION(S) SPECIFIED IN ITS
+//			SOFTWARE LICENSE AGREEMENT WITH JDA.  ACCESS OF ANY OTHER CONFIGURATION IS A DIRECT VIOLATION
+//			OF THE TERMS OF THE SOFTWARE LICENSE AGREEMENT, AND JDA RETAINS ALL ITS LEGAL RIGHTS TO ENFORCE
+//			SUCH AGREEMENT.
+//			This product may be protected by one or more United States and foreign patents.
+//			For information on patents, see https://www.jda.com/legal/patents.
+//=========================================================================================================
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ExtJSPivotViewport",
+        "designer|initialView": true,
+        "defaults": [
+            "{collapsible: true,split: true,bodyPadding: 15}"
+        ],
+        "layout": "fit"
+    },
+    "designerId": "656edea7-9746-457c-ab26-81187b5836d8",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaults": [
+                    "{ collapsible: true,split: true,bodyPadding: 15}"
+                ],
+                "layout": "border",
+                "title": "Visual Pivot"
+            },
+            "designerId": "5be45f52-231d-4b4e-bbe7-4d44b9285ae0",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "minWidth": 300,
+                        "width": 300,
+                        "designer|displayName": "Pivot Filter",
+                        "layout|flex": 1,
+                        "layout|floatable": false,
+                        "layout|region": "west"
+                    },
+                    "designerId": "87fcab38-1a92-4928-8c7a-2b0f04575a67",
+                    "masterInstanceId": "1913e288-4fed-4913-aebf-6ad90b67dd68",
+                    "cn": [
+                        {
+                            "type": "processcfgfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "processPivotFilter",
+                                "designer|params": [
+                                    "config"
+                                ],
+                                "implHandler": [
+                                    "return config;"
+                                ]
+                            },
+                            "designerId": "a673817a-b656-4dab-bfe4-5cf3d000512d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 5,
+                        "layout|region": "center",
+                        "html": [
+                            "Pivot area"
+                        ]
+                    },
+                    "designerId": "9cd4d926-7862-4e47-b25d-8dc1a8272c01"
+                }
+            ]
+        }
+    ]
+}

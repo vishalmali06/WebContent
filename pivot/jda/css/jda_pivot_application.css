@@ -1,0 +1,340 @@
+@CHARSET "ISO-8859-1";
+
+/***
+Styling for the general worksheet properties
+***/	
+#facetProperties {   
+ 
+    width: 30%;
+	
+    cursor: default;
+    padding:0px;
+    min-height: 20%;
+
+}
+
+#facetProperties table{   
+    border:0px;
+
+}
+
+.valignedDiv
+{
+	display:table-cell; vertical-align:middle;	
+}
+
+.valignedDivContainer
+{
+	display:table-row;	
+}
+
+.empty-list{
+	opacity:0.35;
+}
+.ui-widget {
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+    font-size: 1.0em;
+}
+
+#facetProperties input
+{
+   font-family: tahoma, arial, helvetica, verdana, sans-serif;
+ /*   font-size: smaller;  */   
+ 
+   font-weight: normal;
+}
+#facetPropertiesContent {
+    overflow:hidden;
+    height: 80%;
+}
+#facetProperties tbody tr:nth-child(2n),#facetProperties li:nth-child(2n){
+    background: #F3F3F3;
+}
+#facetProperties tbody tr:nth-child(2n+1),#facetProperties li:nth-child(2n+1){
+    background: #F9F9F9;
+}
+#facetProperties  td,#facetProperties  th {
+    padding:0px;
+	display:table-cell;
+	border:0px;
+	border-right-width: 1px;
+}
+#facetProperties button{
+ /*  font-size: .72em !important;*/ 
+   float: none;
+   background-position:center;
+   margin:1px;
+}
+#generalWorksheetTabHeader{
+	margin:1px;
+	padding:0px;
+}
+#facetProperties button{
+   text-align: center;
+   display: table-cell;
+   background-position:center;
+}
+#facetProperties  .ui-selecting { background: #FECA40; }
+#facetProperties  .ui-selected { background: #F39814; color: white; }
+#facetProperties ul { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#facetProperties  li { margin: 3px;}
+
+#GeneralTabId .cellDiv{
+	float:left; 
+}
+	
+#GeneralTabId .ui-autocomplete {
+		max-height: 200px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;
+	}
+#GeneralTabId .ui-autocomplete li
+{
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+}
+#GeneralTabId .ui-autocomplete-category
+{
+    font-weight: bold;
+}
+
+#GeneralTabId .ui-autocomplete li.ui-menu-item a
+{
+    line-height:1;
+    font-size:0.9em;
+}
+
+#msrPropGridIdDiv td.editable[_cellType='coro']
+{
+	background:pink;
+}
+
+#GeneralTabId tbody tr:hover {
+    background:#FECA40;       
+}
+#GeneralTabId thead th {
+    border: 0px solid #D5DDE0;
+
+	padding: 0px;
+    font-weight: normal;
+
+}
+#GeneralTabId table,#GeneralTabId table td {
+    border:0px;
+    padding: 0px;
+    border-spacing:0px;
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+    vertical-align: middle;
+}
+#GeneralTabId table tr {
+    padding-bottom: 0px;
+    border-spacing:0px;
+    font-family: tahoma, arial, helvetica, verdana, sans-serif;
+}
+#GeneralTabId #availableFacetsTable .ui-selecting {
+    background: #FECA40;
+}
+#GeneralTabId .connectedFacetsLists tbody tr:not('.new-item') {
+    font-size: smaller;
+    font-weight: normal;
+}
+#GeneralTabId #availableFacetsTable.ui-selecting {
+    background: #FECA40;
+}
+
+#GeneralTabId .connectedFacetsList button
+{
+    float: 'right';
+    width: 'auto'
+}
+#GeneralTabId  .ui-icon-close { 
+    background-image: url(../../vendor/jquery/css/jda-theme/images/ui-icons_cd0a0a_256x240.png) !important;    
+}
+
+#GeneralTabId  .ui-icon-close,#GeneralTabId  .removeFacetLevels { 
+    background-image: url(../../vendor/jquery/css/jda-theme/images/ui-icons_cd0a0a_256x240.png) !important;
+    
+}
+
+
+#GeneralTabId .ui-state-highlight {
+    background:#DED7D7 !important;
+}
+
+#facetProperties #selectedLevelsTable li.ui-state-highlight{
+    list-style-type: none; margin: 0; padding: 0; width: 100%;
+}
+#GeneralTabId #availFacetsLayer{
+    float:left;
+    width: 50%;
+}
+#GeneralTabId #axisLayers{
+    float:right;
+    width: 45%;
+}
+#GeneralTabId #columnsAxisLayer,#rowsAxisLayer{
+    height:30%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+
+}
+
+#hierarchyLevelsListLayer{
+    max-height:200px;
+    min-height:80px;
+    overflow-y: auto;
+}
+#hierarchyLevelsTable
+{
+    width:100%;
+}
+
+#GeneralTabId #facetLevelPanel{
+    height: 10%;
+    border:0px;
+    border-top-width:1px;
+    border-top-style:dotted;
+    border-color:white;
+    border-top-color:black;
+	padding-top:15px;
+}
+
+#GeneralTabId tr.listPlaceholder{
+    float:left; height:1px;padding-bottom:0px;
+}
+
+#GeneralTabId #rowsAxisLayer{
+    margin-top: 15px;
+}
+
+
+#GeneralTabId .ui-combobox {
+	position: relative;
+	display: inline-block;
+}
+
+#GeneralTabId .tableheader {
+	float: left;
+	clear: both;
+	width:100%;
+}
+
+#GeneralTabId .fullWidthPane {
+	float: left;
+	clear: both;
+	width:100%;
+}
+
+
+#GeneralTabId .paddedLbl { 
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+}
+
+#GeneralTabId .subPane {
+	float: left;
+	margin-left:0.5em;
+	font-size: inherit;
+}
+
+#GeneralTabId .pivotUpDownDiv{
+	float: right;
+	margin-left:0.5em;
+	margin-right:0.2em;
+}
+
+#GeneralTabId .ui-combobox .ui-button .ui-button-text{
+	position: relative;
+	display: inline-block;
+}
+
+#GeneralTabId .fieldSeperator{
+	float:left;
+	width:1px;
+	height:100%;
+	margin-left:0.5em;
+	margin-right:0.5em;
+	margin-top:0em;
+	margin-bottom:0em;
+	padding:0em;
+	border-left:1px dotted;
+}
+#GeneralTabId .ui-widget 	a.ui-combobox-toggle {
+
+		top: 0px;
+		bottom: 0px;
+		margin-left: -1px;
+		padding-top:0.2em;
+		padding-bottom:0.2em;
+
+	}
+
+#GeneralTabId .pivotAddRemoveDiv
+{
+	margin-top: 1em;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #facetProperties .ui-combobox .ui-button .ui-button-text{ 
+       min-height: 9px; 
+    }
+	#facetProperties .ui-combobox-input {
+	    float:left;
+		margin: 0em;
+		top:0em;
+		
+
+	}
+	#facetProperties .ui-widget 	a.ui-combobox-toggle {
+ 		top: 0.1em;
+		padding-top:0.29em;
+		padding-bottom:0.27em;
+
+	}
+	
+	#demandWorkSheetStatusBar{
+		width:100%;
+		height:24px;
+		vertical-align: middle;
+		float: left;
+	}
+
+}
+
+.pivotLayerElement div.dhx_column>div.highlightedChangedCell.editabledata,.pivotLayerElement .dhx_table_cell.highlightedChangedCell.editabledata
+{
+    background-color: #00FFFF;
+    background-Image: none;
+    opacity: 1.0;
+    filter: none;
+    color:inherit;
+}
+
+
+#topAxisSandBox{
+	color:pink;
+}
+
+#topAxisSandBox{
+	color:cyan;
+}
+
+/** Enhance DHX grid selected non-focused row**/
+#wrkshtProps div.gridbox_jda table.obj tr.rowselected td, #wrkshtProps div.gridbox_jda table.obj tr.rowselected td.cellselected, div.gridbox table.obj td.cellselected{
+	background: #A7C4EE;
+}
+
+
+#vpMsgTbl .infomsgtext div.progress-label{ 
+    float: left;
+    margin-top: 5px;
+ /*    z-index:100; */
+	position:relative; 
+    color: black;
+}
+
+#vpMsgTbl .infomsgtext div.ui-progressbar-value
+{
+/* 	background:#A7C4EE url(images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x; */
+}

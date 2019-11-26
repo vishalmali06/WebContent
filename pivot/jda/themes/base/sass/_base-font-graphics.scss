@@ -1,0 +1,131 @@
+@import "../../fonts/jda-font.scss";
+
+@mixin j-font-graphic($class, $font-size: 14px, $font-family: 'JDAIconsFamily-Regular', $font-weight: normal) {
+    @extend .#{$class};
+    @extend .jf;
+    font-family: $font-family !important;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+.j-graphic-space                   {@include j-font-graphic(jf-space);}
+.j-graphic-add                     {@include j-font-graphic(jf-add);}
+.j-graphic-add-btn                 {@include j-font-graphic(jf-add-btn);}
+.j-graphic-add-comment             {@include j-font-graphic(jf-add-comment);}
+.j-graphic-add-favorites           {@include j-font-graphic(jf-add-favorites);}
+.j-graphic-add-folder              {@include j-font-graphic(jf-add-folder);}
+.j-graphic-alert-require-field     {@include j-font-graphic(jf-alert-require-field);}
+.j-graphic-attachment              {@include j-font-graphic(jf-attachment);}
+.j-graphic-audio                   {@include j-font-graphic(jf-audio);}
+.j-graphic-back                    {@include j-font-graphic(jf-back);}
+.j-graphic-bottom                  {@include j-font-graphic(jf-bottom);}
+.j-graphic-calculate               {@include j-font-graphic(jf-calculate);}
+.j-graphic-calendar                {@include j-font-graphic(jf-calendar);}
+.j-graphic-cancel-close            {@include j-font-graphic(jf-cancel-close);}
+.j-graphic-chart                   {@include j-font-graphic(jf-chart);}
+.j-graphic-clock                   {@include j-font-graphic(jf-clock);}
+.j-graphic-collapsed               {@include j-font-graphic(jf-collapsed);}
+.j-graphic-collapsed-all           {@include j-font-graphic(jf-collapsed-all);}
+.j-graphic-comments                {@include j-font-graphic(jf-comments);}
+.j-graphic-confrim                 {@include j-font-graphic(jf-confrim);}
+.j-graphic-copy                    {@include j-font-graphic(jf-copy);}
+.j-graphic-copy-multiple           {@include j-font-graphic(jf-copy-multiple);}
+.j-graphic-critical-error          {@include j-font-graphic(jf-critical-error);}
+.j-graphic-delete                  {@include j-font-graphic(jf-delete);}
+.j-graphic-down                    {@include j-font-graphic(jf-down);}
+.j-graphic-edit                    {@include j-font-graphic(jf-edit);}
+.j-graphic-expanded                {@include j-font-graphic(jf-expanded);}
+.j-graphic-expanded-all            {@include j-font-graphic(jf-expanded-all);}
+.j-graphic-export                  {@include j-font-graphic(jf-export);}
+.j-graphic-export-to-database      {@include j-font-graphic(jf-export-to-database);}
+.j-graphic-favorites               {@include j-font-graphic(jf-favorites);}
+.j-graphic-filter                  {@include j-font-graphic(jf-filter);}
+.j-graphic-find                    {@include j-font-graphic(jf-find);}
+.j-graphic-firstpage               {@include j-font-graphic(jf-firstpage);}
+.j-graphic-folder                  {@include j-font-graphic(jf-folder);}
+.j-graphic-foward                  {@include j-font-graphic(jf-foward);}
+.j-graphic-grid-view               {@include j-font-graphic(jf-grid-view);}
+.j-graphic-go-to                   {@include j-font-graphic(jf-go-to);}
+.j-graphic-graph                   {@include j-font-graphic(jf-graph);}
+.j-graphic-grid                    {@include j-font-graphic(jf-grid);}
+.j-graphic-help                    {@include j-font-graphic(jf-help);}
+.j-graphic-help-btn                {@include j-font-graphic(jf-help-btn);}
+.j-graphic-hierarchy               {@include j-font-graphic(jf-hierarchy);}
+.j-graphic-home                    {@include j-font-graphic(jf-home);}
+.j-graphic-image                   {@include j-font-graphic(jf-image);}
+.j-graphic-import                  {@include j-font-graphic(jf-import);}
+.j-graphic-import-from-cloud       {@include j-font-graphic(jf-import-from-cloud);}
+.j-graphic-import-from-database    {@include j-font-graphic(jf-import-from-database);}
+.j-graphic-information             {@include j-font-graphic(jf-information);}
+.j-graphic-last-page               {@include j-font-graphic(jf-last-page);}
+.j-graphic-last-page-down          {@include j-font-graphic(jf-last-page-down);}
+.j-graphic-last-page-up            {@include j-font-graphic(jf-last-page-up);}
+.j-graphic-left                    {@include j-font-graphic(jf-left);}
+.j-graphic-library                 {@include j-font-graphic(jf-library);}
+.j-graphic-list-view               {@include j-font-graphic(jf-list-view);}
+.j-graphic-lock                    {@include j-font-graphic(jf-lock);}
+.j-graphic-log-in                  {@include j-font-graphic(jf-log-in);}
+.j-graphic-log-out                 {@include j-font-graphic(jf-log-out);}
+.j-graphic-maximize                {@include j-font-graphic(jf-maximize);}
+.j-graphic-menu                    {@include j-font-graphic(jf-menu);}
+.j-graphic-minimize                {@include j-font-graphic(jf-minimize);}
+.j-graphic-more-options            {@include j-font-graphic(jf-more-options);}
+.j-graphic-move                    {@include j-font-graphic(jf-move);}
+.j-graphic-move-back               {@include j-font-graphic(jf-move-back);}
+.j-graphic-move-foward             {@include j-font-graphic(jf-move-foward);}
+.j-graphic-next                    {@include j-font-graphic(jf-next);}
+.j-graphic-next-down               {@include j-font-graphic(jf-next-down);}
+.j-graphic-next-page               {@include j-font-graphic(jf-next-page);}
+.j-graphic-open-folder             {@include j-font-graphic(jf-open-folder);}
+.j-graphic-open-tab                {@include j-font-graphic(jf-open-tab);}
+.j-graphic-pin                     {@include j-font-graphic(jf-pin);}
+.j-graphic-preview                 {@include j-font-graphic(jf-preview);}
+.j-graphic-previous                {@include j-font-graphic(jf-previous);}
+.j-graphic-previous-page           {@include j-font-graphic(jf-previous-page);}
+.j-graphic-previous-up             {@include j-font-graphic(jf-previous-up);}
+.j-graphic-print                   {@include j-font-graphic(jf-print);}
+.j-graphic-refresh                 {@include j-font-graphic(jf-refresh);}
+.j-graphic-refresh-database        {@include j-font-graphic(jf-refresh-database);}
+.j-graphic-remove-folder           {@include j-font-graphic(jf-remove-folder);}
+.j-graphic-report                  {@include j-font-graphic(jf-report);}
+.j-graphic-resources               {@include j-font-graphic(jf-resources);}
+.j-graphic-restore-reset           {@include j-font-graphic(jf-restore-reset);}
+.j-graphic-right                   {@include j-font-graphic(jf-right);}
+.j-graphic-save                    {@include j-font-graphic(jf-save);}
+.j-graphic-scenario-management     {@include j-font-graphic(jf-scenario-management);}
+.j-graphic-search                  {@include j-font-graphic(jf-search);}
+.j-graphic-settings                {@include j-font-graphic(jf-settings);}
+.j-graphic-sort-ascending          {@include j-font-graphic(jf-sort-ascending);}
+.j-graphic-sort-descending         {@include j-font-graphic(jf-sort-descending);}
+.j-graphic-tab-overflow            {@include j-font-graphic(jf-tab-overflow);}
+.j-graphic-thumbs-down             {@include j-font-graphic(jf-thumbs-down);}
+.j-graphic-thumbs-up               {@include j-font-graphic(jf-thumbs-up);}
+.j-graphic-top                     {@include j-font-graphic(jf-top);}
+.j-graphic-unpin                   {@include j-font-graphic(jf-unpin);}
+.j-graphic-up                      {@include j-font-graphic(jf-up);}
+.j-graphic-upload-to-cloud         {@include j-font-graphic(jf-upload-to-cloud);}
+.j-graphic-video                   {@include j-font-graphic(jf-video);}
+.j-graphic-warning-error           {@include j-font-graphic(jf-warning-error);}
+.j-graphic-wizard                  {@include j-font-graphic(jf-wizard);}
+.j-graphic-zoom-in                 {@include j-font-graphic(jf-zoom-in);}
+.j-graphic-zoom-out                {@include j-font-graphic(jf-zoom-out);}
+.j-graphic-collapse-up             {@include j-font-graphic(jf-collapse-up);}
+.j-graphic-expand-down             {@include j-font-graphic(jf-expand-down);}
+.j-graphic-expand-right            {@include j-font-graphic(jf-expand-right);}
+.j-graphic-collapse-left           {@include j-font-graphic(jf-collapse-left);}
+
+.j-graphic-arrow-down       {@include j-font-graphic(jf-sort-descending);  @extend .jf-rotate-0;}
+.j-graphic-arrow-up         {@include j-font-graphic(jf-sort-ascending);   @extend .jf-rotate-0;}
+.j-graphic-arrow-right      {@extend .j-graphic-arrow-down;                @extend .jf-rotate-270;}
+.j-graphic-arrow-left       {@extend .j-graphic-arrow-down;                @extend .jf-rotate-90;}
+
+//below classes are added for showing gadget icons on dashboard
+.j-graphic-dashboard-exception     {@include j-font-graphic(jf-dashboard-exception);}
+.j-graphic-dashboard-kpi           {@include j-font-graphic(jf-dashboard-kpi);}
+.j-graphic-dashboard-graph         {@include j-font-graphic(jf-dashboard-graph);}
+.j-graphic-dashboard-worklist      {@include j-font-graphic(jf-dashboard-worklist);}
+
+//below variable is added for showing flag icon for notifications
+.j-graphic-confirm      {@include j-font-graphic(jf-confirm);}
+.j-graphic-flag      {@include j-font-graphic(jf-flag);}
+.j-graphic-link      {@include j-font-graphic(jf-link);}

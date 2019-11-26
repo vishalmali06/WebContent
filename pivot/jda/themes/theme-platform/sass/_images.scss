@@ -1,0 +1,8 @@
+
+// Because these are referenced from the dhtmlx directory, we need to provide the relative path
+$j-dhtmlx-menu-item-background-selected:    "../css/theme-#{$theme}/images/theme/menuItemBgSelected.gif";
+$j-dhtmlx-grid-column-header-separator:    "../css/theme-#{$theme}/images/theme/gridColHeaderSeparator.gif";
+
+// relative path for replacing extjs images with ux images
+$j-extjs-grid-grouping-expand:  "../../../../css/theme-#{$theme}/images/ux/Other/Expand_Collapse/black/collapsed_black_10";
+$j-extjs-grid-grouping-collapse:  "../../../../css/theme-#{$theme}/images/ux/Other/Expand_Collapse/black/expanded_black_10";

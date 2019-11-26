@@ -1,0 +1,1261 @@
+@import "../../base/sass/base-webworks-layouts";
+
+body {
+    @include standardText;
+    @include standardPageLayout;
+    background-color: $j-page-background-color;
+    line-height: normal;
+}
+
+//=====================================================================
+// Shell components
+.bannerBg {background-color: $j-primary-banner-background-color;}
+
+@if ($theme == "platform") {
+    .bannerBgInThinShell {
+        height: $j-page-banner-height;
+    }
+} @else {
+    .bannerBgInThinShell {
+        height: $j-page-banner-height;
+        background-color: $j-page-title-background-color;
+        border-bottom: 1px solid $j-banner-bottom-border-color;
+    }
+}
+
+//=====================================================================
+// Table and header bars
+.tableBorder {
+    @include border;
+}
+
+.pagetitle {
+    @include boldInverseText(16px);
+    padding: 0px 0px 1px 6px;
+}
+
+
+@if ($theme == "platform") {
+    .fullGridBorder {}
+    .tablePagingHeader {
+        background-color: $j-grid-paging-header-background-color;
+    }    
+    .tablePagingHeaderToggle {
+        width: 16px;
+        padding: 4px !important;
+        vertical-align: middle;
+        background-color: $j-grid-paging-header-background-color;
+    }
+} @else {
+    .fullGridBorder {
+        @extend .tableBorder;
+    }
+    .tablePagingHeader {
+        background-color: $j-grid-paging-header-background-color;
+        border: 1px outset $j-grid-paging-header-border-color;
+    }    
+    .tablePagingHeaderToggle {
+        width:16px;
+        padding:4px;
+        vertical-align:middle;
+        background-color:$j-grid-paging-header-background-color;
+        border-right:1px outset $j-grid-paging-header-border-color;
+    }
+}
+.tableHeader                {@extend .j-primary-header-bar;}
+.tableSubHeader             {@extend .j-secondary-header-bar;}
+
+.tableHeaderContent {
+    height:28px;
+    padding: 1px 2px 1px 2px;
+}
+.tableHeaderText            {@include paddedText($weight: $j-header-bar-font-weight);}
+.tableHeaderSubText         {@include paddedText;}
+.tableHeaderLink            {@include standardText;}
+a.tableHeaderLink {
+    @include hyperlinkStyling($j-base-foreground-color, $j-base-hyperlink-hover-color);
+}
+
+.gridheaderbg {
+    background-color: $j-grid-header-background-color;
+}
+.columnHeader {
+    @include gridHeader($j-grid-col-header-background-color,$j-grid-col-header-text-color);
+    padding: 2px 3px 2px 3px;
+    text-align: center;
+}
+.rowHeader {
+    @include gridHeader($j-grid-row-header-background-color);
+    padding: 3px;
+    text-align: left;
+}
+
+.miniColumnHeader {
+    @include miniGridHeader($j-mini-grid-col-header-color);
+    padding: 1px 3px 1px 3px;
+    border: 1px solid $j-mini-grid-col-border-color;
+}
+.miniRowHeader {
+    @include miniGridHeader($j-mini-grid-row-header-color);
+    padding:0;
+    vertical-align:middle;
+}
+.miniData {
+    @include standardText;
+    background-color: $j-mini-grid-background-color;
+    padding: 0 2px 0 2px;
+}
+// rjy - would like to refactor this later, but data must appear ahead of checkbookOn/Off
+.data                      {@include paddedText($bgColor: $j-data-background-color);}
+
+.j-base-grid-div {
+    @extend .fsb;
+    background-color: $j-grid-background-color;
+}
+
+// used only in the platform theme
+@mixin main-grid-div (  $cell-padding: $j-grid-data-padding-normal,
+                        $cell-padding-sortable: $j-grid-data-padding-sortable-normal,    
+                        $row-min-height: $j-grid-row-min-height-normal,
+                        $header-padding: $j-grid-header-padding-normal,
+                        $header-padding-sortable: $j-grid-header-padding-sortable-normal,                        
+                        $header-min-height: $j-grid-header-min-height-normal,
+                        $text-size: $j-grid-text-size-normal) {
+    @include border($borderColor: $j-base-border-color);
+    @include standardText($size: $text-size);
+    & .j-grid-text-row-header,
+    & .j-grid-data,
+    & .j-grid-data-wrap,
+    & .j-grid-editable-data-wrap,
+    & .gridData,
+    & .j-grid-editable-data,
+    & .editabledata,
+    & .innereditabledata,
+    & .gridTextRowHeader  {
+        padding: $cell-padding;
+        min-height: $row-min-height;
+        @include box-sizing(border-box);
+        @include standardText($size: $text-size);
+        
+    }
+
+    & .j-grid-checkbox-header,
+    & .j-grid-non-text-row-header,
+    & .checkboxHeader,
+    & .gridNonTextRowHeader  {
+        // eliminate padding and min-height for non-text cells
+        @include box-sizing(border-box);
+        @include standardText($size: $text-size);
+        
+    }
+
+    & .j-grid-editable-data-bold,
+    & .j-grid-data-bold{
+        padding: $cell-padding;
+        min-height: $row-min-height;
+        @include box-sizing(border-box);
+        @include boldText($size: $text-size);
+    }
+
+    & .j-grid-column-header, & .gridColumnHeader, & .gridBoldColumnHeader {
+        padding: $header-padding;
+        @include standardText($color: $j-grid-col-header-text-color, $size: $text-size);
+    }
+    & .j-grid-column-header-row,
+    & .gridColumnHeaderRow {
+        height: $header-min-height;
+        @include standardText($size: $text-size);
+    }
+    &.gef {
+        & select, & input {
+            height: 24px;
+            box-sizing: border-box;
+            @include standardText($size: $text-size);
+        }
+    }
+
+
+    & .j-grid-text-row-header,
+    & .j-grid-data,
+    & .j-grid-data-wrap,
+    & .j-grid-editable-data-wrap,
+    & .gridData,
+    & .j-grid-editable-data,
+    & .editabledata,
+    & .innereditabledata,
+    & .gridTextRowHeader,
+    & .j-grid-column-header, 
+    & .gridColumnHeader, 
+    & .gridBoldColumnHeader,
+    & .j-grid-column-header-row,
+    & .gridColumnHeaderRow 
+    {
+        & a{
+            @include standardText($size: $text-size);
+            @include hyperlinkStyling ($linkColor: $j-base-hyperlink-color, $hoverColor: $j-base-hyperlink-hover-color, 
+                                        $textDecoration: none, $hoverTextDecoration: underline);
+        }    
+    }
+
+
+}
+
+.j-main-grid-div-normal     {@include main-grid-div;}
+.j-main-grid-div-compact    {@include main-grid-div($cell-padding: $j-grid-data-padding-compact, 
+                                                    $cell-padding-sortable: $j-grid-data-padding-sortable-compact, 
+                                                    $row-min-height: $j-grid-row-min-height-compact,
+                                                    $header-padding: $j-grid-header-padding-compact, 
+                                                    $header-padding-sortable: $j-grid-header-padding-sortable-compact, 
+                                                    $header-min-height: $j-grid-header-min-height-compact,
+                                                    $text-size: $j-grid-text-size-compact);}
+.j-main-grid-div-comfort    {@include main-grid-div($cell-padding: $j-grid-data-padding-comfort, 
+                                                    $cell-padding-sortable: $j-grid-data-padding-sortable-comfort, 
+                                                    $row-min-height: $j-grid-row-min-height-comfort,
+                                                    $header-padding: $j-grid-header-padding-comfort, 
+                                                    $header-padding-sortable: $j-grid-header-padding-sortable-comfort, 
+                                                    $header-min-height: $j-grid-header-min-height-comfort,
+                                                    $text-size: $j-grid-text-size-comfort);}
+.j-grid-body, .gridBody {
+    //border-spacing:1px 1px;
+    border-collapse:separate;
+    background-color: $j-grid-background-color;
+}
+.j-grid-data, .gridData                 {@include j-grid-cell;}
+.j-grid-editable-data, .editabledata    {@include j-grid-cell($editable: true);}
+.j-grid-editable-data-wrap              {@include j-grid-cell($editable: true, $wrappable: true);}
+.j-grid-data-wrap                       {@include j-grid-cell($wrappable: true);}
+.j-grid-editable-data-bold              {@include j-grid-cell($editable: true, $bold: true);}
+.j-grid-data-bold                       {@include j-grid-cell($bold: true);}
+
+.innereditabledata {
+    background-color: $j-editable-data-background-color;
+    white-space: nowrap;
+}
+.j-grid-checkbook-on, .gridRowCheckbookOn {
+    background-color: $j-grid-checkbook-color; 
+    & > td {
+        border-top: 1px solid $j-grid-separator-color !important;
+    }
+}   
+.j-grid-checkbook-off, .gridRowCheckbookOff {
+    background-color: $j-grid-background-color;
+    & > td {
+        border-top: 1px solid $j-grid-separator-color !important;
+    }
+}
+tbody tr.j-grid-auto-checkbook:nth-child(even) {@extend .j-grid-checkbook-on;}
+tbody tr.j-grid-auto-checkbook:nth-child(odd)  {@extend .j-grid-checkbook-off;}
+
+.checkbookOn            {background-color: $j-grid-checkbook-color;}
+.checkbookOff           {background-color: $j-grid-background-color;}   
+.j-grid-checkbox-header, .checkboxHeader {
+     //width: 40px;
+}
+.j-grid-text-row-header, .gridTextRowHeader {
+    text-align: left;
+    vertical-align: middle;
+}
+
+ .j-grid-non-text-row-header, .gridNonTextRowHeader {
+    text-align: center;
+    vertical-align: middle;
+    & a {
+        @include hyperlinkStyling($linkColor: $j-button-text-color, $hoverColor: $j-button-text-color, $textDecoration: none);
+    }
+}
+.j-grid-column-header, .gridColumnHeader {
+    // line-height: 26px;
+    text-align : center;
+    vertical-align: middle;
+    white-space: nowrap;
+    @include image("theme/gridColHeaderSeparator.gif", $repeat: no-repeat);
+    background-size: 2px 18px;
+    background-position: right;
+    position: relative;
+}
+.gridBoldColumnHeader {
+    @extend .gridColumnHeader;
+    @include inverseText;
+}
+.j-grid-column-header-row, .gridColumnHeaderRow {
+    background-color: $j-grid-col-header-background-color;
+}
+
+.j-grid-sortable-column-header-text {
+    padding: 0px 18px 0px 0px;
+}
+.j-grid-sort-indicator-base {
+    color: $j-grid-sort-indicator-foreground-color;
+    width: 18px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-align: center;
+        font-size: 8px;
+    }
+}
+.j-grid-sort-indicator {
+    display: none;
+    @extend .j-grid-sort-indicator-base;
+    @extend .j-graphic-sort-descending;
+    background-color: $j-grid-sort-indicator-hover-background-color;
+}
+.gridColumnHeader:hover .j-grid-sort-indicator {
+    display: inline;
+}
+.j-grid-sort-indicator-ascending {
+    @extend .j-grid-sort-indicator-base;
+    @extend .j-graphic-sort-ascending;
+    background-color: $j-grid-sort-indicator-selected-background-color;
+    text-shadow: $j-grid-sort-indicator-shadow;
+}
+.j-grid-sort-indicator-descending {
+    @extend .j-grid-sort-indicator-base;
+    @extend .j-graphic-sort-descending;
+    background-color: $j-grid-sort-indicator-selected-background-color;
+    text-shadow: $j-grid-sort-indicator-shadow;
+}
+.j-grid-selection {
+    background-color: $j-grid-selected-background-color !important;
+    color: $j-grid-selected-foreground-color !important;
+}
+.innerdata                 {@include paddedText($bgColor: $j-data-background-color);}
+.datahighlight {
+    @include paddedText($bgColor: $j-highlighted-text-background-color);
+    text-decoration: none;
+}
+// Note: this style showed as black/black in IE, but red on mouseover in Chrome.
+//   Fixing here to the original IE behavior 
+A.datahighlight            {@include hyperlinkStyling($linkColor: $j-base-foreground-color, $hoverColor: $j-base-foreground-color);}
+
+.dataerror {
+    @include inverseText;
+    background-color: $j-data-error-background-color;
+}
+.datanavtext               {@include standardText($j-base-hyperlink-hover-color);}
+.calendardata {
+    @include standardText;
+    background-color: $j-popup-background-color;
+}
+
+.j-toolbar__separator .j-toolbar__separator_bar {
+    border-left:1px solid $j-grid-header-border-color;
+    display:block;
+    height:50%;
+    overflow:auto;
+}
+//=====================================================================
+// copied in from gridinfo.css
+.tabletext                  {@include standardText;}
+.tablesubheadboldbackground {background-color: $j-grid-header-highlighted-background-color;}
+.tablesubheadw              {@include boldInverseText;}
+.tablesubheadb              {@include boldText;}
+.tablesubheadbg             {background-color: $j-grid-header-background-color;}
+.normaltextbold             {@include boldText;}
+.inputnormaltextbg          {background-color: $j-data-background-color;}
+
+
+//=====================================================================
+
+.label                      {@include paddedText($j-label-color);}
+.sectionlabel               {@include paddedBoldText($j-label-color);}
+.labeldisabled              {@include paddedText($j-label-disabled-color);}
+.labelerror                 {@include paddedBoldText($j-label-error-color);}
+.requiredtextindicator      {@include standardText($j-label-color);}
+.labelbg                    {background-color: $j-label-background-color;}
+
+.controltext                {
+    @include standardText;
+    background-color: $j-control-text-background-color;
+}
+.tagcontroltext {
+    @extend .controltext;
+    vertical-align: middle;
+}
+.controltextdisabled {
+    @include standardText($j-control-text-foreground-disabled-color);
+    background-color: $j-control-text-background-color;
+}
+.tagcontroltextdisabled {
+    @extend .controltextdisabled;
+    vertical-align: middle;
+}
+.controltexthighlight {
+    @include standardText ($color: $j-highlighted-text-foreground-color);
+    background-color: $j-highlighted-text-background-color;
+}
+select.controltext,
+input.controltext,
+input.tagcontroltext,
+select,
+input[type="text"],
+input[type="password"] {
+    @include standardText;
+    border: 1px solid $j-control-border-color;
+    padding-left: 5px;
+    &:disabled {
+        color: $j-control-text-foreground-disabled-color;
+        background-color: $j-control-text-background-disabled-color;
+        border: 1px solid $j-control-border-disabled-color;
+    }
+}
+select.controltextdisabled, input.controltextdisabled, input.tagcontroltextdisabled {
+    @include standardText($color: $j-control-text-foreground-disabled-color);
+    border: 1px solid $j-control-border-disabled-color;
+    background-color: $j-control-text-background-disabled-color;
+}
+input[type="radio"]:disabled+* {
+    color: $j-control-text-foreground-disabled-color;
+}
+.waitIndicatorPanel {
+    @include border ($bgColor: $j-page-background-color);
+    display:none;
+    z-index:500;
+    cursor:wait;
+
+    & > div {
+      @include boldText($color: $j-alert-text-color, $size: 16px);
+      vertical-align: middle;
+      display: inline-block;
+      padding: 15px;
+      white-space: nowrap;
+    }
+}
+
+.drag {
+    cursor: row-resize;
+    position: relative
+}   
+
+.borderBg {
+    background-color: $j-base-border-color;
+    line-height:1px;
+}
+
+.shellAppArea {
+    position: absolute; 
+    overflow: auto;
+    top: $j-page-banner-height;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 $j-page-margin $j-page-margin $j-page-margin;
+}
+
+.shellAppAreaInPopup {
+    position: absolute; 
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: $j-page-margin;
+}
+
+#vpMainPageContentDiv {
+    height: 100%;
+    width: 100%;
+}
+
+.shellAppAreaTop            {overflow: hidden;}
+
+.border                     {border: 3px solid $j-base-border-color;}
+.headerlinebg               {background-color: $j-table-border-color;}
+
+.activetabtitle {
+    @include boldInverseText;
+    background-color: $j-popup-banner-background-color;
+    text-decoration: none
+}
+
+.borderline                 {background-color: $j-base-border-color;} 
+
+
+//=====================================================================
+// Grid header and cell styles
+.rl {
+    @include paddedBoldText;
+    background-color: $j-grid-readonly-header-background-color;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.rdr                        {@include cell($readonly: true, $hAlign: right);}
+.rdm                        {@include cell($readonly: true, $hAlign: center);}
+.rdl                        {@include cell($readonly: true, $hAlign: left);}
+.edl                        {@include cell($hAlign: left);}
+.edm                        {@include cell($hAlign: center);}
+.edr                        {@include cell($hAlign: right);}
+
+.cns                        {overflow: hidden;}
+.c
+{
+    display:inline-block;
+    overflow: hidden;
+    text-overflow:ellipsis
+}
+
+.gef {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-width: 0px;
+}
+
+.errortext {
+    @include standardText($j-error-text-color);
+    @extend .j-standard-inner-padding-bottom;
+    vertical-align: middle;
+}
+
+.infomsgtext {
+    @include standardText($j-info-text-color);
+    @extend .j-standard-inner-padding-bottom;
+}
+.calpopupnormaltext        {@include standardText($j-cal-popup-foreground-color);}
+.calpopuphighlight         {@include standardText($j-cal-popup-highlight-color);}
+.calpopupinactive          {@include standardText($j-cal-popup-inactive-color);}
+.footertext                {@include boldText;}
+.supertext                 {@include boldText($size: (.75*$j-base-font-size));}
+.menutext                  {@include standardText($j-menu-foreground-color);}
+// rjy - fix this
+.disabledmenutext          {@include standardText($j-label-disabled-color);}
+
+.tabletextbg                {background-color: $j-data-background-color;}
+
+.popuptopheader {
+    @include padding(3px);
+    @include boldText($j-primary-header-text-color);
+    background-color: $j-data-background-color;
+}
+.popuplabel {
+    @include standardText($j-primary-header-text-color);
+    white-space: nowrap;
+}
+.boldpopuplabel {
+    @extend .popuplabel;
+    font-style: bold;
+}
+.spacerbg                  {background-color: $j-page-background-color;}
+.spacer-image {
+    border: 0px;
+    vertical-align: top;
+}
+
+// rjy - need to elim directory tree variants below
+a.treenode, a.directorytree {
+    font-size: 12px;
+    font-family: $j-base-font-family;
+    text-decoration: none;
+    @include hyperlinkStyling($linkColor: $j-base-foreground-color, $hoverColor: $j-base-foreground-color, $hoverBackgroundColor: $j-highlighted-tree-node-background-color);
+}
+a.highlightedtreenode, a.directorytreehighlight {
+    font-size: 12px;
+    font-family: $j-base-font-family;
+    text-decoration: none;
+    background-color: $j-highlighted-tree-node-background-color;
+    color: $j-base-foreground-color;
+}
+a {
+    @include standardText;
+    @include hyperlinkStyling($textDecoration: none);
+}
+.popuptopheaderlink         {@include standardText($j-primary-header-text-color);}
+a.popuptopheaderlink        {@include hyperlinkStyling($linkColor: $j-primary-header-text-color, $hoverColor: $j-primary-header-text-color, $textDecoration: none);}
+
+.bannersublink              {@include inverseText;}
+a.bannersublink             {@include hyperlinkStyling($linkColor: $j-base-inverse-foreground-color, $hoverColor: $j-base-inverse-foreground-color);}
+
+.normalsublink              {@include standardText($j-primary-header-text-color);}
+a.normalsublink             {@include hyperlinkStyling($textDecoration: none);}
+
+.columnsortlink             {@include standardText;}
+a.columnsortlink            {@include hyperlinkStyling ($linkColor: $j-base-foreground-color, $hoverColor: $j-base-foreground-color);}
+
+.datanavlink                {@include standardText($j-base-hyperlink-hover-color);}
+a.datanavlink               {@include hyperlinkStyling($textDecoration: underline);}
+
+.datanavlinkwhite           {@include inverseText;}
+a.datanavlinkwhite          {@include hyperlinkStyling ($linkColor: $j-base-inverse-foreground-color, $hoverColor: $j-base-inverse-foreground-color);}
+
+.calendarlink {
+    @include standardText;
+    background-color: $j-page-background-color;
+    text-decoration: none
+}
+
+a.calendarlink              {@include hyperlinkStyling ($linkColor: $j-base-foreground-color, $hoverColor: $j-base-foreground-color);}
+
+a.menulink {
+    @include standardText;
+    @include hyperlinkStyling ($linkColor: $j-base-foreground-color, $hoverColor: $j-base-foreground-color, $textDecoration: none);
+}
+
+//=====================================================================
+// Dynamic Nav Menu Styles
+.vpmenu-style               {@include menu;}
+.vpnavadmin-style           {@include menu($border: true);}    
+.menu-item {
+    background-color: $j-menu-background-color;  
+    color: $j-menu-foreground-color;
+    height: $j-menu-item-height;
+    padding: 0px 24px;
+    cursor: pointer;
+}
+.menu-item-selected {
+    @include background-gradient($j-menu-background-color-active-gradient-start, $j-menu-background-color-active-gradient-end);
+    color: $j-menu-foreground-color-active;
+    height: $j-menu-item-height;
+    padding: 0px 24px;
+    cursor: pointer;
+}
+.vpnav-label {
+    word-wrap: break-word;
+    @include padding(5px);
+    font-family: $j-base-font-family;
+    font-size: $j-base-font-size;
+}
+.vpnavmenu-button           {cursor: pointer;}
+.vpnavmenu-recyclebutton {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+.vpDynamicNav-menu-admin {
+    border-style: solid solid solid solid;
+}
+.vpDynamicNav-menu {
+    background-color: $j-menu-background-color;
+    border: 1px solid $j-menu-border-color;
+    width: 200px;
+    @include box-shadow($j-menu-shadow);
+}
+.vpDynamicNav-link {
+    border-style: solid;
+    overflow: auto;
+}
+.vpDynamicNav-linksinner {
+    overflow: visible;
+    width: 178px;
+}
+.vpDynamicNav-label {
+    border-style: solid;
+    background-color: $j-base-inverse-background-color;
+    color: $j-base-inverse-foreground-color;
+}
+.vpDynamicNav-iframe {
+    filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)";
+    visibility: hidden;
+    z-index: 5;
+    position:absolute;
+    left: 0; top: 0;
+    height: 0;
+    width: 0;
+}
+.vpDynamicNav-admin-color   {background-color: black;}
+.vpDynamicNav-admin-image {
+    vertical-align: top;
+    height: 1px;
+}
+.vpDynamicNav-action-menuitem {
+    border-top: 1px solid $j-menu-border-color;
+    text-align: center;
+    height: 17px;
+}
+.vpDynamicNav-menuitem {
+    padding: 4px 0 4px 24px;
+    height: 10px;
+}
+.vpDynamicNav-target {
+    //cursor: pointer;
+    cursor: hand;
+    padding: 4px 0 4px 24px;
+    height: 10px;
+}
+.vpDynamicNav-recycle-img {
+    height: 16px;
+    width: 16px;
+}
+.vpDynamicNav-button-img {
+    @extend .j-standard-inner-margin;
+    height: 14px;
+    width: 14px;
+}
+.vpDynamicNav-row {
+    cursor: pointer;
+    //cursor: hand;
+    padding: 4px 0 4px 24px;
+}
+.vpDynamicNav-window-process {
+    margin-top: 220px;
+    text-align: center;
+}
+.vpDynamicNav-window-error1 {
+    margin-top: 220px;
+    text-align: center;
+}
+.vpDynamicNav-window-error2 {
+    margin-top: 200px;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+
+
+
+//===================================================================================
+// Modal dialogs
+
+.modalOverlay {
+    z-index:200;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+    opacity:$j-modal-dialog-box-mask-opacity;
+    background-color: $j-modal-overlay-background-color;
+    filter:'alpha(opacity=#{$j-modal-dialog-box-mask-opacity})';
+}
+
+.modalDialog {
+    z-index:250;
+    position:absolute;
+    display:none;
+    margin:20px;
+    background-color: $j-dialog-box-frame-background-color;
+    @include padding($j-dialog-box-border-width);
+    @include border-radius($j-dialog-box-corner-radius);
+    @include box-shadow($j-dialog-box-shadow);
+}
+
+.modalDialogHeader {
+    @include boldText($size: $j-base-font-size, $color: $j-dialog-box-frame-foreground-color);
+    cursor: move;
+    padding: 0;
+    height: $j-dialog-box-header-height;
+}
+
+.modalDialogContent {
+    background-color: $j-dialog-box-background-color;
+    @include border-radius($j-dialog-box-corner-radius);
+    padding: 2px;
+}
+
+//PLAT-24938 Needed for ipad. Content of vpPopupDialog was overflowing out of the dialog frame.
+.modalDialogContent .touchScroll {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+
+.modalDialogMessage {
+    @include padding(3px);
+}
+
+.modalDialogButtonBar {
+    border: none;
+    padding: 6px 0px 2px $j-button-spacing !important;
+}
+
+@each $pos in Left, Right, Center, None {
+    .vpButtonGroup#{$pos} {
+        & tr {
+            vertical-align: top;
+            & > td {
+                padding-left: $j-button-spacing !important;
+            }
+            & > td:first-child {
+                padding-left: 0px !important;
+            }
+        }
+        @if ($pos == Left) or ($pos == Center) {margin-right: auto;}
+        @if ($pos == Right) or ($pos == Center) {margin-left: auto;}
+    }
+}
+.vpButtonGroup {@extend .vpButtonGroupNone;}
+
+//===================================================================================
+// Flyouts
+
+.flyoutDialog {
+    position:absolute;
+    display:inline;
+    z-index:102;
+    top:0;
+    left:0;
+    padding: 0px 0px 0px 1px;
+}
+
+.flyoutIcon {
+    position:absolute;
+    display:none;
+    z-index:100;
+    top:0;
+    left:0;
+    padding: 5px 0px 0px 8px;
+}
+
+.flyoutSurround             {filter: alpha(opacity=100);}
+.flyoutContent              {background-color: $j-popup-background-color;}
+
+.popupBorderTop                 {@include image("viewpointui/popupBorderTop.gif", $repeat: repeat-x, $vAlign: bottom);}
+.popupBorderTopLeft             {@include image("viewpointui/popupBorderTopLeft.gif", $repeat: no-repeat, $vAlign: bottom);}
+.popupBorderTopRight            {@include image("viewpointui/popupBorderTopRight.gif", $repeat: no-repeat, $vAlign: bottom);}
+.popupBorderLeft                {@include image("viewpointui/popupBorderLeft.gif", $repeat: repeat-y);}
+.popupBorderRight               {@include image("viewpointui/popupBorderRight.gif", $repeat: repeat-y);}
+.popupBorderBottom              {@include image("viewpointui/popupBorderBottom.gif", $repeat: repeat-x, $vAlign: top);}
+.popupBorderBottomLeft          {@include image("viewpointui/popupBorderBottomLeft.gif", $repeat: no-repeat, $vAlign: top);}
+.popupBorderBottomRight         {@include image("viewpointui/popupBorderBottomRight.gif", $repeat: no-repeat, $vAlign: top);}
+.popupBorderHorizontalNone      {@include image("viewpointui/popupBorderNone.gif", $repeat: repeat-x);}
+.popupBorderVerticalNone        {@include image("viewpointui/popupBorderNone.gif", $repeat: repeat-y);}
+.popupBorderTopLeftCorner       {@include image("viewpointui/popupBorderTopLeftCorner.gif", $repeat: no-repeat);}
+.popupBorderTopRightCorner      {@include image("viewpointui/popupBorderTopRightCorner.gif", $repeat: no-repeat);}
+.popupBorderBottomLeftCorner    {@include image("viewpointui/popupBorderBottomLeftCorner.gif", $repeat: no-repeat);}
+.popupBorderBottomRightCorner   {@include image("viewpointui/popupBorderBottomRightCorner.gif", $repeat: no-repeat);}
+.popupBorderRightTopCorner      {@include image("viewpointui/popupBorderRightTopCorner.gif", $repeat: no-repeat, $vAlign: top);}
+.popupBorderRightBottomCorner   {@include image("viewpointui/popupBorderRightBottomCorner.gif", $repeat: no-repeat);}
+.popupBorderLeftTopCorner       {@include image("viewpointui/popupBorderLeftTopCorner.gif", $repeat: no-repeat, $vAlign: top);}
+.popupBorderLeftBottomCorner    {@include image("viewpointui/popupBorderLeftBottomCorner.gif", $repeat: no-repeat);}
+
+
+
+// legacy
+.buttonOn  {@extend .j-button;}
+.buttonOff {@extend .j-button-disabled;}
+
+.tabsetLine                 {@include image("viewpointui/tab_line.gif", $repeat: repeat-x, $vAlign: bottom, $hAlign: left);}
+
+//===================================================================================
+
+.clickable                  {cursor:pointer;}
+
+.iconGroup {
+    padding:3px;
+}
+table.iconGroup > tbody > tr > td {
+    padding: 3px;
+}
+.borderedIconGroup {
+    @extend .iconGroup;
+    border: 1px solid $j-table-border-color;
+}
+
+.waitIndicator              {@include boldText($j-alert-text-color, 1.333*$j-base-font-size);}
+
+
+//===================================================================================
+// About dialog
+.aboutInfo {
+    @include padding(2px, 6px);
+    @include boldText;
+}
+
+.aboutCopyright {
+    @include standardText;
+    @include padding(10px);
+    width: 420px;
+}
+
+@mixin aboutText($height) {
+    @include standardText;
+    width: 440px;
+    height: $height;
+    overflow: auto;
+    padding: 2px 0px 0px 2px;
+    white-space: nowrap;
+    border: 1px solid $j-control-border-color;
+
+}
+.aboutText                  {@include aboutText(100px);}
+.aboutLicenseText           {@include aboutText(46px);}
+
+//===================================================================================
+// Hierarchy related styles
+
+a.obsoleteNode              {@include hyperlinkStyling($linkColor: $j-base-hyperlink-disabled-color, $hoverColor: $j-base-hyperlink-disabled-color);}
+
+a.selectedNode:link,a.selectedNode:visited,a.selectedNode:hover,a.selectedNode:active {
+    @include boldText($j-base-hyperlink-hover-color);
+    font-style: italic;
+}
+a.selectedObsoleteNode:link,a.selectedObsoleteNode:visited,a.selectedObsoleteNode:hover,a.selectedObsoleteNode:active {
+    @include boldText($j-base-hyperlink-disabled-color);
+    font-style: italic;
+}
+
+.breadcrumbs {
+    @include standardText;
+    background-color: $j-hierarchy-breadcrumb-background-color;
+    border-bottom: $j-hierarchy-breadcrumb-border-color 1px solid;
+    padding: 2px;
+}
+
+.breadcrumbssel {
+    @include standardText($j-hierarchy-breadcrumb-foreground-selected-color);
+    background-color: $j-hierarchy-breadcrumb-background-color;
+    border-bottom: $j-hierarchy-breadcrumb-border-color 1px solid;
+    padding: 2px;
+}
+
+a.normalNode                {@include hyperlinkStyling;}
+
+//===================================================================================
+
+.loadStatus {
+    @include standardText($color: $j-load-status-text-color);
+    font-style:italic;
+}
+
+
+//===================================================================================
+// Color picker styles
+
+@mixin swatch($size: 12px, $border3d: false) {
+    width: $size;
+    height: $size;    
+    @if $border3d == true {
+        @include border3d;
+    } @else {
+        @include border($borderColor: $j-rectangle-border-color);
+    }
+}
+
+.colorSwatch {
+    @include swatch;
+    cursor: pointer;
+}
+
+.selectedSwatch {
+    @include swatch($size: 20px);
+}
+
+.outerSwatch {
+    @include swatch($size: 22px, $border3d: true);
+    z-index: 300;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+
+//===================================================================================
+
+.thinSpacer {
+    line-height:0;
+}
+
+.fsb {
+/*    
+    scrollbar-face-color: $j-scrollbar-face-color;
+    scrollbar-highlight-color: $j-scrollbar-highlight-color;
+    scrollbar-shadow-color: $j-scrollbar-face-color;
+    scrollbar-3dlight-color: $j-scrollbar-3dlight-color;
+    scrollbar-arrow-color: $j-scrollbar-arrow-color;
+    scrollbar-track-color: $j-scrollbar-track-color;
+    scrollbar-darkshadow-color: $j-scrollbar-base-color;
+    scrollbar-base-color: $j-scrollbar-base-color;
+*/    
+}
+
+textarea
+{
+    @extend .fsb;
+    @include standardText;
+    @include border($borderColor: $j-control-border-color);
+}
+
+
+//===================================================================================
+// Prompted search dialog
+
+.uparrowdiv {
+    top: 5px;
+    background: $j-prompted-search-uparrow-background-color;
+    color: white;
+    padding: 5px;
+    position: relative;
+    word-wrap: break-word;
+    @include border-radius(5px);
+    margin-bottom: 5px;
+}
+
+.uparrowdiv:after { //arrow added to uparrowdiv DIV
+    top: -20px; //should be set to -border-width x 2 
+    left: 20px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent darken($j-prompted-search-uparrow-background-color, 3%) transparent;
+    border-style: solid;
+    border-width: 10px;
+}
+
+//===================================================================================
+// Search dropdown - typeAhead styles
+
+@mixin baseTypeAheadStyle {
+    @include box-sizing(border-box);
+    @include padding (0px);
+    margin: 0px;
+}
+
+.typeAheadParent, .typeAheadContent, .typeAheadTextBox, .crossMarkDiv               {@include baseTypeAheadStyle};
+.typeAheadParent a, .typeAheadParent span, .typeAheadParent ul, .typeAheadParent li {@include baseTypeAheadStyle};
+.typeAheadParent > a :after,
+.typeAheadParent > span :after,
+.typeAheadParent > div :after,
+.typeAheadParent > ul :after,
+.typeAheadParent > li :after   {@include baseTypeAheadStyle};
+
+.typeAheadParent > a :before,
+.typeAheadParent > span :before,
+.typeAheadParent > div :before,
+.typeAheadParent > ul :before,
+.typeAheadParent > li :before  {@include baseTypeAheadStyle};
+.typeAheadTextBox:focus         {outline : none;}
+
+.typeAheadParent {
+    margin: 5px 0px 5px 3px;
+    *zoom: 1;
+}
+
+.typeAheadContent {
+    @include padding(5px);
+    @include border-radius($j-button-corner-radius);
+    @include border ($borderColor: $j-button-border-color);
+    @include single-transition($property: all, $duration: 0.3s, $function: ease-out);
+    position: relative;
+    width: 290px;
+    margin: 0 auto;
+    cursor: pointer;
+    background: $j-control-text-background-color;
+    outline: none;
+    z-index: 100;
+}
+
+.crossMarkDiv {
+    position: absolute;
+    top: 0px;  
+    left: 245px;
+    a {text-decoration: none;}
+}
+
+.crossMark {
+    display : none;
+    font-size: 1.5 * $j-base-font-size;
+}
+
+.typeAheadTextBox {
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width : 260px;
+    &::-ms-clear {
+        display: inline;
+    }
+}
+
+.typeAheadContent:after { // Little arrow 
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: $j-dropdown-arrow-color transparent;
+}
+
+.typeAheadContent .typeAheadDropDown {
+    @include standardText;
+    @include single-transition($property: all, $duration: 0.3s, $function: ease-out);
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background: $j-control-text-background-color;
+    @include border-bottom-radius($j-button-corner-radius);
+    @include border($borderColor: $j-base-shadow-color); 
+    border-top: none;
+    border-bottom: none;
+    list-style: none;
+    max-height: 0;
+    overflow: auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .typeAheadContent .typeAheadDropDown {
+        top: 26px;
+    }
+}
+.typeAheadContent .typeAheadDropDown li {
+    padding: 0 0 0 5px ;
+    cursor: pointer;
+}
+
+// Anchored and other searches 
+
+.typeAheadContent .typeAheadDropDown li .groupingList {
+    @include single-transition($property: all, $duration: 0.3s, $function: ease-out);
+    display: block;
+    text-decoration: none;
+    color:  $j-control-text-foreground-color;
+    padding: 5px 0;
+    cursor: default;
+}
+
+.typeAheadContent .typeAheadDropDown li:last-of-type .groupingList {
+    border: none;
+}
+
+.typeAheadContent .typeAheadDropDown li a {
+    @include single-transition($property: all, $duration: 0.3s, $function: ease-out);
+    display: block;
+    text-decoration: none;
+    color: $j-control-text-foreground-color;
+    padding: 2px 0;
+    cursor:pointer;
+}
+
+.typeAheadContent .typeAheadDropDown li:last-of-type a {border: none;}
+
+.typeAheadContent .typeAheadDropDown li i {
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+}
+
+.typeAheadContent .typeAheadDropDown .nonGroupingList:hover, .selectedHover {
+    background-color: $j-list-hover-color;
+}
+
+.typeAheadContent.typeAheadActive {
+    @include border-top-radius($j-button-corner-radius);
+}
+
+.typeAheadContent.typeAheadActive:after {
+    border-color: $j-dropdown-arrow-color transparent;
+}
+
+.typeAheadContent.typeAheadActive .typeAheadDropDown {
+    border-bottom: 1px solid $j-base-shadow-color;
+    max-height: 400px;
+}
+
+// Styles to disable the selection
+.disable-select::selection {
+    background: transparent; 
+}
+
+//===================================================================================
+// Grid cell colorings 
+// The following are specific colorings for grids, providing 
+// proper choice of foreground color for the given background color.
+// todo - should probably move this to FE specific styles
+
+$grid-cell-colorings: 
+    ('beige' #f5f5dc $clr-black)
+    ('lightblue' #c9dbf3 $clr-black)
+    ('lightgray' #e1e1e1 $clr-black)
+    ('white' $clr-white $clr-black)
+    ('yellow' #ffcc00 $clr-black)
+    ('lightgreen' #98f07a $clr-black)
+    ('peach' #fcd6b5 $clr-black)
+    ('pink' #fdb7e5 $clr-black)
+    ('skyblue' #99dfff $clr-black)
+    ('tan' #cac4a8 $clr-black)
+    ('black' $clr-black $clr-white)
+    ('darkblue' #336699 $clr-white)
+    ('gray' #999999 $clr-white)
+    ('green' #4c9377 $clr-white)
+    ('mediumblue' #689fc8 $clr-white)
+    ('purple' #af7ec3 $clr-white)
+    ('red' #cc3333 $clr-white)
+    ('brown' #857842 $clr-white)
+    ('orange' #e78b2f $clr-white)
+    ('plum' #8c34a2 $clr-white);
+
+@each $cell-coloring in $grid-cell-colorings {
+    .#{nth($cell-coloring, 1)} {@include paddedText($bgColor: #{nth($cell-coloring, 2)}, $color: #{nth($cell-coloring, 3)})}
+}
+
+.calBucketDefaultA         {@include paddedText         ($bgColor: $j-cal-bucket-default-a-background-color);}
+.calBucketDefaultB         {@include paddedText         ($bgColor: $j-cal-bucket-default-b-background-color);}
+.calBucketCombo1A          {@include paddedInverseText  ($bgColor: $j-cal-bucket-combo-1a-background-color);}
+.calBucketCombo1B          {@include paddedText         ($bgColor: $j-cal-bucket-combo-1b-background-color);}
+.calBucketCombo2A          {@include paddedInverseText  ($bgColor: $j-cal-bucket-combo-2a-background-color);}
+.calBucketCombo2B          {@include paddedText         ($bgColor: $j-cal-bucket-combo-2b-background-color);}
+.calBucketCombo3A          {@include paddedInverseText  ($bgColor: $j-cal-bucket-combo-3a-background-color);}
+.calBucketCombo3B          {@include paddedText         ($bgColor: $j-cal-bucket-combo-3b-background-color);}
+
+.aboutHeader {
+    font-family: $j-aboutbox-font-family;
+    font-weight: bold;
+    font-size: $j-aboutbox-header-font-size;
+    color: $j-aboutbox-header-color;
+    margin-bottom: 12px;
+}
+.aboutSubHeader {
+    font-family: $j-aboutbox-font-family;
+    font-size: $j-aboutbox-subheader-font-size;
+    color: $j-aboutbox-content-color;
+}
+.aboutContent {
+    font-family: $j-aboutbox-font-family;
+    font-size: $j-aboutbox-content-font-size;
+    color: $j-aboutbox-content-color;
+}
+.aboutMargins {
+    margin-top: 35px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+.aboutInfoScrollableDiv {
+    max-height: 312px; 
+    overflow: auto; 
+}
+.aboutInfoCopyrightSpacer {
+    height: 24px;
+}
+//=====================================================================
+// Icremental scenario styles
+.selectedScenarioLink {
+    cursor:pointer;
+    color: $j-base-hyperlink-color;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+}
+.scenarioManagerLink {
+    cursor:pointer;
+    color: $j-base-hyperlink-color;
+    padding-top:4.2px;
+    padding-left:10px;
+}
+
+//PLAT-32124: enable underlining of links in grid
+.underline-links-grid td.gridData a{
+  text-decoration: underline !important;
+}
+
+.underline-links-grid div.gridbox table.obj tr td a {
+  text-decoration: underline;
+}
+@import "../../base/sass/base-webworks-shame";

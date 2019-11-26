@@ -1,0 +1,260 @@
+@import 'pivot-global';
+
+$j-pvt-cf-global-font: normal 11px Verdana;
+
+/**************** Add new rule pop up styling *****************************/
+$j-pvt-cf-add-new-rule-popup-title-height: 37px;
+$j-pvt-cf-add-new-rule-popup-border:5px;
+$j-pvt-cf-add-rule-popup-border-color:#5e5e5e;
+
+/**************** Add new rule Main area where rule title, target measures, rule definition present ***********************************/
+$j-pvt-cf-add-rule-mainarea-top-padding:14px;
+$j-pvt-cf-add-rule-mainarea-bottom-padding:6px;
+$j-pvt-cf-add-rule-mainarea-component-separator-gap:7px;
+$j-pvt-cf-add-rule-mainarea-background:#ffffff;
+
+/**************** Add new rule Cell format components defined area ***********************************/
+$j-pvt-cf-add-rule-format-cell-area-top-padding:7px;
+$j-pvt-cf-add-rule-format-cell-area-bottom-padding:7px;
+$j-pvt-cf-add-rule-format-cell-area-background-color:#f9f9f9;
+$j-pvt-cf-add-rule-format-cell-area-border:1px solid;
+$j-pvt-cf-add-rule-format-cell-area-border-color:#c9c9c9;
+$j-pvt-cf-add-rule-format-cell-area-header-col-width:179px;  
+$j-pvt-cf-add-rule-format-cell-area-col-gap:18px;
+$j-pvt-cf-add-rule-format-cell-area-detail-col-width:663px;
+
+/**************** Add new rule button area for Save and Cancel  ***********************************/
+$j-pvt-cf-add-rule-format-cell-button-area-top-padding:18px;
+$j-pvt-cf-add-rule-format-cell-button-area-bottom-padding:14px;
+
+/**************** CF view Panel *****************************/
+$j-pvt-cf-view-panel-button-area-left-padding:6%;
+$j-pvt-cf-view-panel-button-area-right-padding:6%;
+$j-pvt-cf-view-panel-button-area-top-padding:7px; 
+$j-pvt-cf-view-panel-button-area-bottom-padding:7px; 
+
+$j-pvt-cf-view-panel-grid-row-padding:8px;
+
+$j-pvt-cf-view-panel-grid-width:88%;
+$j-pvt-cf-view-panel-grid-panel-top-padding:0px;
+$j-pvt-cf-view-panel-grid-panel-bottom-padding:0px; 
+$j-pvt-cf-view-panel-grid-header-row-height:29px;
+$j-pvt-cf-view-panel-grid-sub-header-row-height:33px;
+$j-pvt-cf-view-panel-grid-sub-header-row-background-color:#f1f1f2; 
+
+$j-pvt-cf-view-panel-grid-detail-row-height:42px;
+$j-pvt-cf-view-panel-grid-col1-width:17%;
+$j-pvt-cf-view-panel-grid-col2-width:20%;
+$j-pvt-cf-view-panel-grid-col3-width:42%;
+$j-pvt-cf-view-panel-grid-col4-width:15%;
+$j-pvt-cf-view-panel-grid-col5-width:6%;
+$j-pvt-cf-view-panel-grid-cell-left-padding:15px;
+
+$j-pvt-cf-view-panel-grid-cell-format-box-width:18px;
+$j-pvt-cf-view-panel-grid-cell-format-box-outer-border-color:#c9c9c9;
+$j-pvt-cf-view-panel-grid-cell-format-box-inner-border-color:#FFFFFF;
+$j-pvt-cf-view-panel-grid-cell-format-box-outer-border-:1px;
+$j-pvt-cf-view-panel-grid-cell-format-box-inner-border-:1px;
+
+$j-pvt-cf-view-panel-grid-border:1px;
+
+$j-pvt-cf-delete-hover-img:delete-white;
+$j-pvt-cf-img-over:#ffffff;
+
+$j-pvt-cf-view-panel-grid-row-over-background:#eff0f2;
+
+
+.j-pvt-south-panel{
+
+	border-top: none;
+	
+	.j-pvt-styling-panel{
+	  
+	  .j-pvt-styling-header{
+	    @extend .j-pvt-styling-panel;
+	    @include linear-gradient-header();
+	     border:$j-pvt-global-border !important;
+	  }
+	  
+	   @include button-primary();
+	   @include button-hover();
+	 
+	  .j-pvt-styling-panel-body{
+	  
+	      padding-left:$j-pvt-cf-view-panel-button-area-left-padding;
+		  padding-right:$j-pvt-cf-view-panel-button-area-right-padding;
+		  padding-top:$j-pvt-cf-view-panel-grid-panel-top-padding;
+		  padding-bottom:$j-pvt-cf-view-panel-grid-panel-bottom-padding; 
+		   border:$j-pvt-global-border;
+		  
+	  .j-pvt-styling-grid{
+		 font:$j-pvt-cf-global-font;
+		  border:$j-pvt-cf-view-panel-grid-border;
+	   .x-column-header{
+	     height:$j-pvt-cf-view-panel-grid-sub-header-row-height;
+	     font:inherit;
+	   }
+	   
+	   .x-grid-header-ct{
+	   		border : $j-pvt-cf-view-panel-grid-border;
+	   }
+	   .j-pvt-styling-grid-body{
+	   		border:$j-pvt-cf-view-panel-grid-border;
+	   		.x-grid-view{
+	   		  overflow-x:hidden !important;
+	   }	
+	   		
+	   }
+
+		.x-column-header {
+  			border-right: 1px solid silver;
+  			color: #666666;
+  			font: bold 12px/15px verdana, arial, sans-serif;
+  			background-color: #f5f5f6;
+		}
+
+	   .x-grid-row{
+	 
+	   		.x-grid-td{			   
+			     font:$j-pvt-cf-global-font;
+			      vertical-align:middle;
+				  cursor:move
+			   }
+	   
+	    /* .x-action-col-cell{
+		  cursor:pointer;
+	   } */
+	   
+	   height:$j-pvt-cf-view-panel-grid-detail-row-height;
+	  
+	  }
+	  
+	  .x-grid-item-over{
+	     .x-grid-cell-first{
+		  background-repeat:no-repeat; 		 
+		  background-image: url("../../../../jda/images/drag-handle-rectangular.png");
+	    }
+	   }
+
+  
+	   .x-grid-item-selected{
+	   .x-grid-td{
+	     background-color:$j-pvt-button-down-background-gradient-bottom;
+	     color:#ffffff;
+	    }
+	    .j-cf-grid-delete{
+	    background-image: url("../../../../jda/images/delete-white.png");
+	    }
+
+	   }
+	   
+	   
+	   
+	  .x-grid-item-over{
+	   .x-grid-td{
+	     background-color:$j-pvt-cf-view-panel-grid-row-over-background; 
+	     color:black;
+	    }
+	   .j-cf-grid-delete{
+	    background-image: url("../../../../jda/images/delete.png");
+	    }
+	   }
+
+	   .x-grid-row{
+	  	 border:$j-pvt-global-border;
+	   }
+	   .x-action-col-icon{
+	     height:20px;
+	     width:20px;
+	   }
+
+	   .j-cf-grid-delete{	    
+	     background-image: url("../../../../jda/images/delete.png"); 
+ 		 background-size:16px 16px; 
+ 		 background-repeat:no-repeat;
+ 		 background-position:50% 50%;
+	   }
+	 
+		}
+		
+	  }
+	}
+}
+body{
+	.x-color-picker {
+	  width: 250px;
+	  height: 120px;
+	  background-color: white;
+	  border-color: white;
+	  border-width: 0;
+	  border-style: solid;
+	}
+	.j-pvt-rule-dialog-colorpicker{
+	  background-color:$j-pvt-cf-add-rule-mainarea-background;
+	  height:auto;
+	  box-shadow: rgb(136, 136, 136) 0px 0px 6px;
+	}
+	#pivotLayer{
+		.x-border-layout-ct{
+		  background-color:$j-pvt-panel-header-gradiant-top;
+		}
+		.x-splitter-horizontal{
+			.x-layout-split-bottom{
+			  display:none;
+			}
+		}	
+	}
+	#vpMainAppAreaDiv{
+		position: absolute;
+	}
+	.j-pvt-rule-dialog{
+		border-color:$j-pvt-dialog-background-color;
+		.x-window-header{
+		border:$j-pvt-dialog-border;
+		background-color:$j-pvt-dialog-background-color;
+		}
+		.j-pvt-rule-dialog-body{
+		border-color:$j-pvt-dialog-background-color;
+		  .j-cf-validate-rule{
+			 background-image: url("../../../../jda/images/commitOff.png"); 
+			 background-position:50% 50%;
+			 background-size:12px 12px;
+			 background-repeat:no-repeat;
+			
+		  }
+		  .j-cf-validate-button{
+			 background-color:$j-pvt-dialog-background-color;
+		  }
+		}
+
+		.x-tool-img{
+		  background-color:$j-pvt-dialog-background-color;
+		  background-image: url("../../../../jda/images/close-white.png"); 
+		  background-position:50% 50%;
+		}
+		   @include button();
+		   @include button-primary();
+		   @include button-hover();
+	}
+}
+.pivotLayerElement{
+	.x-splitter-collapsed{
+		display: none;
+	}
+}
+
+.pivot-data-cell-tooltip {
+	border-color: rgb(0,0,0);
+	background-color:  rgb(255,255,255);
+	font-size: 12px;
+	line-height: 2px;
+	box-shadow: 2px 3px #CACACA;
+	min-width: 10px;
+	padding: 2px 0px 2px 0px;
+}
+
+
+input.cell_editor.dhx_table_cell::-ms-clear { 
+	display: none;
+}
+

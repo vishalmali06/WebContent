@@ -1,0 +1,52 @@
+@import 'jda-pivot-filter';
+
+/**************** Data Filter Wrapper *****************************/
+.j-pvt-datafilter-wrapper{
+	.j-pvt-datafilter-panel-body{
+	      padding-left:$j-pvt-filter-view-panel-button-area-left-padding;
+		  padding-right:$j-pvt-filter-view-panel-button-area-right-padding;
+		  padding-top:$j-pvt-filter-view-panel-grid-panel-top-padding;
+		  padding-bottom:$j-pvt-filter-view-panel-grid-panel-bottom-padding;
+		  
+		.x-grid-item-over{
+			.x-selmodel-column.x-grid-cell-first{
+				background-repeat:no-repeat; 		 
+				background-image: url("../../../../jda/images/drag-handle-rectangular_24.png");
+				.x-grid-cell-inner {
+ 					background-color: #F3F3F3;
+				}
+	    	}
+	    }
+	    .x-selmodel-column.x-column-header-first{
+ 			padding-left: $j-pvt-filter-view-panel-grid-selmodel-left-padding;
+		}
+		.x-selmodel-column.x-grid-cell-first {
+			padding-left: $j-pvt-filter-view-panel-grid-selmodel-left-padding;
+			padding-top: 2px;
+		}
+		
+		.x-grid-item-over .x-grid-row .x-grid-td {
+  			cursor: move;
+		}
+	}
+	.j-pvt-datafilter-config-window {
+		.x-form-text-default.x-form-textarea{
+			min-height : 20px !important;
+		}
+	}
+}
+
+.j-pvt-datafilter-filter-img{
+  background-image: url("../../../../jda/images/filter.png");
+  background-size: 15px 15px;
+}
+
+.j-pvt-datafilter-refresh-img{
+  background-image: url("../../../../jda/images/refresh_normal_24.png");
+  background-size: 15px 15px;
+}
+
+.j-pvt-datafilter-removeFilter-img{
+  background-image: url("../../../images/close-filter.png");
+  background-size: 20px 20px;
+}

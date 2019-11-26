@@ -1,0 +1,690 @@
+@import "_pivot-global";
+
+$j-pvt-graph-font : normal normal normal 11px/normal Verdana;
+
+
+
+$j-pvt-edit-background:#FFFFFF;
+$j-pvt-cmt-edit-hover-img:edit-white;
+$j-pvt-cmt-delete-hover-img:graph-slide-in;
+
+
+@mixin drop-shadow($horizontal, $vertical, $blur, $spred, $color ) {
+  -moz-box-shadow:    $horizontal $vertical $blur $spred $color;
+  -webkit-box-shadow: $horizontal $vertical $blur $spred $color;
+  box-shadow:         $horizontal $vertical $blur $spred $color;
+}
+
+@mixin truncate{
+	text-overflow : ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/***********************************************  Graph Flyout  *******************************************************/
+.pivotGraphWrapper{
+	/*min-width: 600px; 	
+	min-height: 350px;*/
+	
+	#pivotGraphFlyout{
+		margin-left:0px !important;
+		left:0% !important;
+		padding-left:5px;
+		padding-right:5px; 
+		overflow: hidden;	
+		height: 350px;
+		font : $j-pvt-graph-font; 
+
+		.ui-layout-west{
+			font: inherit;
+			padding:0px !important;
+			height: 100% !important;
+			width:33%;
+			border: $j-pvt-global-border;
+			@include box-sizing-border-box();		
+			.graphXAxis {
+			
+				font: inherit;
+				height: 22%;
+				min-height:65px;
+				max-height:75px;
+				.graphXAxisHeader{
+					font: inherit;
+					@include truncate;
+					@include linear-gradient(#F6F6F6, #efeff2);
+					height: 34px;
+					width:100%;
+					/* display:table; */
+					color:#5E5E5E;
+					font-size: 12px;
+					font-weight: bold;
+					padding: 0px 15px 0px 15px;
+					border-bottom: $j-pvt-global-border;
+					span{
+						@include text-ellipsis();
+						/* display:table-cell; */
+						/* vertical-align:middle; */
+						line-height:3;
+						width:85%;
+						
+					}
+						
+					.graphSettingsHeaderImg{
+					 /*  float:right;
+                      margin-top:8px;
+                      width:16px;
+                      height:16px;
+                      line-height:16px;
+                      display:table-cell;
+                      vertical-align:middle; */
+                      float:right;
+                      display:inline-block;
+                      line-height:3;
+                      margin-top:8px;
+                      width:16px;
+                      height:16px;
+                      
+                      @include background-img($j-pvt-cmt-delete-hover-img);
+                     /*  background-position:0px 10px; */
+
+					}					
+				}
+				.graphXAxisContent{
+					font: inherit;
+					
+					height : 100%;
+					box-sizing:border-box;
+										
+					.xaxisDimensionSelector{
+						font: inherit;
+						width:100%;
+						height:100%;
+
+						.dimRow{
+							font: inherit;
+							@include truncate;
+							text-align : left;
+							padding-right: 15px;
+							width:100%;
+							height:100%;
+
+							COMMON{
+								@include truncate;
+								position: relative;
+								display: inline-block;
+								height: 50%;
+								min-height:30px;						
+							}
+
+							.dimSelector{
+								@extend COMMON;
+								width: 30%;
+								
+								span{
+									@include truncate;
+									max-height: 30px;
+									position: absolute;
+									top: 16%;
+									width: 100%;
+									height: 75%;
+								}
+							}							
+							.dimensionFont{
+								@extend COMMON;
+								width: 20%;
+								padding-left:15px;
+								
+								span{
+									@include truncate;
+									width:100%;
+									height: 100%;									
+									display: inline-block;
+									/* padding: 16% 0%; */
+									line-height: 3.5;
+								}
+							}
+
+							.levelFont{
+								@extend .dimensionFont;
+								text-align: right;
+								padding-right: 15px;
+								padding-left:0px;
+							}
+							.lvlSelector{
+								@extend COMMON;
+								width: 30%;
+								
+								span{
+									max-height: 30px;
+									position: absolute;
+									top: 16%;
+									width: 100%;
+									height: 75%;
+								}
+							}
+
+							.dimensionSelector{
+								div{
+									font: inherit;
+									@include truncate;
+									width:100%;
+									background: #ffffff;
+									border: 1px solid #CACACA;								
+									padding:0px 0px 0px 8px;
+									text-align : left;
+									line-height:2.0;									
+									height: 100%;
+									img{
+										float: right;
+										height:100%;
+										width:28px;
+										
+									}
+								}
+								ul{
+									font: inherit;
+									display: none;
+									text-align : left;
+									border : $j-pvt-global-border;
+									position: fixed;
+									z-index:10;
+									float: none;   								
+									li{
+										display: block;
+										@include truncate;										
+										padding-left: 8px;
+										padding-top: 5%;
+										text-decoration: none;
+										color:#000000;										
+										background: #ffffff;
+										
+										&:hover{
+											@include linear-gradient(#EEEFF0, #DCDCDC);		
+											color: #424749;
+										}
+									}
+								}								
+							
+							}
+							.dimensionLevelSelector{
+								@extend .dimensionSelector;
+							}
+							
+						}
+						
+					}					
+				}
+			}			
+			
+			.graphYAxis {
+				height:65%;
+				border-top: $j-pvt-global-border;
+				.graphYAxisHeader{
+					font: inherit;
+					@include truncate;
+					@include linear-gradient(#F6F6F6, #efeff2);
+					height: 15%;
+					max-height:34px;
+					width:100%;
+					/* display:table; */
+					font-size: 12px;
+					font-weight: bold;
+					color :  #5E5E5E;
+					padding: 0px 15px 0px 15px;
+					
+					 span{
+					   	/* line-height:3; */
+						display:table-cell;
+						vertical-align:middle;
+						@include text-ellipsis();
+						width: 98%;
+						position:relative;
+						top:20%;
+						/* margin-top: 8px; */
+					} 
+				}
+				.graphSettingsGrid{
+					width:100%;
+					height:85%;
+					font: inherit;
+					overflow:hidden;
+					border-bottom:$j-pvt-global-border;
+					.settingsHeaderGrid{
+						font: inherit;
+						table-layout:fixed;
+						border-spacing: 2px 0px; 
+						width:100%;
+						font-size:12px;
+						border:$j-pvt-global-border;
+						height : 17%;
+						max-height:34px;
+						.gridHeader{
+							font: inherit;
+							@include linear-gradient(#ffffff, #ebecee);
+							@include drop-shadow(1px, 1px, 4px, 0px, #d1d1d1);
+							width:auto;
+							
+							.chxBox{
+								/* padding : 0px 0px 0px 15px; */
+								height: 16px;
+								width: 6%;
+								text-align: right;
+								
+								input{
+									margin : 0px;
+								}
+							}
+							.msrValue{
+								font: inherit;
+								width: 42%;	
+							}
+							.axis{
+								@include truncate;
+								text-align : center;
+								width: 22%;
+							}
+							.graphTypes{
+								font: inherit;
+								text-align : left;
+								width:30%;
+							}
+							.dummyColumn{
+								width: 13px;
+							}				
+						}
+	
+					}					
+					.scrollGrid {
+						font: inherit;
+						max-height:84%;
+						overflow-x:hidden;
+						overflow-y:auto;
+						
+						.settingsGrid {
+							font: inherit;
+							table-layout:fixed;
+							border-spacing: 2px;
+							width:100%;
+							overflow:hidden;
+							tr{
+								width:auto;
+								height:32px;
+								padding:0px;
+								border: 1px solid #ebeaea;
+								.chxBox
+								{
+									width: 6%;
+									height: 16px;
+									/* padding : 0px 0px 0px 15px; */
+									text-align: right;
+									
+									input{
+										margin: 0px;
+									}
+								}
+								.msrName{
+									font: inherit;
+									width: 42%;
+									
+								}
+								.axis{
+									width: 22%;
+									padding-left: 5%;
+								}
+								.graphTypes{
+									font: inherit;
+									text-align:center;
+									width:30%;
+									padding-left: 2px;
+									.pvt-Disable{
+									  div{
+									    opacity:0.5;
+									  }
+									}
+									.graphTypeSelector{
+										font: inherit;
+										height : 30px;
+										width:90%;
+										position: relative;
+										
+										div{
+											font: inherit;
+											@include truncate;
+											width:100%;
+											height: 30px;
+											background: #ffffff;
+											border: 1px solid #CACACA;								
+											padding:0px 0px 0px 8px;
+											line-height: 2.5;
+											text-align : left;
+											color : #000000;
+											img{
+												float: right;
+												height:28px;
+												width: 28px;
+											}
+										}
+										ul{
+											font: inherit;
+											display: none;
+											text-align : left;
+											border : $j-pvt-global-border;
+											//position: absolute;
+											z-index:10;
+											float: none;
+											color: #000000;
+											
+											li{
+												display: block;
+												line-height: 2.5;
+												padding:0px 0px 0px 8px;
+												text-decoration: none;
+												color:#000000;										
+												height:30px;
+												background: #ffffff;
+												margin-left: 1px;
+												white-space: nowrap;
+												
+												&:hover{
+													@include linear-gradient(#EEEFF0, #DCDCDC);
+													height: 30px;			
+													color: #424749;
+												}
+											}
+										}
+										
+									}	
+								}
+								
+								&:not(.gridFocus):hover{
+									@include linear-gradient(#e2e2e2, #dcdcdc);
+									color : #424749;									
+								}								
+							}
+							.gridOddData{
+								background: #faf9f9;
+							}
+							.gridEvenData{
+								background: #ffffff;
+							}
+							.gridFocus{
+								color: #ffffff;
+								@include linear-gradient(#353637, #4f5051);
+								@include drop-shadow(1px, 1px, 6px, 0px, #d1d1d1);
+								
+								td{
+									@include linear-gradient(#353637, #4f5051);
+								}
+							}
+							.msrName{
+								@include truncate;
+							}
+							.ui-controlgroup{
+								text-align: center;							
+								.ui-button {
+									margin-left: 0;
+									margin-right: -0.0em;
+								}
+								.ui-icon {
+									margin-top: 0px;
+								}
+								.ui-controlgroup-item {
+									background-color: #D3D3D3;
+								}
+								.ui-state-disabled {
+									opacity: 0.50 ;
+									filter: alpha(opacity=50) ;
+								}
+														
+								.ui-state-default{
+									background-color: #dddddd;
+								}	
+								.ui-state-active{
+									box-shadow:none;
+								}
+								
+// TODO GK: Add comment to move to glyphs. Start of section								
+							.toggleFocus{ 
+									background-color: #ffffff;
+								}					
+								.leftAxisButton{
+									height: 18px;
+									text-align:center;
+									border:$j-pvt-global-border;
+									background-image: url(../../../images/left-axis.png);
+									background-repeat: no-repeat;
+									background-position: 4px 1px;
+									border-radius: 3px 0px 0px 3px !important;
+								}
+								.rightAxisButton{
+									@extend .leftAxisButton;
+									border-radius: 0px 3px 3px 0px !important;
+									background-image: url(../../../images/right-axis.png);
+								}
+								
+// TODO GK: Add comment to move to glyphs. End of section	
+// TODO GK: Remove comment to move to glyphs							
+							/*	.toggleFocus{
+                                  background-color : $j-pvt-small-button-color;
+                                  color : $j-pvt-small-button-background-color;
+								}
+                                .axisButton{
+                                  height: 20px;
+                                  text-align:center;
+                                  border:$j-pvt-global-border;
+                                  background-image : initial;
+                                  vertical-align: middle;
+                                  text-align: center;
+                                  color : $j-pvt-small-button-color;
+                                  background-color : $j-pvt-small-button-background-color;
+                                  .ui-button-text{
+                                    padding: 0;
+                                    width:0px;
+                                    height:0px;
+                                    height:0px;
+                                  }
+
+                                }
+                                .toggleFocus{
+                                  background-color : $j-pvt-small-button-color;
+                                  color : $j-pvt-small-button-background-color;
+                                }
+                                .axisButton:hover{
+                                  background-color : $j-pvt-small-button-color;
+                                  color : $j-pvt-small-button-background-color;
+
+                                }
+
+								.leftAxisButton{
+                                    @extend .axisButton;
+                                    border-radius: 3px 0px 0px 3px !important;
+                                    @include fontawesome-icon($fa-var-arrow-left,1.5);
+								}
+								.rightAxisButton{
+									@extend .axisButton;
+									border-radius: 0px 3px 3px 0px !important;
+                                    @include fontawesome-icon($fa-var-arrow-right,1.5);
+								}*/
+								
+							}
+						}						
+					}
+				}
+			}
+			.commitSettings {
+				font: inherit;
+				width: 100%;
+				height:13%;
+				max-height:34px;
+				/* border:$j-pvt-global-border; */
+				padding: 1.5% 15px 0px 15px;
+				overflow:hidden;
+				@include input-button();
+			 	@include button-disabled();
+			 	@include button-hover();
+			    @include button(); 	
+			 	@include button-primary();
+				
+				/* .clearSetting{
+					font: inherit;
+					@include linear-gradient(#ffffff, #eaecee);
+					height: 22px;
+					width: 50px;				
+					border:1px solid #DEDEDE;
+					color :#000000;
+					text-align: center;
+					padding-left: 6px;
+					padding-right: 6px;
+					border-radius:3px;				
+					margin-right:8px;
+					&:hover{
+						@include linear-gradient(#5A5B5C, #4B4B4B);
+						color:#FFFFFF;
+					}
+					&:active{
+						@include linear-gradient(#5A5B5C, #4B4B4B);
+						color:#FFFFFF;					
+					}
+					&:disabled{
+						@include linear-gradient(#FEFEFE, #EDEFF0);
+						color:#9B9D9F;					
+					}
+				}
+				.saveSetting{
+					@extend .clearSetting;
+					@include linear-gradient(#5BA1D4, #2B75B4);
+					color : #ffffff;
+				} */
+				.notificationHeader{
+					font: inherit;
+					@include truncate;
+					font-weight: bold;
+					display: inline;
+		
+					span{
+						font: inherit;
+						position : relative;
+						float : right;
+					}
+			
+					.notificationImg{
+						margin-right: 3px;
+					}
+				}
+			}
+		}
+		.ui-layout-center{
+			height:100% !important;
+			font: inherit;
+			padding:0px !important;
+			border: $j-pvt-global-border;
+			overflow:hidden !important;
+			@include intersection-delimiter;
+		
+			
+			.graphHeader {
+				font: inherit;
+				@include truncate;
+				height: 34px;
+				@include linear-gradient(#F6F6F6, #efeff2);
+				font-size: 12px;
+				font-weight: bold;
+				color: #5E5E5E;
+				line-height:2.5;
+				padding-left:12px;
+				border-bottom:$j-pvt-global-border;
+			}
+			.errorHeader{
+				font: inherit;
+				font-weight: bold;
+				height:15px;
+				padding: 8px 8px 8px 24px;
+				left: 38%;
+				position: absolute;
+				top: 50%;
+			}		
+			#interactiveChxBox{
+				vertical-align:middle;
+				margin-right: 6px;
+			}
+			#pvt-graph-grapharea{
+				font: inherit;
+				height:auto;
+				position:absolute;
+				top:34px;
+				bottom:0px;
+				left:0px;
+				right:0px;
+				#myChartId{
+					tspan{
+						font : $j-pvt-graph-font !important;
+					}
+				}
+			}
+		}
+		
+		.hidden{
+			display:none !important;
+		}
+		
+		.resizer-west-open {
+			width : 10px;
+			background-color:#cdcdcd !important;
+			border: $j-pvt-global-border !important;
+		}
+		.ui-layout-toggler-west-open {
+			background-color:#989898 !important;
+			height:auto !important;
+			top:180px;
+			overflow:visible !important;
+			width:auto !important;
+		}
+		.resizer{
+			.ui-layout-toggler-west-closed{
+				background:#ffffff !important;
+				height:100% !important;
+				
+				.content {
+					background : #ffffff !important;
+					height:100% !important;
+					margin-top:0px !important;
+                    @include linear-gradient(#ffffff, #eaecee);
+// TODO GK: Remove comment to move to glyphs
+					/*.expandImgDiv{
+                        margin-top : 12px;
+						height : 16px;
+						width : 16px;
+                        font-size: 16px;
+						border:0;
+					}*/
+// TODO GK: Add comment to move to glyphs. start of section					
+					.expandImgDiv{
+						height : 24px;
+						width : 24px;
+						@include linear-gradient(#ffffff, #eaecee);
+						border:1px solid #DEDEDE;
+						border-radius:3px;	
+						.graphExpandImg{
+						 padding:3px;
+						}		
+					}
+// TODO GK: Add comment to move to glyphs. end of section
+					
+				}			
+			}
+		}
+		.pvtTransparent{
+			opacity:0.5;
+		}
+		
+		.warningImg{
+			margin-left: -10px;
+			margin-bottom:-4px;
+			margin-right:5px;
+		}
+		.errorText{
+			font: inherit;
+			display:inline-block;		
+		}
+	}
+}

@@ -1,0 +1,21 @@
+@import "_pivot-global";
+
+/**************** Filters Wrapper *****************************/
+$j-pvt-filter-view-panel-button-area-left-padding:20px;
+$j-pvt-filter-view-panel-button-area-right-padding:20px;
+ 
+$j-pvt-filter-view-panel-grid-panel-top-padding:0px;
+$j-pvt-filter-view-panel-grid-panel-bottom-padding:0px; 
+$j-pvt-filter-view-panel-grid-header-row-height:29px;
+$j-pvt-filter-view-panel-grid-sub-header-row-height:22px;
+$j-pvt-filter-view-panel-grid-detail-row-height:22px;
+$j-pvt-filter-view-panel-grid-selmodel-left-padding:5px;
+
+.j-pvt-filter-wrapper{
+	.j-pvt-filter-panel-body{
+	      padding-left:$j-pvt-filter-view-panel-button-area-left-padding;
+		  padding-right:$j-pvt-filter-view-panel-button-area-right-padding;
+		  padding-top:$j-pvt-filter-view-panel-grid-panel-top-padding;
+		  padding-bottom:$j-pvt-filter-view-panel-grid-panel-bottom-padding;
+	}
+}

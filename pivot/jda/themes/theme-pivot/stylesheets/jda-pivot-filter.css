@@ -1,0 +1,10 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/**************** Filters Wrapper *****************************/
+/* line 15, ../sass/jda-pivot-filter.scss */
+.j-pvt-filter-wrapper .j-pvt-filter-panel-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

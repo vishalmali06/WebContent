@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+.label { font-weight:normal; font-size:11px; }
+    .labelBold { font-weight:bold; font-size:12px; }
+    .data {  padding:2px; }
+    .listclassname {background:#ffffff;font-size:11px;}
+    .listclassnameWithCheckbox {background:#ffffff;font-size:11px;}
+    .multiselectwithcheckbox {overflow-y:scroll;overflow-x:scroll;width:210px;height:160px;border:1px solid #c0c0c0;white-space:nowrap;position:relative;cursor:default;}
+    .multiselectwithcheckbox>ol>li>span {position:absolute;left:3rem;cursor:default;}
+    .multiselectwithoutcheckbox {overflow-y:scroll;overflow-x:scroll;width:210px;height:160px;border:1px solid #c0c0c0;white-space:nowrap;position:relative;cursor:default}
+     .multiselectwithcheckbox>ol>li>span {position:absolute;left:3rem;cursor:default;}
+    .measures input { padding:1px;margin:1px; }
+    .measures .ui-selected { background: #306EFF; color: white; }
+    .measures { list-style-type: none; margin: 0; padding: 0; width: 100%; font-size:inherit;}
+    .measures li { margin: 0px; padding: 0; height: 18px; cursor:default; }
+	.measures li .handle {float:left;  }
+
+    .quickloadList { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+    .quickloadList li { margin: 0px; padding: 0; height: 14px; cursor:default; }
+	.quickloadList li .handle {float:left;  }
+	.quickloadList li:hover{
+	    background: #306EFF; color: white; 
+	}
+	.draggedFacet {border:1px dotted gray;}
+	.connectedFacets {height:100%;}
+	.multiselectwithcheckbox.facetPanel{
+		overflow-y:hidden;overflow-x:hidden;
+	}
+    .aParent div {
+        float: left;
+        clear: none;
+    }
+    .sortDimensions {
+    width: 175px;
+    height:70px;   
+    } 

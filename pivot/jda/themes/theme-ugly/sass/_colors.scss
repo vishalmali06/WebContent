@@ -1,0 +1,237 @@
+// Primary theme colors
+// - use this first set of variables to name/define/swap out the primary colors 
+//   for the suite. Only use these within this color file
+$j-theme-color-main-banner:                     $clr-ugly-red;
+$j-theme-color-main-banner-001:                 $clr-ugly-green;
+$j-theme-color-secondary-banner:                $clr-ugly-blue;
+//=============================================================================
+
+$j-base-foreground-color:                       $clr-ugly-dodgerblue;
+$j-base-inverse-foreground-color:               $clr-ugly-manhattan;
+$j-base-inverse-background-color:               $clr-ugly-blue;
+$j-base-background-color:                       $clr-ugly-manhattan;
+$j-base-shadow-color:                           $clr-shadow;
+$j-base-shadow-darker-color:                    $clr-shadow-darker;
+
+$j-base-hyperlink-color:                        $clr-ugly-hotpink;
+$j-base-hyperlink-hover-color:                  $clr-ugly-screamingreen;
+$j-base-hyperlink-disabled-color:               $clr-ugly-greenpea;
+
+$j-page-background-color:                       $j-base-background-color;
+$j-page-title-background-color:                 $j-theme-color-secondary-banner;
+
+$j-banner-bottom-border-color:                  $clr-ugly-blue;
+
+$j-primary-banner-background-color:             $j-theme-color-main-banner;
+$j-secondary-banner-background-color:           $j-theme-color-secondary-banner;
+
+$j-primary-header-text-color:                   $j-theme-color-main-banner-001;
+
+$j-highlighted-text-background-color:           $clr-ugly-greenhaze;
+$j-highlighted-text-foreground-color:           $clr-black;
+
+$j-tree-node-foreground-color:                  $j-base-foreground-color;
+$j-highlighted-tree-node-foreground-color:      $j-base-foreground-color;
+$j-highlighted-tree-node-background-color:      $clr-ugly-greenhaze;
+$j-highlighted-tree-node-border-color:          $clr-ugly-green;
+
+// Borders 
+$j-base-border-color:                           $j-theme-color-main-banner;
+$j-3dborder-upper-left-color:                   $clr-ugly-razzmatazz;
+$j-3dborder-bottom-right-color:                 $clr-ugly-red;
+$j-control-border-color:                        $clr-ugly-tapestry;
+$j-control-border-disabled-color:               $clr-ugly-hotpink;
+$j-rectangle-border-color:                      $clr-ugly-electricviolet;
+
+// Dialog box
+$j-dialog-box-title-bar-color:                  $clr-ugly-classicrose;
+$j-dialog-box-background-color:                 $j-base-background-color;
+$j-dialog-box-top-left-border-color:            $clr-ugly-electriclime;
+$j-dialog-box-bottom-right-border-color:        $clr-ugly-razzmatazz;
+
+$j-popup-banner-background-color:               $j-theme-color-main-banner-001;
+$j-popup-background-color:                      $j-base-background-color;
+
+// Header bars
+$j-primary-toolbar-color:                       $clr-ugly-electricviolet;
+$j-secondary-toolbar-background-color:          $clr-ugly-electriclime;
+$j-secondary-toolbar-foreground-color:          $clr-black;
+
+$j-table-border-color:                          $clr-ugly-hotpink;
+
+$j-grid-paging-header-background-color:         $clr-ugly-energyyellow;
+$j-grid-paging-header-border-color:             $clr-ugly-razzmatazz;
+
+$j-grid-background-color:                       $clr-ugly-texas;
+$j-grid-header-background-color:                $clr-ugly-screamingreen;
+$j-grid-readonly-header-background-color:       $clr-ugly-pineglade;
+$j-grid-row-header-background-color:            $j-grid-header-background-color;
+$j-grid-col-header-background-color:            $j-grid-header-background-color;
+$j-grid-col-header-text-color:                  $clr-ugly-dodgerblue;
+$j-grid-header-highlighted-background-color:    $clr-ugly-hotpink;
+$j-grid-header-border-color:                    $clr-gray-c01;
+$j-grid-checkbook-color:                        $clr-ugly-razzmatazz;
+$j-grid-separator-color:                        $clr-ugly-blue;
+$j-grid-selected-background-color:              $clr-black;
+$j-grid-selected-foreground-color:              $clr-white;
+$j-grid-selected-border-color:                  $clr-ugly-red;
+
+$j-grid-sort-indicator-foreground-color:            $clr-white;
+$j-grid-sort-indicator-hover-background-color:      $clr-black;
+$j-grid-sort-indicator-selected-background-color:   $clr-ugly-hotpink;
+
+$j-data-color:                                  $j-base-foreground-color;
+$j-data-background-color:                       $clr-ugly-texas;
+$j-data-error-background-color:                 $clr-ugly-electricviolet;
+$j-editable-data-background-color:              $clr-ugly-aeroblue;
+$j-control-text-foreground-color:               $j-base-foreground-color;
+$j-control-text-background-color:               $clr-ugly-sweetpink;
+$j-control-text-foreground-disabled-color:      $clr-ugly-tapestry;
+$j-control-text-background-disabled-color:      $clr-ugly-classicrose;
+$j-label-color:                                 $clr-ugly-blue;
+$j-label-background-color:                      $clr-ugly-pineglade;
+$j-label-disabled-color:                        $clr-ugly-sweetpink;
+$j-label-error-color:                           $clr-ugly-screamingreen;
+$j-label-optional-indicator-color:              $clr-ugly-red;
+$j-field-background-color:                      $clr-ugly-energyyellow;
+$j-form-section-header-background-color:        $clr-ugly-texas;
+
+$j-mini-grid-col-header-color:                  $clr-ugly-electricviolet;
+$j-mini-grid-row-header-color:                  $clr-ugly-electriclime;
+$j-mini-grid-col-border-color:                  $clr-ugly-sweetpink;
+$j-mini-grid-background-color:                  $clr-ugly-manhattan;
+
+$j-cal-popup-foreground-color:                  $clr-ugly-razzmatazz;
+$j-cal-popup-highlight-color:                   $clr-ugly-screamingreen;
+$j-cal-popup-inactive-color:                    $clr-ugly-sweetpink;
+
+$j-scrollbar-arrow-color:                       $clr-ugly-green;
+$j-scrollbar-track-color:                       $clr-ugly-red;
+$j-scrollbar-face-color:                        $clr-ugly-blue;
+$j-scrollbar-3dlight-color:                     $clr-ugly-energyyellow;
+$j-scrollbar-highlight-color:                   $clr-ugly-electriclime;
+$j-scrollbar-base-color:                        $clr-ugly-electricviolet;
+
+$j-alert-text-color:                            $clr-ugly-razzmatazz;
+$j-error-text-color:                            $clr-ugly-screamingreen;
+$j-info-text-color:                             $clr-ugly-green;
+
+$j-menu-background-color:                       $clr-ugly-greenhaze;
+$j-menu-background-color-active-gradient-start: $clr-gray-5;
+$j-menu-background-color-active-gradient-end:   $clr-gray-8;
+$j-menu-foreground-color:                       $clr-ugly-dodgerblue;
+$j-menu-foreground-color-active:                $j-menu-foreground-color;
+$j-menu-border-color:                           $clr-ugly-tapestry;
+
+$j-button-text-color:                           $clr-ugly-green;
+$j-button-text-hover-color:                     $clr-ugly-electriclime;
+$j-button-text-pressed-color:                   $clr-ugly-electriclime;
+$j-button-text-disabled-color:                  $clr-ugly-greenhaze;
+$j-button-top-left-border-color:                $clr-ugly-aeroblue;
+$j-button-bottom-right-border-color:            $clr-ugly-razzmatazz;
+$j-button-border-color:                         $clr-ugly-razzmatazz;
+$j-button-border-hover-color:                   $clr-ugly-electriclime;
+$j-button-border-pressed-color:                 $clr-ugly-electriclime;
+$j-button-border-disabled-color:                $clr-ugly-razzmatazz;
+$j-primary-button-text-color:                   $j-button-text-color;
+$j-primary-button-text-hover-color:             $j-button-text-hover-color;
+$j-primary-button-text-pressed-color:           $j-button-text-pressed-color;
+$j-primary-button-text-disabled-color:          $j-button-text-disabled-color;          
+$j-primary-button-border-color:                 $j-button-border-color;       
+$j-primary-button-border-hover-color:           $j-button-border-hover-color;       
+$j-primary-button-border-pressed-color:         $j-button-border-pressed-color; 
+
+// button gradients
+$j-button-background-gradient-color-start:          $clr-white;
+$j-button-background-gradient-color-end:            $clr-ugly-classicrose;    
+$j-button-background-hover-gradient-color-start:    $clr-white;
+$j-button-background-hover-gradient-color-end:      $clr-ugly-tapestry;    
+$j-button-background-pressed-gradient-color-start:  $clr-ugly-tapestry;
+$j-button-background-pressed-gradient-color-end:    $clr-white;    
+$j-button-background-disabled-gradient-color-start: $clr-white;
+$j-button-background-disabled-gradient-color-end:   $clr-gray-d;    
+$j-primary-button-background-gradient-color-start:          $clr-white;
+$j-primary-button-background-gradient-color-end:            $clr-ugly-blue;    
+$j-primary-button-background-hover-gradient-color-start:    $clr-ugly-blue;
+$j-primary-button-background-hover-gradient-color-end:      $clr-white;
+$j-primary-button-background-pressed-gradient-color-start:  $clr-ugly-blue;
+$j-primary-button-background-pressed-gradient-color-end:    $clr-white;    
+
+$j-filter-control-border-color:                             $clr-ugly-razzmatazz;
+$j-filter-control-background-color:                         $clr-ugly-energyyellow;
+$j-filter-control-close-button-border-color:                transparent;
+$j-filter-control-close-button-border-pressed-color:        $clr-ugly-red;
+$j-filter-control-close-button-background-color:            transparent;
+$j-filter-control-close-button-foreground-color:            $clr-ugly-pineglade;
+$j-filter-panel-background-color:                           $clr-ugly-blue;
+$j-filter-panel-border-color:                               $clr-ugly-red;
+
+$j-splitter-border-color:                       $clr-ugly-greenpea;
+$j-splitter-background-color:                   $clr-ugly-electriclime;
+$j-splitter-collapsed-color:                    $clr-ugly-pineglade;
+
+$j-modal-overlay-background-color:              $clr-white;
+
+$j-cal-bucket-default-a-background-color:       $clr-ugly-sweetpink;
+$j-cal-bucket-default-b-background-color:       $clr-ugly-pineglade;
+$j-cal-bucket-combo-1a-background-color:        $clr-ugly-razzmatazz;
+$j-cal-bucket-combo-1b-background-color:        $clr-ugly-tapestry;
+$j-cal-bucket-combo-2a-background-color:        $clr-ugly-greenhaze;
+$j-cal-bucket-combo-2b-background-color:        $clr-ugly-electriclime;
+$j-cal-bucket-combo-3a-background-color:        $clr-ugly-greenpea;
+$j-cal-bucket-combo-3b-background-color:        $clr-ugly-classicrose;
+
+$j-hierarchy-breadcrumb-background-color:       $clr-ugly-greenhaze;
+$j-hierarchy-breadcrumb-border-color:           $clr-ugly-green;
+$j-hierarchy-breadcrumb-foreground-selected-color:  $clr-ugly-sweetpink;
+
+$j-load-status-text-color:                      $clr-ugly-razzmatazz;
+$j-prompted-search-uparrow-background-color:    $clr-ugly-energyyellow;
+$j-dropdown-arrow-color:                        $clr-ugly-electricviolet;
+$j-list-hover-color:                            $clr-ugly-red;
+
+$j-dialog-box-frame-background-color:           $clr-ugly-blue;        
+$j-dialog-box-frame-foreground-color:           $clr-ugly-electriclime;
+$j-dialog-box-shadow-color:                     $clr-gray-301;
+$j-dialog-box-header-text-shadow-color:         $clr-black;
+$j-modal-dialog-box-mask-color:                 $clr-white;
+
+$j-tab-border-color:                            $clr-gray-1;
+$j-tab-hover-border-color:                      $clr-gray-3;
+$j-tab-selected-border-color:                   $clr-gray-3;
+$j-tab-foreground-color:                        $clr-gray-e;
+$j-tab-hover-foreground-color:                  $clr-white;
+$j-tab-selected-foreground-color:               $clr-white;
+$j-tab-background-color:						$clr-ugly-greenpea;
+$j-tab-hover-background-color:					$clr-ugly-screamingreen;
+$j-tab-selected-background-color:				$clr-ugly-greenhaze;
+
+$j-group-header-shadow-color:                   $clr-gray-d03;
+
+$j-header-bar-background-gradient-color-start:  $j-primary-toolbar-color;
+$j-header-bar-background-gradient-color-end:    $j-primary-toolbar-color;
+
+$j-tooltip-foreground-color:                    $clr-gray-501;
+$j-tooltip-background-color:                    $clr-ugly-tapestry;
+$j-tooltip-border-color:                        $clr-gray-501;
+
+$j-graph-background-color:                      $clr-ugly-hotpink;
+$j-graph-header-background-gradient-color-start: $clr-ugly-energyyellow; 
+$j-graph-header-background-gradient-color-end:   $clr-ugly-screamingreen;
+
+$j-aboutbox-header-color:                       $clr-ugly-red;
+$j-aboutbox-content-color:                      $clr-ugly-greenpea;
+
+$j-button-icon-color:                           $clr-ugly-razzmatazz;
+$j-button-icon-hover-color:                     $clr-ugly-blue;
+$j-button-icon-hover-inverse-color:             $clr-ugly-electriclime;
+$j-button-icon-disabled-color:                  $clr-gray-c03;
+$j-button-icon-pressed-color:                   $clr-ugly-electricviolet;
+
+$j-icon-color-blue:                             $clr-mariner;
+$j-icon-color-yellow:                           $clr-seabuckthorn;
+$j-icon-color-red:                              $clr-cardinal;
+
+$j-indicator-good-color:                        $clr-ugly-green;
+$j-indicator-average-color:                     $clr-ugly-energyyellow;
+$j-indicator-critical-color:                    $clr-ugly-red;

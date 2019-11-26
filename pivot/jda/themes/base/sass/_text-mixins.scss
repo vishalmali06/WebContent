@@ -1,0 +1,68 @@
+@mixin standardText ($color: $j-base-foreground-color, $weight: normal, $size: $j-base-font-size) {
+    font-family: $j-base-font-family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin boldText($color: $j-base-foreground-color, $size: $j-base-font-size) {
+    @include standardText($color, bold, $size);
+}
+
+@mixin inverseText($size: $j-base-font-size) {
+    @include standardText($j-base-inverse-foreground-color, normal, $size);
+}
+
+@mixin boldInverseText($size: $j-base-font-size) {
+    @include standardText($j-base-inverse-foreground-color, bold,   $size);
+}
+
+
+
+@mixin paddedText ($color: $j-base-foreground-color, $weight: normal, $bgColor: null) {
+    @include standardText($color, $weight);
+    @include standardPadding;
+    @if $bgColor {
+        background-color: $bgColor;
+    }
+}
+
+@mixin paddedBoldText ($color: $j-base-foreground-color, $bgColor: null) {
+    @include paddedText($color, bold, $bgColor);
+}
+
+@mixin paddedInverseText ($color: $j-base-inverse-foreground-color, $bgColor: null) {
+    @include paddedText($color, normal, $bgColor);
+}
+
+@mixin paddedBoldInverseText ($color: $j-base-inverse-foreground-color, $bgColor: null) {
+    @include paddedText($color, bold, $bgColor);
+}
+
+
+@mixin hyperlinkStyling ($linkColor: $j-base-hyperlink-color, $hoverColor: $j-base-hyperlink-hover-color, $visitedColor: "", $activeColor: "", 
+                         $hoverBackgroundColor: "", $textDecoration: "", $hoverTextDecoration: "") {
+    // In general, we will only use a link color and a hover color for hyperlinks. Thus, the "visited" 
+    // color will be the same as the base link color, and the "active" color will be the same as "hover".
+    // Unless specified otherwise
+    @if $visitedColor == "" {$visitedColor: $linkColor;}
+    @if $activeColor  == "" {$activeColor: $hoverColor;}
+    @if $hoverTextDecoration == "" {$hoverTextDecoration: $textDecoration;}
+
+    &:link      {color: $linkColor};
+    &:visited   {color: $visitedColor};
+    &:hover     {color: $hoverColor};
+    &:active    {color: $activeColor};
+
+    // IF a text decoration was specified, apply it to all aspects of the link 
+    @if $textDecoration != "" {
+        &:link, &:visited{text-decoration: $textDecoration};
+    }
+    @if $hoverTextDecoration != "" {
+        &:hover, &:active {text-decoration: $hoverTextDecoration};
+    }
+    // IF a hover background color was specified... 
+    @if $hoverBackgroundColor != "" {
+        &:hover {background-color: $hoverBackgroundColor};
+    }
+}

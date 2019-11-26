@@ -1,0 +1,38 @@
+// Color constants
+// As a principle, avoid using these directly in subsequent styles. Instead, color constants
+// are to be assigned to variables named for their use, and those variables should then be used in the styles
+
+// Note: except for the shades of gray from white to black, 
+// all other colors are given names from http://www.chir.ag/projects/name-that-color
+
+$clr-perano:            #a7c4ee;
+$clr-spindle:           #bed1e9;
+$clr-tropicalblue:      #dae8fa; 
+$clr-nepal:             #86a2be;
+
+$clr-bayofmany:         #244e7a;
+$clr-midnightblue:      #013366;
+
+$clr-linkwater:         #ecf2fb;
+$clr-cherokee:          #f9d78c;
+
+$clr-persianred:        #cc3333;
+$clr-azure:             #336699;
+
+$clr-bahamablue:        #006699;
+$clr-blacksqueeze:      #edf3f9;
+$clr-sidecar:           #f6edc5;
+
+$clr-casper:            #afc2d5;
+$clr-anakiwa:           #99ccff;
+$clr-goldenrod:         #fad277;
+$clr-astronaut:         #264c77;
+$clr-steelblue:         #417fbf;
+$clr-chestnutrose:      #cc5252;
+$clr-japaneselaurel:    #00aa00;
+$clr-malibu:            #96c2fa;
+$clr-pigeonpost:        #a4bed4;
+$clr-jellybean:         #297bad;
+$clr-pictonblue:        #4a9ce7;
+$clr-peach:             #ffe8b5;
+$clr-salomie:           #ffdc8f;

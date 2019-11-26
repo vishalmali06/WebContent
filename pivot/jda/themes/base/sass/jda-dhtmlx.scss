@@ -1,0 +1,982 @@
+/**
+ * JDA customized styles for use with the DHTMLX grid.
+ */
+@mixin dhtmlx-grid-div ($cell-padding: $j-grid-data-padding-normal,
+                        $row-min-height: $j-grid-row-min-height-normal,
+                        $header-padding: $j-grid-header-padding-normal,
+                        $header-min-height: $j-grid-header-min-height-normal,
+                        $row-selection-enabled: true) {
+    // This first style for border-collapse is to fix a problem with horizontal scrolling in the grid, where the column headers and the grid cells below them get mis-aligned by the
+    // width of the scrollbar. The CSS Reset code sets border-collapse to collapse, and that introduces this problem with dhtmlx grids. Newer versions of dhtmlx *may* have fixed this
+    // problem, but for now, we'll make sure border-collapse is separate all the way down the DOM tree.
+    & * {
+        border-collapse: separate;
+    }
+    @include border($borderColor: $j-base-border-color);
+    background-color: $j-grid-background-color;
+    & .xhdr {
+        background-color: $j-grid-col-header-background-color;
+        height: $header-min-height;
+    }
+    & table.hdr {
+        & td {
+            background-color: rgba(0,0,0,0);
+            padding:1px;
+            margin:0;
+            border:none;
+            @if ($theme == "platform") {
+                background-image: url($j-dhtmlx-grid-column-header-separator);
+                background-size: 2px 18px;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+            & div.hdrcell {
+                @include standardText($color: $j-grid-col-header-text-color);
+                padding: $header-padding;
+                line-height: normal;
+                text-align : center;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+        }
+        // Used for 2-row column headers
+        & tr:nth-child(3) td div.hdrcell {
+            padding-top: 0px;
+            padding-bottom: 2px;
+            line-height: normal;
+        }
+    }
+    & table.obj {
+        & td {
+            @include standardText;
+            padding: $cell-padding;
+            white-space: nowrap;
+            overflow: hidden;
+            border: none;
+        }
+        @if ($row-selection-enabled == true) {
+            & tr.rowselected td {
+                border-top: 1px solid $j-grid-selected-border-color !important;
+                border-right: none;
+                border-left: none;
+            }
+            & tr.rowselected td,
+            & tr.rowselected td a,
+            & tr.rowselected td.cellselected,
+            & tr.rowselected td.cellselected a,
+            & td.cellselected,
+            & td.cellselected a {
+                background: $j-grid-selected-background-color !important;
+                color: $j-grid-selected-foreground-color !important;
+                & span.j-font-graphic {
+                    color: $j-grid-selected-foreground-color !important;
+                }
+            }
+            & tr.rowselected td a:hover,
+            & tr.rowselected td.cellselected a:hover,
+            & td.cellselected a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    & table.row20px tr td, & table.obj.row20px tr td  {
+        height:20px;
+        white-space:nowrap;
+        padding: $cell-padding;
+        // the height of treegrid_cells is, rather unfortunately, hardcoded
+        // in styles in the dhtmlx.js code. Specifying it here with !important
+        // is the only way - short of modifying dhtmlx.js - to force
+        // our grid sizing to work on the treegrid cells. The other cells
+        // in the grid are sized properly; this is specific only to the 
+        // treegrid cells, which are typically the first column of the treegrid.
+        & div.treegrid_cell {
+            line-height: 20px !important;
+            height: 20px !important;
+        }
+    }
+    & .ftr {
+        background: $clr-gray-e07;
+        & table {
+            & td {
+                background: $clr-gray-e07;
+                height: 22px;
+                border-right: none;
+                padding:1px;
+                border-top-color: $j-base-border-color;
+                & .hdrcell {
+                    font-size: $j-base-font-size !important;
+                    font-family: $j-base-font-family;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-variant: normal;
+                    color : $clr-gray-501;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    padding: $header-padding;
+                }
+            }
+        }
+    }
+}
+
+.dhtmlxGrid_selection {
+    -moz-opacity:.5;
+    filter:alpha(opacity = 50);
+    background-color:#fe9a2e;
+    opacity:.5;
+    border:1px dotted black;
+}
+
+div.gridbox_jda-normal      { @include dhtmlx-grid-div; }
+div.gridbox_jda-compact     { @include dhtmlx-grid-div ($cell-padding: $j-grid-data-padding-compact,
+                                                        $row-min-height: $j-grid-row-min-height-compact,
+                                                        $header-padding: $j-grid-header-padding-compact,
+                                                        $header-min-height: $j-grid-header-min-height-compact);
+}
+div.gridbox_jda-comfort     { @include dhtmlx-grid-div ($cell-padding: $j-grid-data-padding-comfort,
+                                                        $row-min-height: $j-grid-row-min-height-comfort,
+                                                        $header-padding: $j-grid-header-padding-comfort,
+                                                        $header-min-height: $j-grid-header-min-height-comfort);
+}
+div.gridbox_jda-normal-nrs  { @include dhtmlx-grid-div ($row-selection-enabled: false);}
+div.gridbox_jda-compact-nrs { @include dhtmlx-grid-div ($cell-padding: $j-grid-data-padding-compact,
+                                                        $row-min-height: $j-grid-row-min-height-compact,
+                                                        $header-padding: $j-grid-header-padding-compact,
+                                                        $header-min-height: $j-grid-header-min-height-compact,
+                                                        $row-selection-enabled: false);
+}
+div.gridbox_jda-comfort-nrs { @include dhtmlx-grid-div ($cell-padding: $j-grid-data-padding-comfort,
+                                                        $row-min-height: $j-grid-row-min-height-comfort,
+                                                        $header-padding: $j-grid-header-padding-comfort,
+                                                        $header-min-height: $j-grid-header-min-height-comfort,
+                                                        $row-selection-enabled: false);
+}
+
+.dhxgrid_rh_jda-normal, .dhxgrid_rh_jda-compact, .dhxgrid_rh_jda-comfort  {
+    position: absolute;
+    top: -20px;
+    left: -24px;
+    width: 23px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    font-size: 1px;
+    overflow: hidden;
+}
+/**
+ * JDA customized styles for use with the DHTMLX tree.
+ */
+.dhxtree_jda .selectedTreeRow{
+    background: $j-highlighted-tree-node-background-color;
+    border: 1px solid $j-highlighted-tree-node-border-color;
+    color: $j-highlighted-tree-node-foreground-color;
+    line-height: 17px;
+    font-size: $j-base-font-size !important;
+    font-family: $j-base-font-family;
+    overflow: hidden;
+}
+.dhxtree_jda .standartTreeRow, .dhxtree_jda .standartTreeRow_lor{
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    color: $j-tree-node-foreground-color;
+    font-family: $j-base-font-family;
+    font-size: $j-base-font-size !important;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+}
+html > body .dhxtree_jda .selectedTreeRow, html > body .dhxtree_jda .selectedTreeRow_lor{
+    padding: 1px 0px 1px 0px;
+    line-height: normal;
+    display: inline-block; // !ie; rjy - this directive fails on the compass compile
+    height: 13px;
+}
+body:nth-of-type(1) .dhxtree_jda span.selectedTreeRow, body:nth-of-type(1) .dhxtree_jda span.selectedTreeRow_lor{
+    padding: 1px 0px 1px 0px;
+    display: inline-block;
+    padding-top: 0px;
+    height: 13px;
+}
+body:nth-of-type(1) .dhxtree_jda span.standartTreeRow, body:nth-of-type(1) .dhxtree_jda span.standartTreeRow_lor{
+    display: inline-block; height: 14px;
+}
+.dhxtree_jda .selectedTreeRow_lor, .dhxtree_jda .selectedTreeRow{
+    // background-color: white;
+    background: $j-highlighted-tree-node-background-color;
+    border: 1px solid $j-highlighted-tree-node-border-color;
+    color: $j-tree-node-foreground-color;
+    line-height: 17px;
+    font-size: $j-base-font-size !important;
+    font-family: $j-base-font-family;
+    overflow: hidden;
+}
+.dhxtree_jda .selectedTreeRow_lor, .dhxtree_jda .selectedTreeRow{
+    class: selectedNode;
+}
+
+/* x-border-box is ext-js class, it sets box-sizing to border-box */
+.x-border-box .selectedTreeRow {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+/* MENU COMPONENTS */
+
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon {
+    @include border($borderColor: $j-menu-border-color, $bgColor: $j-menu-background-color);
+    position:absolute;
+    overflow:hidden;
+    padding-top:1px;
+    padding-bottom:1px;
+    @include box-shadow($j-menu-shadow);
+   /*  box-sizing: border-box; RAY - NEED THIS???????? */
+}
+@mixin menu-item() {
+    height: $j-menu-item-height;
+    cursor: pointer;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item {@include menu-item;}
+
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis {
+    @include menu-item;
+    opacity: .5;
+}
+
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected {
+    @include menu-item;
+    // rjy - we had trouble getting the gradient to work in dhtmlx menus, so we're reverting to using the image instead
+    // @include background-gradient($j-menu-background-color-active-gradient-start, $j-menu-background-color-active-gradient-end);
+    background-image: url($j-dhtmlx-menu-item-background-selected) !important; 
+    background-size: 100% 100%;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected td.sub_item_text div.sub_item_text {
+    color: $j-menu-foreground-color-active;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected td {
+    background: none !important;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td {
+    @include standardText($color: $j-menu-foreground-color);
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_icon {
+    width:24px;
+    text-align:left;-moz-user-select:none;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_icon img.sub_icon {
+    width:18px;
+    height:18px;
+    margin-top:2px;
+    margin-right:0;
+    margin-left:6px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_text {
+    vertical-align:middle;
+    padding-left:4px;
+    padding-right:4px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_item_text {
+    @include standardText($color: $j-menu-foreground-color);
+    white-space:nowrap;
+    text-align:left;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_item_text {
+    color:#999!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_hk {
+    padding-left:8px;
+    padding-right:8px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl td.sub_item_hk div.sub_item_hk {
+    font-family: $j-base-font-family;
+    font-size:10px;
+    color:#4985b7;
+    text-align:right;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis td.sub_item_hk div.sub_item_hk {
+    color:#cecece!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon tr.sub_sep {
+    height:3px;
+    font-size:1px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon div.sub_sep {
+    position: static;
+    font-size: 1px;
+    line-height: 1px;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid $j-menu-border-color;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.complex_arrow {
+    width:4px;
+    height:24px;
+    background-image:url('imgs/dhxmenu_skyblue/dhxmenu_subar.gif');
+    background-repeat:no-repeat;
+    background-position:0 0;
+    float:right;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_selected div.complex_arrow {
+    background-position:-4px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.complex_arrow {
+    background-position:-8px 0!important;
+}
+div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+    position:absolute;
+    width:11px;
+    height:11px;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-image:url('imgs/dhxmenu_skyblue/dhxmenu_loader.gif');
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon_left div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+    top:6px;
+    left:none;
+    right:6px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon_right div.dhtmlxMenu_SubLevelArea_Item_Arrow_Loading {
+    top:6px;
+    right:none;
+    left:6px;_right:-38px;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Arrow {
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-color:#eaf2fb;
+    text-align:center;
+    overflow:hidden;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Arrow div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    position:relative;
+    margin-top:5px;
+    margin-left:auto;
+    margin-right:auto;
+    width:9px;
+    height:5px;
+    background-repeat:no-repeat;
+    background-image:url('imgs/dhxmenu_skyblue/dhtmlxmenu_upar.gif');
+}
+/* rjy - failed on height=18px - commenting out so that it passes through from the original file without going through sass compilation 
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Over,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Disabled {
+    position:absolute;
+    height:16px;
+    height=18px;
+    padding:1px 1px 0 1px;
+    font-size:1px;
+    background-color:#eaf2fb;
+    border:#a4bed4 1px solid;
+    border-bottom:none;
+}
+*/
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:-27px 0;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Over div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:-36px 0;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowUp_Disabled div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:-45px 0;
+}
+/* rjy - failed on height=18px - commenting out so that it passes through from the original file without going through sass compilation 
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Over,div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Disabled {
+    position:absolute;
+    height:16px;
+    height=18px;
+    font-size:1px;
+    padding:1px 1px 0 1px;
+    background-color:#eaf2fb;
+    border:#a4bed4 1px solid;
+    border-top:none;
+}
+*/
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:0 0;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Over div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:-9px 0;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_ArrowDown_Disabled div.dhtmlxMenu_SubLevelArea_Arrow_Icon {
+    background-position:-18px 0;
+}
+
+@mixin menu-top-level-text ($side) {
+    @include standardText($j-menu-foreground-color);
+    position:absolute;
+    top:5px;
+    @if ($side == left) {
+        right:none;
+        left:8px;
+    } @else {
+        left:none;
+        right:8px;
+    }
+    cursor:pointer;
+}
+.dhtmlxMenu_dhx_skyblue_Middle div.dhtmlxMenu_TopLevel_Text_right   {@include menu-top-level-text(right);}
+.dhtmlxMenu_dhx_skyblue_Middle div.dhtmlxMenu_TopLevel_Text_left    {@include menu-top-level-text(left);}
+
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon {
+    float:left;
+    margin:0 2px 0 2px;
+    width:18px;
+    height:18px;
+    background-position:top right;
+    background-repeat:no-repeat;
+    background-image:url('imgs/dhxmenu_skyblue/dhxmenu_chrd.gif');
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.chbx_0 {
+    background-position:0 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.chbx_1 {
+    background-position:-18px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.chbx_0 {
+    background-position:-36px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.chbx_1 {
+    background-position:-54px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.rdbt_0 {
+    background-position:-72px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl div.sub_icon.rdbt_1 {
+    background-position:-90px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.rdbt_0 {
+    background-position:-108px 0!important;
+}
+div.dhtmlxMenu_dhx_skyblue_SubLevelArea_Polygon table.dhtmlxMebu_SubLevelArea_Tbl tr.sub_item_dis div.sub_icon.rdbt_1 {
+    background-position:-126px 0!important;
+}
+
+/**
+ * JDA customized styles for use with the DHTMLX combobox.
+ */
+.dhx_combo_img {
+    position:absolute;top:0;right:0;width:18px;height:20px;
+}
+.dhx_combo_option_img {
+    position:relative;top:1px;margin:0;margin-left:2px;left:0;width:18px;height:18px;padding:0;
+}
+.dhx_combo_input {
+    color:#333;font-family: $j-base-font-family;font-size:9pt;border:0;padding:2px 2px 2px 2px;position:absolute;top:0;
+}
+.dhx_combo_box {
+    position:relative;text-align:left;border:1px solid #7F9DB9;height:20px;_height:22px;overflow:hidden;background-color:white;
+}
+.dhx_combo_list {
+    position:absolute;z-index:230;overflow-y:auto;overflow-x:hidden;border:1px solid #7F9DB9;height:100px;font-family: $j-base-font-family;font-size:9pt;background-color:white;z-index:12000;
+}
+.dhx_combo_list div {
+    cursor:default;padding:2px 2px 2px 2px;
+}
+.dhx_selected_option {
+    background-color:Highlight;
+    color:HighlightText;
+}
+.dhx_combo_img_rtl {
+    position:absolute;top:0;left:1px;width:17px;height:20px;
+}
+.dhx_combo_option_img_rtl {
+    float:right;margin-right:0;width:18px;height:18px;
+}
+.dhx_combo_list_rtl {
+    direction:rtl;unicode-bidi:bidi-override;position:absolute;z-index:230;overflow-y:auto;overflow-x:hidden;border:1px solid #7F9DB9;height:100px;font-family: $j-base-font-family;font-size:9pt;background-color:white;
+}
+.dhx_combo_list_rtl div {
+    direction:rtl;unicode-bidi:bidi-override;padding:2px 2px 2px 2px;
+}
+.dhx_combo_list_rtl div div {
+    float:right!important;cursor:default;
+}
+.dhx_combo_list_rtl div img {
+    float:right!important;
+}
+.dhx_combo_list_rtl div input {
+    float:right!important;
+}
+.dhx_combo_box.dhx_skyblue {
+    border:1px solid #a4bed4;
+}
+.dhx_combo_box.dhx_skyblue .dhx_combo_input {
+    font-family: $j-base-font-family;font-size: $j-base-font-size;padding:3px;
+}
+.dhx_combo_list.dhx_skyblue_list {
+    background-color:#eaf2fb;border:1px solid #a4bed4;font-family: $j-base-font-family;font-size: $j-base-font-size;
+}
+.dhx_combo_list.dhx_skyblue_list div {
+    cursor:default;padding:3px 4px;
+}
+.dhx_combo_list_rtl.dhx_skyblue_list {
+    background-color:#eaf2fb;border:1px solid #a4bed4;font-family: $j-base-font-family;font-size: $j-base-font-size;
+}
+.combo_dhx_skyblue_sel {
+    background-image:url('imgs/bg_selection.gif')!important;background-position:bottom;background-repeat:repeat-x;color:black;
+}
+.dhxcombolist_dhx_skyblue {
+    z-index : 5000 !important;
+    /* setting the background color as !important, otherwise not able to override the default dhtmlx color */
+    background-color: $j-base-background-color !important; 
+}
+div.dhxcombo_dhx_skyblue{
+    border-color: #c7c7c7;
+}
+div.dhxcombo_dhx_skyblue div.dhxcombo_select_button{
+    border-color: #d1d1d1;
+    background-color: #f1f1f1;
+    @include background-gradient(#f1f1f1, #d1d1d1);
+    filter: none;
+}
+div.dhxcombolist_dhx_skyblue div.dhxcombo_option,
+div.dhxcombolist_dhx_skyblue div.dhxcombo_option.dhxcombo_option_selected {
+    border-color: $j-base-background-color !important;
+}
+.dhx_combo_select{
+    font-family:$j-base-font-family;
+    font-size:$j-base-font-size;
+    border:1px solid;
+    border-color:black silver silver black;
+    background-color:white;
+    overflow:hidden;
+    cursor:default;
+    position:absolute;
+    height:auto;
+    z-index:600
+}
+.dhx_combo_select, .gridbox_dhx_skyblue .dhx_combo_edit, .gridbox_dhx_skyblue .dhx_textarea {
+    font-family:$j-base-font-family;
+     font-size:$j-base-font-size;
+}
+
+/* dhtmlx popup */
+div.dhx_popup_dhx_skyblue {
+    position: absolute;
+    z-index: 1990;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_area {
+    position: relative;
+    margin: 10px;
+    padding: 1px 0px;
+    border: 1px solid #ffffff;
+    /*box-shadow: 0 0 12px #666666;*/
+    border-radius: $j-dialog-box-corner-radius;
+    background-color: $j-dialog-box-frame-background-color;
+}
+
+div.dhx_popup_dhx_skyblue div.dhx_popup_area td.dhx_popup_td {
+    @include standardText;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0px 6px;
+    height: 28px;
+    line-height: 28px;
+    white-space: nowrap;
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_area tr.dhxnode td.dhx_popup_td {
+    height: auto;
+    line-height: inherit;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_area.dhx_popup_area_ie tr.dhxnode td.dhx_popup_td {
+    height: 1em;
+    line-height: 1em;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_area tr.dhx_popup_sep td.dhx_popup_sep {
+    font-size: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 1px;
+    position: relative;
+}
+
+/* arrow image */
+div.dhx_popup_dhx_skyblue div.dhx_popup_arrow {
+    position: absolute;
+    background-repeat: no-repeat;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_arrow.dhx_popup_arrow_bottom {
+    width: 19px;
+    height: 16px;
+    background-image: url("../css/theme-platform/images/secondary/popup_arrow_bottom.png");
+    background-position: top center;
+}
+div.dhx_popup_dhx_skyblue div.dhx_popup_arrow.dhx_popup_arrow_top {
+    width: 19px;
+    height: 16px;
+    background-image: url("../css/theme-platform/images/secondary/popup_arrow_top.png");
+    background-position: bottom center;
+}
+
+div.dhx_popup_dhx_skyblue div.dhx_popup_arrow.dhx_popup_arrow_right {
+    width: 16px;
+    height: 19px;
+    background-image: url("../css/theme-platform/images/secondary/popup_arrow_right.png");
+    background-position: center left;
+}
+
+div.dhx_popup_dhx_skyblue div.dhx_popup_arrow.dhx_popup_arrow_left {
+    width: 16px;
+    height: 19px;
+    background-image: url("../css/theme-platform/images/secondary/popup_arrow_left.png"); 
+    background-position: center right;
+}
+
+/* components-related */
+div.dhx_popup_dhx_skyblue div.dhx_popup_area tr.dhxnode td.dhx_popup_td {
+    padding: 6px 3px 3px 3px!important;
+}
+
+/* Layout Control Styling */
+
+.dhxlayout_base_jda {
+    position: relative;
+    cursor: default;
+}
+.dhxlayout_base_jda div.dhxlayout_sep {
+    position: absolute;
+    background-color: #ebebeb;
+    font-size: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    @include user-select(none);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 2;
+}
+.dhxlayout_base_jda div.dhxlayout_sep.dhxlayout_sep_resize_v {
+    cursor: w-resize;
+    background-image: url('imgs/dhxlayout_skyblue/dhxlayout_sep_v.gif');
+}
+.dhxlayout_base_jda div.dhxlayout_sep.dhxlayout_sep_resize_h {
+    cursor: n-resize;
+    background-image: url('imgs/dhxlayout_skyblue/dhxlayout_sep_h.gif');
+}
+.dhxlayout_base_jda div.dhx_cell_layout {
+    position: absolute;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: default;
+    z-index: 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_cont_layout {
+    position: absolute;
+    border-left: 1px solid $j-base-border-color;
+    border-right: 1px solid $j-base-border-color;
+    border-bottom: 1px solid $j-base-border-color;
+    border-top: 0 solid #fff;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_cont_layout.dhx_cell_cont_no_borders {
+    border: 0 solid #fff!important;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_cont_layout,.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_h div.dhx_cell_cont_layout {
+    display: none;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr {
+    position: relative;
+    height: 27px;
+    line-height: 26px;
+    overflow: hidden;
+    @include standardText;
+    @include border();
+    background: $j-secondary-toolbar-background-color;
+    cursor: default;
+    filter: none;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr.dhx_cell_hdr_hidden {
+    height: 0;
+    line-height: 0;
+    border-bottom-width: 0;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr.dhx_cell_hdr_hidden_no_borders {
+    height: 0;
+    line-height: 0;
+    border-width: 0;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhx_cell_hdr_text {
+    position: relative;
+    margin: 0 26px 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_h div.dhx_cell_hdr {
+    height: 18px;
+    line-height: 17px;
+    font-weight: normal;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr {
+    width: 18px;
+    background: $j-secondary-toolbar-background-color;
+    filter: none;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text {
+    position: absolute;
+    left: 3px;
+    bottom: 0;
+    transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform-origin: left center;
+    font-weight: normal;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie8 {
+    left: -5px;
+    line-height: 17px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie8 span {
+    float: left;
+    filter: none;
+    margin-bottom: 95%;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie7 {
+    left: -5px;
+    line-height: 17px;
+    padding-bottom: 10px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie7 span {
+    float: left;
+    filter: none;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie6 {
+    left: -5px;
+    line-height: 17px;
+    padding-bottom: 10px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_ie6 span {
+    float: left;
+    filter: none;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhx_cell_hdr_text.dhx_cell_hdr_text_chrome {
+    left: 5px;
+    -webkit-transform: rotate(270deg);
+    -webkit-transform-origin: left center;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhxlayout_arrow {
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background-image: url('imgs/dhxlayout_skyblue/dhxlayout_cell_btns.gif');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_va {
+    background-position: -16px 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_vb {
+    background-position: -48px 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_ha {
+    background-position: -32px 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_hb {
+    background-position: 0 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_h div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_ha {
+    background-position: 0 -5px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_h div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_hb {
+    background-position: -32px -4px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_va {
+    background-position: -45px 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_hdr div.dhxlayout_arrow.dhxlayout_arrow_vb {
+    background-position: -13px 0;
+}
+.dhxlayout_base_jda div.dhxlayout_resize_area {
+    position: absolute;
+    background-color: #a4bed4;
+    opacity: .15;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=15);
+    z-index: 1;
+    border: 2px dashed black;
+    cursor: inherit;
+}
+.dhxlayout_base_jda div.dhxlayout_resize_sep {
+    position: absolute;
+    background-color: #a4bed4;
+    overflow: hidden;
+    display: block;
+    opacity: .5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    z-index: 2;
+    cursor: inherit;
+}
+.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_h div.dhx_cell_statusbar_def,.dhxlayout_base_jda div.dhx_cell_layout.dhxlayout_collapsed_v div.dhx_cell_statusbar_def {
+    display: none;
+}
+.dhxlayout_base_jda div.dhxlayout_hdr_attached {
+    position: relative;
+}
+.dhxlayout_base_jda div.dhxlayout_ftr_attached {
+    position: absolute;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_menu_def {
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid $j-base-border-color;
+    border-right: 1px solid $j-base-border-color;
+    border-bottom: 1px solid $j-base-border-color;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_menu_no_borders {
+    position: relative;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_menu_def div.dhtmlxMenu_jda_Middle,.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_menu_no_borders div.dhtmlxMenu_jda_Middle {
+    padding: 0 2px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_toolbar_def {
+    position: relative;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_toolbar_def div.dhx_toolbar_jda {
+    border-top-width: 0;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_ribbon_def div.dhxrb_with_tabbar.dhxtabbar_base_jda {
+    margin-top: -1px;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_ribbon_def div.dhtmlxribbon_jda.dhxrb_without_tabbar {
+    border-top-width: 0;
+    width: auto;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_statusbar_def {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include standardText;
+    background-color: #ddecff;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_statusbar_def div.dhx_cell_statusbar_text {
+    position: relative;
+    padding: 0 4px;
+    height: 21px;
+    line-height: 21px;
+    border-bottom: 1px solid $j-base-border-color;
+    border-left: 1px solid $j-base-border-color;
+    border-right: 1px solid $j-base-border-color;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhxlayout_progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .55;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=55);
+    z-index: 3;
+}
+.dhxlayout_base_jda div.dhxlayout_progress_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imgs/dhxlayout_skyblue/dhxlayout_cell_progress.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_progress_bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75);
+    z-index: 1;
+}
+.dhxlayout_base_jda div.dhx_cell_layout div.dhx_cell_progress_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid $j-base-border-color;
+    background-image: url('imgs/dhxlayout_skyblue/dhxlayout_cell_progress.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.dhxlayout_base_jda div.dhxlayout_menu {
+    position: relative;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhxlayout_toolbar {
+    position: relative;
+    background-color: #ebebeb;
+    padding-bottom: 4px;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhxlayout_ribbon {
+    border-bottom: 2px solid #ebebeb;
+    position: relative;
+}
+.dhxlayout_base_jda div.dhxlayout_ribbon div.dhtmlxribbon_jda.dhxrb_without_tabbar {
+    width: auto;
+}
+.dhxlayout_base_jda div.dhxlayout_statusbar {
+    position: absolute;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+.dhxlayout_base_jda div.dhxlayout_statusbar div.dhxcont_statusbar {
+    position: relative;
+    margin-top: 2px;
+    border: 1px solid $j-base-border-color;
+    background-color: #ddecff;
+    @include standardText;
+    padding: 3px 4px;
+}
+body.dhxlayout_resize_v * {
+    @include user-select(none);
+    cursor: w-resize!important;
+}
+body.dhxlayout_resize_h * {
+    @include user-select(none);
+    cursor: n-resize!important;
+}
+div.dhxlayout_sep_sw_jda {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 5px;
+    height: 1px;
+    font-size: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.dhxlayout_skin_detect {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    margin: 0;
+    padding: 0;
+    border: 0 solid white;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+}

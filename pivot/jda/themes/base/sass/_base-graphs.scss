@@ -1,0 +1,73 @@
+$j-graph-data-color-opacity:        85;
+$j-graph-data-color-transparency:   15;
+$j-graph-trend-zone-color-transparency:   50;
+
+$j-graph-data-color-01:             $clr-deepcerulean;
+$j-graph-data-color-02:             $clr-razzmatazz;
+$j-graph-data-color-03:             $clr-seance;
+$j-graph-data-color-04:             $clr-trinidad;
+$j-graph-data-color-05:             $clr-regalblue-chart;
+$j-graph-data-color-06:             $clr-limeade;
+$j-graph-data-color-07:             $clr-lavender;
+$j-graph-data-color-08:             $clr-pictonblue;
+$j-graph-error-color:               $clr-crimson;
+$j-graph-comparison-color:          $clr-alto;
+
+
+$j-graph-data-hover-color-01:       $clr-orient;
+$j-graph-data-hover-color-02:       $clr-jazzberryjam;
+$j-graph-data-hover-color-03:       $clr-scarletgum;
+$j-graph-data-hover-color-04:       $clr-fire;
+$j-graph-data-hover-color-05:       $clr-astronautblue;
+$j-graph-data-hover-color-06:       $clr-verdungreen;
+$j-graph-data-hover-color-07:       $clr-wisteria;
+$j-graph-data-hover-color-08:       $clr-bostonblue;
+$j-graph-error-hover-color:         $clr-thunderbird;
+$j-graph-comparison-hover-color:    $clr-nobel;
+
+$j-graph-element-spacing:           16px;
+
+$j-graph-font-family:               $j-base-font-family;
+
+$j-graph-title-font-size:           $j-base-font-size;
+$j-graph-title-font-weight:         normal;
+
+$j-graph-time-range-font-weight:    bold;
+$j-graph-time-range-font-size:      $j-base-font-size;
+$j-graph-time-range-color:          $clr-gray-501;
+
+$j-graph-axis-units-font-weight:    normal;
+$j-graph-axis-units-font-size:      10px;
+$j-graph-axis-units-color:          $clr-gray-501;
+
+$j-graph-legend-font-weight:        normal;
+$j-graph-legend-font-size:          12px;
+$j-graph-legend-color:              $clr-gray-501;
+
+$j-graph-label-font-weight:         normal;
+$j-graph-label-font-size:           12px;
+$j-graph-label-color:               $clr-gray-501;
+
+$j-graph-tooltip-font-weight:       normal;
+$j-graph-tooltip-font-size:         12px;
+$j-graph-tooltip-color:             $clr-gray-501;
+$j-graph-tooltip-border-color:      $clr-gray-501;
+
+$j-graph-x-axis-width:              1px;
+$j-graph-x-axis-style:              solid;
+$j-graph-x-axis-color:              $clr-gray-802;
+
+$j-graph-increment-line-width:      1px;
+$j-graph-increment-line-style:      solid;
+$j-graph-increment-line-color:      $clr-gray-e05;
+
+$j-graph-trend-line-width:          1px;
+$j-graph-trend-line-style:          dashed;
+$j-graph-trend-line-color:          $clr-gray-501;
+
+$j-graph-trend-zone-color:          $clr-alto;
+
+$j-graph-line-chart-line-width:                         2px;
+$j-graph-line-chart-intersection-point-radius:          3px;
+$j-graph-line-chart-intersection-point-border-color:    $clr-white;
+$j-graph-line-chart-intersection-point-border-width:    2px;

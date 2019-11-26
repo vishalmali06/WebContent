@@ -1,0 +1,662 @@
+//=====================================================================
+// Page Banners
+
+    .j-page-banner-container {
+        height: $j-page-banner-height;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: $j-page-margin $j-page-margin 0 $j-page-margin;
+        & > table {
+            width: 100%;
+            & col:first-child {
+                width: 100%;
+            }
+            & tbody td#tblvpApptitleTitle {
+                min-width: 150px;
+                vertical-align: top;
+                & > div {
+                    position: relative;
+                    & > div {
+                        position: absolute;
+                        width: 100%;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            & tbody td#tblvpApptitleSearch {
+                padding: 0px $j-page-margin;
+            }
+            & tbody td#tblvpApptitleNotifications {
+                padding-right: $j-button-spacing;
+            }
+            & tbody td#tblvpApptitleNotifications{
+                & > a {
+                    position: relative;
+                    display: block;
+                    & > span#AppTitleNotifCountDiv {
+                        position: absolute;
+                        top: -30px;
+                        right: -1px;
+                        background-color: $j-indicator-good-color;
+                        border-radius: 35%;
+                        @include standardText($j-page-background-color, $size: $j-notification-count-font-size);
+                        @include padding(0px, 3px);
+                    }
+                }
+            }
+            & tbody td#tblvpApptitleAddNotification {
+                padding-right: $j-button-spacing;
+            }
+            & tbody td#tblvpApptitleFavorites {
+            }
+            & tbody td#tblvpApptitleRefresh,
+            & tbody td#tblvpApptitlePrint,
+            & tbody td#tblvpApptitleHelp {
+                padding-left: $j-button-spacing;
+            }
+        }
+    }
+@if ($theme == "platform") {
+    .j-page-banner-title-text {
+        @include standardText($j-primary-header-text-color, $size: $j-page-banner-title-font-size);
+    }
+    .j-primary-header-bar {
+        @include border-top-radius(2px);
+        @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+        @include border($borderColor: $j-base-border-color, $important: true);
+        // When this is a row in the table, border must be applied to the underlying TDs
+        // ... rows do not take borders
+        & > td {
+            @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+            position: relative;
+            border-top: 1px solid $j-base-border-color !important;
+            border-bottom: 1px solid $j-base-border-color !important;
+        }
+        & > td:first-child {
+            border-left: 1px solid $j-base-border-color !important;
+        }
+        & > td:last-child {
+            border-right: 1px solid $j-base-border-color !important;
+        }
+    }
+    .j-header-bar-title {
+        @include standardText($j-primary-header-text-color);
+        margin: 0px 8px 0px 8px;
+        padding: 3px 0px 4px 0px;
+    }
+    .j-header-bar-title-row {
+        @extend .j-header-bar-title;
+        border-bottom: 1px solid $j-base-border-color;
+    }
+    .j-header-bar-toolbar-row {
+        height: 34px;
+    }
+    .j-secondary-header-bar {
+        @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+        @include border($borderColor: $j-base-border-color, $important: true);
+        background-color: $j-secondary-toolbar-background-color; 
+        // When this is a row in the table, border must be applied to the underlying TDs
+        // ... rows do not take borders
+        & > td {
+            border-top: 1px solid $j-base-border-color !important;
+            border-bottom: 1px solid $j-base-border-color !important;
+        }
+    }
+} @else {
+    .j-page-banner-title-text {
+        @include boldText($j-primary-header-text-color, $size: $j-page-banner-title-font-size);
+    }
+    .j-primary-header-bar {
+        @include rectangle3d($j-primary-toolbar-color);
+    } 
+    .j-header-bar-title {
+        @include boldText($j-primary-header-text-color);
+        margin: 3px 8px 4px 8px;
+    }
+    .j-header-bar-title-row {
+        @extend .j-header-bar-title;
+        border-bottom: 1px solid $j-base-border-color;
+    }
+    .j-header-bar-toolbar-row {
+        height: 34px;
+    }    
+    .j-secondary-header-bar {@include rectangle3d($j-secondary-toolbar-background-color);}
+}
+
+@each $pos in top, bottom {
+    .j-header-no-#{$pos}-border {
+        border-#{$pos}-width: 0px !important;
+        & > td {
+            border-#{$pos}-width: 0px !important;
+        }
+    }
+}
+.j-header-no-left-border {
+    border-left-width: 0px !important;
+    & > td:first-child {
+        border-left-width: 0px !important;
+    }
+}
+.j-header-no-right-border {
+    border-right-width: 0px !important;
+    & > td:last-child {
+        border-right-width: 0px !important;
+    }
+}
+.j-header-no-side-borders {
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    & > td:first-child {
+        border-left-width: 0px !important;
+    }
+    & > td:last-child {
+        border-right-width: 0px !important;
+    }
+}
+
+
+//===================================================================================
+// Buttons
+
+.j-button                   {@include button;}
+.j-button-disabled          {@include button($enabled: false);}
+.j-button-primary           {@include button($primary: true);}
+.j-button-primary-disabled  {@include button($primary: true, $enabled: false);}
+
+.j-toolbar-item             {padding: 4px 0px 4px 8px;}
+.j-toolbar__separator       {padding-left: $j-button-spacing;}
+
+//===================================================================================
+// Font graphics
+
+.j-font-graphic--base {
+    color: $j-button-icon-color; 
+}
+.j-font-graphic--mouseover {
+    color: $j-button-icon-hover-color; 
+}
+.j-font-graphic--inverse-mouseover {
+    color: $j-button-icon-hover-inverse-color; 
+}
+.j-font-graphic--supports-mouseover {
+    @extend .j-font-graphic--base; 
+    &:hover {
+        @extend .j-font-graphic--mouseover;
+    }
+}
+.j-font-graphic--supports-inverse-mouseover {
+    @extend .j-font-graphic--base; 
+    &:hover {
+        @extend .j-font-graphic--inverse-mouseover;
+    }
+}
+@mixin font-graphic-color-override($color) {
+    &,
+    &.j-font-graphic--supports-mouseover,
+    &.j-font-graphic--supports-mouseover:hover,
+    & > .j-font-graphic--supports-mouseover,
+    & > .j-font-graphic--supports-mouseover:hover {
+        color: $color;
+    }
+}
+.j-font-graphic--disabled {
+    @include font-graphic-color-override($j-button-icon-disabled-color);
+}
+.j-font-graphic--color-blue {
+    @include font-graphic-color-override($j-icon-color-blue);
+}
+.j-font-graphic--color-yellow {
+    @include font-graphic-color-override($j-icon-color-yellow);
+}
+.j-font-graphic--color-red {
+    @include font-graphic-color-override($j-icon-color-red);
+}
+.j-vpimage {
+    &.j-font-graphic--size-small {
+        font-size: 16px;
+    }
+    &.j-font-graphic--size-normal {
+        font-size: 24px;
+    }
+}
+
+//===================================================================================
+// Tabs
+
+
+.j-tab                      {@include tab;}
+.j-tab-selected             {@include tab($selected: true);}
+.j-subordinate-tab          {@include tab($small-tabs: true);}
+.j-subordinate-tab-selected {@include tab($small-tabs: true, $selected: true);}
+.j-tab__spacer{
+    @include box-sizing(border-box);
+    height: $j-tab-height;
+    border-bottom: $j-tab-border-width $j-tab-border-color solid;    
+    margin: $j-tab-margin;
+    width: $j-tab-margin-right;
+    
+}
+.j-tab-extended-bottom-border {
+    @include box-sizing(border-box);
+    height: $j-tab-height;
+    border-bottom: $j-tab-border-width $j-tab-border-color solid;    
+    margin: $j-tab-margin;
+    width: 100%;
+}
+
+
+@each $pos in top, right, bottom, left {
+    .j-standard-component-margin-#{$pos} {
+        margin-#{$pos}: $j-component-margin;
+    }
+}
+.j-standard-component-margin {
+    margin: $j-component-margin;
+}
+@each $pos in top, right, bottom, left {
+    .j-standard-inner-margin-#{$pos} {
+        margin-#{$pos}: $j-border-padding;
+    }
+}
+.j-standard-inner-margin {
+    margin: $j-border-padding;
+}
+@each $pos in top, right, bottom, left {
+    .j-standard-inner-padding-#{$pos} {
+        padding-#{$pos}: $j-border-padding;
+    }
+}
+.j-standard-inner-padding {
+    padding: $j-border-padding;
+}
+@each $pos in top, right, bottom, left {
+    .j-standard-image-spacing-#{$pos} {
+        padding-#{$pos}: 2px;
+    }
+}
+.j-standard-inter-image-spacing {
+    margin-left: $j-icon-spacing;
+}
+
+//===================================================================================
+// Forms
+@mixin form($table-based: true) {
+    @include standardText;
+    @if ($table-based == true) {
+        &:not(.j-form--multicolumn) {
+            border-spacing: 1px;
+            border-collapse: separate;
+        }
+    }
+    & .j-form__column {
+        vertical-align: top;
+        & > table {
+            border-spacing: 1px;
+            border-collapse: separate;
+        }
+    }
+
+    //===========================================================================================
+    // Begin: Isolate the paddings/margins/widths here for handling compact mode all in one place
+    &:not(.j-form--compact) {
+        & .j-form__column {
+            & .j-form__field {
+                padding: $j-form-field-padding $j-form-field-padding-plus-margin $j-form-field-padding $j-form-field-padding;
+            }
+            &.j-form--align-labels-top .j-form__label {
+                padding: $j-form-field-padding $j-form-field-padding-plus-margin $j-form-field-padding $j-form-field-padding;
+            }
+        }
+        & td.j-form__column:last-child {
+            & .j-form__field {
+                padding-right: $j-form-field-padding;
+            }
+        }
+        & .j-form__label {
+            width: $j-form-label-width-normal;
+            min-width: $j-form-label-width-normal;
+            padding: $j-form-field-padding;
+        }
+        &.j-form--long-fields.j-form--align-labels-top .j-form__label,
+        &.j-form--align-labels-top .j-form--long-fields .j-form__label,
+        &.j-form--long-fields .j-form__field,
+        & .j-form--long-fields .j-form__field {
+            width: $j-form-field-width-long;
+            min-width: $j-form-field-width-long;
+        }
+        &.j-form--long-labels .j-form__label,
+        & .j-form--long-labels .j-form__label {
+            width: $j-form-label-width-long;
+            min-width: $j-form-label-width-long;
+        }
+        & .j-form__field {
+            width: $j-form-field-width-normal;
+            min-width: $j-form-field-width-normal;
+            padding: $j-form-field-padding;
+        }
+        & tr.j-form__section-header > td,
+        & td.j-form__section-header {
+            padding: $j-form-field-padding;
+        }
+    }
+
+    &.j-form--compact {
+        & .j-form__column {
+            & .j-form__field {
+                padding: $j-form-compact-field-padding $j-form-compact-field-padding-plus-margin $j-form-compact-field-padding $j-form-compact-field-padding;
+            }
+            &.j-form--align-labels-top .j-form__label {
+                padding: $j-form-compact-field-padding $j-form-compact-field-padding-plus-margin $j-form-compact-field-padding $j-form-compact-field-padding;
+            }
+        }
+        & td.j-form__column:last-child {
+            & .j-form__field {
+                padding-right: $j-form-compact-field-padding;
+            }
+        }
+        & .j-form__label {
+            width: $j-form-compact-label-width-normal;
+            min-width: $j-form-compact-label-width-normal;
+            padding: $j-form-compact-field-padding;
+        }
+        &.j-form--long-fields.j-form--align-labels-top .j-form__label,
+        &.j-form--align-labels-top .j-form--long-fields .j-form__label,
+        &.j-form--long-fields .j-form__field,
+        & .j-form--long-fields .j-form__field {
+            width: $j-form-compact-field-width-long;
+            min-width: $j-form-compact-field-width-long;
+        }
+        &.j-form--long-labels .j-form__label,
+        & .j-form--long-labels .j-form__label {
+            width: $j-form-compact-label-width-long;
+            min-width: $j-form-compact-label-width-long;
+        }
+        & .j-form__field {
+            width: $j-form-compact-field-width-normal;
+            min-width: $j-form-compact-field-width-normal;
+            padding: $j-form-compact-field-padding;
+        }
+        & tr.j-form__section-header > td,
+        & td.j-form__section-header {
+            padding: $j-form-compact-field-padding;
+        }
+    }
+    // End: Isolate the paddings/margins/widths here for handling compact mode all in one place
+    //=========================================================================================
+
+    & .j-form__label {
+        white-space: normal;
+        text-align: right;
+        vertical-align: middle;
+        color: $j-label-color;
+    }
+    &:not(.j-form--mark-optional-fields) {
+        & .j-form__label.j-form__field--required:after,
+        & .j-form__field--required .j-form__label:after {
+            content: "\00a0*";
+        }
+    }
+    &.j-form--mark-optional-fields {
+        & tr:not(.j-form__field--required) > .j-form__label:not(.j-form__field--required):after {
+            body &            { content: "\A(optional)"; }
+            body[lang="de"] & { content: "\A(optional[de])"; }
+            body[lang="en"] & { content: "\A(optional)"; }
+            body[lang="es"] & { content: "\A(optional[es])"; }
+            body[lang="fr"] & { content: "\A(optional[fr])"; }
+            body[lang="ja"] & { content: "\A(optional[ja])"; }
+            body[lang="ru"] & { content: "\A(optional[ru])"; }
+            body[lang="zh"] & { content: "\A(optional[zh])"; }
+            white-space: pre;
+            font-size: $j-label-optional-indicator-font-size;
+            color: $j-label-optional-indicator-color;
+        }
+    }
+    &.j-form--mark-optional-fields.j-form--align-labels-top {
+        & tr:not(.j-form__field--required) > .j-form__label:not(.j-form__field--required):after {
+            body &            { content: " (optional)"; }
+            body[lang="de"] & { content: " (optional[de])"; }
+            body[lang="en"] & { content: " (optional)"; }
+            body[lang="es"] & { content: " (optional[es])"; }
+            body[lang="fr"] & { content: " (optional[fr])"; }
+            body[lang="ja"] & { content: " (optional[ja])"; }
+            body[lang="ru"] & { content: " (optional[ru])"; }
+            body[lang="zh"] & { content: " (optional[zh])"; }
+        }
+    }
+    &.j-form--nowrap-labels .j-form__label,
+    & .j-form--nowrap-labels .j-form__label {
+        white-space: nowrap;
+    }
+    &.j-form--nowrap-fields .j-form__field,
+    & .j-form--nowrap-fields .j-form__field {
+        white-space: nowrap;
+    }
+    &.j-form--align-labels-top .j-form__label {
+        text-align: left;
+    }
+    &.j-form--align-labels-left .j-form__label {
+        text-align: left;
+    }
+    & .j-form__field {
+        white-space: normal;
+        vertical-align: middle;
+        color: $j-data-color;
+    }
+    & .j-form__field--tall > .j-form__label,
+    & .j-form__field--tall.j-form__label,
+    & .j-form__field--tall > .j-form__field,
+    & .j-form__field--tall.j-form__field {
+        vertical-align: top;
+    }
+
+    &:not(.j-form--transparent):not(.j-form--align-labels-top) {
+        @include border;
+        @if (table-based == false) {
+            @include padding($j-border-padding);
+        }
+        & .j-form__column {
+            background-color: $j-field-background-color;
+            & > table {
+                background-color: $j-base-background-color;
+            }
+        }        
+        & > tbody > tr > .j-form__label,
+        & > tbody > tr > td.j-form__column > table > tbody > tr > .j-form__label {
+            background-color: $j-label-background-color;
+        }
+        & > tbody > tr > .j-form__field,
+        & > tbody > tr > td.j-form__column > table > tbody > tr > .j-form__field {
+            background-color: $j-field-background-color;
+        }
+    }
+    &.j-form--transparent .j-form__label,
+    &.j-form--transparent .j-form__field,
+    &.j-form--align-labels-top .j-form__label,
+    &.j-form--align-labels-top .j-form__field {
+        background-color: transparent;
+        &.j-form__label {
+            padding-bottom: 2px;
+        }
+        &.j-form__field {
+            padding-top: 2px;
+        }
+    }
+    & tr.j-form__section-header > td,
+    & td.j-form__section-header {
+        background-color: $j-form-section-header-background-color;
+    }
+    &.j-form--full-width {
+        width: 100%;        
+        & > tbody > tr > td:last-child {
+            // this handles the final column of a multi-column form, as well as the final field in a standard form
+            width: 100%;
+        }        
+        & > tbody > tr > td.j-form__column:last-child > table > tbody > tr > td:last-child {
+            // this handles the final field in the final column of a multi-column form
+            width: 100%;
+        }
+    }
+}
+
+div.j-form                  {@include form($table-based: false)}
+table.j-form                {@include form($table-based: true)}
+
+
+//===================================================================================
+// TRANSITIONAL
+body.j-ux-diagnostics .j-form {
+    & .j-label,
+    & .j-label-plain,
+    & .j-label-wrappable,
+    & .j-label-bold {
+        background-color: papayawhip !important;
+    }
+    & .j-data {
+        background-color: cornsilk !important;
+    }
+}
+
+td:not(.j-form__label) > .j-vp-label-tag {
+    @include paddedText($j-label-color);
+}
+td:not(.j-form__label) > .j-vp-label-tag--error {
+    @include paddedText($j-label-error-color);
+}
+td:not(.j-form__label) > .j-vp-label-tag--required:after {
+    content: "\00a0*";
+}
+
+
+//===================================================================================
+// OLD FORM STYLING 
+table.j-form {
+    & td.j-label,
+    & td.j-data {
+        padding: 3px;
+    }
+}
+table.j-form-border {
+    @include border;
+}
+div.j-form-border {
+    @include border;
+    @include padding($j-border-padding);
+}
+
+.j-label-plain {
+    @include standardText($j-label-color);
+    height: $j-label-height;
+    padding: $j-label-padding !important;
+    box-sizing: border-box;
+}
+.j-label-wrappable {
+    @extend .j-label-plain;
+}
+.j-form .j-label-wrappable {
+    background-color: $j-label-background-color;
+}
+.j-label {
+    @extend .j-label-wrappable;
+    white-space: nowrap;
+}
+.j-label-bold {
+    @extend .j-label;
+    font-weight: bold;
+}
+.j-data {
+    @include standardText;
+}
+div.j-group-header {
+    @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+    @include box-shadow($j-group-header-shadow);
+    @include standardText;
+    height: $j-standard-header-height;
+    box-sizing: border-box;
+    border-top: 1px solid $j-base-border-color;
+    border-bottom: 1px solid $j-base-border-color;
+    padding: $j-standard-header-padding;
+}
+tr.j-group-header {
+    & > td {
+        @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+        @include box-shadow($j-group-header-shadow);
+        @include standardText;
+        height: $j-standard-header-height;
+        box-sizing: border-box;
+        border-top: 1px solid $j-base-border-color;
+        border-bottom: 1px solid $j-base-border-color;
+        padding: $j-standard-header-padding !important;
+    }
+}
+td.j-group-header {
+    @include background-gradient($j-header-bar-background-gradient-color-start, $j-header-bar-background-gradient-color-end);
+    @include box-shadow($j-group-header-shadow);
+    @include standardText;
+    border-top: 1px solid $j-base-border-color;
+    border-bottom: 1px solid $j-base-border-color;
+    height: $j-standard-header-height;
+    box-sizing: border-box;
+    padding: $j-standard-header-padding !important;
+}
+.j-form-column-gap {
+    min-width: $j-component-margin;
+}
+.j-instructional-text {
+    @include standardText($size: $j-base-font-size*.9);
+}
+// OLD FORM STYLING 
+//===================================================================================
+
+.j-standard-tooltip {
+    @extend .j-standard-inner-padding;
+    @include standardText($j-tooltip-foreground-color);
+    background-color: $j-tooltip-background-color;
+    @include border($borderColor: $j-base-border-color);
+    @include box-shadow($j-dialog-box-shadow);
+}
+
+.j-dialog-box-header-tool {
+    @include hyperlinkStyling($linkColor: $j-dialog-box-frame-foreground-color, $hoverColor: $j-dialog-box-frame-foreground-color, $textDecoration: none);
+    @extend .j-standard-inner-padding-right;
+    & > span::before {
+        font-size: $j-dialog-box-header-tool-size;
+    }
+}
+.j-dialog-box-header-tool-hidden {
+    display: none;
+}
+
+.j-graph-container {
+    @include border;
+    @extend .j-standard-inner-margin;
+    background-color: $j-graph-background-color;
+}
+
+.j-graph-header {
+    @include background-gradient($j-graph-header-background-gradient-color-start, $j-graph-header-background-gradient-color-end);
+    // height: 38px;
+    vertical-align: middle;
+    font-family: $j-base-font-family;
+    font-size: $j-graph-title-font-size;
+    font-style: $j-graph-title-font-weight;
+    color: $j-secondary-toolbar-foreground-color;
+    border-bottom: solid 1px $j-base-border-color;
+    padding-top: $j-graph-header-vertical-padding;
+    padding-bottom: $j-graph-header-vertical-padding;
+    padding-left: $j-graph-header-horizontal-padding;
+    padding-right: $j-graph-header-horizontal-padding;
+}
+
+.j-graph-body {
+    padding: $j-graph-body-padding;
+}
+
+.j-vertical-align-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

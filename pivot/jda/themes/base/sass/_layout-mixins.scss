@@ -1,0 +1,373 @@
+@mixin standardPageLayout {
+    margin: 0;
+}
+
+@mixin border ($width: 1px, $borderColor: $j-table-border-color, $bgColor: null, $top-color: null, $bottom-color: null, $left-color: null, $right-color: null, $important: false) {
+    $col1: $borderColor;
+    $col2: $borderColor;
+    $col3: $borderColor;
+    $col4: $borderColor;
+    $importantString: "";
+
+    @if ($important == true)    {$importantString: "!important";}
+
+    @if ($top-color != null)    {$col1: $top-color;}
+    @if ($right-color != null)  {$col2: $right-color;}
+    @if ($bottom-color != null) {$col3: $bottom-color;}
+    @if ($left-color != null)   {$col4: $left-color;}
+
+    border-style: solid #{$importantString};
+    border-width: $width #{$importantString};
+    border-color: $col1 $col2 $col3 $col4 #{$importantString};
+    @if $bgColor != null {
+        background-color: $bgColor #{$importantString};
+    }
+}
+
+@mixin border3d ($top-left-color: $j-3dborder-upper-left-color, $bottom-right-color: $j-3dborder-bottom-right-color) {
+    border: 1px solid $top-left-color;
+    border-right-color: $bottom-right-color;
+    border-bottom-color: $bottom-right-color;
+}
+
+@mixin rectangle3d($bgColor) {
+    @include border3d;
+    background-color: $bgColor;
+}
+
+@mixin table($cell-spacing, $cell-padding, $border: 0) {
+    @if (unitless($cell-spacing)) {
+        border-spacing: #{$cell-spacing}px;
+    } @else {
+        border-spacing: $cell-spacing;
+    }
+    border-collapse: separate;
+    @if $border==0 {
+        border-style: none;
+        border-width: 0px;
+    } @else {
+        border-style: solid;
+        border-width: $border;
+    }
+    & > tbody > tr > td {
+        @if (unitless($cell-padding)) {
+            padding: #{$cell-padding}px;
+        } @else {
+            padding: $cell-padding;
+        }
+    }
+}
+
+@mixin padding ($vPadding, $hPadding: null) {
+    @if $hPadding != null {
+        padding: $vPadding $hPadding $vPadding $hPadding;
+    } @else {
+        padding: $vPadding;
+    }
+}
+
+@mixin standardPadding {
+    @include padding($j-base-text-vpadding, $j-base-text-hpadding);
+}
+
+@mixin menu($width: 180px, $border: false) {
+    @include standardText($color: $j-menu-foreground-color);
+    margin-top: 0em;
+    margin-bottom: 0em;
+    position: absolute;
+    z-index: 50;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    width: $width;
+    background-color: $j-menu-background-color;    
+    @if $border == true {
+        border: 1px $j-menu-border-color;
+    }
+}
+
+@mixin image($image, $repeat: no-repeat, $vAlign: null, $hAlign: null, $bgColor: null) {
+    @if $bgColor == null {
+        background: url(images/#{$image}) $repeat;
+    } @else {
+        background: $bgColor url(images/#{$image}) $repeat;
+    }
+
+    @if $vAlign != null {
+        vertical-align: $vAlign;
+    }
+
+    @if $hAlign != null {
+        text-align: $hAlign;
+    }
+}
+
+@mixin button($enabled: true, $primary: false) {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    & > a {    
+        @if ($primary == false) {
+            outline: none;
+        }
+        min-height:         $j-button-min-height;
+        line-height:        $j-button-min-height; // padding (was -4)
+        min-width:          $j-button-dialog-min-width;
+        text-decoration:    none;
+        display:            inline-block;
+
+        .j-header-bar-toolbar-row & {
+            min-width:      $j-button-toolbar-min-width;
+        }
+
+        @include user-select(none);
+        & > div.j-button-border {
+            overflow: hidden;
+            @include border-radius($j-button-corner-radius);
+            & > div.j-button-fill {
+                & > span {
+                    padding: $j-button-padding;
+                    white-space: nowrap;        
+                    vertical-align: baseline;                    
+                    @if ($primary == true) {
+                        @if ($enabled == true) {
+                            @include standardText($color: $j-primary-button-text-color, $weight: $j-button-font-weight);
+                        } @else {
+                            @include standardText($color: $j-primary-button-text-disabled-color, $weight: $j-button-font-weight);
+                        }
+                    } @else {
+                        @if ($enabled == true) {
+                            @include standardText($color: $j-button-text-color, $weight: $j-button-font-weight);
+                        } @else {
+                            @include standardText($color: $j-button-text-disabled-color, $weight: $j-button-font-weight);
+                        }
+                    }             
+                }
+                & > span.j-font-graphic {
+                    font-size: $j-button-icon-size;
+                    @if ($enabled == true) {
+                        color: $j-button-icon-color; 
+                    } @else {
+                        color: $j-button-icon-disabled-color; 
+                    }
+                }
+                & > .j-graphic-arrow-down {
+                    padding-left: 0px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    & > a.j-button-a-normal {    
+        & > div.j-button-border {
+            @if ($theme == "platform") {
+                @if ($enabled == false) {
+                    @include border ($borderColor: $j-button-border-disabled-color);
+                } @else if ($primary == true) {
+                    @include border($borderColor: $j-primary-button-border-color);
+                } @else {
+                    @include border ($borderColor: $j-button-border-color);
+                }
+            } @else {
+                @include border3d($j-button-top-left-border-color, $j-button-bottom-right-border-color);
+            }
+            & > div.j-button-fill {
+                @if ($enabled == false) {
+                    @include background-gradient($j-button-background-disabled-gradient-color-start, $j-button-background-disabled-gradient-color-end);
+                } @else if ($primary == true) {
+                    @include background-gradient($j-primary-button-background-gradient-color-start, $j-primary-button-background-gradient-color-end);
+                } @else {
+                    @include background-gradient($j-button-background-gradient-color-start, $j-button-background-gradient-color-end);
+                }
+                & > span {
+                }
+                & > .j-graphic-arrow-down {
+                    padding-left: 0px;
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+    & > .j-button-disable-mask {
+        position: absolute;
+        background-color: rgba(0,0,0,0);
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        @if ($enabled == true) {
+            display: none;
+        } @else {
+            display: block;
+        }
+    }
+    @if ($enabled == true) {
+        & > a:hover > div.j-button-border, 
+        & > a:focus > div.j-button-border {
+            cursor :pointer;
+            @if ($primary == false) {
+                border-color: $j-button-border-hover-color;
+            } @else {
+                border-color: $j-primary-button-border-hover-color;
+            }
+            & > div.j-button-fill {
+                @if ($primary == false) {
+                    @include background-gradient($j-button-background-hover-gradient-color-start, $j-button-background-hover-gradient-color-end);
+                } @else {
+                    @include background-gradient($j-primary-button-background-hover-gradient-color-start, $j-primary-button-background-hover-gradient-color-end);
+                }
+                & span {
+                    @if ($primary == false) {
+                        @include standardText($color: $j-button-text-hover-color, $weight: $j-button-font-weight);
+                    } @else {
+                        @include standardText($color: $j-primary-button-text-hover-color, $weight: $j-button-font-weight);
+                    }
+                }
+                & > span.j-font-graphic {
+                    font-size: $j-button-icon-size;
+                    color: $j-button-icon-hover-inverse-color;
+                }
+            }
+        }
+        & > a.j-button-a-pressed {
+            & > div.j-button-border {
+                @if ($theme == "platform") {
+                    @if ($primary == true) {
+                        @include border ($borderColor: $j-primary-button-border-pressed-color);
+                    } @else {
+                        @include border ($borderColor: $j-button-border-pressed-color);
+                    }
+                } @else {
+                    @include border3d($j-button-border-pressed-color);
+                }
+                & > div.j-button-fill {
+                    @if ($primary == true) {
+                        @include background-gradient($j-primary-button-background-pressed-gradient-color-start, $j-primary-button-background-pressed-gradient-color-end);
+                    } @else {
+                        @include background-gradient($j-button-background-pressed-gradient-color-start, $j-button-background-pressed-gradient-color-end);
+                    }
+                    & span {
+                        @if ($primary == false) {
+                            @include standardText($color: $j-button-text-pressed-color, $weight: $j-button-font-weight);
+                        } @else {
+                            @include standardText($color: $j-primary-button-text-pressed-color, $weight: $j-button-font-weight);
+                        }
+                    }
+                    & > span.j-font-graphic {
+                        font-size: $j-button-icon-size;
+                        color: $j-button-icon-hover-inverse-color;
+                    }
+                    & > .j-graphic-arrow-down {
+                        padding-left: 0px;
+                        font-size: 9px;
+                    }                    
+                }
+            }
+        }
+    } @else {
+        & > a:hover > div.j-button-border, 
+        & > a:focus > div.j-button-border {
+            cursor: default;
+        }
+    }
+}
+
+// encodedHexString takes a color, force converts it to the IE hex string - thus ensuring we get "#00000000" instead of "black",
+// and calls a ruby function in sass-jda.rb to convert it from an 8- to 6-character color hex string.
+@function encodedHexString($color) {
+    $ieHexStr: '#{ie-hex-str($color)}';
+    $c: '%23#{hex8tohex6($ieHexStr)}';
+    @return $c;
+}
+
+// generates the SVG string for creating gradients in IE
+@mixin svg-gradient-background-image($color1, $color2) {
+    $c1: encodedHexString($color1);
+    $c2: encodedHexString($color2);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'100%25'%20height%3D'100%25'%20viewBox%3D'0%200%201%201'%20preserveAspectRatio%3D'none'%3E%3ClinearGradient%20id%3D'g791'%20gradientUnits%3D'userSpaceOnUse'%20x1%3D'0%25'%20y1%3D'0%25'%20x2%3D'0%25'%20y2%3D'100%25'%3E%3Cstop%20stop-color%3D'#{$c1}'%20offset%3D'0'%2F%3E%3Cstop%20stop-color%3D'#{$c2}'%20offset%3D'1'%2F%3E%3C%2FlinearGradient%3E%3Crect%20x%3D'0'%20y%3D'0'%20width%3D'1'%20height%3D'1'%20fill%3D'url(%23g791)'%20%2F%3E%3C%2Fsvg%3E") !important; 
+}
+
+@mixin background-gradient($start-color, $end-color, $direction: top) {
+    @include background-image(linear-gradient($direction, $start-color, $end-color));
+    @include background-image(-ms-linear-gradient($direction, $start-color, $end-color));
+
+//  Eliminating this use of DXImageTransform.Microsoft.gradient with an SVG gradient background image
+//    $gradient-type: 0;
+//    @if ($direction != top) {
+//        $gradient-type: 1;
+//    }
+//    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start-color}', EndColorStr='#{$end-color}', GradientType=#{$gradient-type});
+
+    // New function for generating SVG gradients in IE. Presently only works from top down, so it ignores the $direction parameter
+    @include svg-gradient-background-image($start-color, $end-color);
+}
+
+@mixin tab($selected: false, $small-tabs: false) {
+    @include box-sizing(border-box);
+    @include border-top-radius($j-tab-corner-radius);
+    @if ($selected) {
+        @include border($width: $j-tab-selected-border-width, $borderColor: $j-tab-selected-border-color);
+    } @else {
+        @include border($width: $j-tab-border-width, $borderColor: $j-tab-border-color);
+        &:hover {
+            border-color: $j-tab-hover-border-color;
+        }
+    }
+    @if ($small-tabs) { 
+        height: $j-small-tab-height;
+        margin: $j-tab-margin;
+    } @else {
+        height: $j-tab-height;
+        margin: $j-tab-margin;
+    }
+
+    & div {
+        height: 100%;
+        @if ($small-tabs) { 
+            padding: $j-small-tab-padding;
+        } @else {
+            padding: $j-tab-padding;
+        }
+        @if ($selected) {
+            background-color: $j-tab-selected-background-color;
+        } @else {
+            background-color: $j-tab-background-color;
+            &:hover {
+                background-color: $j-tab-hover-background-color;
+            }
+        }
+        
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        & span {
+            @if ($selected) {
+                @include standardText($j-tab-selected-foreground-color);
+            } @else {
+                @include standardText($j-tab-foreground-color);
+            }
+            white-space: nowrap;
+            vertical-align: middle;
+            @if ($small-tabs) { 
+                line-height: $j-small-tab-height - ($j-tab-border-width * 2);
+            } @else {
+                line-height: $j-tab-height - ($j-tab-border-width * 2);
+            }
+            &:hover {
+                color: $j-tab-hover-foreground-color;
+            }
+        }
+    }
+}
+
+@mixin j-grid-cell ($editable: false, $wrappable: false, $bold: false) {
+    @if ($bold == true){
+        @include boldText;
+    } @else {
+        @include standardText;
+    }
+    @if ($editable == true)     {background-color: $j-editable-data-background-color;}
+    @if ($wrappable == false)   {white-space: nowrap;}
+}
+    

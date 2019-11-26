@@ -1,0 +1,54 @@
+// Color constants
+// As a principle, avoid using these directly in subsequent styles. Instead, color constants
+// are to be assigned to variables named for their use, and those variables should then be used in the styles
+
+// Note: except for the shades of gray from white to black, 
+// all other colors are given names from http://www.chir.ag/projects/name-that-color
+
+$clr-derby:             #ffedd8;
+$clr-astral:            #3178b2;
+$clr-mariner:           #2073bc;
+$clr-capecod-01:        #373839;
+$clr-shark-01:          #222323;
+$clr-shark-02:          #2e2f30;
+$clr-porcelain-01:      #ebedef;
+$clr-porcelain-02:      #edeff0;
+$clr-abbey-01:          #424344;
+$clr-abbey-02:          #595a5b;
+$clr-abbey-03:          #474849;
+$clr-abbey-04:          #5a5b5c;
+$clr-danube:            #5ba1d4;
+$clr-jellybean:         #2b75b4;
+$clr-pacificblue:       #0090c7;
+$clr-bahamablue:        #005d94;
+$clr-regalblue:         #00437A;
+
+
+// copied from vp - most of these will go away
+$clr-perano:            #a7c4ee;
+$clr-spindle:           #bed1e9;
+$clr-tropicalblue:      #dae8fa; 
+$clr-nepal:             #86a2be;
+
+$clr-bayofmany:         #244e7a;
+$clr-midnightblue:      #013366;
+
+$clr-linkwater:         #ecf2fb;
+$clr-cherokee:          #f9d78c;
+
+$clr-persianred:        #cc3333;
+$clr-azure:             #336699;
+
+$clr-bahamablue:        #006699;
+$clr-blacksqueeze:      #edf3f9;
+
+
+$clr-casper:            #afc2d5;
+$clr-anakiwa:           #99ccff;
+$clr-goldenrod:         #fad277;
+$clr-astronaut:         #264c77;
+$clr-steelblue:         #417fbf;
+$clr-chestnutrose:      #cc5252;
+$clr-japaneselaurel:    #00aa00;
+$clr-malibu:            #96c2fa;
+$clr-nevada:            #5b6163;

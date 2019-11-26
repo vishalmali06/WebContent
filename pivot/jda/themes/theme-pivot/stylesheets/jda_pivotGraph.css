@@ -1,0 +1,838 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/***********************************************  Graph Flyout  *******************************************************/
+/* line 25, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper {
+  /*min-width: 600px; 	
+  min-height: 350px;*/
+}
+/* line 29, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout {
+  margin-left: 0px !important;
+  left: 0% !important;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  height: 350px;
+  font: normal normal normal 11px/normal Verdana;
+}
+/* line 38, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west {
+  font: inherit;
+  padding: 0px !important;
+  height: 100% !important;
+  width: 33%;
+  border: 1px solid #DADADB;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+/* line 45, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis {
+  font: inherit;
+  height: 22%;
+  min-height: 65px;
+  max-height: 75px;
+}
+/* line 51, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisHeader {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: -webkit-linear-gradient(#F6F6F6, #efeff2);
+  background: -ms-linear-gradient(#F6F6F6, #efeff2);
+  background: -moz-linear-gradient(#F6F6F6, #efeff2);
+  background: linear-gradient(#F6F6F6, #efeff2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#efeff2)";
+  height: 34px;
+  width: 100%;
+  /* display:table; */
+  color: #5E5E5E;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 15px 0px 15px;
+  border-bottom: 1px solid #DADADB;
+}
+/* line 63, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisHeader span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  /* display:table-cell; */
+  /* vertical-align:middle; */
+  line-height: 3;
+  width: 85%;
+}
+/* line 72, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisHeader .graphSettingsHeaderImg {
+  					 /*  float:right;
+                        margin-top:8px;
+                        width:16px;
+                        height:16px;
+                        line-height:16px;
+                        display:table-cell;
+                        vertical-align:middle; */
+  float: right;
+  display: inline-block;
+  line-height: 3;
+  margin-top: 8px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../../../../jda/images/graph-slide-in.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat, repeat;
+  /*  background-position:0px 10px; */
+}
+/* line 92, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent {
+  font: inherit;
+  height: 100%;
+  box-sizing: border-box;
+}
+/* line 98, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector {
+  font: inherit;
+  width: 100%;
+  height: 100%;
+}
+/* line 103, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  padding-right: 15px;
+  width: 100%;
+  height: 100%;
+}
+/* line 111, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow COMMON, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimSelector, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionFont, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .levelFont, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .lvlSelector {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  height: 50%;
+  min-height: 30px;
+}
+/* line 119, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimSelector {
+  width: 30%;
+}
+/* line 123, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimSelector span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-height: 30px;
+  position: absolute;
+  top: 16%;
+  width: 100%;
+  height: 75%;
+}
+/* line 132, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionFont, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .levelFont {
+  width: 20%;
+  padding-left: 15px;
+}
+/* line 137, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionFont span, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .levelFont span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  /* padding: 16% 0%; */
+  line-height: 3.5;
+}
+/* line 147, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .levelFont {
+  text-align: right;
+  padding-right: 15px;
+  padding-left: 0px;
+}
+/* line 153, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .lvlSelector {
+  width: 30%;
+}
+/* line 157, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .lvlSelector span {
+  max-height: 30px;
+  position: absolute;
+  top: 16%;
+  width: 100%;
+  height: 75%;
+}
+/* line 167, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionSelector div, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionLevelSelector div {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #CACACA;
+  padding: 0px 0px 0px 8px;
+  text-align: left;
+  line-height: 2.0;
+  height: 100%;
+}
+/* line 177, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionSelector div img, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionLevelSelector div img {
+  float: right;
+  height: 100%;
+  width: 28px;
+}
+/* line 184, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionSelector ul, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionLevelSelector ul {
+  font: inherit;
+  display: none;
+  text-align: left;
+  border: 1px solid #DADADB;
+  position: fixed;
+  z-index: 10;
+  float: none;
+}
+/* line 192, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionSelector ul li, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionLevelSelector ul li {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 8px;
+  padding-top: 5%;
+  text-decoration: none;
+  color: #000000;
+  background: #ffffff;
+}
+/* line 201, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionSelector ul li:hover, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphXAxis .graphXAxisContent .xaxisDimensionSelector .dimRow .dimensionLevelSelector ul li:hover {
+  background: -webkit-linear-gradient(#EEEFF0, #DCDCDC);
+  background: -ms-linear-gradient(#EEEFF0, #DCDCDC);
+  background: -moz-linear-gradient(#EEEFF0, #DCDCDC);
+  background: linear-gradient(#EEEFF0, #DCDCDC);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#EEEFF0, endColorstr=#DCDCDC)";
+  color: #424749;
+}
+/* line 219, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis {
+  height: 65%;
+  border-top: 1px solid #DADADB;
+}
+/* line 222, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphYAxisHeader {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: -webkit-linear-gradient(#F6F6F6, #efeff2);
+  background: -ms-linear-gradient(#F6F6F6, #efeff2);
+  background: -moz-linear-gradient(#F6F6F6, #efeff2);
+  background: linear-gradient(#F6F6F6, #efeff2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#efeff2)";
+  height: 15%;
+  max-height: 34px;
+  width: 100%;
+  /* display:table; */
+  font-size: 12px;
+  font-weight: bold;
+  color: #5E5E5E;
+  padding: 0px 15px 0px 15px;
+}
+/* line 235, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphYAxisHeader span {
+  /* line-height:3; */
+  display: table-cell;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 98%;
+  position: relative;
+  top: 20%;
+  /* margin-top: 8px; */
+}
+/* line 246, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid {
+  width: 100%;
+  height: 85%;
+  font: inherit;
+  overflow: hidden;
+  border-bottom: 1px solid #DADADB;
+}
+/* line 252, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid {
+  font: inherit;
+  table-layout: fixed;
+  border-spacing: 2px 0px;
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid #DADADB;
+  height: 17%;
+  max-height: 34px;
+}
+/* line 261, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader {
+  font: inherit;
+  background: -webkit-linear-gradient(#ffffff, #ebecee);
+  background: -ms-linear-gradient(#ffffff, #ebecee);
+  background: -moz-linear-gradient(#ffffff, #ebecee);
+  background: linear-gradient(#ffffff, #ebecee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#ebecee)";
+  -moz-box-shadow: 1px 1px 4px 0px #d1d1d1;
+  -webkit-box-shadow: 1px 1px 4px 0px #d1d1d1;
+  box-shadow: 1px 1px 4px 0px #d1d1d1;
+  width: auto;
+}
+/* line 267, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .chxBox {
+  /* padding : 0px 0px 0px 15px; */
+  height: 16px;
+  width: 6%;
+  text-align: right;
+}
+/* line 273, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .chxBox input {
+  margin: 0px;
+}
+/* line 277, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .msrValue {
+  font: inherit;
+  width: 42%;
+}
+/* line 281, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .axis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  width: 22%;
+}
+/* line 286, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .graphTypes {
+  font: inherit;
+  text-align: left;
+  width: 30%;
+}
+/* line 291, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .settingsHeaderGrid .gridHeader .dummyColumn {
+  width: 13px;
+}
+/* line 297, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid {
+  font: inherit;
+  max-height: 84%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 303, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid {
+  font: inherit;
+  table-layout: fixed;
+  border-spacing: 2px;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 309, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr {
+  width: auto;
+  height: 32px;
+  padding: 0px;
+  border: 1px solid #ebeaea;
+}
+/* line 314, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .chxBox {
+  width: 6%;
+  height: 16px;
+  /* padding : 0px 0px 0px 15px; */
+  text-align: right;
+}
+/* line 321, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .chxBox input {
+  margin: 0px;
+}
+/* line 325, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .msrName {
+  font: inherit;
+  width: 42%;
+}
+/* line 330, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .axis {
+  width: 22%;
+  padding-left: 5%;
+}
+/* line 334, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes {
+  font: inherit;
+  text-align: center;
+  width: 30%;
+  padding-left: 2px;
+}
+/* line 340, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .pvt-Disable div {
+  opacity: 0.5;
+}
+/* line 344, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector {
+  font: inherit;
+  height: 30px;
+  width: 90%;
+  position: relative;
+}
+/* line 350, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector div {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #CACACA;
+  padding: 0px 0px 0px 8px;
+  line-height: 2.5;
+  text-align: left;
+  color: #000000;
+}
+/* line 361, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector div img {
+  float: right;
+  height: 28px;
+  width: 28px;
+}
+/* line 367, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector ul {
+  font: inherit;
+  display: none;
+  text-align: left;
+  border: 1px solid #DADADB;
+  z-index: 10;
+  float: none;
+  color: #000000;
+}
+/* line 377, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector ul li {
+  display: block;
+  line-height: 2.5;
+  padding: 0px 0px 0px 8px;
+  text-decoration: none;
+  color: #000000;
+  height: 30px;
+  background: #ffffff;
+  margin-left: 1px;
+  white-space: nowrap;
+}
+/* line 388, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr .graphTypes .graphTypeSelector ul li:hover {
+  background: -webkit-linear-gradient(#EEEFF0, #DCDCDC);
+  background: -ms-linear-gradient(#EEEFF0, #DCDCDC);
+  background: -moz-linear-gradient(#EEEFF0, #DCDCDC);
+  background: linear-gradient(#EEEFF0, #DCDCDC);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#EEEFF0, endColorstr=#DCDCDC)";
+  height: 30px;
+  color: #424749;
+}
+/* line 399, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid tr:not(.gridFocus):hover {
+  background: -webkit-linear-gradient(#e2e2e2, #dcdcdc);
+  background: -ms-linear-gradient(#e2e2e2, #dcdcdc);
+  background: -moz-linear-gradient(#e2e2e2, #dcdcdc);
+  background: linear-gradient(#e2e2e2, #dcdcdc);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e2e2e2, endColorstr=#dcdcdc)";
+  color: #424749;
+}
+/* line 404, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .gridOddData {
+  background: #faf9f9;
+}
+/* line 407, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .gridEvenData {
+  background: #ffffff;
+}
+/* line 410, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .gridFocus {
+  color: #ffffff;
+  background: -webkit-linear-gradient(#353637, #4f5051);
+  background: -ms-linear-gradient(#353637, #4f5051);
+  background: -moz-linear-gradient(#353637, #4f5051);
+  background: linear-gradient(#353637, #4f5051);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#353637, endColorstr=#4f5051)";
+  -moz-box-shadow: 1px 1px 6px 0px #d1d1d1;
+  -webkit-box-shadow: 1px 1px 6px 0px #d1d1d1;
+  box-shadow: 1px 1px 6px 0px #d1d1d1;
+}
+/* line 415, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .gridFocus td {
+  background: -webkit-linear-gradient(#353637, #4f5051);
+  background: -ms-linear-gradient(#353637, #4f5051);
+  background: -moz-linear-gradient(#353637, #4f5051);
+  background: linear-gradient(#353637, #4f5051);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#353637, endColorstr=#4f5051)";
+}
+/* line 419, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .msrName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 422, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup {
+  text-align: center;
+  							/*	.toggleFocus{
+                                    background-color : $j-pvt-small-button-color;
+                                    color : $j-pvt-small-button-background-color;
+  								}
+                                  .axisButton{
+                                    height: 20px;
+                                    text-align:center;
+                                    border:$j-pvt-global-border;
+                                    background-image : initial;
+                                    vertical-align: middle;
+                                    text-align: center;
+                                    color : $j-pvt-small-button-color;
+                                    background-color : $j-pvt-small-button-background-color;
+                                    .ui-button-text{
+                                      padding: 0;
+                                      width:0px;
+                                      height:0px;
+                                      height:0px;
+                                    }
+  
+                                  }
+                                  .toggleFocus{
+                                    background-color : $j-pvt-small-button-color;
+                                    color : $j-pvt-small-button-background-color;
+                                  }
+                                  .axisButton:hover{
+                                    background-color : $j-pvt-small-button-color;
+                                    color : $j-pvt-small-button-background-color;
+  
+                                  }
+  
+  								.leftAxisButton{
+                                      @extend .axisButton;
+                                      border-radius: 3px 0px 0px 3px !important;
+                                      @include fontawesome-icon($fa-var-arrow-left,1.5);
+  								}
+  								.rightAxisButton{
+  									@extend .axisButton;
+  									border-radius: 0px 3px 3px 0px !important;
+                                      @include fontawesome-icon($fa-var-arrow-right,1.5);
+  								}*/
+}
+/* line 424, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-button {
+  margin-left: 0;
+  margin-right: -0.0em;
+}
+/* line 428, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-icon {
+  margin-top: 0px;
+}
+/* line 431, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-controlgroup-item {
+  background-color: #D3D3D3;
+}
+/* line 434, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-state-disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* line 439, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-state-default {
+  background-color: #dddddd;
+}
+/* line 442, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .ui-state-active {
+  box-shadow: none;
+}
+/* line 447, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .toggleFocus {
+  background-color: #ffffff;
+}
+/* line 450, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .leftAxisButton, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .rightAxisButton {
+  height: 18px;
+  text-align: center;
+  border: 1px solid #DADADB;
+  background-image: url(../../../images/left-axis.png);
+  background-repeat: no-repeat;
+  background-position: 4px 1px;
+  border-radius: 3px 0px 0px 3px !important;
+}
+/* line 459, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .graphYAxis .graphSettingsGrid .scrollGrid .settingsGrid .ui-controlgroup .rightAxisButton {
+  border-radius: 0px 3px 3px 0px !important;
+  background-image: url(../../../images/right-axis.png);
+}
+/* line 514, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings {
+  font: inherit;
+  width: 100%;
+  height: 13%;
+  max-height: 34px;
+  /* border:$j-pvt-global-border; */
+  padding: 1.5% 15px 0px 15px;
+  overflow: hidden;
+  /* .clearSetting{
+  	font: inherit;
+  	@include linear-gradient(#ffffff, #eaecee);
+  	height: 22px;
+  	width: 50px;				
+  	border:1px solid #DEDEDE;
+  	color :#000000;
+  	text-align: center;
+  	padding-left: 6px;
+  	padding-right: 6px;
+  	border-radius:3px;				
+  	margin-right:8px;
+  	&:hover{
+  		@include linear-gradient(#5A5B5C, #4B4B4B);
+  		color:#FFFFFF;
+  	}
+  	&:active{
+  		@include linear-gradient(#5A5B5C, #4B4B4B);
+  		color:#FFFFFF;					
+  	}
+  	&:disabled{
+  		@include linear-gradient(#FEFEFE, #EDEFF0);
+  		color:#9B9D9F;					
+  	}
+  }
+  .saveSetting{
+  	@extend .clearSetting;
+  	@include linear-gradient(#5BA1D4, #2B75B4);
+  	color : #ffffff;
+  } */
+}
+/* line 226, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings input {
+  height: 22px;
+  width: auto;
+  min-width: 26px;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 8px;
+  font: normal 11px Verdana;
+}
+/* line 77, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button:disabled, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button:disabled {
+  background: -webkit-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -ms-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -moz-linear-gradient(#FEFEFE, #EDEFF0);
+  background: linear-gradient(#FEFEFE, #EDEFF0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FEFEFE, endColorstr=#EDEFF0)";
+  border: 1px solid #DADADA;
+  color: #9B9D9F;
+}
+/* line 120, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button:hover:not(:disabled), .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button:hover:not(:disabled), .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button:focus, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button:hover:not(:disabled) .x-btn-inner, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button:focus .x-btn-inner, .pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 94, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button {
+  background: -webkit-linear-gradient(#FFFFFF, #EAECEE);
+  background: -ms-linear-gradient(#FFFFFF, #EAECEE);
+  background: -moz-linear-gradient(#FFFFFF, #EAECEE);
+  background: linear-gradient(#FFFFFF, #EAECEE);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#EAECEE)";
+  color: #424749;
+  border: 1px solid #C7C7C7;
+  cursor: pointer;
+}
+/* line 99, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-button .x-btn-inner {
+  color: #424749;
+}
+/* line 107, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button {
+  background: -webkit-linear-gradient(#5BA1D4, #2B75B4);
+  background: -ms-linear-gradient(#5BA1D4, #2B75B4);
+  background: -moz-linear-gradient(#5BA1D4, #2B75B4);
+  background: linear-gradient(#5BA1D4, #2B75B4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5BA1D4, endColorstr=#2B75B4)";
+  color: #FFFFFF;
+  border: 1px solid #EBECEE;
+  cursor: pointer;
+}
+/* line 112, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .j-pvt-primary-button .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 558, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .notificationHeader {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  display: inline;
+}
+/* line 564, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .notificationHeader span {
+  font: inherit;
+  position: relative;
+  float: right;
+}
+/* line 570, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-west .commitSettings .notificationHeader .notificationImg {
+  margin-right: 3px;
+}
+/* line 576, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center {
+  height: 100% !important;
+  font: inherit;
+  padding: 0px !important;
+  border: 1px solid #DADADB;
+  overflow: hidden !important;
+}
+/* line 58, ../sass/_pivot-global.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center .intersectionDelimiter {
+  background-color: #5E5E5E;
+  width: 6px;
+  height: 6px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+}
+/* line 585, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center .graphHeader {
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 34px;
+  background: -webkit-linear-gradient(#F6F6F6, #efeff2);
+  background: -ms-linear-gradient(#F6F6F6, #efeff2);
+  background: -moz-linear-gradient(#F6F6F6, #efeff2);
+  background: linear-gradient(#F6F6F6, #efeff2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#efeff2)";
+  font-size: 12px;
+  font-weight: bold;
+  color: #5E5E5E;
+  line-height: 2.5;
+  padding-left: 12px;
+  border-bottom: 1px solid #DADADB;
+}
+/* line 597, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center .errorHeader {
+  font: inherit;
+  font-weight: bold;
+  height: 15px;
+  padding: 8px 8px 8px 24px;
+  left: 38%;
+  position: absolute;
+  top: 50%;
+}
+/* line 606, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center #interactiveChxBox {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+/* line 610, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center #pvt-graph-grapharea {
+  font: inherit;
+  height: auto;
+  position: absolute;
+  top: 34px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+/* line 619, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-center #pvt-graph-grapharea #myChartId tspan {
+  font: normal normal normal 11px/normal Verdana !important;
+}
+/* line 626, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .hidden {
+  display: none !important;
+}
+/* line 630, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .resizer-west-open {
+  width: 10px;
+  background-color: #cdcdcd !important;
+  border: 1px solid #DADADB !important;
+}
+/* line 635, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .ui-layout-toggler-west-open {
+  background-color: #989898 !important;
+  height: auto !important;
+  top: 180px;
+  overflow: visible !important;
+  width: auto !important;
+}
+/* line 643, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .resizer .ui-layout-toggler-west-closed {
+  background: #ffffff !important;
+  height: 100% !important;
+}
+/* line 647, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .resizer .ui-layout-toggler-west-closed .content {
+  background: #ffffff !important;
+  height: 100% !important;
+  margin-top: 0px !important;
+  background: -webkit-linear-gradient(#ffffff, #eaecee);
+  background: -ms-linear-gradient(#ffffff, #eaecee);
+  background: -moz-linear-gradient(#ffffff, #eaecee);
+  background: linear-gradient(#ffffff, #eaecee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#eaecee)";
+  					/*.expandImgDiv{
+                          margin-top : 12px;
+  						height : 16px;
+  						width : 16px;
+                          font-size: 16px;
+  						border:0;
+  					}*/
+}
+/* line 661, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .resizer .ui-layout-toggler-west-closed .content .expandImgDiv {
+  height: 24px;
+  width: 24px;
+  background: -webkit-linear-gradient(#ffffff, #eaecee);
+  background: -ms-linear-gradient(#ffffff, #eaecee);
+  background: -moz-linear-gradient(#ffffff, #eaecee);
+  background: linear-gradient(#ffffff, #eaecee);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#eaecee)";
+  border: 1px solid #DEDEDE;
+  border-radius: 3px;
+}
+/* line 667, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .resizer .ui-layout-toggler-west-closed .content .expandImgDiv .graphExpandImg {
+  padding: 3px;
+}
+/* line 676, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .pvtTransparent {
+  opacity: 0.5;
+}
+/* line 680, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .warningImg {
+  margin-left: -10px;
+  margin-bottom: -4px;
+  margin-right: 5px;
+}
+/* line 685, ../sass/jda_pivotGraph.scss */
+.pivotGraphWrapper #pivotGraphFlyout .errorText {
+  font: inherit;
+  display: inline-block;
+}

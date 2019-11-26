@@ -1,0 +1,785 @@
+/* @import 'all'; */
+/*** TODO: GK - please change here to the proper global colors **/
+/* line 86, ../sass/_pivot-global.scss */
+.validationErrorToolTip {
+  border: 1px solid #ff0000;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #ff0000;
+}
+
+/* line 62, ../sass/jda-pivot-comment.scss */
+.pivotComment .j-pvt-cmt-wrapper {
+  width: inherit;
+  height: inherit;
+  display: table;
+  font: normal 11px Verdana;
+  table-layout: fixed;
+}
+/* line 69, ../sass/_pivot-global.scss */
+.pivotComment .j-pvt-cmt-wrapper .pvt-hidden {
+  display: none;
+}
+/* line 58, ../sass/_pivot-global.scss */
+.pivotComment .j-pvt-cmt-wrapper .intersectionDelimiter {
+  background-color: #5E5E5E;
+  width: 6px;
+  height: 6px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+}
+/* line 70, ../sass/jda-pivot-comment.scss */
+.pivotComment .j-pvt-cmt-wrapper .pvtAlert {
+  background-image: url(../../../../jda/images/warning.png);
+  background-repeat: no-repeat;
+  background-position: 97% 50%;
+  padding-right: 15px;
+}
+/* line 77, ../sass/jda-pivot-comment.scss */
+.pivotComment .j-pvt-cmt-wrapper .j-pvt-cmt-west {
+  width: 35%;
+  border-right: 8px solid #CDCDCD;
+  border-bottom: 1px solid #DADADB;
+  border-top: 1px solid #DADADB;
+  border-left: 1px solid #DADADB;
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 87, ../sass/jda-pivot-comment.scss */
+.pivotComment .j-pvt-cmt-wrapper .j-pvt-cmt-center {
+  width: 65%;
+  height: inherit;
+  border: 1px solid #DADADB;
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* line 100, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header {
+  border-bottom: 1px solid #DADADB;
+  height: 34px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font: normal 12px Verdana;
+  /*  line-height:2.5;		 */
+  padding-top: 5px;
+  width: auto;
+  background: -webkit-linear-gradient(#F6F6F6, #EFEFF2);
+  background: -ms-linear-gradient(#F6F6F6, #EFEFF2);
+  background: -moz-linear-gradient(#F6F6F6, #EFEFF2);
+  background: linear-gradient(#F6F6F6, #EFEFF2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#EFEFF2)";
+}
+/* line 197, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header input[type=text] {
+  height: 24px;
+  /* width: auto; */
+  box-shadow: inset 1px 1px 1px #cccccc;
+  min-width: 26px;
+  border-radius: 1px;
+  font: normal 11px Verdana;
+}
+/* line 205, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header input[type=text]::-ms-clear {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+/* line 69, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .pvt-hidden {
+  display: none;
+}
+/* line 113, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .pvtExpandAll, .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll {
+  position: absolute;
+  /* padding-right:3%; */
+  color: #2073BC;
+  padding-top: 2px;
+  cursor: pointer;
+}
+/* line 119, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .pvtExpandAll .expand, .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll .expand, .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtExpandAll .j-pvt-cmt-center-body .pvtComments .collapse, .j-pvt-cmt-center-body .pvtComments .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtExpandAll .collapse, .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll .j-pvt-cmt-center-body .pvtComments .collapse, .j-pvt-cmt-center-body .pvtComments .j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll .collapse {
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 125, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll {
+  /*  background-image:url(../../../../jda/images/collapse.png); */
+}
+/* line 128, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .pvtCollapseAll .collapse {
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 134, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment {
+  padding-left: 20%;
+  padding-right: 2%;
+  padding-top: 5px;
+}
+/* line 226, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment input {
+  height: 22px;
+  width: auto;
+  min-width: 26px;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 8px;
+  font: normal 11px Verdana;
+}
+/* line 77, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button:disabled, .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button:disabled {
+  background: -webkit-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -ms-linear-gradient(#FEFEFE, #EDEFF0);
+  background: -moz-linear-gradient(#FEFEFE, #EDEFF0);
+  background: linear-gradient(#FEFEFE, #EDEFF0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FEFEFE, endColorstr=#EDEFF0)";
+  border: 1px solid #DADADA;
+  color: #9B9D9F;
+}
+/* line 120, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button:hover:not(:disabled), .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button:hover:not(:disabled), .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button:focus, .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button:focus {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 125, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button:hover:not(:disabled) .x-btn-inner, .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button:hover:not(:disabled) .x-btn-inner, .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button:focus .x-btn-inner, .j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button:focus .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 94, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button {
+  background: -webkit-linear-gradient(#FFFFFF, #EAECEE);
+  background: -ms-linear-gradient(#FFFFFF, #EAECEE);
+  background: -moz-linear-gradient(#FFFFFF, #EAECEE);
+  background: linear-gradient(#FFFFFF, #EAECEE);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#EAECEE)";
+  color: #424749;
+  border: 1px solid #C7C7C7;
+  cursor: pointer;
+}
+/* line 99, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-button .x-btn-inner {
+  color: #424749;
+}
+/* line 107, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button {
+  background: -webkit-linear-gradient(#5BA1D4, #2B75B4);
+  background: -ms-linear-gradient(#5BA1D4, #2B75B4);
+  background: -moz-linear-gradient(#5BA1D4, #2B75B4);
+  background: linear-gradient(#5BA1D4, #2B75B4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5BA1D4, endColorstr=#2B75B4)";
+  color: #FFFFFF;
+  border: 1px solid #EBECEE;
+  cursor: pointer;
+}
+/* line 112, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .addComment .j-pvt-primary-button .x-btn-inner {
+  color: #FFFFFF;
+}
+/* line 144, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .showCmtText, .j-pvt-cmt-center .j-pvt-cmt-center-header .parentCmtText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childCmtText {
+  color: #000000;
+  /* float:right; */
+  /* padding-right:$j-pvt-cmt-padding;
+  padding-left:12%; */
+  font: normal 11px Verdana;
+  margin-top: 5px;
+}
+/* line 152, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .parentCmtText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childCmtText {
+  color: #249F33;
+  /* float:right; */
+  /* padding-right:$j-pvt-cmt-padding; */
+  padding-left: 12%;
+  font: normal 11px Verdana;
+  margin-top: 5px;
+}
+/* line 162, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .showCmtContentText, .j-pvt-cmt-center .j-pvt-cmt-center-header .parentContentText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childContentText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 17%;
+  margin-top: 5px;
+}
+/* line 167, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .parentContentText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childContentText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 17%;
+  /*  vertical-align: middle; */
+}
+/* line 173, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .parentContentText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childContentText {
+  max-width: 12%;
+}
+/* line 177, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .parentCmtText, .j-pvt-cmt-center .j-pvt-cmt-center-header .childCmtText {
+  padding-left: 2%;
+  color: #249F33;
+}
+/* line 183, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .childContentText {
+  max-width: 12%;
+}
+/* line 188, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .childCmtText {
+  padding-left: 2%;
+  padding-left: 2%;
+  color: #2073BC;
+}
+/* line 198, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .filtertext {
+  float: right;
+  width: 15%;
+  font: normal 12px Verdana;
+  color: #5E5E5E;
+  border: 1px solid #C7C7C7;
+  /*  margin-top:5px; */
+  background-image: url(../../../../jda/images/filter.png);
+  background-repeat: no-repeat;
+  background-position: 97% 50%;
+  padding-right: 15px;
+  padding-left: 5px;
+}
+/* line 211, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .default-value {
+  color: #838383;
+}
+/* line 214, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+}
+/* line 221, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .switch input {
+  display: none;
+}
+/* line 223, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider0, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider1, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c8d2d7;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* line 236, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider0:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider1:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider2:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0px;
+  top: -3px;
+  background-color: #5e747e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* line 249, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider0:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+  background-color: #000000;
+}
+/* line 257, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider1:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+  background-color: #249F33;
+}
+/* line 265, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider2:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+  background-color: #007ab4;
+}
+/* line 273, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header input:focus + .slider, .j-pvt-cmt-center .j-pvt-cmt-center-header input:focus + .slider0, .j-pvt-cmt-center .j-pvt-cmt-center-header input:focus + .slider1, .j-pvt-cmt-center .j-pvt-cmt-center-header input:focus + .slider2 {
+  box-shadow: 0 0 1px #2196F3;
+}
+/* line 277, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider.round, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider0.round, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider1.round, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider2.round {
+  border-radius: 4px;
+}
+/* line 281, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-header .slider.round:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .round.slider0:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .round.slider1:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .round.slider2:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider0.round:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider1.round:before, .j-pvt-cmt-center .j-pvt-cmt-center-header .slider2.round:before {
+  border-radius: 50%;
+}
+/* line 286, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-body {
+  height: 91%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* line 293, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center .j-pvt-cmt-center-body .pvtComments, .j-pvt-cmt-center .j-pvt-cmt-center-body .newCommentPanel {
+  flex-shrink: 0;
+}
+
+/* line 303, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments {
+  		/*.deleteCommentWrapper:not(.cancelButton){
+  		 	@include fontawesome-icon($fa-var-trash-o,1.5);
+  		}
+  		.editCommentWrapper:not(.okButton){
+  			@include fontawesome-icon($fa-var-pencil,1.5);
+  		}
+   		.commentButton:hover{
+  		 	background-color : $j-pvt-cmt-default-font-color;
+  		 	color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+  		}*/
+}
+/* line 213, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center-body .pvtComments textarea, .j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .editReasonCodes, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .reasonCodesCombo, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .cmtBody input.cmtSubArea, .j-pvt-cmt-center-body .newCommentPanel .cmtBody .pvtComments input.cmtSubArea {
+  border: 1px solid #C7C7C7;
+  box-shadow: inset 1px 1px 1px #cccccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 305, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments textarea, .j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .editReasonCodes, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .reasonCodesCombo, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .cmtBody input.cmtSubArea, .j-pvt-cmt-center-body .newCommentPanel .cmtBody .pvtComments input.cmtSubArea {
+  font: normal 12px Verdana;
+  color: #5E5E5E;
+}
+/* line 311, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader:not(.editingModeHeader) .ANCESTORS {
+  color: #249F33;
+}
+/* line 314, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader:not(.editingModeHeader) .DESCENDANTS {
+  color: #2073BC;
+}
+/* line 317, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader:not(.editingModeHeader) .SELF {
+  color: #5E5E5E;
+}
+/* line 320, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader:not(.editingModeHeader) .pvtAccordionDate {
+  color: #5E5E5E;
+}
+/* line 324, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader {
+  border-top: 1px solid #DADADB;
+  border-bottom: 1px solid #DADADB;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  height: 30px;
+  /* line-height:3; */
+  background: -webkit-linear-gradient(#FFFFFF, #F6F6F6);
+  background: -ms-linear-gradient(#FFFFFF, #F6F6F6);
+  background: -moz-linear-gradient(#FFFFFF, #F6F6F6);
+  background: linear-gradient(#FFFFFF, #F6F6F6);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#F6F6F6)";
+  		  /* .okButton{
+              color: $j-pvt-cmt-ok-button-color;
+              @include fontawesome-icon($fa-var-check,1.7);
+  			border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+  			box-shadow:none;
+  		   }
+  		  .cancelButton{
+  		    border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+              color: $j-pvt-cmt-cancel-button-color;
+              @include fontawesome-icon($fa-var-times,1.7);
+  			
+  		   }  
+  		   .okButton:hover{
+  		     border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+               color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+               background-color : $j-pvt-cmt-ok-button-color;
+             }
+  		   .cancelButton:hover{
+  		     border:1px solid $j-pvt-cmt-panel-accordionHeader-gradiant-bottom;
+               color : $j-pvt-cmt-panel-accordionHeader-gradiant-top;
+               background-color : $j-pvt-cmt-cancel-button-color;
+             }*/
+}
+/* line 335, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader .okButton, .j-pvt-cmt-center-body .pvtComments .cmtHeader .cancelButton, .j-pvt-cmt-center-body .pvtComments .cmtHeader .cancelButton:hover, .j-pvt-cmt-center-body .pvtComments .cmtHeader .okButton:hover {
+  background-image: url(../../../../jda/images/ok.png);
+  background-color: #FFFFFF;
+  background-size: 16px 16px;
+  border: 1px solid #F6F6F6;
+  box-shadow: none;
+}
+/* line 342, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtHeader .cancelButton, .j-pvt-cmt-center-body .pvtComments .cmtHeader .cancelButton:hover {
+  background-image: url(../../../../jda/images/cancel.png);
+}
+/* line 380, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .editingModeHeader {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #ffffff;
+}
+/* line 384, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+}
+/* line 388, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject {
+  font: bold 12px Verdana;
+  color: #505050;
+  padding-top: 10px;
+  padding-left: 45px;
+}
+/* line 389, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .editSubCmt {
+  width: 100%;
+  padding-left: 5px;
+  height: 25px;
+  word-wrap: normal;
+  vertical-align: super;
+  background-position: 99% 50%;
+}
+/* line 403, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject:not(.editingMode) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 100%;
+}
+/* line 408, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .commentTextContent {
+  font: normal 12px Verdana;
+  color: #505050;
+  padding-top: 5px;
+  padding-left: 45px;
+}
+/* line 414, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtMeasureValues {
+  font: normal 12px Verdana;
+  color: #929292;
+  padding-top: 5px;
+  padding-left: 45px;
+}
+/* line 421, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .intersectionName {
+  font: bold 11px Verdana;
+  color: #838383;
+  padding-top: 5px;
+  padding-left: 45px;
+}
+/* line 428, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .cmtBody .editDescCmt {
+  width: 100%;
+  height: 100px;
+  background-position: 99.5% 5%;
+}
+/* line 437, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .expand, .j-pvt-cmt-center-body .pvtComments .collapse {
+  padding-right: 5px;
+  cursor: pointer;
+}
+/* line 444, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .pvtDisable:not(.okButton):not(.cancelButton) {
+  opacity: 0.5;
+}
+/* line 447, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .pvt-update-disable {
+  opacity: 0.5;
+}
+/* line 450, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .signComment {
+  padding-bottom: 3px;
+  /*  vertical-align:middle; */
+}
+/* line 455, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentUserHeader {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 2px;
+  padding-bottom: 3px;
+  /*  vertical-align:super; */
+  max-width: 15%;
+}
+/* line 464, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentSubHeader {
+  font: bold 12px Verdana;
+  padding-left: 5px;
+  /* vertical-align:super;   */
+}
+/* line 468, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentSubHeader .editSubCmt {
+  width: 45%;
+  padding-left: 5px;
+  height: 20px;
+  word-wrap: normal;
+  vertical-align: super;
+  background-position: 99% 50%;
+}
+/* line 478, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentSubHeader:not(.editingMode) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 45%;
+  padding-bottom: 3px;
+  /*  vertical-align:super; */
+}
+/* line 487, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentReasonCode {
+  font: bold 12px Verdana;
+  padding-left: 5px;
+}
+/* line 490, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentReasonCode .editReasonCodes {
+  padding-left: 5px;
+  height: 20px;
+  word-wrap: normal;
+  vertical-align: super;
+  background-position: 99% 50%;
+  max-width: 30%;
+  border: 1px solid #D8DFE2;
+}
+/* line 502, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .contentReasonCode:not(.reasonCodeEditingMode) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 30%;
+  padding-bottom: 3px;
+}
+/* line 508, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .pvtAccordionDate {
+  font: bold 12px Verdana;
+  padding-right: 10px;
+  float: right;
+  line-height: 2;
+  display: inline-block;
+}
+/* line 516, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .commentButton, .j-pvt-cmt-center-body .pvtComments .deleteCommentWrapper, .j-pvt-cmt-center-body .pvtComments .editCommentWrapper, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .cancelComment, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .cancelComment, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .saveComment, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .saveComment {
+  height: 20px;
+  width: 20px;
+  margin: 0px 0px 0px 3px;
+  float: right;
+  /* border:$j-pvt-cmt-toggle-button-stroke;*/
+  vertical-align: middle;
+  text-align: center;
+  /* color : $j-pvt-small-button-color;
+  background-color : $j-pvt-small-button-background-color; */
+  background-image: url(../../../../jda/images/delete.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+/* line 535, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .editCommentWrapper {
+  margin: 0px 2px 0px 0px;
+  background-image: url(../../../../jda/images/edit.png);
+}
+/* line 541, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .deleteCommentWrapper:hover {
+  			/* background-image:url("../../../../jda/images/delete-white.png"),-webkit-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/delete-white.png"),-ms-linear-gradient($top,$bottom);  
+	       	background-image:url("../../../../jda/images/delete-white.png"),-moz-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/delete-white.png"),linear-gradient($top,$bottom); 
+	       	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../../jda/images/delete-white.png')  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF5A5B5C', endColorstr='#FF4B4B4B');
+ */
+  background-image: url("../../../../jda/images/delete-white.png");
+  background-size: 16px 16px;
+  background-color: #4B4B4B;
+  box-shadow: inset 0 -8px 6px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -8px 6px -2px rgba 0, 0, 0, 0.4;
+           /* -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5A5B5C', endColorstr='#FF4B4B4B'), url("../../../../jda/images/delete-white.png");
+*/
+  background-repeat: no-repeat, repeat;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 547, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .pvtComments .editCommentWrapper:hover {
+  			/* background-image:url("../../../../jda/images/edit-white.png"),-webkit-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/edit-white.png"),-ms-linear-gradient($top,$bottom);  
+	       	background-image:url("../../../../jda/images/edit-white.png"),-moz-linear-gradient($top,$bottom);
+	       	background-image:url("../../../../jda/images/edit-white.png"),linear-gradient($top,$bottom); 
+	       	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../../jda/images/edit-white.png')  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF5A5B5C', endColorstr='#FF4B4B4B');
+ */
+  background-image: url("../../../../jda/images/edit-white.png");
+  background-size: 16px 16px;
+  background-color: #4B4B4B;
+  box-shadow: inset 0 -8px 6px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -8px 6px -2px rgba 0, 0, 0, 0.4;
+           /* -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5A5B5C', endColorstr='#FF4B4B4B'), url("../../../../jda/images/edit-white.png");
+*/
+  background-repeat: no-repeat, repeat;
+  border: 1px solid #4B4B4B;
+  cursor: pointer;
+}
+/* line 213, ../sass/_pivot-global.scss */
+.j-pvt-cmt-center-body .newCommentPanel textarea, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .cmtBody .contentCmtSubject .editSubCmt, .j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentSubHeader .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentReasonCode .editReasonCodes, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .newCommentPanel .editReasonCodes, .j-pvt-cmt-center-body .newCommentPanel .reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .cmtBody input.cmtSubArea {
+  border: 1px solid #C7C7C7;
+  box-shadow: inset 1px 1px 1px #cccccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 568, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel textarea, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .cmtBody .contentCmtSubject .editSubCmt, .j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentSubHeader .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentReasonCode .editReasonCodes, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .newCommentPanel .editReasonCodes, .j-pvt-cmt-center-body .newCommentPanel .reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .cmtBody input.cmtSubArea {
+  font: normal 12px Verdana;
+  color: #5E5E5E;
+}
+/* line 572, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .errorValue {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+/* line 578, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtHeader {
+  border-top: 1px solid #DADADB;
+  border-bottom: 1px solid #DADADB;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  height: 30px;
+  background: -webkit-linear-gradient(#FFFFFF, #F6F6F6);
+  background: -ms-linear-gradient(#FFFFFF, #F6F6F6);
+  background: -moz-linear-gradient(#FFFFFF, #F6F6F6);
+  background: linear-gradient(#FFFFFF, #F6F6F6);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF, endColorstr=#F6F6F6)";
+}
+/* line 587, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtHeader .okButton, .j-pvt-cmt-center-body .newCommentPanel .cmtHeader .cancelButton, .j-pvt-cmt-center-body .newCommentPanel .cmtHeader .cancelButton:hover, .j-pvt-cmt-center-body .newCommentPanel .cmtHeader .okButton:hover {
+  background-image: url(../../../../jda/images/ok.png);
+  background-color: #FFFFFF;
+  background-size: 16px 16px;
+  border: 1px solid #F6F6F6;
+  box-shadow: none;
+}
+/* line 594, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtHeader .cancelButton, .j-pvt-cmt-center-body .newCommentPanel .cmtHeader .cancelButton:hover {
+  background-image: url(../../../../jda/images/cancel.png);
+}
+/* line 605, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtHeader .expand, .j-pvt-cmt-center-body .newCommentPanel .cmtHeader .pvtComments .collapse, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .cmtHeader .collapse {
+  cursor: pointer;
+}
+/* line 609, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtHeader .collapse {
+  cursor: pointer;
+}
+/* line 614, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .newCmtHeader {
+  background: -webkit-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -ms-linear-gradient(#5A5B5C, #4B4B4B);
+  background: -moz-linear-gradient(#5A5B5C, #4B4B4B);
+  background: linear-gradient(#5A5B5C, #4B4B4B);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#5A5B5C, endColorstr=#4B4B4B)";
+  color: #ffffff;
+}
+/* line 618, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .signComment {
+  padding-left: 5px;
+  padding-bottom: 3px;
+}
+/* line 622, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .reasonCodesCombo {
+  margin-left: 5px;
+  padding-top: 2px;
+  height: 20px;
+  max-width: 30%;
+  word-wrap: normal;
+  vertical-align: super;
+  border: 1px solid #D8DFE2;
+}
+/* line 632, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel select, .j-pvt-cmt-center-body .newCommentPanel input, .j-pvt-cmt-center-body .newCommentPanel textarea, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .cmtBody .contentCmtSubject .editSubCmt, .j-pvt-cmt-center-body .pvtComments .cmtBody .contentCmtSubject .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentSubHeader .editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .newCommentPanel .editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .contentReasonCode .editReasonCodes, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .newCommentPanel .editReasonCodes, .j-pvt-cmt-center-body .newCommentPanel .reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .cmtBody input.cmtSubArea {
+  padding-left: 5px;
+}
+/* line 635, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtBody {
+  padding-left: 4%;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+/* line 641, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtBody .intersectionName {
+  font: bold 11px Verdana;
+  color: #838383;
+  padding-top: 5px;
+}
+/* line 646, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtBody input.cmtSubArea {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  word-wrap: normal;
+  vertical-align: super;
+  background-position: 99% 50%;
+}
+/* line 655, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cmtBody textarea.cmtDescArea, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .cmtBody .contentCmtSubject .cmtDescArea.editSubCmt, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .cmtBody .contentCmtSubject .cmtDescArea.editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .cmtBody .pvtComments .contentSubHeader .cmtDescArea.editSubCmt, .j-pvt-cmt-center-body .pvtComments .contentSubHeader .newCommentPanel .cmtBody .cmtDescArea.editSubCmt, .j-pvt-cmt-center-body .newCommentPanel .cmtBody .pvtComments .contentReasonCode .cmtDescArea.editReasonCodes, .j-pvt-cmt-center-body .pvtComments .contentReasonCode .newCommentPanel .cmtBody .cmtDescArea.editReasonCodes, .j-pvt-cmt-center-body .newCommentPanel .cmtBody .cmtDescArea.reasonCodesCombo, .j-pvt-cmt-center-body .newCommentPanel .cmtBody input.cmtDescArea.cmtSubArea {
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  background-position: 99.5% 5%;
+}
+/* line 662, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .commentButton, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .deleteCommentWrapper, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .deleteCommentWrapper, .j-pvt-cmt-center-body .newCommentPanel .pvtComments .editCommentWrapper, .j-pvt-cmt-center-body .pvtComments .newCommentPanel .editCommentWrapper, .j-pvt-cmt-center-body .newCommentPanel .cancelComment, .j-pvt-cmt-center-body .newCommentPanel .saveComment {
+  height: 20px;
+  width: 20px;
+  margin: 0px 0px 0px 3px;
+  float: right;
+  vertical-align: middle;
+  text-align: center;
+  background-image: url(../../../../jda/images/delete.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+}
+/* line 674, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .cancelComment {
+  cursor: pointer;
+}
+/* line 678, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .saveComment {
+  margin: 0px 2px 0px 0px;
+  cursor: pointer;
+  background-image: url(../../../../jda/images/edit.png);
+}
+/* line 684, ../sass/jda-pivot-comment.scss */
+.j-pvt-cmt-center-body .newCommentPanel .saveComment-disable {
+  opacity: 0.5;
+}
